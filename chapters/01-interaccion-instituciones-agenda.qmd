@@ -1,0 +1,1213 @@
+---
+title: "Interacción estratégica, instituciones y poder de agenda"
+subtitle: "De la teoría espacial del voto a Romer y Rosenthal"
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(ggplot2)
+library(plotly)
+
+theme_set(theme_minimal(base_size = 12))
+```
+
+## Parte I. De la interacción social a la teoría espacial del voto
+
+*Primer módulo: 70 minutos.*
+
+### Política como interacción estratégica
+
+La política ocurre en contextos de interdependencia. Las decisiones de una persona, organización o grupo producen consecuencias que dependen también de lo que otros hacen, de lo que esperan que otros hagan y de las reglas que organizan esas interacciones. Una legisladora decide cómo votar considerando la propuesta que enfrenta y las consecuencias de aprobarla o rechazarla. Un partido decide qué posición adoptar considerando las respuestas de otros partidos y de los electores. Un gobierno formula una propuesta anticipando la reacción del Congreso.
+
+La teoría de juegos proporciona un lenguaje para representar este tipo de situaciones. Su objeto central son problemas en los que el resultado de una decisión depende de las decisiones de más de un actor [@rasmusen2006; @mccartymeirowitz2007].
+
+Como primera guía, podemos representar una situación política mediante seis preguntas:
+
+$$
+\boxed{
+\text{Jugadores}
+\rightarrow
+\text{Acciones}
+\rightarrow
+\text{Preferencias}
+\rightarrow
+\text{Reglas}
+\rightarrow
+\text{Información}
+\rightarrow
+\text{Solución}
+}
+$$
+
+Los **jugadores** son las unidades capaces de tomar decisiones dentro del problema. Pueden ser individuos, partidos, organizaciones, gobiernos, burocracias o países. La elección depende del nivel de análisis pertinente para la pregunta que queremos responder.
+
+Las **acciones** describen qué puede hacer cada jugador. Un legislador puede votar a favor o en contra. Un gobierno puede proponer distintos niveles de gasto. Un partido puede escoger una posición dentro de un espacio ideológico. En otros problemas, el conjunto de acciones puede ser continuo:
+
+$$
+a_i\in A_i\subseteq \mathbb{R}.
+$$
+
+Las **preferencias** representan cómo cada jugador ordena los posibles resultados. Utilizaremos funciones de utilidad para expresar ese ordenamiento. Si $x$ representa un resultado político,
+
+$$
+u_i(x)
+$$
+
+indica cómo el jugador $i$ evalúa ese resultado.
+
+La racionalidad instrumental agrega una hipótesis acerca de la acción. Dadas sus preferencias, las alternativas disponibles y sus creencias acerca del entorno, el jugador escoge la acción que espera que produzca el resultado que más prefiere. Cuando existe incertidumbre, podemos representar este problema como
+
+$$
+a_i^*
+\in
+\arg\max_{a_i\in A_i}
+E_i\left[
+u_i(x)
+\mid a_i
+\right].
+$$
+
+Esta representación deja abierta la naturaleza de la motivación. Un jugador puede valorar ingresos, políticas públicas, permanencia en el poder, prestigio, bienestar colectivo o cualquier otra consecuencia. La teoría requiere especificar qué valora. La racionalidad instrumental permite estudiar cómo actúa dadas esas preferencias.
+
+Las **reglas** determinan qué acciones son posibles, quién puede actuar, en qué orden y cómo esas acciones se transforman en resultados. Mayoría simple, poder de veto, control de agenda, quórums, elecciones periódicas y procedimientos legislativos son ejemplos de reglas que modifican una interacción.
+
+La **información** determina qué conoce cada jugador cuando toma una decisión. Puede existir información completa acerca de las preferencias y acciones disponibles de los demás, o pueden existir distintos tipos de incertidumbre y asimetrías de información.
+
+Finalmente buscamos una **solución**. Queremos identificar comportamientos mutuamente consistentes dadas las preferencias, las acciones, las reglas y la información del juego.
+
+Modelar consiste en construir un mapa simplificado de una interacción. La utilidad de ese mapa depende de que conserve los elementos necesarios para explicar el fenómeno que queremos estudiar y descarte aquellos que no son necesarios para esa pregunta.
+
+### Un primer modelo político: elegir una política en un espacio continuo
+
+Consideremos un grupo de $n$ personas que debe escoger una política pública. Supongamos que las políticas posibles pertenecen a un continuo:
+
+$$
+x\in X\subseteq\mathbb{R}.
+$$
+
+Podemos pensar en $x$ como gasto público, nivel de impuestos, grado de regulación, generosidad de un programa o cualquier otra decisión susceptible de ordenarse sobre una dimensión.
+
+Cada individuo $i$ tiene una política ideal:
+
+$$
+x_i.
+$$
+
+Una representación especialmente sencilla de sus preferencias es
+
+$$
+u_i(x)=-(x-x_i)^2.
+$$
+
+La utilidad alcanza su máximo cuando
+
+$$
+x=x_i
+$$
+
+y disminuye a medida que la política se aleja de ese punto.
+
+Esta estructura representa **preferencias de pico único** o *single-peaked preferences*. Cada persona tiene una alternativa que prefiere a todas las demás y su valoración disminuye a medida que nos alejamos de ella en cualquiera de las dos direcciones.
+
+Supongamos tres votantes cuyos puntos ideales satisfacen
+
+$$
+x_1<x_2<x_3.
+$$
+
+Si se enfrentan dos alternativas $x$ e $y$, el votante $i$ apoya $x$ cuando
+
+$$
+u_i(x)>u_i(y).
+$$
+
+Con preferencias cuadráticas esto equivale a
+
+$$
+|x-x_i|<|y-x_i|.
+$$
+
+Cada persona vota por la alternativa que se encuentra más cerca de su punto ideal.
+
+```{r}
+#| label: fig-utilidades-espaciales
+#| fig-cap: "Preferencias espaciales con tres votantes."
+#| echo: true
+
+ideal_points <- tibble(
+  voter = c("Votante 1", "Votante 2", "Votante 3"),
+  ideal = c(25, 50, 75)
+)
+
+x_grid <- seq(0, 100, length.out = 401)
+
+spatial_utilities <- tidyr::crossing(
+  ideal_points,
+  x = x_grid
+) |>
+  mutate(utility = -(x - ideal)^2)
+
+ggplot(spatial_utilities, aes(x = x, y = utility, linetype = voter)) +
+  geom_line(linewidth = 0.8) +
+  geom_vline(
+    data = ideal_points,
+    aes(xintercept = ideal),
+    linewidth = 0.35,
+    alpha = 0.5
+  ) +
+  labs(
+    x = "Política x",
+    y = "Utilidad",
+    linetype = NULL
+  )
+```
+
+La decisión colectiva se obtiene mediante mayoría simple. Podemos escribir
+
+$$
+x\succ_M y
+$$
+
+cuando una mayoría de los individuos prefiere $x$ a $y$.
+
+Tenemos ya un modelo político completo en su forma mínima. Existen jugadores, un conjunto de alternativas, preferencias individuales y una regla de agregación.
+
+### El votante mediano
+
+Ordenemos los puntos ideales:
+
+$$
+x_1\leq x_2\leq\cdots\leq x_n.
+$$
+
+Si $n$ es impar, existe un votante cuya posición divide al electorado en dos grupos de igual tamaño. Denotaremos su punto ideal por
+
+$$
+x_m.
+$$
+
+Bajo mayoría simple y preferencias de pico único, $x_m$ derrota mediante comparación mayoritaria a cualquier otra alternativa. Este es el resultado central asociado al teorema del votante mediano [@black1948].
+
+La intuición se observa directamente en el espacio político.
+
+Supongamos una alternativa
+
+$$
+y>x_m.
+$$
+
+El votante mediano prefiere $x_m$ a $y$. También lo hacen todos los votantes cuyos puntos ideales están a la izquierda de $x_m$. Existe entonces una mayoría que prefiere $x_m$.
+
+Para una alternativa
+
+$$
+z<x_m,
+$$
+
+el razonamiento es simétrico. El votante mediano y todos los votantes situados a su derecha prefieren $x_m$.
+
+Por tanto,
+
+$$
+x_m\succ_M x
+\qquad
+\forall x\neq x_m.
+$$
+
+El resultado colectivo queda determinado por la distribución de preferencias:
+
+$$
+\boxed{x^*=x_m}.
+$$
+
+Este resultado será nuestro primer **benchmark institucional**. Bajo una dimensión, preferencias de pico único y competencia abierta entre alternativas, la política preferida por el votante mediano ocupa una posición privilegiada.
+
+También permite introducir una primera forma de estática comparativa. Si cambian las preferencias de la población y el votante mediano se desplaza,
+
+$$
+x_m\rightarrow x_m',
+$$
+
+la política de equilibrio se desplaza también:
+
+$$
+x^*\rightarrow x_m'.
+$$
+
+La pregunta siguiente será decisiva:
+
+> ¿Seguimos obteniendo $x_m$ cuando modificamos las reglas mediante las cuales las alternativas llegan a ser consideradas?
+
+## Las instituciones modifican el juego
+
+Hasta aquí hemos supuesto implícitamente que cualquier alternativa puede compararse con cualquier otra. Esa hipótesis es una característica institucional del modelo.
+
+En muchas decisiones políticas las alternativas llegan a votación mediante procedimientos específicos. Alguien decide qué propuesta presentar. Existe un status quo. Algunas decisiones requieren la aprobación de otro actor. Ciertos participantes pueden bloquear cambios. Las propuestas pueden realizarse secuencialmente.
+
+Podemos resumir el resultado político de manera más general como
+
+$$
+x^*
+=
+f(\text{preferencias},\text{reglas},\text{situación inicial}).
+$$
+
+Mantendremos inicialmente las mismas preferencias. Modificaremos las reglas y el status quo para observar qué ocurre con el resultado.
+
+### Control de agenda
+
+Supongamos que existe una política vigente
+
+$$
+q,
+$$
+
+que llamaremos **status quo**.
+
+Un actor $S$ posee control de agenda. Puede realizar una propuesta $p$. La mayoría enfrenta solamente dos alternativas:
+
+$$
+\{p,q\}.
+$$
+
+Si la propuesta obtiene mayoría, se implementa $p$. Si es rechazada, permanece $q$.
+
+Supongamos primero que
+
+$$
+q<x_m.
+$$
+
+El votante mediano acepta $p$ siempre que
+
+$$
+u_m(p)\geq u_m(q).
+$$
+
+Con utilidad cuadrática,
+
+$$
+-(p-x_m)^2
+\geq
+-(q-x_m)^2,
+$$
+
+lo que equivale a
+
+$$
+|p-x_m|
+\leq
+|q-x_m|.
+$$
+
+Cuando $q<x_m$, el conjunto de políticas que el votante mediano prefiere al status quo es
+
+$$
+p\in[q,\,2x_m-q].
+$$
+
+El control de agenda produce entonces una consecuencia inmediata. El setter puede proponer una política situada más allá del punto ideal del votante mediano y aun así obtener su apoyo.
+
+Supongamos que el agenda setter tiene un punto ideal $x_S>x_m$. Si puede escoger libremente dentro del conjunto aceptable, su propuesta óptima será
+
+$$
+p^*
+=
+\min\{x_S,\,2x_m-q\}.
+$$
+
+El resultado puede diferir de
+
+$$
+x_m.
+$$
+
+La mayoría sigue votando racionalmente. El resultado cambia porque la mayoría debe escoger entre una propuesta y una alternativa de referencia específica.
+
+El status quo también importa. Si disminuye $q$, aumenta la distancia entre el status quo y el punto ideal del votante mediano. Como consecuencia, se amplía hacia la derecha el conjunto de propuestas que la mayoría está dispuesta a aceptar.
+
+```{r}
+#| label: fig-agenda-setting
+#| fig-cap: "Control de agenda: una peor alternativa de reversión amplía el conjunto de propuestas aceptables para el votante mediano."
+#| echo: true
+
+xm <- 50
+q_values <- c(45, 35, 20)
+
+agenda_df <- tibble(
+  q = q_values,
+  upper = 2 * xm - q
+)
+
+ggplot(agenda_df, aes(y = factor(q, levels = rev(q_values)))) +
+  geom_segment(
+    aes(x = q, xend = upper, yend = factor(q, levels = rev(q_values))),
+    linewidth = 1.1
+  ) +
+  geom_point(aes(x = q), size = 2.5) +
+  geom_point(aes(x = upper), size = 2.5) +
+  geom_vline(xintercept = xm, linetype = "dashed") +
+  labs(
+    x = "Espacio de políticas",
+    y = "Status quo q",
+    caption = "La línea vertical identifica el punto ideal del votante mediano."
+  )
+```
+
+### Poder de veto
+
+Consideremos ahora una regla diferente.
+
+La mayoría desea modificar una política vigente $q$. Existe además un actor $V$ que puede vetar el cambio. Su política ideal es
+
+$$
+x_V.
+$$
+
+Una propuesta $p$ puede implementarse solamente si el veto player la prefiere al status quo:
+
+$$
+u_V(p)\geq u_V(q).
+$$
+
+Con preferencias espaciales cuadráticas,
+
+$$
+|p-x_V|
+\leq
+|q-x_V|.
+$$
+
+Supongamos que la mayoría preferiría implementar directamente
+
+$$
+p=x_m.
+$$
+
+La reforma será aceptada por el veto player cuando
+
+$$
+|x_m-x_V|
+\leq
+|q-x_V|.
+$$
+
+Un cambio en $q$ puede alterar completamente el resultado sin modificar las preferencias de ningún actor ni la regla de veto.
+
+Para ciertos status quo, $x_m$ pertenece al conjunto aceptable del veto player y la mayoría puede implementar su política preferida. Para otros, $x_m$ queda fuera de ese conjunto, pero existe alguna política intermedia que ambos prefieren a $q$. En ese caso puede producirse una reforma parcial. Para otros valores de $q$, permanece el status quo.
+
+Las preferencias siguen siendo las mismas. También permanece constante la distribución de votos. El resultado depende ahora de tres componentes:
+
+$$
+\boxed{
+\text{preferencias}
++
+\text{reglas}
++
+\text{status quo}
+}
+$$
+
+---
+
+## Parte II. Romer y Rosenthal: gasto público, votación y poder de agenda
+
+*Segundo módulo: 70 minutos.*
+
+### El problema
+
+Romer y Rosenthal estudian la determinación del gasto público bajo una estructura institucional en la que un actor controla la propuesta presupuestaria y los votantes deben escoger entre esa propuesta y una alternativa determinada institucionalmente [@romerrosenthal1979].
+
+El benchmark competitivo sugiere que, bajo mayoría simple y preferencias de pico único, el nivel de gasto debería aproximarse al preferido por el votante mediano. Romer y Rosenthal consideran una institución distinta: el votante no puede escoger libremente cualquier nivel de gasto.
+
+El contexto son referéndums sobre gasto público. Un actor con control de agenda presenta una propuesta. Si la propuesta es rechazada, se implementa un nivel de gasto determinado por una regla previa. Los autores llaman a esa alternativa el **reversion point**.
+
+La pregunta puede expresarse de manera sencilla:
+
+$$
+\boxed{
+\text{¿Cuánto gasto puede obtener un actor que controla la propuesta?}
+}
+$$
+
+La respuesta requiere combinar dos elementos.
+
+Primero debemos conocer las preferencias de los votantes sobre distintos niveles de gasto.
+
+Después debemos incorporar la regla institucional que determina qué pueden escoger.
+
+### De las preferencias económicas a las preferencias políticas
+
+Cada individuo $i$ consume un bien privado $C_i$ y recibe servicios provenientes de un bien provisto colectivamente $G_i$. Su utilidad es
+
+$$
+U_i(C_i,G_i).
+$$
+
+El consumo del bien colectivamente financiado depende del gasto público:
+
+$$
+G_i=f_i(E),
+$$
+
+donde $E$ representa gasto público.
+
+Más gasto permite una mayor provisión del bien colectivo. Sin embargo, ese gasto debe financiarse.
+
+### La restricción presupuestaria
+
+El gasto público se financia mediante un impuesto proporcional. Si $T$ es la tasa impositiva y $Y$ la base tributaria total,
+
+$$
+E=TY.
+$$
+
+Sea $Y_i$ el ingreso o riqueza del individuo $i$ sujeto al impuesto y sea $\bar Y_i$ su ingreso total. Su consumo privado queda restringido por
+
+$$
+C_i
+\leq
+\bar Y_i-TY_i.
+$$
+
+Sustituyendo
+
+$$
+T=\frac{E}{Y},
+$$
+
+obtenemos
+
+$$
+C_i
+\leq
+\bar Y_i-\frac{Y_i}{Y}E.
+$$
+
+El aumento de $E$ produce dos efectos. Incrementa la provisión colectiva,
+
+$$
+G_i=f_i(E),
+$$
+
+pero también aumenta los impuestos y reduce el consumo privado.
+
+Podemos sustituir ambas relaciones dentro de la función de utilidad y expresar directamente la utilidad del individuo como función del gasto público:
+
+$$
+V_i(E)
+=
+U_i
+\left(
+\bar Y_i-\frac{Y_i}{Y}E,
+f_i(E)
+\right).
+$$
+
+Bajo los supuestos del modelo, $V_i(E)$ es single-peaked. Cada votante posee un nivel ideal de gasto:
+
+$$
+E_i.
+$$
+
+La utilidad aumenta mientras
+
+$$
+E<E_i
+$$
+
+y disminuye cuando
+
+$$
+E>E_i.
+$$
+
+Romer y Rosenthal han construido de esta forma las preferencias espaciales que anteriormente habíamos supuesto directamente.
+
+$$
+\boxed{
+U_i(C_i,G_i)
+\rightarrow
+\text{restricción presupuestaria}
+\rightarrow
+V_i(E)
+\rightarrow
+E_i
+}
+$$
+
+El punto ideal político $E_i$ emerge de un problema de optimización económica.
+
+### El benchmark competitivo
+
+Ordenemos los niveles ideales de gasto:
+
+$$
+E_1\leq E_2\leq\cdots\leq E_n.
+$$
+
+Denotemos por
+
+$$
+E_m
+$$
+
+el nivel ideal del votante mediano.
+
+Si cualquier nivel de gasto pudiera competir con cualquier otro mediante mayoría simple,
+
+$$
+E^C=E_m.
+$$
+
+Este es el modelo competitivo que Romer y Rosenthal utilizan como referencia.
+
+### Introducir el punto de reversión
+
+Sea
+
+$$
+E_q
+$$
+
+el gasto que se implementará si los votantes rechazan la propuesta.
+
+Un agenda setter propone un gasto
+
+$$
+E.
+$$
+
+Cada votante enfrenta solamente dos alternativas:
+
+$$
+\{E,E_q\}.
+$$
+
+El votante $i$ votará a favor de la propuesta si
+
+$$
+V_i(E)\geq V_i(E_q).
+$$
+
+Para cada votante podemos definir el mayor nivel de gasto que está dispuesto a aceptar frente a $E_q$:
+
+$$
+\bar E_i(E_q)
+=
+\sup
+\left\{
+E:
+V_i(E)\geq V_i(E_q)
+\right\}.
+$$
+
+Con la especificación cuadrática utilizada para las simulaciones,
+
+$$
+V_i(E)=-(E-E_i)^2,
+$$
+
+el máximo gasto aceptable es
+
+$$
+\bar E_i(E_q)
+=
+E_i+|E_q-E_i|.
+$$
+
+Por tanto,
+
+$$
+\bar E_i(E_q)
+=
+\begin{cases}
+2E_i-E_q, & E_q<E_i,\\
+E_q, & E_q\geq E_i.
+\end{cases}
+$$
+
+Este objeto resume cuánto puede extraer el setter de cada votante dada la alternativa de reversión.
+
+### El problema del agenda setter
+
+El setter busca maximizar el nivel de gasto aprobado.
+
+Definamos
+
+$$
+b_i(E;E_q)
+=
+\begin{cases}
+1 & \text{si }V_i(E)\geq V_i(E_q),\\
+0 & \text{en caso contrario}.
+\end{cases}
+$$
+
+Su problema puede escribirse como
+
+$$
+\max_E E
+$$
+
+sujeto a obtener una mayoría:
+
+$$
+\sum_{i=1}^{n} b_i(E;E_q)
+\geq
+\frac{n+1}{2},
+$$
+
+suponiendo un número impar de votantes.
+
+Primero determinamos cómo votará cada ciudadano frente a cualquier propuesta. Después el setter anticipa esas respuestas y escoge el mayor $E$ capaz de obtener una mayoría.
+
+La solución es el votante mediano de los niveles máximos aceptables:
+
+$$
+E^*(E_q)
+=
+\operatorname{median}
+\left\{
+\bar E_1(E_q),
+\ldots,
+\bar E_n(E_q)
+\right\}.
+$$
+
+El objeto relevante ya no es solamente la distribución de puntos ideales $E_i$. Importa cómo esos puntos ideales, combinados con el punto de reversión, determinan cuánto está dispuesto a aceptar cada votante.
+
+### Implementación computacional del modelo bajo certeza
+
+La siguiente función implementa directamente la solución anterior.
+
+```{r}
+#| label: rr-functions-certainty
+#| echo: true
+
+rr_upper_accept <- function(q, ideals) {
+  ideals + abs(q - ideals)
+}
+
+rr_certainty_outcome <- function(q, ideals) {
+  median(rr_upper_accept(q, ideals))
+}
+```
+
+Construyamos un electorado simétrico con 101 votantes y gasto ideal mediano igual a 50.
+
+```{r}
+#| label: rr-baseline-electorate
+#| echo: true
+
+ideals_rr <- seq(20, 80, length.out = 101)
+Em <- median(ideals_rr)
+
+Em
+```
+
+Para distintos puntos de reversión podemos calcular el gasto máximo que obtiene el setter.
+
+```{r}
+#| label: rr-certainty-table
+#| echo: true
+
+tibble(
+  reversion = c(10, 25, 40, 50, 60, 75),
+  equilibrium = map_dbl(
+    c(10, 25, 40, 50, 60, 75),
+    ~ rr_certainty_outcome(.x, ideals_rr)
+  )
+)
+```
+
+### El resultado central
+
+Cuando el punto de reversión se encuentra por debajo del gasto ideal mediano,
+
+$$
+E_q<E_m,
+$$
+
+el setter puede proponer un gasto superior a $E_m$ y todavía conseguir una mayoría.
+
+Con preferencias cuadráticas y un electorado cuyo votante mediano tiene ideal $E_m$,
+
+$$
+E^*(E_q)=2E_m-E_q
+\qquad
+\text{si }E_q<E_m.
+$$
+
+Cuando
+
+$$
+E_q\geq E_m,
+$$
+
+ninguna propuesta de gasto mayor puede derrotar al punto de reversión mediante mayoría. Por tanto,
+
+$$
+E^*(E_q)=E_q.
+$$
+
+En conjunto,
+
+$$
+\boxed{
+E^*(E_q)
+=
+\begin{cases}
+2E_m-E_q, & E_q<E_m,\\
+E_q, & E_q\geq E_m.
+\end{cases}
+}
+$$
+
+Esta especificación produce una versión transparente de la relación central representada por Romer y Rosenthal entre gasto aprobado y punto de reversión.
+
+```{r}
+#| label: fig-rr-certainty
+#| fig-cap: "Equilibrio bajo certeza como función del punto de reversión. La línea horizontal identifica el gasto ideal del votante mediano."
+#| echo: true
+
+q_grid <- seq(0, 100, by = 0.5)
+
+rr_curve_certainty <- tibble(
+  q = q_grid,
+  equilibrium = map_dbl(q_grid, ~ rr_certainty_outcome(.x, ideals_rr))
+)
+
+p_rr_certainty <- ggplot(
+  rr_curve_certainty,
+  aes(x = q, y = equilibrium)
+) +
+  geom_line(linewidth = 0.9) +
+  geom_hline(yintercept = Em, linetype = "dashed") +
+  labs(
+    x = "Punto de reversión, E[q]",
+    y = "Gasto aprobado, E*(E[q])"
+  )
+
+p_rr_certainty
+```
+
+La curva tiene dos regiones.
+
+Para
+
+$$
+E_q<E_m,
+$$
+
+una reducción del punto de reversión incrementa el máximo gasto que una mayoría está dispuesta a aceptar:
+
+$$
+E_q\downarrow
+\quad\Rightarrow\quad
+E^*(E_q)\uparrow.
+$$
+
+Para
+
+$$
+E_q\geq E_m,
+$$
+
+el propio punto de reversión determina el gasto:
+
+$$
+E^*(E_q)=E_q.
+$$
+
+### Interacción: mover el punto de reversión
+
+En la versión HTML del libro, el siguiente gráfico permite recorrer distintos valores del punto de reversión. El punto móvil identifica el equilibrio correspondiente sobre la curva completa.
+
+```{r}
+#| label: fig-rr-interactive-q
+#| echo: true
+
+q_frames <- seq(0, 100, by = 2)
+
+rr_frames <- tibble(
+  q = q_frames,
+  equilibrium = map_dbl(q_frames, ~ rr_certainty_outcome(.x, ideals_rr)),
+  frame = sprintf("E[q] = %03.0f", q_frames)
+)
+
+if (knitr::is_html_output()) {
+  plot_ly() |>
+    add_lines(
+      data = rr_curve_certainty,
+      x = ~q,
+      y = ~equilibrium,
+      name = "Curva de equilibrio",
+      hoverinfo = "x+y"
+    ) |>
+    add_markers(
+      data = rr_frames,
+      x = ~q,
+      y = ~equilibrium,
+      frame = ~frame,
+      name = "Equilibrio seleccionado",
+      marker = list(size = 10),
+      hovertemplate = paste(
+        "Reversión: %{x:.0f}<br>",
+        "Equilibrio: %{y:.0f}<extra></extra>"
+      )
+    ) |>
+    layout(
+      xaxis = list(title = "Punto de reversión, E[q]"),
+      yaxis = list(title = "Gasto aprobado, E*(E[q])"),
+      showlegend = TRUE
+    ) |>
+    animation_opts(
+      frame = 100,
+      transition = 0,
+      redraw = TRUE
+    ) |>
+    animation_slider(
+      currentvalue = list(prefix = "", font = list(color = "#333333"))
+    ) |>
+    animation_button(label = "Reproducir") |>
+    style(name = "Equilibrio seleccionado", traces = 2)
+} else {
+  p_rr_certainty
+}
+```
+
+Este gráfico puede utilizarse para experimentar con una pregunta simple: manteniendo constantes las preferencias, ¿cuánto cambia el resultado político cuando sólo modificamos la consecuencia institucional de rechazar la propuesta?
+
+### Variar las preferencias del electorado
+
+La misma implementación permite modificar la distribución de puntos ideales.
+
+```{r}
+#| label: rr-preference-variation
+#| echo: true
+
+electorates <- list(
+  "Mediana = 40" = seq(10, 70, length.out = 101),
+  "Mediana = 50" = seq(20, 80, length.out = 101),
+  "Mediana = 60" = seq(30, 90, length.out = 101)
+)
+
+rr_preference_curves <- imap_dfr(
+  electorates,
+  function(ideals, label) {
+    tibble(
+      electorate = label,
+      q = q_grid,
+      equilibrium = map_dbl(q_grid, ~ rr_certainty_outcome(.x, ideals))
+    )
+  }
+)
+
+ggplot(
+  rr_preference_curves,
+  aes(x = q, y = equilibrium, linetype = electorate)
+) +
+  geom_line(linewidth = 0.85) +
+  labs(
+    x = "Punto de reversión, E[q]",
+    y = "Gasto aprobado",
+    linetype = "Electorado"
+  )
+```
+
+La comparación separa dos fuentes de cambio.
+
+Una curva puede desplazarse porque cambia la distribución de preferencias. Dentro de cada curva, el resultado también cambia porque se modifica la regla de reversión.
+
+### Incertidumbre sobre participación
+
+Romer y Rosenthal extienden el modelo permitiendo que la participación electoral sea aleatoria. El setter conoce la distribución de preferencias, pero no sabe con certeza quién participará.
+
+Para una propuesta $E$ y un punto de reversión $E_q$, definamos
+
+$$
+q(E)
+$$
+
+como la proporción del electorado que votaría a favor si participara. Si cada votante se abstiene con probabilidad $r$, los autores aproximan la probabilidad de aprobación mediante una distribución normal.
+
+La implementación siguiente reproduce esa lógica numéricamente para un electorado finito. Primero calculamos qué fracción del electorado aceptaría cada propuesta. Luego utilizamos la aproximación normal del artículo para obtener la probabilidad de aprobación y buscamos la propuesta que maximiza el gasto esperado.
+
+```{r}
+#| label: rr-functions-uncertainty
+#| echo: true
+
+rr_pass_probability <- function(E, q, ideals, abstention) {
+  stopifnot(abstention > 0, abstention < 1)
+
+  upper_accept <- rr_upper_accept(q, ideals)
+  share_yea <- mean(upper_accept >= E)
+
+  t_value <- sqrt(
+    length(ideals) * (1 - abstention) / abstention
+  ) * (1 - 2 * share_yea)
+
+  1 - pnorm(t_value)
+}
+
+rr_uncertain_outcome <- function(
+  q,
+  ideals,
+  abstention,
+  grid_points = 250
+) {
+  upper <- max(rr_upper_accept(q, ideals))
+
+  if (upper <= q) {
+    return(
+      tibble(
+        q = q,
+        proposal = q,
+        pass_probability = 1,
+        expected_expenditure = q
+      )
+    )
+  }
+
+  proposals <- seq(q, upper, length.out = grid_points)
+
+  probs <- map_dbl(
+    proposals,
+    ~ rr_pass_probability(.x, q, ideals, abstention)
+  )
+
+  expected_expenditure <- q + (proposals - q) * probs
+
+  best <- which.max(expected_expenditure)
+
+  tibble(
+    q = q,
+    proposal = proposals[best],
+    pass_probability = probs[best],
+    expected_expenditure = expected_expenditure[best]
+  )
+}
+```
+
+Para un nivel dado de abstención podemos comparar el resultado esperado con la solución bajo certeza.
+
+```{r}
+#| label: fig-rr-uncertainty-static
+#| fig-cap: "Resultado bajo certeza y gasto esperado con participación incierta."
+#| echo: true
+
+abstention_baseline <- 0.50
+q_uncertainty <- seq(0, 100, by = 2)
+
+uncertain_curve <- map_dfr(
+  q_uncertainty,
+  ~ rr_uncertain_outcome(
+    q = .x,
+    ideals = ideals_rr,
+    abstention = abstention_baseline
+  )
+)
+
+certainty_curve_coarse <- tibble(
+  q = q_uncertainty,
+  expenditure = map_dbl(
+    q_uncertainty,
+    ~ rr_certainty_outcome(.x, ideals_rr)
+  ),
+  model = "Certeza"
+)
+
+uncertainty_curve_plot <- uncertain_curve |>
+  transmute(
+    q,
+    expenditure = expected_expenditure,
+    model = paste0(
+      "Participación incierta (r = ",
+      abstention_baseline,
+      ")"
+    )
+  )
+
+bind_rows(
+  certainty_curve_coarse,
+  uncertainty_curve_plot
+) |>
+  ggplot(aes(x = q, y = expenditure, linetype = model)) +
+  geom_line(linewidth = 0.9) +
+  labs(
+    x = "Punto de reversión, E[q]",
+    y = "Gasto / gasto esperado",
+    linetype = NULL
+  )
+```
+
+Este ejercicio es una **reproducción numérica de la lógica del modelo**, no una reproducción exacta de la figura original con sus parámetros históricos. La forma concreta depende de la distribución de preferencias, el tamaño del electorado y la probabilidad de abstención.
+
+### Interacción: variar la probabilidad de abstención
+
+Podemos utilizar la misma implementación para modificar $r$ y observar cómo cambia la relación entre punto de reversión y gasto esperado.
+
+```{r}
+#| label: fig-rr-interactive-turnout
+#| echo: true
+
+abstention_values <- seq(0.10, 0.90, by = 0.10)
+
+rr_uncertainty_frames <- crossing(
+  abstention = abstention_values,
+  q = q_uncertainty
+) |>
+  mutate(
+    result = map2(
+      q,
+      abstention,
+      ~ rr_uncertain_outcome(
+        q = .x,
+        ideals = ideals_rr,
+        abstention = .y,
+        grid_points = 180
+      )
+    )
+  ) |>
+  select(-q) |> # q también está incluida en cada resultado
+  unnest(result) |>
+  mutate(
+    frame = sprintf("r = %.1f", abstention)
+  )
+
+if (knitr::is_html_output()) {
+  plot_ly() |>
+    add_lines(
+      data = certainty_curve_coarse,
+      x = ~q,
+      y = ~expenditure,
+      name = "Certeza",
+      hoverinfo = "x+y"
+    ) |>
+    add_lines(
+      data = rr_uncertainty_frames,
+      x = ~q,
+      y = ~expected_expenditure,
+      frame = ~frame,
+      name = "Participación incierta",
+      hovertemplate = paste(
+        "Reversión: %{x:.0f}<br>",
+        "Gasto esperado: %{y:.2f}<extra></extra>"
+      )
+    ) |>
+    layout(
+      xaxis = list(title = "Punto de reversión, E[q]"),
+      yaxis = list(title = "Gasto / gasto esperado"),
+      showlegend = TRUE
+    ) |>
+    animation_opts(
+      frame = 100,
+      transition = 0,
+      redraw = TRUE
+    ) |>
+    animation_slider(
+      currentvalue = list(prefix = "", font = list(color = "#333333"))
+    ) |>
+    animation_button(label = "Reproducir")
+} else {
+  bind_rows(
+    certainty_curve_coarse,
+    rr_uncertainty_frames |>
+      filter(abstention == 0.50) |>
+      transmute(
+        q,
+        expenditure = expected_expenditure,
+        model = "Participación incierta"
+      )
+  ) |>
+    ggplot(aes(x = q, y = expenditure, linetype = model)) +
+    geom_line(linewidth = 0.9) +
+    labs(
+      x = "Punto de reversión, E[q]",
+      y = "Gasto / gasto esperado",
+      linetype = NULL
+    )
+}
+```
+
+La interacción permite explorar una de las extensiones centrales del artículo manteniendo fija la distribución de preferencias. En particular, permite comparar cómo distintos niveles de abstención modifican el gasto esperado del setter para puntos de reversión bajos y altos.
+
+### Elecciones sucesivas
+
+Romer y Rosenthal consideran finalmente instituciones que permiten realizar más de un referéndum cuando una propuesta fracasa.
+
+Si el setter dispone de $T$ intentos y puede escoger una nueva propuesta después de cada derrota, la secuencia óptima satisface
+
+$$
+x_1>x_2>\cdots>x_T,
+$$
+
+y la última propuesta coincide con la que habría realizado si solamente hubiera dispuesto de una elección:
+
+$$
+x_T=x^*.
+$$
+
+El setter comienza con una propuesta relativamente ambiciosa. Si fracasa, reduce la siguiente. La existencia de nuevas oportunidades modifica el valor estratégico de realizar propuestas altas al comienzo de la secuencia.
+
+Esta extensión se incorporará posteriormente a la implementación computacional utilizando la misma estructura básica: preferencias individuales, punto de reversión, probabilidad de aprobación y optimización del gasto esperado.
+
+## De la predicción a la evidencia
+
+El modelo genera predicciones observables.
+
+Si el punto de reversión afecta el poder del setter, jurisdicciones con diferentes reglas de reversión deberían exhibir distintos patrones de gasto incluso después de considerar las preferencias de sus habitantes.
+
+Romer y Rosenthal utilizan distritos escolares de Oregon para ilustrar esta posibilidad. Algunos distritos podían financiar niveles importantes de gasto sin realizar referéndums, mientras que otros enfrentaban puntos de reversión muy bajos. El artículo presenta evidencia descriptiva y deja un análisis econométrico sistemático para investigaciones posteriores [@romerrosenthal1979].
+
+Entre los patrones documentados, los distritos que no realizaban elecciones tendían a utilizar prácticamente todo el gasto permitido por su punto de reversión. Cuando se realizaban varias votaciones sucesivas, las propuestas posteriores tendían mucho más frecuentemente a mantenerse o reducirse que a aumentar.
+
+Tenemos así la secuencia completa:
+
+$$
+\boxed{
+\text{problema}
+\rightarrow
+\text{modelo}
+\rightarrow
+\text{equilibrio}
+\rightarrow
+\text{predicciones}
+\rightarrow
+\text{evidencia}
+}
+$$
+
+## Cierre: cómo leer un modelo de economía política
+
+Al comenzar el capítulo identificamos seis componentes para representar una interacción estratégica. Romer y Rosenthal permiten completar por primera vez esa ficha.
+
+| Componente | Pregunta general | Romer y Rosenthal |
+|---|---|---|
+| **Jugadores** | ¿Quiénes toman decisiones? | Agenda setter y votantes |
+| **Acciones** | ¿Qué puede hacer cada jugador? | El setter propone $E$; los votantes aprueban o rechazan |
+| **Preferencias** | ¿Qué resultados busca cada uno? | Cada votante tiene $V_i(E)$; el setter busca maximizar gasto |
+| **Reglas** | ¿Cómo se transforman las acciones en resultados? | El setter controla la propuesta; mayoría simple; rechazo conduce a $E_q$ |
+| **Información** | ¿Qué sabe cada jugador cuando decide? | En el modelo básico existe certeza sobre preferencias y participación |
+| **Solución** | ¿Qué comportamiento resulta consistente con esas decisiones? | El setter anticipa los votos y propone el mayor $E$ capaz de obtener mayoría |
+
+Esta será la estructura de lectura utilizada durante el curso.
+
+Cada modelo hará elecciones distintas acerca de jugadores, preferencias, acciones, información y reglas. Esas decisiones producirán diferentes problemas estratégicos y diferentes conceptos de solución.
+
+Romer y Rosenthal muestran además una idea que reaparecerá en los capítulos siguientes. Dos sociedades con preferencias idénticas pueden producir resultados políticos diferentes cuando enfrentan instituciones o situaciones iniciales diferentes. Formalizar esas diferencias permite identificar el mecanismo que conecta las reglas con los resultados y derivar predicciones que posteriormente pueden confrontarse con evidencia.
+
+## Referencias
+
+::: {#refs}
+:::

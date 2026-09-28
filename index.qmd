@@ -1,0 +1,5 @@
+# Presentación {.unnumbered}
+
+Material del curso **Economía Política Formal - 2026**.
+
+El [Capítulo 1](chapters/01-interaccion-instituciones-agenda.qmd) estudia la interacción estratégica, las instituciones y el poder de agenda, con simulaciones y gráficos interactivos.
