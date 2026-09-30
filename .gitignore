@@ -4,6 +4,8 @@ _book/
 .RData
 .Rproj.user/
 *.log
+_quarto.yml
+references.bib
 
 /.quarto/
 **/*.quarto_ipynb
@@ -12,3 +14,4 @@ _book/
 /scripts/validar-capitulo.R
 /references.bib
 /Economia_Politica_Formal_2026_v2.docx
+/.github/workflows/
