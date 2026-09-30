@@ -22,8 +22,6 @@ theme_set(theme_minimal(base_size = 12))
 
 ## Parte I. De la interacción social a la teoría espacial del voto
 
-*Primer módulo: 70 minutos.*
-
 ### Política como interacción estratégica
 
 La política ocurre en contextos de interdependencia. Las decisiones de una persona, organización o grupo producen consecuencias que dependen también de lo que otros hacen, de lo que esperan que otros hagan y de las reglas que organizan esas interacciones. Una legisladora decide cómo votar considerando la propuesta que enfrenta y las consecuencias de aprobarla o rechazarla. Un partido decide qué posición adoptar considerando las respuestas de otros partidos y de los electores. Un gobierno formula una propuesta anticipando la reacción del Congreso.
@@ -116,7 +114,7 @@ $$
 
 y disminuye a medida que la política se aleja de ese punto.
 
-Esta estructura representa **preferencias de pico único** o *single-peaked preferences*. Cada persona tiene una alternativa que prefiere a todas las demás y su valoración disminuye a medida que nos alejamos de ella en cualquiera de las dos direcciones.
+Esta estructura representa *single-peaked preferences*. Cada persona tiene una alternativa que prefiere a todas las demás y su valoración disminuye a medida que nos alejamos de ella en cualquiera de las dos direcciones (también puede ser útil bidimensional para algunos casos de interés).
 
 Supongamos tres votantes cuyos puntos ideales satisfacen
 
@@ -195,11 +193,11 @@ $$
 x_m.
 $$
 
-Bajo mayoría simple y preferencias de pico único, $x_m$ derrota mediante comparación mayoritaria a cualquier otra alternativa. Este es el resultado central asociado al teorema del votante mediano [@black1948].
+Bajo mayoría simple y preferencias de single-peaked, $x_m$ derrota por simple mayoría a cualquier otra alternativa. Éste es el resultado central asociado al *teorema del votante mediano* [@black1948].
 
 La intuición se observa directamente en el espacio político.
 
-Supongamos una alternativa
+Supongamos una alternativa (por ejemplo, un proyecto de ley que busca implementar *y* )
 
 $$
 y>x_m.
@@ -229,7 +227,7 @@ $$
 \boxed{x^*=x_m}.
 $$
 
-Este resultado será nuestro primer **benchmark institucional**. Bajo una dimensión, preferencias de pico único y competencia abierta entre alternativas, la política preferida por el votante mediano ocupa una posición privilegiada.
+Este resultado será nuestro primer **benchmark institucional**. Bajo una dimensión, preferencias single-peaked y competencia abierta entre alternativas, la política preferida por el votante mediano ocupa una posición privilegiada.
 
 También permite introducir una primera forma de estática comparativa. Si cambian las preferencias de la población y el votante mediano se desplaza,
 
@@ -243,15 +241,13 @@ $$
 x^*\rightarrow x_m'.
 $$
 
-La pregunta siguiente será decisiva:
+Dado lo anterior:
 
 > ¿Seguimos obteniendo $x_m$ cuando modificamos las reglas mediante las cuales las alternativas llegan a ser consideradas?
 
 ## Las instituciones modifican el juego
 
-Hasta aquí hemos supuesto implícitamente que cualquier alternativa puede compararse con cualquier otra. Esa hipótesis es una característica institucional del modelo.
-
-En muchas decisiones políticas las alternativas llegan a votación mediante procedimientos específicos. Alguien decide qué propuesta presentar. Existe un status quo. Algunas decisiones requieren la aprobación de otro actor. Ciertos participantes pueden bloquear cambios. Las propuestas pueden realizarse secuencialmente.
+Hasta aquí hemos supuesto implícitamente que cualquier alternativa puede compararse con cualquier otra. Esa hipótesis es una característica institucional del modelo. No obstante, en muchas decisiones políticas las alternativas llegan a votación mediante procedimientos específicos. Alguien decide qué propuesta presentar. Existe un status quo. Algunas decisiones requieren la aprobación de otro actor. Ciertos participantes pueden bloquear cambios. Las propuestas pueden realizarse secuencialmente. Etcétera.
 
 Podemos resumir el resultado político de manera más general como
 
@@ -261,7 +257,7 @@ x^*
 f(\text{preferencias},\text{reglas},\text{situación inicial}).
 $$
 
-Mantendremos inicialmente las mismas preferencias. Modificaremos las reglas y el status quo para observar qué ocurre con el resultado.
+Mantendremos inicialmente las mismas preferencias. Modificaremos las reglas y el status quo para observar qué ocurre con el resultado. Veamos cómo inciden algunas reglas (o instituciones).
 
 ### Control de agenda
 
@@ -315,7 +311,7 @@ $$
 p\in[q,\,2x_m-q].
 $$
 
-El control de agenda produce entonces una consecuencia inmediata. El setter puede proponer una política situada más allá del punto ideal del votante mediano y aun así obtener su apoyo.
+El control de agenda produce entonces una consecuencia inmediata. El *agenda setter* puede proponer una política situada más allá del punto ideal del votante mediano y aun así obtener su apoyo.
 
 Supongamos que el agenda setter tiene un punto ideal $x_S>x_m$. Si puede escoger libremente dentro del conjunto aceptable, su propuesta óptima será
 
@@ -421,17 +417,15 @@ $$
 
 ## Parte II. Romer y Rosenthal: gasto público, votación y poder de agenda
 
-*Segundo módulo: 70 minutos.*
-
 ### El problema
 
 Romer y Rosenthal estudian la determinación del gasto público bajo una estructura institucional en la que un actor controla la propuesta presupuestaria y los votantes deben escoger entre esa propuesta y una alternativa determinada institucionalmente [@romerrosenthal1979].
 
-El benchmark competitivo sugiere que, bajo mayoría simple y preferencias de pico único, el nivel de gasto debería aproximarse al preferido por el votante mediano. Romer y Rosenthal consideran una institución distinta: el votante no puede escoger libremente cualquier nivel de gasto.
+El benchmark competitivo sugiere que, bajo mayoría simple y preferencias single-peaked, el nivel de gasto debería aproximarse al preferido por el votante mediano. Romer y Rosenthal consideran una institución distinta: el votante no puede escoger libremente cualquier nivel de gasto.
 
-El contexto son referéndums sobre gasto público. Un actor con control de agenda presenta una propuesta. Si la propuesta es rechazada, se implementa un nivel de gasto determinado por una regla previa. Los autores llaman a esa alternativa el **reversion point**.
+El contexto son referéndums sobre gasto público (y el caso empírico es el procedimiento en algunos distritos escolares en EEUU). Un actor con control de agenda presenta una propuesta. Si la propuesta es rechazada, se implementa un nivel de gasto determinado por una regla previa. Los autores llaman a esa alternativa el **reversion point**.
 
-La pregunta puede expresarse de manera sencilla:
+La pregunta de R&R puede expresarse así:
 
 $$
 \boxed{
@@ -439,11 +433,7 @@ $$
 }
 $$
 
-La respuesta requiere combinar dos elementos.
-
-Primero debemos conocer las preferencias de los votantes sobre distintos niveles de gasto.
-
-Después debemos incorporar la regla institucional que determina qué pueden escoger.
+Así planteado, se está asumiendo que el actor que controla la propuesta siempre quiere más gasto. Bajo esa premisa, la respuesta requiere combinar dos elementos. Primero debemos conocer las preferencias de los votantes sobre distintos niveles de gasto. Luego debemos incorporar la regla institucional que determina qué pueden escoger. Un aspecto interesante de este paper es que, como veremos, es que los autores parten de supuestos bastante estandar de preferencias individuales y derivan preferencias single peaked agregadas o inferidas a partir del juego de decisión colectiva. 
 
 ### De las preferencias económicas a las preferencias políticas
 
@@ -461,7 +451,7 @@ $$
 
 donde $E$ representa gasto público.
 
-Más gasto permite una mayor provisión del bien colectivo. Sin embargo, ese gasto debe financiarse.
+Más gasto permite una mayor provisión del bien colectivo. Sin embargo, ese gasto debe financiarse y para ello se requieren impuestos.
 
 ### La restricción presupuestaria
 
@@ -499,7 +489,7 @@ $$
 G_i=f_i(E),
 $$
 
-pero también aumenta los impuestos y reduce el consumo privado.
+pero también aumenta los impuestos y reduce el consumo privado. Así, de forma muy elegante, el trade-off del consumidor queda vinculado a la decisión colectiva de cuánto gastar en el bien público. 
 
 Podemos sustituir ambas relaciones dentro de la función de utilidad y expresar directamente la utilidad del individuo como función del gasto público:
 
@@ -513,7 +503,7 @@ f_i(E)
 \right).
 $$
 
-Bajo los supuestos del modelo, $V_i(E)$ es single-peaked. Cada votante posee un nivel ideal de gasto:
+Bajo los supuestos del modelo, $V_i(E)$ es single-peaked, pero esto es derivado como consecuencia de la vinculación de la preferencia con la decisión colectiva sobre *E* y no impuesta como un tipo de preferencia individual. Cada consumidor/votante posee un nivel ideal de gasto:
 
 $$
 E_i.
@@ -545,7 +535,7 @@ E_i
 }
 $$
 
-El punto ideal político $E_i$ emerge de un problema de optimización económica.
+El punto ideal político $E_i$ emerge de un problema de optimización económica. Es un modelo muy elegante. 
 
 ### El benchmark competitivo
 
@@ -636,7 +626,7 @@ E_q, & E_q\geq E_i.
 \end{cases}
 $$
 
-Este objeto resume cuánto puede extraer el setter de cada votante dada la alternativa de reversión.
+Este objeto resume cuánto puede extraer el agenda setter de cada votante dada la alternativa de reversión.
 
 ### El problema del agenda setter
 
@@ -686,7 +676,7 @@ $$
 
 El objeto relevante ya no es solamente la distribución de puntos ideales $E_i$. Importa cómo esos puntos ideales, combinados con el punto de reversión, determinan cuánto está dispuesto a aceptar cada votante.
 
-### Implementación computacional del modelo bajo certeza
+### Implementación del modelo bajo certeza
 
 La siguiente función implementa directamente la solución anterior.
 
@@ -829,9 +819,9 @@ $$
 E^*(E_q)=E_q.
 $$
 
-### Interacción: mover el punto de reversión
+### Moviendo el punto de reversión
 
-En la versión HTML del libro, el siguiente gráfico permite recorrer distintos valores del punto de reversión. El punto móvil identifica el equilibrio correspondiente sobre la curva completa.
+El siguiente gráfico permite recorrer distintos valores del punto de reversión. El punto móvil identifica el equilibrio correspondiente sobre la curva completa.
 
 ```{r}
 #| label: fig-rr-interactive-q
@@ -886,7 +876,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-Este gráfico puede utilizarse para experimentar con una pregunta simple: manteniendo constantes las preferencias, ¿cuánto cambia el resultado político cuando sólo modificamos la consecuencia institucional de rechazar la propuesta?
+Manteniendo constantes las preferencias, ¿cuánto cambia el resultado político cuando sólo modificamos la consecuencia institucional de rechazar la propuesta?
 
 ### Variar las preferencias del electorado
 
@@ -931,7 +921,7 @@ Una curva puede desplazarse porque cambia la distribución de preferencias. Dent
 
 ### Incertidumbre sobre participación
 
-Romer y Rosenthal extienden el modelo permitiendo que la participación electoral sea aleatoria. El setter conoce la distribución de preferencias, pero no sabe con certeza quién participará.
+Romer y Rosenthal extienden el modelo permitiendo que la participación electoral sea aleatoria. Es decir, analizan el escenario en que el agenda setter conoce la distribución de preferencias, pero no sabe con certeza quién participará.
 
 Para una propuesta $E$ y un punto de reversión $E_q$, definamos
 
@@ -1051,9 +1041,9 @@ bind_rows(
   )
 ```
 
-Este ejercicio es una **reproducción numérica de la lógica del modelo**, no una reproducción exacta de la figura original con sus parámetros históricos. La forma concreta depende de la distribución de preferencias, el tamaño del electorado y la probabilidad de abstención.
+Este ejercicio es una **reproducción numérica de la lógica del modelo**, no una reproducción exacta de la figura original del paper con sus parámetros históricos. La forma concreta depende de la distribución de preferencias, el tamaño del electorado y la probabilidad de abstención.
 
-### Interacción: variar la probabilidad de abstención
+### Variando la probabilidad de abstención
 
 Podemos utilizar la misma implementación para modificar $r$ y observar cómo cambia la relación entre punto de reversión y gasto esperado.
 
@@ -1140,13 +1130,13 @@ if (knitr::is_html_output()) {
 }
 ```
 
-La interacción permite explorar una de las extensiones centrales del artículo manteniendo fija la distribución de preferencias. En particular, permite comparar cómo distintos niveles de abstención modifican el gasto esperado del setter para puntos de reversión bajos y altos.
+La interacción permite explorar una de las extensiones centrales del artículo manteniendo fija la distribución de preferencias. En particular, permite comparar cómo distintos niveles de abstención modifican el gasto esperado del agenda setter para puntos de reversión bajos y altos.
 
 ### Elecciones sucesivas
 
 Romer y Rosenthal consideran finalmente instituciones que permiten realizar más de un referéndum cuando una propuesta fracasa.
 
-Si el setter dispone de $T$ intentos y puede escoger una nueva propuesta después de cada derrota, la secuencia óptima satisface
+Si el agenda setter dispone de $T$ intentos y puede escoger una nueva propuesta después de cada derrota, la secuencia óptima satisface
 
 $$
 x_1>x_2>\cdots>x_T,
@@ -1160,13 +1150,11 @@ $$
 
 El setter comienza con una propuesta relativamente ambiciosa. Si fracasa, reduce la siguiente. La existencia de nuevas oportunidades modifica el valor estratégico de realizar propuestas altas al comienzo de la secuencia.
 
-Esta extensión se incorporará posteriormente a la implementación computacional utilizando la misma estructura básica: preferencias individuales, punto de reversión, probabilidad de aprobación y optimización del gasto esperado.
-
 ## De la predicción a la evidencia
 
 El modelo genera predicciones observables.
 
-Si el punto de reversión afecta el poder del setter, jurisdicciones con diferentes reglas de reversión deberían exhibir distintos patrones de gasto incluso después de considerar las preferencias de sus habitantes.
+Por ejemplo: Si el punto de reversión afecta el poder del agenda setter, jurisdicciones con diferentes reglas de reversión deberían exhibir distintos patrones de gasto incluso después de considerar las preferencias de sus habitantes.
 
 Romer y Rosenthal utilizan distritos escolares de Oregon para ilustrar esta posibilidad. Algunos distritos podían financiar niveles importantes de gasto sin realizar referéndums, mientras que otros enfrentaban puntos de reversión muy bajos. El artículo presenta evidencia descriptiva y deja un análisis econométrico sistemático para investigaciones posteriores [@romerrosenthal1979].
 
@@ -1188,24 +1176,22 @@ $$
 }
 $$
 
-## Cierre: cómo leer un modelo de economía política
+## Síntesis: cómo leer un modelo de economía política
+
+Romer y Rosenthal muestran una idea que reaparecerá en los capítulos siguientes. Dos sociedades con preferencias idénticas pueden producir resultados políticos diferentes cuando enfrentan instituciones o situaciones iniciales diferentes. Formalizar esas diferencias permite identificar el mecanismo que conecta las reglas con los resultados y derivar predicciones que posteriormente pueden confrontarse con evidencia.
 
 Al comenzar el capítulo identificamos seis componentes para representar una interacción estratégica. Romer y Rosenthal permiten completar por primera vez esa ficha.
 
 | Componente | Pregunta general | Romer y Rosenthal |
 |---|---|---|
 | **Jugadores** | ¿Quiénes toman decisiones? | Agenda setter y votantes |
-| **Acciones** | ¿Qué puede hacer cada jugador? | El setter propone $E$; los votantes aprueban o rechazan |
+| **Acciones** | ¿Qué puede hacer cada jugador? | El agenda setter propone $E$; los votantes aprueban o rechazan |
 | **Preferencias** | ¿Qué resultados busca cada uno? | Cada votante tiene $V_i(E)$; el setter busca maximizar gasto |
 | **Reglas** | ¿Cómo se transforman las acciones en resultados? | El setter controla la propuesta; mayoría simple; rechazo conduce a $E_q$ |
 | **Información** | ¿Qué sabe cada jugador cuando decide? | En el modelo básico existe certeza sobre preferencias y participación |
-| **Solución** | ¿Qué comportamiento resulta consistente con esas decisiones? | El setter anticipa los votos y propone el mayor $E$ capaz de obtener mayoría |
+| **Solución** | ¿Qué comportamiento resulta consistente con esas decisiones? | El agenda setter anticipa los votos y propone el mayor $E$ capaz de obtener mayoría |
 
-Esta será la estructura de lectura utilizada durante el curso.
-
-Cada modelo hará elecciones distintas acerca de jugadores, preferencias, acciones, información y reglas. Esas decisiones producirán diferentes problemas estratégicos y diferentes conceptos de solución.
-
-Romer y Rosenthal muestran además una idea que reaparecerá en los capítulos siguientes. Dos sociedades con preferencias idénticas pueden producir resultados políticos diferentes cuando enfrentan instituciones o situaciones iniciales diferentes. Formalizar esas diferencias permite identificar el mecanismo que conecta las reglas con los resultados y derivar predicciones que posteriormente pueden confrontarse con evidencia.
+Esta estructura de lectura de un artículo de economía política es la que iremos repitiendo a lo largo del curso. Cada modelo hará elecciones distintas acerca de jugadores, preferencias, acciones, información y reglas. Esas decisiones producirán diferentes problemas estratégicos y diferentes conceptos de solución.
 
 ## Referencias
 
