@@ -1,5 +1,4 @@
 .quarto/
-_book/
 .Rhistory
 .RData
 .Rproj.user/
@@ -14,4 +13,3 @@ references.bib
 /scripts/validar-capitulo.R
 /references.bib
 /Economia_Politica_Formal_2026_v2.docx
-/.github/workflows/
