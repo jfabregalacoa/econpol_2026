@@ -29,6 +29,10 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: '1.10.18'
+      - name: Instalar dependencias del sistema
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libuv1-dev libcurl4-openssl-dev
       - name: Instalar dependencias de R
         run: Rscript scripts/instalar-dependencias.R
       - name: Validar modelos
