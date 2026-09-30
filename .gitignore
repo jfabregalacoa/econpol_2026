@@ -7,3 +7,8 @@ _book/
 
 /.quarto/
 **/*.quarto_ipynb
+
+/scripts/instalar-dependencias.R
+/scripts/validar-capitulo.R
+/references.bib
+/Economia_Politica_Formal_2026_v2.docx
