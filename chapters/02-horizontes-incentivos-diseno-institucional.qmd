@@ -1,0 +1,1161 @@
+---
+title: "Horizontes temporales, incentivos y diseño institucional"
+subtitle: "Decisiones intertemporales y duración del mandato"
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Parte I. Decisiones intertemporales e instituciones
+
+### Decidir hoy cuando las consecuencias ocurren mañana
+
+Muchas decisiones políticas producen consecuencias que se extienden en el tiempo. Construir una organización, adquirir conocimientos especializados, desarrollar una política pública o formar una reputación exige recursos en el presente y produce parte de sus beneficios en períodos posteriores.
+
+Esto introduce un problema distinto del estudiado en el capítulo anterior. Allí, el resultado dependía de cómo las reglas estructuraban la interacción entre distintos actores. Ahora el problema inicial puede representarse mediante una decisión individual:
+
+> **¿Cuánto conviene invertir hoy cuando una parte de los beneficios sólo podrá obtenerse en el futuro?**
+
+Supongamos que una acción genera un beneficio inmediato $b_0$ y un beneficio $b_1$ un período después. Para comparar ambos necesitamos expresar el beneficio futuro en términos presentes:
+
+$$
+V=b_0+\delta b_1,
+$$
+
+donde
+
+$$
+0<\delta\leq 1
+$$
+
+es el **factor de descuento**.
+
+Si utilizamos una tasa de descuento $r$,
+
+$$
+\delta=\frac{1}{1+r}.
+$$
+
+Una tasa de descuento mayor implica un factor de descuento menor. El actor asigna entonces relativamente menos valor a beneficios que ocurren en el futuro.
+
+Consideremos dos proyectos.
+
+El proyecto A produce:
+
+$$
+10 \text{ hoy}.
+$$
+
+El proyecto B produce:
+
+$$
+12 \text{ dentro de un período}.
+$$
+
+El segundo será preferido cuando
+
+$$
+12\delta>10.
+$$
+
+Por tanto,
+
+$$
+\delta>\frac{10}{12}.
+$$
+
+Una diferencia en la valoración del futuro puede cambiar la decisión incluso cuando todos conocen perfectamente los retornos de ambas alternativas.
+
+Esta es una primera fuente de heterogeneidad intertemporal:
+
+$$
+\boxed{
+\text{cuánto valoro el futuro}
+}
+$$
+
+Pero existe otra, particularmente importante en política.
+
+### Valorar el futuro y poder apropiarse de él
+
+Un actor puede valorar mucho los beneficios futuros y, aun así, no estar seguro de encontrarse en posición de obtenerlos.
+
+Supongamos que el beneficio $b_1$ sólo puede ser capturado con probabilidad $p$. Su valor esperado pasa a ser
+
+$$
+V=b_0+\delta p b_1.
+$$
+
+Aparecen ahora dos parámetros diferentes:
+
+$$
+\underbrace{\delta}_{\text{valoración del futuro}}
+\qquad\qquad
+\underbrace{p}_{\text{probabilidad de capturar el retorno}}.
+$$
+
+Esta distinción resulta fundamental.
+
+Un actor puede ser perfectamente paciente, con
+
+$$
+\delta\approx 1,
+$$
+
+pero enfrentar una probabilidad muy baja de capturar los retornos futuros:
+
+$$
+p\ll 1.
+$$
+
+En ese caso, las inversiones de largo plazo pueden resultar poco atractivas aunque el actor no tenga una preferencia particular por el presente.
+
+Supongamos dos autoridades idénticas. Ambas valoran de la misma manera presente y futuro. Una sabe que continuará en su posición durante diez años. La otra sabe que existe una probabilidad elevada de abandonar el cargo el próximo año.
+
+Una política que exige costos ahora y genera resultados cinco años después tiene valores esperados diferentes para ambas.
+
+Por tanto, debemos distinguir:
+
+$$
+\boxed{
+\text{preferencia temporal}
+\neq
+\text{horizonte de apropiación}
+}
+$$
+
+Una institución puede modificar el segundo sin modificar el primero.
+
+### Cuando el esfuerzo es una inversión
+
+Supongamos que una autoridad decide cuánto esfuerzo $l$ realizar.
+
+El esfuerzo produce un beneficio inmediato, pero tiene un costo creciente. Utilicemos una especificación sencilla:
+
+$$
+C(l)=l^2.
+$$
+
+Si cada unidad de esfuerzo genera una unidad de beneficio inmediatamente,
+
+$$
+U(l)=l-l^2.
+$$
+
+La condición de primer orden es
+
+$$
+1-2l=0,
+$$
+
+por lo que
+
+$$
+l^*=\frac{1}{2}.
+$$
+
+Introduzcamos ahora un retorno futuro. Supongamos que cada unidad de esfuerzo genera además $h$ unidades de beneficio en el período siguiente:
+
+$$
+U(l)=l+\delta hl-l^2.
+$$
+
+La solución pasa a ser
+
+$$
+l^*=\frac{1+\delta h}{2}.
+$$
+
+Mientras mayor sea el retorno futuro,
+
+$$
+h\uparrow,
+$$
+
+mayor será el esfuerzo presente.
+
+El esfuerzo se ha convertido en una inversión.
+
+Supongamos ahora que el individuo sólo podrá capturar el retorno futuro con probabilidad $p$:
+
+$$
+U(l)=l+\delta p hl-l^2.
+$$
+
+Entonces,
+
+$$
+l^*=\frac{1+\delta ph}{2}.
+$$
+
+Y obtenemos inmediatamente
+
+$$
+\frac{\partial l^*}{\partial p}>0.
+$$
+
+Manteniendo constantes las preferencias y la tecnología, aumentar la probabilidad de capturar los beneficios futuros aumenta el esfuerzo presente.
+
+Esta expresión contiene la intuición que recorrerá todo el capítulo:
+
+$$
+\boxed{
+\text{mayor horizonte de apropiación}
+\rightarrow
+\text{mayor valor de los retornos futuros}
+\rightarrow
+\text{mayor inversión presente}
+}
+$$
+
+### Actividades con distintos horizontes de retorno
+
+Podemos extender el problema distinguiendo dos actividades.
+
+Sea
+
+$$
+l^R
+$$
+
+una actividad de retorno rápido y
+
+$$
+l^L
+$$
+
+una actividad cuyo retorno se materializa lentamente.
+
+La primera produce beneficios fundamentalmente durante el período actual. La segunda exige recursos ahora y entrega una parte importante de sus beneficios después.
+
+Podemos representarlo esquemáticamente como
+
+$$
+B_R(l^R)=b_R l^R
+$$
+
+y
+
+$$
+B_L(l^L)=\delta p b_L l^L.
+$$
+
+Una reducción en $p$ afecta principalmente la segunda actividad.
+
+Por tanto,
+
+$$
+p\downarrow
+\quad\Rightarrow\quad
+\frac{B_L}{B_R}\downarrow.
+$$
+
+El horizonte temporal puede modificar tanto **cuánto esfuerzo realizar** como **en qué actividades utilizar ese esfuerzo**.
+
+Esto permite pensar en muchas decisiones políticas. Algunas producen resultados visibles rápidamente: anunciar una transferencia, inaugurar infraestructura pequeña, intensificar fiscalización durante un período corto o realizar actividades electorales.
+
+Otras exigen acumulación: construir capacidades administrativas, adquirir expertise, elaborar legislación compleja, desarrollar infraestructura de largo plazo o implementar reformas cuyos resultados sólo aparecerán después.
+
+Las instituciones que modifican la permanencia esperada de quien decide pueden alterar la rentabilidad relativa de ambos tipos de actividad.
+
+### Mancur Olson: del bandido itinerante al bandido estacionario
+
+Mancur Olson [-@olson1993] utiliza una intuición relacionada para pensar el surgimiento del Estado.
+
+Imaginemos inicialmente un territorio sometido a diferentes grupos que pueden apropiarse de su producción. Un grupo llega, extrae todo lo que puede y continúa hacia otro lugar. La próxima vez será probablemente otro grupo quien capture cualquier producción adicional.
+
+El horizonte de apropiación del grupo actual es muy pequeño:
+
+$$
+p\approx 0
+$$
+
+para cualquier beneficio futuro.
+
+En estas condiciones existe poco incentivo para proteger la capacidad productiva del territorio. Cada grupo tiene incentivos para extraer una fracción elevada de los recursos disponibles mientras todavía controla la situación.
+
+Olson denomina a este actor un **roving bandit**.
+
+La situación cambia cuando uno de esos grupos logra monopolizar coercitivamente el territorio y espera continuar controlándolo. Aparece el **stationary bandit**.
+
+Ese actor continúa interesado en extraer recursos. Sin embargo, ahora parte de la producción futura del territorio también podrá ser apropiada por él. Destruir completamente la capacidad productiva actual reduce su propia base futura de extracción.
+
+El interés del gobernante pasa entonces a abarcar una fracción mayor del flujo futuro:
+
+$$
+\text{control esperado duradero}
+\rightarrow
+\text{internalización de retornos futuros}.
+$$
+
+En el argumento de Olson, esto genera incentivos para moderar la depredación, proporcionar orden y producir ciertos bienes públicos que incrementen la producción que posteriormente podrá ser gravada. Un autócrata seguro posee lo que Olson llama un *encompassing interest* sobre el territorio. Cuando espera permanecer poco tiempo, reaparecen incentivos para confiscar activos cuyo valor total supera lo que podría obtener mediante tributación durante su permanencia.
+
+La diferencia puede resumirse como:
+
+$$
+\begin{array}{ccc}
+& \text{Horizonte corto} & \text{Horizonte largo}\\
+\hline
+\text{Apropiación} & \text{presente} & \text{presente + futuro}\\
+\text{Incentivo} & \text{extraer} & \text{preservar e invertir}\\
+\text{Resultado} & \text{depredación intensa} & \text{extracción sostenible}
+\end{array}
+$$
+
+La lógica no requiere que el gobernante se vuelva benevolente. Basta con que parte de los beneficios futuros de una economía más productiva también sean beneficios futuros para él.
+
+### Mortalidad, asentamiento e instituciones coloniales
+
+Una estructura relacionada aparece en el argumento de Acemoglu, Johnson y Robinson [-@acemoglujohnsonrobinson2001] sobre los orígenes coloniales de las instituciones.
+
+Los autores utilizan diferencias históricas en mortalidad europea para explicar distintas estrategias de colonización. Allí donde los europeos enfrentaban mortalidades muy elevadas, el asentamiento resultaba menos viable y tendieron a instalar instituciones orientadas a la extracción. Allí donde podían asentarse con mayor facilidad, aparecieron instituciones con mayor protección frente a la expropiación. Los autores sostienen además que estas diferencias institucionales tuvieron una importante persistencia histórica.
+
+El mecanismo completo de Acemoglu, Johnson y Robinson contiene elementos históricos e institucionales que exceden un problema simple de descuento. Sin embargo, existe un paralelismo útil:
+
+$$
+\text{posibilidad de permanencia}
+\rightarrow
+\text{horizonte relevante}
+\rightarrow
+\text{tipo de institución que resulta conveniente construir}.
+$$
+
+Si espero abandonar rápidamente un territorio, una institución orientada a extraer recursos mientras todavía puedo hacerlo puede resultar racional.
+
+Si espero permanecer y mis propios retornos futuros dependen del funcionamiento de esa sociedad, aumenta el valor de instituciones que preserven su capacidad productiva.
+
+La misma estructura lógica aparece, por tanto, en niveles muy diferentes:
+
+$$
+\boxed{
+\text{legislador}
+\quad
+\text{organización}
+\quad
+\text{gobernante}
+\quad
+\text{colonia}
+}
+$$
+
+En todos ellos puede preguntarse quién realiza una inversión, cuánto tarda en producir retornos y qué probabilidad existe de que quien incurrió en el costo pueda capturarlos.
+
+### Un problema de diseño: ¿cómo administrar una liga deportiva?
+
+Consideremos ahora una organización encargada de administrar una liga profesional de fútbol o básquetbol.
+
+Su negocio depende de los clubes que participan en ella. Sin embargo, el valor económico del campeonato no depende únicamente del club más exitoso. Depende también de que existan adversarios capaces de competir, partidos atractivos, incertidumbre sobre los resultados y una competición que conserve interés durante períodos sucesivos.
+
+Supongamos dos administradores.
+
+El primero espera controlar la organización sólo durante un período:
+
+$$
+p\ll 1.
+$$
+
+El segundo espera participar de los beneficios de la competición durante muchos años:
+
+$$
+p\approx1.
+$$
+
+Ambos pueden escoger entre dos políticas.
+
+La política $A$ permite extraer una parte elevada de los ingresos actuales, aunque debilita la competición futura.
+
+La política $B$ sacrifica parte del ingreso presente para distribuir recursos, desarrollar clubes más débiles, formar jugadores o establecer reglas que mantengan una competición atractiva.
+
+Podemos representar sus retornos como
+
+$$
+V(A)=R_0^A+\delta pR_1^A
+$$
+
+y
+
+$$
+V(B)=R_0^B+\delta pR_1^B,
+$$
+
+donde
+
+$$
+R_0^A>R_0^B
+$$
+
+pero
+
+$$
+R_1^B>R_1^A.
+$$
+
+Una reducción de $p$ aumenta el atractivo relativo de $A$.
+
+El problema relevante pasa entonces a ser institucional:
+
+> **¿Las reglas de gobierno de la liga permiten que quienes deciden internalicen los beneficios futuros de preservar y aumentar el valor de la competición?**
+
+### Fútbol chileno y NBA como contraste institucional
+
+El contraste entre el fútbol chileno y la NBA puede utilizarse como hipótesis motivadora, aunque requiere algunas precisiones.
+
+En la ANFP, el Consejo de Presidentes constituye formalmente la máxima autoridad de la asociación. Está compuesto por los presidentes de los clubes de Primera División y Primera B, sus decisiones obligan a los clubes y el propio Consejo elige al presidente y a los seis directores de la ANFP.
+
+Esa estructura permite formular una pregunta sobre horizontes e incentivos: ¿hasta qué punto los actores que deciden sobre las reglas generales internalizan el valor futuro de toda la competición y hasta qué punto representan intereses más inmediatos de sus respectivos clubes?
+
+La hipótesis de que la organización del fútbol chileno produce sistemáticamente comportamiento extractivo de corto plazo requiere evidencia adicional. La estructura institucional por sí sola no demuestra ese comportamiento. Para nuestros propósitos, puede plantearse como una hipótesis:
+
+$$
+\text{menor horizonte esperado de control}
+\rightarrow
+\text{mayor peso de rentas inmediatas}
+\rightarrow
+\text{menor inversión en el valor futuro de la liga}.
+$$
+
+La NBA proporciona un contraste útil porque algunas de sus reglas distribuyen oportunidades de manera deliberadamente distinta a lo que produciría un mercado irrestricto.
+
+El ejemplo más claro es el **Draft**, no el mercado de transferencias. Tradicionalmente, los equipos con peores resultados reciben mejores posiciones o mayores probabilidades de obtener selecciones tempranas, mientras que buena parte del resto del Draft se ordena inversamente según los resultados de la temporada anterior.
+
+El mecanismo puede entenderse como una redistribución parcial de talento nuevo hacia equipos más débiles:
+
+$$
+\text{peor desempeño}
+\rightarrow
+\text{mejor acceso esperado a nuevo talento}
+\rightarrow
+\text{posibilidad de reconstrucción}.
+$$
+
+Pero esta regla produce a su vez otro incentivo. Si perder aumenta la probabilidad de conseguir mejores jugadores futuros, algunos equipos pueden tener incentivos para reducir deliberadamente su competitividad presente, fenómeno conocido como *tanking*.
+
+La NBA ha ajustado reiteradamente sus reglas de lotería para reducir esos incentivos. El ejemplo muestra bien la lógica del diseño institucional:
+
+$$
+\boxed{
+\text{una regla corrige un incentivo}
+\rightarrow
+\text{genera otro incentivo}
+\rightarrow
+\text{la institución debe volver a ajustarse}
+}
+$$
+
+Dar mejores selecciones a los equipos débiles puede contribuir a reconstruirlos. Pero llevar esa ventaja demasiado lejos puede recompensar perder. El diseño debe equilibrar ambos objetivos.
+
+La NBA utiliza además restricciones salariales y mecanismos de redistribución de ingresos. Conviene separar la intención institucional de sus efectos empíricos: la existencia de estas reglas no implica automáticamente mayor equilibrio competitivo [@tottyowens2011].
+
+Por tanto, el ejemplo deportivo permite formular una pregunta más general:
+
+> **¿Qué reglas inducen a los participantes actuales a preservar el valor futuro del sistema del que forman parte?**
+
+Esa pregunta nos lleva directamente a la duración de los mandatos políticos.
+
+## Parte II. Dal Bó y Rossi: duración del mandato y esfuerzo político
+
+### El problema
+
+Una constitución debe decidir durante cuánto tiempo permanecerán los representantes en sus cargos antes de enfrentar nuevamente a los electores.
+
+Una primera intuición favorece mandatos cortos. Si la próxima elección está cerca, un político que realiza poco esfuerzo puede ser castigado rápidamente. Una elección frecuente fortalece entonces la rendición de cuentas.
+
+Esta es la intuición clásica del modelo de Barro [-@barro1973]: la amenaza de reemplazo disciplina al representante.
+
+Dal Bó y Rossi [-@dalborossi2011] plantean que la duración del mandato puede producir simultáneamente otros incentivos.
+
+Una elección cercana obliga al político a dedicar recursos a conseguir su reelección.
+
+Además, parte del trabajo legislativo puede funcionar como una inversión cuyos retornos sólo aparecen gradualmente.
+
+Por tanto, una misma regla institucional puede producir fuerzas contrapuestas.
+
+La pregunta central es:
+
+$$
+\boxed{
+\text{¿Los mandatos más largos aumentan o reducen el esfuerzo legislativo?}
+}
+$$
+
+La teoría no determina de antemano el signo.
+
+### Dos legisladores idénticos con horizontes diferentes
+
+El modelo considera dos clases de legisladores.
+
+Un legislador de mandato corto $S$ enfrenta una elección después de un período.
+
+Un legislador de mandato largo $L$ enfrenta una elección después de dos períodos.
+
+Después de esa primera reelección, ambos enfrentan la misma situación futura y poseen un valor de continuación $V$. Esta simplificación permite aislar el efecto de la diferencia inicial en duración del mandato.
+
+Los legisladores eligen dos tipos de esfuerzo:
+
+$$
+l=\text{esfuerzo legislativo}
+$$
+
+y
+
+$$
+c=\text{esfuerzo de campaña}.
+$$
+
+El costo del esfuerzo legislativo es cuadrático:
+
+$$
+l^2.
+$$
+
+El esfuerzo de campaña tiene también costo cuadrático:
+
+$$
+c^2.
+$$
+
+La estructura reproduce una característica importante del problema: dedicar recursos adicionales a cualquiera de estas actividades resulta progresivamente más costoso.
+
+### Esfuerzo y probabilidad de reelección
+
+La posibilidad de reelección depende de las acciones del legislador:
+
+$$
+P(l,\sigma c,\pi).
+$$
+
+El parámetro $\pi$ captura seguridad electoral.
+
+Los autores suponen
+
+$$
+P_l\geq0,
+\qquad
+P_c\geq0.
+$$
+
+Más trabajo legislativo y más actividad electoral pueden aumentar la probabilidad de reelección.
+
+Además,
+
+$$
+P_{ll}\leq0,
+\qquad
+P_{cc}\leq0,
+$$
+
+por lo que aparecen retornos marginales decrecientes.
+
+El modelo permite además complementariedad entre ambas actividades:
+
+$$
+P_{lc}\geq0.
+$$
+
+Una buena actividad legislativa puede, por ejemplo, hacer más productiva una campaña en la que el representante comunica lo que ha realizado.
+
+### Los retornos del esfuerzo legislativo
+
+Cada unidad de esfuerzo legislativo produce un retorno contemporáneo.
+
+Los autores introducen además un parámetro
+
+$$
+h\in\{0,1\}.
+$$
+
+Cuando
+
+$$
+h=0,
+$$
+
+el esfuerzo sólo genera un retorno durante el período actual.
+
+Cuando
+
+$$
+h=1,
+$$
+
+sus beneficios continúan durante el período siguiente.
+
+Esos retornos pueden representar reconocimiento, logros de política, legado o menores costos futuros derivados del aprendizaje.
+
+Por tanto, cuando
+
+$$
+h=1,
+$$
+
+el esfuerzo legislativo adquiere explícitamente la naturaleza de una inversión.
+
+### El legislador de mandato largo
+
+El problema del legislador de mandato largo es
+
+$$
+\max_{l_L,c_L}
+V^L
+=
+-l_L^2
+-\delta c_L^2
++w
++l_L
++\delta h l_L
++\delta^2P(l_L,\sigma c_L)V.
+$$
+
+Cada término tiene una interpretación.
+
+$$
+-l_L^2
+$$
+
+es el costo actual de hacer trabajo legislativo.
+
+$$
+-\delta c_L^2
+$$
+
+es el costo de campaña, que ocurre posteriormente porque la elección está más distante.
+
+$$
+w
+$$
+
+es la remuneración asociada al cargo.
+
+$$
+l_L
+$$
+
+es el retorno inmediato del esfuerzo legislativo.
+
+$$
+\delta h l_L
+$$
+
+es su retorno futuro. El legislador de mandato largo tiene garantizado que permanecerá todavía en el cargo cuando ese retorno aparezca.
+
+Finalmente,
+
+$$
+\delta^2P(l_L,\sigma c_L)V
+$$
+
+es el valor esperado de continuar posteriormente en la carrera política después de enfrentar la elección.
+
+La característica fundamental es que
+
+$$
+\delta h l_L
+$$
+
+se recibe independientemente de la próxima elección.
+
+### El legislador de mandato corto
+
+El legislador de mandato corto resuelve
+
+$$
+\max_{l_S,c_S}
+V^S
+=
+-l_S^2
+-c_S^2
+-\sigma\rho(l_S+c_S)
++w
++l_S
++\delta P(l_S,\sigma c_S)(V+h l_S).
+$$
+
+Ahora el esfuerzo de campaña ocurre durante el período actual.
+
+Además aparece
+
+$$
+-\sigma\rho(l_S+c_S),
+$$
+
+un costo adicional derivado de tener que combinar trabajo legislativo y actividad electoral. El parámetro $\rho$ aumenta con la distancia entre Buenos Aires y la provincia representada, capturando el costo de realizar simultáneamente ambas actividades.
+
+La expresión crucial es
+
+$$
+\delta P(l_S,\sigma c_S)(V+h l_S).
+$$
+
+El retorno futuro del esfuerzo legislativo,
+
+$$
+hl_S,
+$$
+
+sólo puede ser obtenido si el legislador gana primero la elección.
+
+Ésa es la diferencia central:
+
+$$
+\begin{aligned}
+L:&\qquad \delta hl_L,\\
+S:&\qquad \delta P(\cdot)hl_S.
+\end{aligned}
+$$
+
+El mismo retorno futuro tiene distinto valor porque los dos legisladores enfrentan distintas probabilidades de encontrarse todavía en posición de capturarlo.
+
+## Tres mecanismos
+
+### Accountability
+
+Supongamos inicialmente
+
+$$
+\sigma=0
+$$
+
+y
+
+$$
+h=0.
+$$
+
+No existe campaigning individual y el trabajo legislativo no produce retornos futuros.
+
+Las condiciones de primer orden relevantes son entonces
+
+$$
+-2l_L+1+\delta^2P_l(l_L)V=0
+$$
+
+para el legislador de mandato largo, y
+
+$$
+-2l_S+1+\delta P_l(l_S)V=0
+$$
+
+para el de mandato corto.
+
+Como
+
+$$
+0<\delta<1,
+$$
+
+se cumple
+
+$$
+\delta>\delta^2.
+$$
+
+El premio de la reelección está más próximo para quien tiene mandato corto.
+
+Por tanto,
+
+$$
+\boxed{
+l_S>l_L
+}
+$$
+
+bajo las condiciones establecidas por los autores.
+
+Esta es la lógica de accountability:
+
+$$
+\text{elección próxima}
+\rightarrow
+\text{premio y castigo próximos}
+\rightarrow
+\text{mayor esfuerzo}.
+$$
+
+### Campaigning
+
+Supongamos ahora que existe actividad individual de campaña:
+
+$$
+\sigma=1.
+$$
+
+El legislador de mandato corto debe legislar y buscar su reelección durante el mismo período.
+
+Aparece entonces el costo
+
+$$
+\rho(l_S+c_S).
+$$
+
+A medida que crecen las obligaciones electorales, aumenta el costo marginal de utilizar tiempo y recursos en trabajo legislativo.
+
+En determinadas condiciones obtenemos
+
+$$
+\boxed{
+l_L>l_S
+}.
+$$
+
+El mandato corto acerca la elección, pero esa misma proximidad obliga a desviar recursos hacia la campaña.
+
+Tenemos así dos fuerzas contrapuestas:
+
+$$
+\text{elección próxima}
+\rightarrow
+\begin{cases}
+\text{más accountability},\\
+\text{más campaigning}.
+\end{cases}
+$$
+
+La primera aumenta esfuerzo legislativo. La segunda puede reducirlo.
+
+### Payback horizon
+
+El tercer mecanismo aparece cuando
+
+$$
+h=1.
+$$
+
+Parte del retorno del trabajo legislativo ocurre posteriormente.
+
+El legislador de mandato largo tiene asegurada su permanencia durante ese período y puede capturar ese retorno.
+
+El legislador de mandato corto necesita primero ser reelegido.
+
+Por tanto, un mandato más largo aumenta el valor esperado de una inversión legislativa:
+
+$$
+\boxed{
+\text{mandato largo}
+\rightarrow
+\text{mayor horizonte seguro}
+\rightarrow
+\text{mayor retorno esperado del esfuerzo}
+}.
+$$
+
+Cuando el efecto marginal del esfuerzo sobre la probabilidad de reelección no es demasiado grande, este mecanismo genera
+
+$$
+l_L>l_S.
+$$
+
+La condición importa. El esfuerzo legislativo también puede ayudar al político a ganar la elección. Para el legislador de mandato corto, una unidad adicional de $l$ aumenta su probabilidad de permanecer y, con ello, de apropiarse de todos los retornos generados por el esfuerzo realizado previamente. Ese efecto opera en sentido contrario.
+
+El resultado depende de cuál de las dos fuerzas sea mayor.
+
+## La predicción teórica es ambigua
+
+Podemos resumir el modelo:
+
+| Mecanismo | Mandato corto | Mandato largo | Predicción |
+|---|---|---|---|
+| Accountability | elección próxima | elección distante | $l_S>l_L$ |
+| Campaigning | campaña y legislación simultáneas | menor congestión inmediata | $l_L>l_S$ |
+| Payback | parte del retorno exige reelección | retorno futuro asegurado durante más tiempo | $l_L>l_S$ |
+
+La duración del mandato no posee entonces un efecto mecánico sobre el comportamiento.
+
+Es una regla que modifica simultáneamente distintos componentes de la función objetivo:
+
+$$
+\boxed{
+\text{term length}
+\rightarrow
+\begin{cases}
+\text{frecuencia de accountability},\\
+\text{costos electorales},\\
+\text{horizonte de apropiación}.
+\end{cases}
+}
+$$
+
+El signo final constituye una pregunta empírica.
+
+## El experimento institucional
+
+El caso argentino permite observar legisladores que comenzaron a ejercer al mismo tiempo y recibieron aleatoriamente mandatos de distinta duración.
+
+En 1983, los 254 diputados elegidos con el retorno de la democracia fueron distribuidos entre mandatos iniciales de dos y cuatro años mediante un procedimiento aleatorio. En 2001, una situación similar permitió asignar a los senadores mandatos de dos, cuatro o seis años.
+
+Esto produce una comparación particularmente limpia.
+
+Durante los primeros dos años:
+
+$$
+\text{mismo contexto político}
+$$
+
+$$
+\text{misma cohorte}
+$$
+
+$$
+\text{misma institución legislativa}
+$$
+
+pero
+
+$$
+\text{distinto horizonte garantizado}.
+$$
+
+La duración del mandato puede entonces tratarse como una variación institucional exógena.
+
+### ¿Qué entendemos por esfuerzo?
+
+El Congreso argentino proporciona seis medidas de actividad:
+
+- asistencia a sesiones de sala;
+- asistencia a comisiones;
+- participación en proyectos de comisión;
+- intervenciones en sala;
+- proyectos presentados;
+- proyectos aprobados.
+
+Los autores construyen además un índice agregado de esfuerzo legislativo.
+
+La comparación inicial muestra que los legisladores con mandatos más largos realizan, en promedio, mayor esfuerzo. Los coeficientes estimados son positivos para las seis medidas individuales, aunque la precisión estadística varía entre ellas.
+
+Esto permite rechazar la hipótesis más sencilla según la cual una elección más próxima necesariamente aumenta el trabajo legislativo.
+
+Todavía quedan dos explicaciones:
+
+$$
+\text{campaigning}
+\qquad\text{y}\qquad
+\text{payback}.
+$$
+
+El modelo permite distinguirlas.
+
+## Del resultado al mecanismo
+
+### Cuatro años versus seis años
+
+Consideremos senadores con mandatos de cuatro y seis años durante sus primeros dos años.
+
+Ninguno está próximo a su elección.
+
+Por tanto, el mecanismo de campaigning predice aproximadamente
+
+$$
+l_4=l_6.
+$$
+
+El mecanismo de payback predice
+
+$$
+l_6>l_4.
+$$
+
+Los datos muestran mayor esfuerzo entre quienes recibieron seis años. Los autores interpretan este resultado como evidencia favorable al mecanismo de payback.
+
+### ¿Aparece el efecto cuando se acerca la campaña?
+
+Si campaigning explicara la diferencia entre diputados con mandatos de dos y cuatro años, esperaríamos que esa diferencia aumentara especialmente durante el segundo año, cuando la elección de los primeros se aproxima.
+
+Formalmente:
+
+$$
+(l_L-l_S)_{t=2}
+>
+(l_L-l_S)_{t=1}.
+$$
+
+Los autores no encuentran ese patrón.
+
+Nuevamente, la evidencia favorece la explicación basada en horizonte de payback.
+
+### Distancia y campaigning
+
+La campaña exige presencia territorial.
+
+Si el legislador representa una provincia distante de Buenos Aires, compatibilizar trabajo parlamentario con actividad electoral debería resultar más costoso.
+
+Por tanto, si campaigning fuese el mecanismo principal,
+
+$$
+\rho\uparrow
+\quad\Rightarrow\quad
+l_L-l_S\uparrow.
+$$
+
+Esta es la segunda proposición del artículo.
+
+Empíricamente, los autores no encuentran esa interacción positiva.
+
+### Seguridad electoral y payback
+
+El mecanismo de payback produce otra predicción.
+
+Consideremos un legislador con reelección prácticamente segura.
+
+Incluso con un mandato corto, probablemente continuará en el cargo:
+
+$$
+p\approx1.
+$$
+
+Alargar su mandato modifica poco su horizonte efectivo.
+
+Comparemos ahora un legislador cuya probabilidad de reelección es baja:
+
+$$
+p\ll1.
+$$
+
+Para él, pasar de un mandato corto a uno largo garantiza varios años adicionales durante los cuales podrá apropiarse de los retornos de sus inversiones.
+
+Por tanto,
+
+$$
+\boxed{
+\text{mayor seguridad electoral}
+\rightarrow
+\text{menor efecto de alargar el mandato}
+}.
+$$
+
+Esta es la tercera proposición del artículo. Los resultados muestran precisamente que el efecto de obtener un mandato largo es menor entre legisladores electoralmente seguros.
+
+La secuencia analítica es especialmente importante:
+
+$$
+\boxed{
+\text{modelo}
+\rightarrow
+\text{mecanismos alternativos}
+\rightarrow
+\text{predicciones diferentes}
+\rightarrow
+\text{tests que discriminan entre mecanismos}
+}
+$$
+
+## Qué sabemos y qué queda fuera del modelo
+
+Dal Bó y Rossi muestran que mandatos más largos pueden inducir mayor esfuerzo legislativo cuando ese esfuerzo tiene retornos diferidos.
+
+El artículo mide **esfuerzo**, no calidad de las políticas.
+
+La conexión con calidad debe plantearse entonces como una extensión.
+
+Si algunas políticas de mayor calidad requieren inversiones cuyos retornos aparecen lentamente, podríamos esperar que horizontes más largos aumentaran su atractivo relativo. Pero también podrían permitir a políticos de baja calidad permanecer más tiempo sin enfrentar sanción electoral.
+
+Una extensión natural distinguiría explícitamente:
+
+$$
+l^R=\text{esfuerzo de retorno rápido}
+$$
+
+y
+
+$$
+l^L=\text{esfuerzo de retorno lento}.
+$$
+
+La duración del mandato podría afectar entonces no solamente
+
+$$
+l=l^R+l^L,
+$$
+
+sino también su composición:
+
+$$
+\frac{l^L}{l^R}.
+$$
+
+Esta extensión produciría una nueva predicción:
+
+$$
+\text{mandatos más largos}
+\rightarrow
+\text{mayor proporción de actividades con payback lento}.
+$$
+
+El artículo original no prueba esta hipótesis. Su modelo proporciona las piezas para formularla.
+
+## El diseñador institucional
+
+Volvamos finalmente a la persona que debe escribir las reglas.
+
+Debe escoger entre mandatos relativamente cortos y relativamente largos.
+
+Un mandato corto significa
+
+$$
+\text{elecciones frecuentes}
+\rightarrow
+\text{mayor capacidad de sanción}.
+$$
+
+El político sabe que tendrá que responder pronto frente a los votantes.
+
+Pero ese mismo diseño reduce el tiempo durante el cual puede apropiarse con seguridad de los beneficios derivados de actividades cuyos retornos son lentos.
+
+Un mandato largo significa
+
+$$
+\text{mayor horizonte garantizado}
+\rightarrow
+\text{mayor incentivo a determinadas inversiones}.
+$$
+
+Pero la próxima instancia de control electoral queda más distante.
+
+El problema constitucional contiene entonces un trade-off:
+
+$$
+\boxed{
+\text{accountability}
+\quad\longleftrightarrow\quad
+\text{horizonte para invertir}
+}
+$$
+
+La duración óptima del mandato dependerá de las características del entorno.
+
+Si casi todo el esfuerzo político produce resultados rápidamente, el beneficio de extender el mandato por razones de payback será pequeño.
+
+Si administrar el cargo exige grandes inversiones de retorno lento, un horizonte mayor puede resultar importante.
+
+Si las campañas absorben una cantidad considerable de tiempo, hacerlas muy frecuentes puede reducir la actividad sustantiva.
+
+Si el esfuerzo legislativo afecta fuertemente la probabilidad de reelección, la propia accountability puede inducir inversión.
+
+Si los políticos enfrentan una probabilidad elevada de reelección incluso bajo mandatos cortos, ampliar formalmente el mandato modificará poco su horizonte efectivo.
+
+No existe, por tanto, una duración universalmente óptima.
+
+La pregunta que enfrenta el diseñador es más precisa:
+
+> **¿Qué tipo de esfuerzo queremos inducir y cuánto control presente estamos dispuestos a intercambiar por un horizonte mayor para realizar inversiones cuyos beneficios aparecerán después?**
+
+Podemos representar el problema completo como
+
+$$
+\boxed{
+\text{diseño institucional}
+\rightarrow
+\text{horizonte del actor}
+\rightarrow
+\text{valor relativo de retornos presentes y futuros}
+\rightarrow
+\text{esfuerzo}
+\rightarrow
+\text{resultados políticos}
+}
+$$
+
+Ésta amplía la conclusión del capítulo anterior. Las instituciones pueden modificar las alternativas entre las cuales deciden los actores. También pueden cambiar el período durante el cual esos actores esperan apropiarse de las consecuencias de sus propias decisiones.
+
+## Referencias
+
+[Consultar las referencias bibliográficas del libro](01-interaccion-instituciones-agenda.qmd#refs).
