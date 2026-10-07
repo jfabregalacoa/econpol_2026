@@ -95,9 +95,7 @@ $$
 \underbrace{p}_{\text{probabilidad de capturar el retorno}}.
 $$
 
-Esta distinción resulta fundamental.
-
-Un actor puede ser perfectamente paciente, con
+Esta distinción resulta fundamental. Un actor puede ser perfectamente paciente, con
 
 $$
 \delta\approx 1,
@@ -109,7 +107,7 @@ $$
 p\ll 1.
 $$
 
-En ese caso, las inversiones de largo plazo pueden resultar poco atractivas aunque el actor no tenga una preferencia particular por el presente.
+En ese caso, las inversiones de largo plazo pueden resultar poco atractivas aunque el actor no tenga una preferencia particular por el presente. [Nótese que esta manera de formular el problema nos ha permitido separar dos conceptos que estaban mezclados en uno: preferencias (contingentes o de largo plazo) de factibilidad (probabilidad de apropiarse de los beneficios futuros). Ello es un ejemplo claro del tipo de ganacia epistemológica que obtenemos al modelar problema. Ahora tenemos la base de un modelo que puede distinguir dos causas para un mismo fenómeno.] 
 
 Supongamos dos autoridades idénticas. Ambas valoran de la misma manera presente y futuro. Una sabe que continuará en su posición durante diez años. La otra sabe que existe una probabilidad elevada de abandonar el cargo el próximo año.
 
@@ -129,7 +127,7 @@ Una institución puede modificar el segundo sin modificar el primero.
 
 ### Cuando el esfuerzo es una inversión
 
-Supongamos que una autoridad decide cuánto esfuerzo $l$ realizar.
+Ahora, complejicemos un poco el escenario y supongamos que la autoridad no sólo valora un escenario, sino además puede hacer acciones que pueden incidir en cuál escenario se va a producir. Específicamente, puede decidir cuánto esfuerzo $l$ realizar.
 
 El esfuerzo produce un beneficio inmediato, pero tiene un costo creciente. Utilicemos una especificación sencilla:
 
@@ -173,9 +171,7 @@ $$
 h\uparrow,
 $$
 
-mayor será el esfuerzo presente.
-
-El esfuerzo se ha convertido en una inversión.
+mayor será el esfuerzo presente (el esfuerzo se ha convertido en una inversión). 
 
 Supongamos ahora que el individuo sólo podrá capturar el retorno futuro con probabilidad $p$:
 
@@ -189,15 +185,13 @@ $$
 l^*=\frac{1+\delta ph}{2}.
 $$
 
-Y obtenemos inmediatamente
+Y, por lo tanto:
 
 $$
 \frac{\partial l^*}{\partial p}>0.
 $$
 
-Manteniendo constantes las preferencias y la tecnología, aumentar la probabilidad de capturar los beneficios futuros aumenta el esfuerzo presente.
-
-Esta expresión contiene la intuición que recorrerá todo el capítulo:
+Manteniendo constantes las preferencias y la tecnología, aumentar la probabilidad de capturar los beneficios futuros aumenta el esfuerzo presente. Esta expresión contiene la intuición que queremos rescatar en este capítulo. Si el marco institucional, el contexto, el juego político,... en términos más abstractos, un factor exógeno hace más probable la captura de beneficios futuros, el incentivo para la acción (esfuerzo en este caso) aumenta:
 
 $$
 \boxed{
@@ -211,9 +205,7 @@ $$
 
 ### Actividades con distintos horizontes de retorno
 
-Podemos extender el problema distinguiendo dos actividades.
-
-Sea
+Podemos extender el problema distinguiendo dos actividades. Sea
 
 $$
 l^R
@@ -261,9 +253,7 @@ Las instituciones que modifican la permanencia esperada de quien decide pueden a
 
 ### Mancur Olson: del bandido itinerante al bandido estacionario
 
-Mancur Olson [-@olson1993] utiliza una intuición relacionada para pensar el surgimiento del Estado.
-
-Imaginemos inicialmente un territorio sometido a diferentes grupos que pueden apropiarse de su producción. Un grupo llega, extrae todo lo que puede y continúa hacia otro lugar. La próxima vez será probablemente otro grupo quien capture cualquier producción adicional.
+Mancur Olson [-@olson1993] utiliza una intuición relacionada para pensar el surgimiento del Estado. Imaginemos inicialmente un territorio sometido a diferentes grupos que pueden apropiarse de su producción. Un grupo llega, extrae todo lo que puede y continúa hacia otro lugar. La próxima vez será probablemente otro grupo quien capture cualquier producción adicional.
 
 El horizonte de apropiación del grupo actual es muy pequeño:
 
@@ -273,9 +263,7 @@ $$
 
 para cualquier beneficio futuro.
 
-En estas condiciones existe poco incentivo para proteger la capacidad productiva del territorio. Cada grupo tiene incentivos para extraer una fracción elevada de los recursos disponibles mientras todavía controla la situación.
-
-Olson denomina a este actor un **roving bandit**.
+En estas condiciones existe poco incentivo para proteger la capacidad productiva del territorio. Cada grupo tiene incentivos para extraer una fracción elevada de los recursos disponibles mientras todavía controla la situación. Olson denomina a este actor un **roving bandit**.
 
 La situación cambia cuando uno de esos grupos logra monopolizar coercitivamente el territorio y espera continuar controlándolo. Aparece el **stationary bandit**.
 
@@ -307,9 +295,7 @@ La lógica no requiere que el gobernante se vuelva benevolente. Basta con que pa
 
 ### Mortalidad, asentamiento e instituciones coloniales
 
-Una estructura relacionada aparece en el argumento de Acemoglu, Johnson y Robinson [-@acemoglujohnsonrobinson2001] sobre los orígenes coloniales de las instituciones.
-
-Los autores utilizan diferencias históricas en mortalidad europea para explicar distintas estrategias de colonización. Allí donde los europeos enfrentaban mortalidades muy elevadas, el asentamiento resultaba menos viable y tendieron a instalar instituciones orientadas a la extracción. Allí donde podían asentarse con mayor facilidad, aparecieron instituciones con mayor protección frente a la expropiación. Los autores sostienen además que estas diferencias institucionales tuvieron una importante persistencia histórica.
+Una estructura relacionada aparece en el argumento de Acemoglu, Johnson y Robinson [-@acemoglujohnsonrobinson2001] sobre los orígenes coloniales de las instituciones. Los autores utilizan diferencias históricas en mortalidad europea para explicar distintas estrategias de colonización. Allí donde los europeos enfrentaban mortalidades muy elevadas, el asentamiento resultaba menos viable y tendieron a instalar instituciones orientadas a la extracción. Allí donde podían asentarse con mayor facilidad, aparecieron instituciones con mayor protección frente a la expropiación. Los autores sostienen además que estas diferencias institucionales tuvieron una importante persistencia histórica.
 
 El mecanismo completo de Acemoglu, Johnson y Robinson contiene elementos históricos e institucionales que exceden un problema simple de descuento. Sin embargo, existe un paralelismo útil:
 
@@ -325,7 +311,7 @@ Si espero abandonar rápidamente un territorio, una institución orientada a ext
 
 Si espero permanecer y mis propios retornos futuros dependen del funcionamiento de esa sociedad, aumenta el valor de instituciones que preserven su capacidad productiva.
 
-La misma estructura lógica aparece, por tanto, en niveles muy diferentes:
+Los ejemplos anteriores muestran que la misma estructura lógica puede servir para explicar fenómenos muy diferentes:
 
 $$
 \boxed{
@@ -343,9 +329,7 @@ En todos ellos puede preguntarse quién realiza una inversión, cuánto tarda en
 
 ### Un problema de diseño: ¿cómo administrar una liga deportiva?
 
-Consideremos ahora una organización encargada de administrar una liga profesional de fútbol o básquetbol.
-
-Su negocio depende de los clubes que participan en ella. Sin embargo, el valor económico del campeonato no depende únicamente del club más exitoso. Depende también de que existan adversarios capaces de competir, partidos atractivos, incertidumbre sobre los resultados y una competición que conserve interés durante períodos sucesivos.
+Consideremos ahora una organización encargada de administrar una liga profesional de fútbol o básquetbol. Su negocio depende de los clubes que participan en ella. Sin embargo, el valor económico del campeonato no depende únicamente del club más exitoso. Depende también de que existan adversarios capaces de competir, partidos atractivos, incertidumbre sobre los resultados y una competición que conserve interés durante períodos sucesivos.
 
 Supongamos dos administradores.
 
@@ -365,7 +349,7 @@ Ambos pueden escoger entre dos políticas.
 
 La política $A$ permite extraer una parte elevada de los ingresos actuales, aunque debilita la competición futura.
 
-La política $B$ sacrifica parte del ingreso presente para distribuir recursos, desarrollar clubes más débiles, formar jugadores o establecer reglas que mantengan una competición atractiva.
+La política $B$ sacrifica parte del ingreso presente para distribuir recursos, potenciar a los clubes más débiles, formar jugadores o establecer reglas que mantengan una competición atractiva.
 
 Podemos representar sus retornos como
 
@@ -399,9 +383,7 @@ El problema relevante pasa entonces a ser institucional:
 
 ### Fútbol chileno y NBA como contraste institucional
 
-El contraste entre el fútbol chileno y la NBA puede utilizarse como hipótesis motivadora, aunque requiere algunas precisiones.
-
-En la ANFP, el Consejo de Presidentes constituye formalmente la máxima autoridad de la asociación. Está compuesto por los presidentes de los clubes de Primera División y Primera B, sus decisiones obligan a los clubes y el propio Consejo elige al presidente y a los seis directores de la ANFP.
+El contraste entre el fútbol chileno y la NBA puede utilizarse como hipótesis motivadora, aunque requiere algunas precisiones. En la ANFP, el Consejo de Presidentes constituye formalmente la máxima autoridad de la asociación. Está compuesto por los presidentes de los clubes de Primera División y Primera B, sus decisiones obligan a los clubes y el propio Consejo elige al presidente y a los seis directores de la ANFP.
 
 Esa estructura permite formular una pregunta sobre horizontes e incentivos: ¿hasta qué punto los actores que deciden sobre las reglas generales internalizan el valor futuro de toda la competición y hasta qué punto representan intereses más inmediatos de sus respectivos clubes?
 
@@ -417,9 +399,7 @@ $$
 
 La NBA proporciona un contraste útil porque algunas de sus reglas distribuyen oportunidades de manera deliberadamente distinta a lo que produciría un mercado irrestricto.
 
-El ejemplo más claro es el **Draft**, no el mercado de transferencias. Tradicionalmente, los equipos con peores resultados reciben mejores posiciones o mayores probabilidades de obtener selecciones tempranas, mientras que buena parte del resto del Draft se ordena inversamente según los resultados de la temporada anterior.
-
-El mecanismo puede entenderse como una redistribución parcial de talento nuevo hacia equipos más débiles:
+El ejemplo más claro es el **Draft**, no el mercado de transferencias. Tradicionalmente, los equipos con peores resultados reciben mejores posiciones o mayores probabilidades de obtener selecciones tempranas, mientras que buena parte del resto del Draft se ordena inversamente según los resultados de la temporada anterior. El mecanismo puede entenderse como una redistribución parcial de talento nuevo hacia equipos más débiles:
 
 $$
 \text{peor desempeño}
@@ -457,19 +437,9 @@ Esa pregunta nos lleva directamente a la duración de los mandatos políticos.
 
 ### El problema
 
-Una constitución debe decidir durante cuánto tiempo permanecerán los representantes en sus cargos antes de enfrentar nuevamente a los electores.
+Una constitución debe decidir durante cuánto tiempo permanecerán los representantes en sus cargos antes de enfrentar nuevamente a los electores. Una primera intuición favorece mandatos cortos: Si la próxima elección está cerca, un político que realiza poco esfuerzo puede ser castigado rápidamente, por lo tanto, una elección frecuente fortalece la rendición de cuentas. Esta es la intuición clásica del modelo de Barro [-@barro1973]: la amenaza de reemplazo disciplina al representante.
 
-Una primera intuición favorece mandatos cortos. Si la próxima elección está cerca, un político que realiza poco esfuerzo puede ser castigado rápidamente. Una elección frecuente fortalece entonces la rendición de cuentas.
-
-Esta es la intuición clásica del modelo de Barro [-@barro1973]: la amenaza de reemplazo disciplina al representante.
-
-Dal Bó y Rossi [-@dalborossi2011] plantean que la duración del mandato puede producir simultáneamente otros incentivos.
-
-Una elección cercana obliga al político a dedicar recursos a conseguir su reelección.
-
-Además, parte del trabajo legislativo puede funcionar como una inversión cuyos retornos sólo aparecen gradualmente.
-
-Por tanto, una misma regla institucional puede producir fuerzas contrapuestas.
+Dal Bó y Rossi [-@dalborossi2011] desafían esa idea. ELlos plantean que la duración del mandato puede producir simultáneamente otros incentivos. Una elección cercana obliga al político a desviar recursos y esfuerzo a conseguir su reelección más que beneficios futuros. Además, parte del trabajo legislativo puede funcionar como una inversión cuyos retornos sólo aparecen gradualmente. Por tanto, una misma regla institucional puede producir fuerzas contrapuestas.
 
 La pregunta central es:
 
@@ -525,7 +495,7 @@ $$
 P(l,\sigma c,\pi).
 $$
 
-El parámetro $\pi$ captura seguridad electoral.
+El parámetro $\pi$ captura seguridad electoral y $\sigma$, es 0 cuando el esfuerzo de campaña es parejo y 1 cuando tienen compromisos de campaña adicionales.
 
 Los autores suponen
 
@@ -557,9 +527,7 @@ Una buena actividad legislativa puede, por ejemplo, hacer más productiva una ca
 
 ### Los retornos del esfuerzo legislativo
 
-Cada unidad de esfuerzo legislativo produce un retorno contemporáneo.
-
-Los autores introducen además un parámetro
+Cada unidad de esfuerzo legislativo produce un retorno que parte en el mismo período. Los autores introducen además un parámetro para el tiempo en que se obtienen retornos:
 
 $$
 h\in\{0,1\}.
@@ -583,13 +551,13 @@ sus beneficios continúan durante el período siguiente.
 
 Esos retornos pueden representar reconocimiento, logros de política, legado o menores costos futuros derivados del aprendizaje.
 
-Por tanto, cuando
+Por lo tanto, cuando
 
 $$
 h=1,
 $$
 
-el esfuerzo legislativo adquiere explícitamente la naturaleza de una inversión.
+el esfuerzo legislativo es equivalente a una inversión.
 
 ### El legislador de mandato largo
 
@@ -679,7 +647,7 @@ $$
 -\sigma\rho(l_S+c_S),
 $$
 
-un costo adicional derivado de tener que combinar trabajo legislativo y actividad electoral. El parámetro $\rho$ aumenta con la distancia entre Buenos Aires y la provincia representada, capturando el costo de realizar simultáneamente ambas actividades.
+un costo adicional derivado de tener que combinar trabajo legislativo y actividad electoral. El parámetro $\rho$ aumenta con la distancia entre la localidad donde se encuentra el parlamento y el distrito que representa, capturando el costo de realizar simultáneamente ambas actividades.
 
 La expresión crucial es
 
@@ -879,13 +847,11 @@ El signo final constituye una pregunta empírica.
 
 ## El experimento institucional
 
-El caso argentino permite observar legisladores que comenzaron a ejercer al mismo tiempo y recibieron aleatoriamente mandatos de distinta duración.
+Dal Bó y Rossi explotan dos experimentos naturales distintos en el Congreso argentino. Ambos permiten observar legisladores que comenzaron a ejercer al mismo tiempo, pero que recibieron aleatoriamente mandatos de diferente duración.
 
-En 1983, los 254 diputados elegidos con el retorno de la democracia fueron distribuidos entre mandatos iniciales de dos y cuatro años mediante un procedimiento aleatorio. En 2001, una situación similar permitió asignar a los senadores mandatos de dos, cuatro o seis años.
+El experimento principal corresponde a la Cámara de Diputados. En 1983, con el retorno de la democracia, los 254 diputados electos fueron asignados aleatoriamente a mandatos iniciales de dos o cuatro años. Los autores comparan su comportamiento durante los primeros dos años, cuando ambos grupos ejercían simultáneamente bajo las mismas condiciones institucionales.
 
-Esto produce una comparación particularmente limpia.
-
-Durante los primeros dos años:
+Durante ese período:
 
 $$
 \text{mismo contexto político}
@@ -905,11 +871,11 @@ $$
 \text{distinto horizonte garantizado}.
 $$
 
-La duración del mandato puede entonces tratarse como una variación institucional exógena.
+La duración inicial del mandato puede entonces tratarse como una variación institucional exógena.
 
 ### ¿Qué entendemos por esfuerzo?
 
-El Congreso argentino proporciona seis medidas de actividad:
+Para la Cámara de Diputados, el Congreso argentino proporciona seis medidas de actividad legislativa:
 
 - asistencia a sesiones de sala;
 - asistencia a comisiones;
@@ -918,13 +884,21 @@ El Congreso argentino proporciona seis medidas de actividad:
 - proyectos presentados;
 - proyectos aprobados.
 
-Los autores construyen además un índice agregado de esfuerzo legislativo.
+Los autores construyen además un índice agregado de esfuerzo legislativo a partir de estas seis medidas.
 
-La comparación inicial muestra que los legisladores con mandatos más largos realizan, en promedio, mayor esfuerzo. Los coeficientes estimados son positivos para las seis medidas individuales, aunque la precisión estadística varía entre ellas.
+La comparación principal muestra que los diputados asignados a mandatos de cuatro años realizan más esfuerzo que aquellos asignados a mandatos de dos años. El efecto sobre el índice agregado es positivo y estadísticamente significativo. Los coeficientes son además positivos para las seis medidas individuales, aunque su precisión estadística varía.
 
-Esto permite rechazar la hipótesis más sencilla según la cual una elección más próxima necesariamente aumenta el trabajo legislativo.
+El resultado central puede resumirse como
 
-Todavía quedan dos explicaciones:
+$$
+\boxed{
+l_{4}>l_{2}
+}
+$$
+
+Esto muestra que, en este contexto, el efecto de una mayor estabilidad en el cargo domina el incentivo de *accountability* asociado a enfrentar una elección más próxima.
+
+Sin embargo, ese resultado por sí solo no permite establecer por qué ocurre. El modelo identifica dos mecanismos capaces de producir mayor esfuerzo bajo mandatos más largos:
 
 $$
 \text{campaigning}
@@ -932,33 +906,37 @@ $$
 \text{payback}.
 $$
 
-El modelo permite distinguirlas.
+Para distinguirlos, los autores utilizan evidencia adicional de la Cámara de Diputados y un segundo experimento natural en el Senado.
+
+En 2001, los senadores fueron asignados aleatoriamente a mandatos de dos, cuatro o seis años. En una primera comparación, los autores agrupan los mandatos de cuatro y seis años como *long term* y los comparan con los mandatos de dos años. El patrón general vuelve a ser consistente con mayor esfuerzo bajo horizontes más largos. El Senado, sin embargo, proporciona sólo tres medidas objetivas de esfuerzo: asistencia a sala, proyectos presentados y proyectos aprobados.
 
 ## Del resultado al mecanismo
 
 ### Cuatro años versus seis años
 
-Consideremos senadores con mandatos de cuatro y seis años durante sus primeros dos años.
+El diseño del Senado permite realizar un test especialmente útil para distinguir entre *campaigning* y *payback*.
 
-Ninguno está próximo a su elección.
+Consideremos exclusivamente a los senadores asignados a mandatos de cuatro y seis años durante sus primeros dos años en el cargo. Ninguno de los dos grupos enfrenta todavía una elección próxima.
 
-Por tanto, el mecanismo de campaigning predice aproximadamente
+Si la diferencia de esfuerzo observada entre mandatos cortos y largos se debiera exclusivamente a las exigencias de campaña, esperaríamos aproximadamente
 
 $$
 l_4=l_6.
 $$
 
-El mecanismo de payback predice
+En cambio, si el esfuerzo legislativo constituye una inversión cuyos retornos se obtienen a lo largo del tiempo, un horizonte garantizado adicional debería aumentar los incentivos:
 
 $$
 l_6>l_4.
 $$
 
-Los datos muestran mayor esfuerzo entre quienes recibieron seis años. Los autores interpretan este resultado como evidencia favorable al mecanismo de payback.
+Los datos muestran precisamente este segundo patrón. Durante los primeros dos años, los senadores con mandatos de seis años realizan más esfuerzo que quienes recibieron cuatro años. La estimación es sustantivamente importante, aunque su significación estadística es marginal en una especificación y menor al colapsar los datos por legislador. Los autores interpretan este resultado como evidencia favorable al mecanismo de *payback*.
 
 ### ¿Aparece el efecto cuando se acerca la campaña?
 
-Si campaigning explicara la diferencia entre diputados con mandatos de dos y cuatro años, esperaríamos que esa diferencia aumentara especialmente durante el segundo año, cuando la elección de los primeros se aproxima.
+La Cámara de Diputados permite un segundo test.
+
+Si *campaigning* explicara la diferencia entre diputados con mandatos de dos y cuatro años, esperaríamos que esa brecha aumentara durante el segundo año, cuando los diputados con mandato corto se aproximan a la elección.
 
 Formalmente:
 
@@ -968,17 +946,17 @@ $$
 (l_L-l_S)_{t=1}.
 $$
 
-Los autores no encuentran ese patrón.
+Los autores no encuentran ese patrón. La interacción entre mandato largo y segundo año no es positiva ni significativa. La diferencia de esfuerzo entre ambos grupos ya aparece durante el primer año y no aumenta cuando se aproxima la elección de los legisladores con mandato corto.
 
-Nuevamente, la evidencia favorece la explicación basada en horizonte de payback.
+Esta evidencia vuelve a debilitar la explicación basada exclusivamente en *campaigning*.
 
 ### Distancia y campaigning
 
-La campaña exige presencia territorial.
+El modelo genera otra predicción asociada al costo de hacer campaña.
 
-Si el legislador representa una provincia distante de Buenos Aires, compatibilizar trabajo parlamentario con actividad electoral debería resultar más costoso.
+La actividad electoral exige presencia territorial. Para un legislador que representa una provincia distante de Buenos Aires, compatibilizar trabajo parlamentario con actividades de campaña debería resultar más costoso.
 
-Por tanto, si campaigning fuese el mecanismo principal,
+Por tanto, si *campaigning* fuera el mecanismo que explica el efecto de la duración del mandato,
 
 $$
 \rho\uparrow
@@ -988,21 +966,19 @@ $$
 
 Esta es la segunda proposición del artículo.
 
-Empíricamente, los autores no encuentran esa interacción positiva.
+Empíricamente, los autores no encuentran esa interacción positiva. El coeficiente tiene incluso signo negativo y no es estadísticamente significativo.
 
 ### Seguridad electoral y payback
 
-El mecanismo de payback produce otra predicción.
+El mecanismo de *payback* genera una predicción diferente.
 
-Consideremos un legislador con reelección prácticamente segura.
-
-Incluso con un mandato corto, probablemente continuará en el cargo:
+Consideremos primero un legislador cuya reelección es prácticamente segura:
 
 $$
 p\approx1.
 $$
 
-Alargar su mandato modifica poco su horizonte efectivo.
+Aunque su mandato actual sea corto, existe una probabilidad elevada de que continúe en el cargo. Por tanto, extender formalmente la duración de su mandato modifica poco su horizonte efectivo para capturar los retornos futuros de sus inversiones legislativas.
 
 Comparemos ahora un legislador cuya probabilidad de reelección es baja:
 
@@ -1010,33 +986,36 @@ $$
 p\ll1.
 $$
 
-Para él, pasar de un mandato corto a uno largo garantiza varios años adicionales durante los cuales podrá apropiarse de los retornos de sus inversiones.
+Para este legislador, recibir un mandato más largo aumenta considerablemente el período durante el cual tiene asegurada la posibilidad de apropiarse de esos retornos.
 
-Por tanto,
+El modelo predice entonces:
 
 $$
 \boxed{
 \text{mayor seguridad electoral}
 \rightarrow
 \text{menor efecto de alargar el mandato}
-}.
+}
 $$
 
-Esta es la tercera proposición del artículo. Los resultados muestran precisamente que el efecto de obtener un mandato largo es menor entre legisladores electoralmente seguros.
+Esta es la tercera proposición del artículo. Los resultados muestran precisamente que el efecto del mandato largo disminuye entre legisladores electoralmente más seguros. En la especificación con datos colapsados, la interacción entre mandato largo y seguridad electoral es negativa y estadísticamente significativa.
 
-La secuencia analítica es especialmente importante:
+La estrategia empírica completa puede resumirse así:
 
 $$
 \boxed{
-\text{modelo}
+\text{efecto causal principal}
 \rightarrow
 \text{mecanismos alternativos}
 \rightarrow
-\text{predicciones diferentes}
+\text{predicciones diferenciadas}
 \rightarrow
-\text{tests que discriminan entre mecanismos}
+\text{tests de mecanismos}
 }
 $$
+
+Primero, la comparación entre diputados de dos y cuatro años establece que la duración del mandato afecta el esfuerzo legislativo. Después, la evidencia del Senado y las variaciones adicionales dentro de la Cámara permiten investigar por qué ocurre. En conjunto, los resultados son más consistentes con una lógica de *payback horizon* que con una explicación basada exclusivamente en las distracciones producidas por la campaña electoral.
+
 
 ## Qué sabemos y qué queda fuera del modelo
 
