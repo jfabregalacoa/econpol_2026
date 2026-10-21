@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Principal-agente: incentivos y preferencias de los representantes – Economía Política Formal - 2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/03-compromiso-repeticion-clientelismo.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c574c73dd0d0ff61020859ffc61752ee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-principal-agente-elecciones-corrupcion.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principal-agente: incentivos y preferencias de los representantes</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Economía Política Formal - 2026</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-interaccion-instituciones-agenda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Interacción estratégica, instituciones y poder de agenda</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-horizontes-incentivos-diseno-institucional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Horizontes temporales, incentivos y diseño institucional</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-compromiso-repeticion-clientelismo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Compromiso, repetición y clientelismo</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-principal-agente-elecciones-corrupcion.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principal-agente: incentivos y preferencias de los representantes</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción.-cómo-controlar-a-los-representantes-y-conocer-sus-preferencias" id="toc-introducción.-cómo-controlar-a-los-representantes-y-conocer-sus-preferencias" class="nav-link active" data-scroll-target="#introducción.-cómo-controlar-a-los-representantes-y-conocer-sus-preferencias"><span class="header-section-number">4.1</span> Introducción. ¿Cómo controlar a los representantes y conocer sus preferencias?</a></li>
+  <li><a href="#delegar-decisiones-una-introducción-formal-al-problema-principal-agente" id="toc-delegar-decisiones-una-introducción-formal-al-problema-principal-agente" class="nav-link" data-scroll-target="#delegar-decisiones-una-introducción-formal-al-problema-principal-agente"><span class="header-section-number">4.2</span> Delegar decisiones: una introducción formal al problema principal-agente</a>
+  <ul class="collapse">
+  <li><a href="#por-qué-aparece-el-problema" id="toc-por-qué-aparece-el-problema" class="nav-link" data-scroll-target="#por-qué-aparece-el-problema"><span class="header-section-number">4.2.1</span> Por qué aparece el problema</a></li>
+  <li><a href="#una-formulación-elemental" id="toc-una-formulación-elemental" class="nav-link" data-scroll-target="#una-formulación-elemental"><span class="header-section-number">4.2.2</span> Una formulación elemental</a></li>
+  <li><a href="#diseñar-incentivos-participación-y-compatibilidad" id="toc-diseñar-incentivos-participación-y-compatibilidad" class="nav-link" data-scroll-target="#diseñar-incentivos-participación-y-compatibilidad"><span class="header-section-number">4.2.3</span> Diseñar incentivos: participación y compatibilidad</a></li>
+  <li><a href="#la-reelección-como-mecanismo-de-incentivos" id="toc-la-reelección-como-mecanismo-de-incentivos" class="nav-link" data-scroll-target="#la-reelección-como-mecanismo-de-incentivos"><span class="header-section-number">4.2.4</span> La reelección como mecanismo de incentivos</a></li>
+  </ul></li>
+  <li><a href="#ferejohn-1986-la-reelección-como-mecanismo-de-control" id="toc-ferejohn-1986-la-reelección-como-mecanismo-de-control" class="nav-link" data-scroll-target="#ferejohn-1986-la-reelección-como-mecanismo-de-control"><span class="header-section-number">4.3</span> Ferejohn (1986): la reelección como mecanismo de control</a>
+  <ul class="collapse">
+  <li><a href="#por-qué-abandonar-las-promesas-de-campaña" id="toc-por-qué-abandonar-las-promesas-de-campaña" class="nav-link" data-scroll-target="#por-qué-abandonar-las-promesas-de-campaña"><span class="header-section-number">4.3.1</span> Por qué abandonar las promesas de campaña</a></li>
+  <li><a href="#jugadores-información-y-secuencia" id="toc-jugadores-información-y-secuencia" class="nav-link" data-scroll-target="#jugadores-información-y-secuencia"><span class="header-section-number">4.3.2</span> Jugadores, información y secuencia</a></li>
+  <li><a href="#la-mejor-respuesta-del-gobernante" id="toc-la-mejor-respuesta-del-gobernante" class="nav-link" data-scroll-target="#la-mejor-respuesta-del-gobernante"><span class="header-section-number">4.3.3</span> La mejor respuesta del gobernante</a></li>
+  <li><a href="#los-votantes-también-optimizan" id="toc-los-votantes-también-optimizan" class="nav-link" data-scroll-target="#los-votantes-también-optimizan"><span class="header-section-number">4.3.4</span> Los votantes también optimizan</a></li>
+  <li><a href="#por-qué-el-equilibrio-debe-ser-dinámicamente-creíble" id="toc-por-qué-el-equilibrio-debe-ser-dinámicamente-creíble" class="nav-link" data-scroll-target="#por-qué-el-equilibrio-debe-ser-dinámicamente-creíble"><span class="header-section-number">4.3.5</span> Por qué el equilibrio debe ser dinámicamente creíble</a></li>
+  <li><a href="#qué-ocurre-si-la-derrota-no-resulta-definitiva" id="toc-qué-ocurre-si-la-derrota-no-resulta-definitiva" class="nav-link" data-scroll-target="#qué-ocurre-si-la-derrota-no-resulta-definitiva"><span class="header-section-number">4.3.6</span> ¿Qué ocurre si la derrota no resulta definitiva?</a></li>
+  <li><a href="#el-paso-hacia-las-preferencias-heterogéneas" id="toc-el-paso-hacia-las-preferencias-heterogéneas" class="nav-link" data-scroll-target="#el-paso-hacia-las-preferencias-heterogéneas"><span class="header-section-number">4.3.7</span> El paso hacia las preferencias heterogéneas</a></li>
+  </ul></li>
+  <li><a href="#ferraz-y-finan-2011-de-los-incentivos-a-la-corrupción-municipal" id="toc-ferraz-y-finan-2011-de-los-incentivos-a-la-corrupción-municipal" class="nav-link" data-scroll-target="#ferraz-y-finan-2011-de-los-incentivos-a-la-corrupción-municipal"><span class="header-section-number">4.4</span> Ferraz y Finan (2011): de los incentivos a la corrupción municipal</a>
+  <ul class="collapse">
+  <li><a href="#una-predicción-y-un-diseño-de-investigación" id="toc-una-predicción-y-un-diseño-de-investigación" class="nav-link" data-scroll-target="#una-predicción-y-un-diseño-de-investigación"><span class="header-section-number">4.4.1</span> Una predicción y un diseño de investigación</a></li>
+  <li><a href="#por-qué-ferraz-y-finan-construyen-otro-modelo" id="toc-por-qué-ferraz-y-finan-construyen-otro-modelo" class="nav-link" data-scroll-target="#por-qué-ferraz-y-finan-construyen-otro-modelo"><span class="header-section-number">4.4.2</span> ¿Por qué Ferraz y Finan construyen otro modelo?</a></li>
+  <li><a href="#la-decisión-del-político-corrupto" id="toc-la-decisión-del-político-corrupto" class="nav-link" data-scroll-target="#la-decisión-del-político-corrupto"><span class="header-section-number">4.4.3</span> La decisión del político corrupto</a></li>
+  <li><a href="#cómo-intervienen-las-creencias-de-los-votantes" id="toc-cómo-intervienen-las-creencias-de-los-votantes" class="nav-link" data-scroll-target="#cómo-intervienen-las-creencias-de-los-votantes"><span class="header-section-number">4.4.4</span> Cómo intervienen las creencias de los votantes</a></li>
+  <li><a href="#la-hipótesis-que-va-a-los-datos" id="toc-la-hipótesis-que-va-a-los-datos" class="nav-link" data-scroll-target="#la-hipótesis-que-va-a-los-datos"><span class="header-section-number">4.4.5</span> La hipótesis que va a los datos</a></li>
+  </ul></li>
+  <li><a href="#del-concepto-de-corrupción-a-una-variable-medible" id="toc-del-concepto-de-corrupción-a-una-variable-medible" class="nav-link" data-scroll-target="#del-concepto-de-corrupción-a-una-variable-medible"><span class="header-section-number">4.5</span> Del concepto de corrupción a una variable medible</a>
+  <ul class="collapse">
+  <li><a href="#la-elección-de-una-fuente-de-información" id="toc-la-elección-de-una-fuente-de-información" class="nav-link" data-scroll-target="#la-elección-de-una-fuente-de-información"><span class="header-section-number">4.5.1</span> La elección de una fuente de información</a></li>
+  <li><a href="#cuál-es-la-variable-explicativa" id="toc-cuál-es-la-variable-explicativa" class="nav-link" data-scroll-target="#cuál-es-la-variable-explicativa"><span class="header-section-number">4.5.2</span> ¿Cuál es la variable explicativa?</a></li>
+  <li><a href="#primera-lectura-de-los-resultados-tabla-4" id="toc-primera-lectura-de-los-resultados-tabla-4" class="nav-link" data-scroll-target="#primera-lectura-de-los-resultados-tabla-4"><span class="header-section-number">4.5.3</span> Primera lectura de los resultados: Tabla 4</a></li>
+  <li><a href="#qué-sesgos-amenazan-la-interpretación" id="toc-qué-sesgos-amenazan-la-interpretación" class="nav-link" data-scroll-target="#qué-sesgos-amenazan-la-interpretación"><span class="header-section-number">4.5.4</span> ¿Qué sesgos amenazan la interpretación?</a></li>
+  <li><a href="#elecciones-estrechas-y-discontinuidad" id="toc-elecciones-estrechas-y-discontinuidad" class="nav-link" data-scroll-target="#elecciones-estrechas-y-discontinuidad"><span class="header-section-number">4.5.5</span> Elecciones estrechas y discontinuidad</a></li>
+  <li><a href="#descartar-explicaciones-alternativas-con-otras-predicciones" id="toc-descartar-explicaciones-alternativas-con-otras-predicciones" class="nav-link" data-scroll-target="#descartar-explicaciones-alternativas-con-otras-predicciones"><span class="header-section-number">4.5.6</span> Descartar explicaciones alternativas con otras predicciones</a></li>
+  <li><a href="#qué-concluimos-y-qué-no" id="toc-qué-concluimos-y-qué-no" class="nav-link" data-scroll-target="#qué-concluimos-y-qué-no"><span class="header-section-number">4.5.7</span> Qué concluimos, y qué no</a></li>
+  </ul></li>
+  <li><a href="#preferencias-políticas-de-controlar-al-representante-a-comprender-sus-decisiones" id="toc-preferencias-políticas-de-controlar-al-representante-a-comprender-sus-decisiones" class="nav-link" data-scroll-target="#preferencias-políticas-de-controlar-al-representante-a-comprender-sus-decisiones"><span class="header-section-number">4.6</span> Preferencias políticas: de controlar al representante a comprender sus decisiones</a>
+  <ul class="collapse">
+  <li><a href="#un-modelo-espacial-de-votación" id="toc-un-modelo-espacial-de-votación" class="nav-link" data-scroll-target="#un-modelo-espacial-de-votación"><span class="header-section-number">4.6.1</span> Un modelo espacial de votación</a></li>
+  <li><a href="#incorporar-incentivos-de-representación" id="toc-incorporar-incentivos-de-representación" class="nav-link" data-scroll-target="#incorporar-incentivos-de-representación"><span class="header-section-number">4.6.2</span> Incorporar incentivos de representación</a></li>
+  <li><a href="#cómo-estimar-una-posición-que-no-observamos" id="toc-cómo-estimar-una-posición-que-no-observamos" class="nav-link" data-scroll-target="#cómo-estimar-una-posición-que-no-observamos"><span class="header-section-number">4.6.3</span> Cómo estimar una posición que no observamos</a></li>
+  <li><a href="#qué-podremos-afirmar-sobre-representación" id="toc-qué-podremos-afirmar-sobre-representación" class="nav-link" data-scroll-target="#qué-podremos-afirmar-sobre-representación"><span class="header-section-number">4.6.4</span> Qué podremos afirmar sobre representación</a></li>
+  </ul></li>
+  <li><a href="#laboratorio-en-r.-posiciones-ideológicas-y-decisiones-legislativas-en-chile" id="toc-laboratorio-en-r.-posiciones-ideológicas-y-decisiones-legislativas-en-chile" class="nav-link" data-scroll-target="#laboratorio-en-r.-posiciones-ideológicas-y-decisiones-legislativas-en-chile"><span class="header-section-number">4.7</span> Laboratorio en R. Posiciones ideológicas y decisiones legislativas en Chile</a>
+  <ul class="collapse">
+  <li><a href="#los-datos" id="toc-los-datos" class="nav-link" data-scroll-target="#los-datos"><span class="header-section-number">4.7.1</span> Los datos</a></li>
+  <li><a href="#primera-actividad-describir-posiciones-ya-estimadas" id="toc-primera-actividad-describir-posiciones-ya-estimadas" class="nav-link" data-scroll-target="#primera-actividad-describir-posiciones-ya-estimadas"><span class="header-section-number">4.7.2</span> Primera actividad: describir posiciones ya estimadas</a></li>
+  <li><a href="#segunda-actividad-recuperar-posiciones-de-una-matriz-de-votos" id="toc-segunda-actividad-recuperar-posiciones-de-una-matriz-de-votos" class="nav-link" data-scroll-target="#segunda-actividad-recuperar-posiciones-de-una-matriz-de-votos"><span class="header-section-number">4.7.3</span> Segunda actividad: recuperar posiciones de una matriz de votos</a></li>
+  <li><a href="#tercera-actividad-se-apartan-de-sus-bancadas-los-diputados-ideológicamente-distantes" id="toc-tercera-actividad-se-apartan-de-sus-bancadas-los-diputados-ideológicamente-distantes" class="nav-link" data-scroll-target="#tercera-actividad-se-apartan-de-sus-bancadas-los-diputados-ideológicamente-distantes"><span class="header-section-number">4.7.4</span> Tercera actividad: ¿se apartan de sus bancadas los diputados ideológicamente distantes?</a></li>
+  </ul></li>
+  <li><a href="#integración-lo-que-aprendemos-al-pasar-de-un-modelo-a-los-datos" id="toc-integración-lo-que-aprendemos-al-pasar-de-un-modelo-a-los-datos" class="nav-link" data-scroll-target="#integración-lo-que-aprendemos-al-pasar-de-un-modelo-a-los-datos"><span class="header-section-number">4.8</span> Integración: lo que aprendemos al pasar de un modelo a los datos</a></li>
+  <li><a href="#cierre.-incentivos-y-preferencias-en-la-representación-política" id="toc-cierre.-incentivos-y-preferencias-en-la-representación-política" class="nav-link" data-scroll-target="#cierre.-incentivos-y-preferencias-en-la-representación-política"><span class="header-section-number">4.9</span> 4.7. Cierre. Incentivos y preferencias en la representación política</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">4.10</span> Referencias</a></li>
+  <li><a href="#guía-de-recorrido-para-una-sesión-de-120-minutos" id="toc-guía-de-recorrido-para-una-sesión-de-120-minutos" class="nav-link" data-scroll-target="#guía-de-recorrido-para-una-sesión-de-120-minutos"><span class="header-section-number">4.11</span> Guía de recorrido para una sesión de 120 minutos</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principal-agente: incentivos y preferencias de los representantes</span></h1>
+<p class="subtitle lead">Incentivos, preferencias políticas y estimación empírica</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>El capítulo anterior estudió cómo la repetición y el monitoreo permiten sostener compromisos políticos. Ahora trasladamos esa lógica a la representación: cuando los ciudadanos delegan decisiones, ¿cómo pueden incentivar a sus representantes a actuar conforme a sus intereses? A partir de este problema examinaremos una segunda cuestión: cómo inferir las preferencias de los propios representantes observando sus decisiones. Para ello, pasaremos del estudio de la rendición de cuentas electoral a la estimación de posiciones ideológicas mediante votaciones legislativas.</p>
+<section id="introducción.-cómo-controlar-a-los-representantes-y-conocer-sus-preferencias" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introducción.-cómo-controlar-a-los-representantes-y-conocer-sus-preferencias"><span class="header-section-number">4.1</span> Introducción. ¿Cómo controlar a los representantes y conocer sus preferencias?</h2>
+<p>Imaginemos un municipio cuyo alcalde administra recursos para construir escuelas, reparar caminos y financiar servicios de salud. Algunas decisiones demandan esfuerzo y coordinación. Otras ofrecen oportunidades para favorecer a proveedores, desviar recursos o conseguir beneficios privados. Los habitantes pueden observar si una escuela se construyó, pero rara vez conocen todas las decisiones que hicieron posible su construcción, el costo que habría tenido bajo una gestión diligente o las alternativas que el alcalde descartó.</p>
+<p>El alcalde enfrenta elecciones periódicas. Durante su primer mandato puede presentarse nuevamente; durante el segundo, una regla institucional le impide competir por un tercer período consecutivo. Supongamos que nada más cambia: sus preferencias, su capacidad y el presupuesto disponible permanecen constantes. ¿Esperaríamos las mismas decisiones en ambos mandatos?</p>
+<p>La pregunta introduce el <strong>problema principal-agente</strong>. Los ciudadanos delegan autoridad en representantes que adquieren información y capacidad de decisión sobre asuntos que aquellos no pueden supervisar directamente. Además, los representantes pueden tener intereses distintos de los ciudadanos. ¿Cómo conseguir, entonces, que actúen conforme a los intereses de quienes les entregaron esa autoridad? Una posibilidad consiste en establecer incentivos que hagan conveniente para el representante comportarse de la manera deseada. Las elecciones pueden desempeñar esa función porque conservar el cargo tiene valor y perderlo puede ser costoso.</p>
+<p>La primera parte del capítulo estudia este mecanismo. Comenzaremos formulando el problema principal-agente y sus restricciones de incentivos. Después examinaremos cómo John Ferejohn (1986) demuestra que una regla de reelección basada en el desempeño puede disciplinar a los gobernantes, aun cuando los ciudadanos no observen directamente sus acciones. Finalmente, estudiaremos cómo Claudio Ferraz y Frederico Finan (2011) utilizan los límites a la reelección de alcaldes brasileños para investigar empíricamente si los incentivos electorales reducen la corrupción. Nos interesará especialmente comprender las decisiones que toman los autores al construir sus modelos y las estrategias que utilizan para contrastar sus predicciones con datos.</p>
+<p>Este recorrido supone que las preferencias del representante pueden diferir de las del electorado. En los modelos anteriores, esa divergencia se incorpora mediante supuestos acerca de los beneficios privados y los costos que enfrenta el gobernante. Pero podemos plantear una pregunta adicional: <strong>¿cómo podríamos conocer empíricamente las preferencias de los propios representantes?</strong> En muchas situaciones, esas preferencias tampoco son directamente observables. Lo que observamos son decisiones que pueden revelar información sobre ellas.</p>
+<p>Para abordar esta pregunta, dejaremos el ejemplo del alcalde y nos trasladaremos a un cuerpo colegiado. Un parlamento ofrece una oportunidad especialmente interesante para estudiar las preferencias políticas porque muchos representantes deben pronunciarse sobre las mismas propuestas. Ante una votación legislativa, cada diputado enfrenta un conjunto común de alternativas y debe expresar una decisión. Cuando observamos numerosas votaciones, podemos identificar patrones de coincidencia y desacuerdo entre representantes. Esos patrones contienen información que, bajo determinados supuestos, permite inferir sus posiciones ideológicas.</p>
+<p>La segunda parte del capítulo introduce los modelos espaciales de votación y los métodos de estimación de posiciones ideales (<em>ideal points</em>). Estudiaremos cómo se pasa de una matriz de votos observados a la estimación de posiciones políticas que no conocemos directamente. Luego aplicaremos estas herramientas en R utilizando votaciones de la Cámara de Diputadas y Diputados de Chile. El ejercicio permitirá examinar la distribución de posiciones ideológicas, las diferencias entre partidos y la heterogeneidad de preferencias dentro de ellos. También discutiremos hasta qué punto las decisiones observadas permiten distinguir preferencias individuales de incentivos estratégicos o disciplina partidaria.</p>
+<p>Las dos partes del capítulo abordan, así, dimensiones complementarias de la representación política. La primera estudia cómo los incentivos pueden modificar el comportamiento de los representantes cuando sus intereses divergen de los de los ciudadanos. La segunda examina cómo podemos inferir las preferencias de esos representantes a partir de su conducta. En ambos casos, <strong>el desafío consiste en comprender decisiones observables a partir de elementos que no podemos observar directamente</strong>, y en reconocer qué supuestos necesitamos para hacerlo.</p>
+<p>El objetivo metodológico de la sesión será reconstruir cómo se formulan esos problemas, qué decisiones de modelamiento permiten abordarlos y de qué manera las herramientas formales se conectan con estrategias de investigación empírica.</p>
+</section>
+<section id="delegar-decisiones-una-introducción-formal-al-problema-principal-agente" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="delegar-decisiones-una-introducción-formal-al-problema-principal-agente"><span class="header-section-number">4.2</span> Delegar decisiones: una introducción formal al problema principal-agente</h2>
+<section id="por-qué-aparece-el-problema" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="por-qué-aparece-el-problema"><span class="header-section-number">4.2.1</span> Por qué aparece el problema</h3>
+<p>Un principal, o mandante, necesita que otra persona tome decisiones o realice actividades en su nombre. Su bienestar depende, al menos parcialmente, de las decisiones que adopte esa persona, a quien llamaremos agente. Para desempeñar su función, el agente recibe recursos y autoridad, dispone de conocimientos especializados y adquiere información durante el ejercicio de sus responsabilidades. El principal, en cambio, difícilmente puede conocer todas las circunstancias que enfrenta el agente ni observar directamente cada una de sus decisiones.</p>
+<p>Esta delegación plantea un problema cuando las preferencias de ambos no coinciden. El principal desea que el agente actúe de determinada manera, pero este puede preferir otra acción que le proporcione mayores beneficios personales o le demande menos esfuerzo. Como sus decisiones no son perfectamente observables, el agente dispone de cierta libertad para perseguir sus propios intereses, incluso cuando estos difieren de los del principal.</p>
+<p>En el capítulo anterior estudiamos cómo la asimetría de información puede dar lugar a problemas de <strong>selección adversa</strong> y <strong>riesgo moral</strong> (<em>moral hazard</em>). El primero aparece cuando el principal desconoce características relevantes del agente antes de establecer la relación, como su capacidad o sus preferencias. El segundo surge cuando, una vez delegada la responsabilidad, el agente puede adoptar acciones que el principal no observa o no puede verificar adecuadamente. Ambos problemas pueden coexistir. Aquí nos concentraremos inicialmente en el riesgo moral, porque queremos comprender cómo inducir al agente a actuar en beneficio del principal aun cuando sus acciones no sean directamente observables.</p>
+<p>Esta pregunta retoma un elemento de la discusión anterior sobre relaciones políticas repetidas: las consecuencias futuras de una decisión pueden modificar los incentivos presentes. Ahora cambiaremos de perspectiva. Nos situaremos en la posición del principal, que debe establecer las condiciones bajo las cuales el agente desempeñará sus funciones. En política, esto nos lleva a considerar el diseño de instituciones como la duración de los mandatos, las posibilidades de reelección y las reglas mediante las cuales los gobernantes pueden ser reemplazados.</p>
+<p>¿Por cuánto tiempo conviene entregar autoridad a un representante? ¿Es preferible permitirle reelegirse o limitar el número de mandatos que puede ejercer? Estas decisiones institucionales alteran los beneficios futuros que un gobernante puede obtener de su comportamiento presente.</p>
+<p>El problema que queremos resolver es, entonces, el siguiente: <strong>¿cómo puede el principal establecer incentivos para que un agente, cuyas preferencias pueden diferir de las suyas y cuyas acciones no puede observar directamente, encuentre conveniente actuar conforme a sus intereses?</strong></p>
+</section>
+<section id="una-formulación-elemental" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="una-formulación-elemental"><span class="header-section-number">4.2.2</span> Una formulación elemental</h3>
+<p>Comencemos representando el problema mediante dos actores: un principal <span class="math inline">\(P\)</span> y un agente <span class="math inline">\(A\)</span>.</p>
+<p>El principal desea obtener un resultado <span class="math inline">\(y\)</span>, que depende del esfuerzo realizado por el agente y de circunstancias externas que ninguno de los dos controla completamente. Podemos expresarlo como:</p>
+<p><span class="math display">\[
+y=f(a,\varepsilon),
+\]</span></p>
+<p>donde <span class="math inline">\(a\geq 0\)</span> representa el esfuerzo del agente y <span class="math inline">\(\varepsilon\)</span> reúne los factores externos que también influyen sobre el resultado. Supondremos que, manteniendo constantes esas circunstancias, un mayor esfuerzo permite obtener un mejor resultado.</p>
+<p>La utilidad del principal depende del resultado producido:</p>
+<p><span class="math display">\[
+U_P(y)=u_P(y).
+\]</span></p>
+<p>Sustituyendo la función de producción del resultado, podemos escribir:</p>
+<p><span class="math display">\[
+\boxed{U_P(a,\varepsilon)=u_P\big(f(a,\varepsilon)\big).}
+\]</span></p>
+<p>Esta expresión hace explícito que el bienestar del principal depende de una acción que realiza otra persona y de circunstancias que también afectan sus consecuencias. Como esas circunstancias pueden variar, el principal está interesado en maximizar su utilidad esperada:</p>
+<p><span class="math display">\[
+\max_a\;\mathbb{E}_{\varepsilon}
+\left[u_P\big(f(a,\varepsilon)\big)\right].
+\]</span></p>
+<p>Esta maximización representa el problema que resolvería el principal si pudiera escoger directamente el esfuerzo del agente. Precisamente ahí reside la dificultad: <strong>el principal desea influir sobre <span class="math inline">\(a\)</span>, pero es el agente quien lo elige</strong>.</p>
+<p>Consideremos ahora al agente. Supongamos que recibe una compensación <span class="math inline">\(W\)</span> por desempeñar su función y que realizar esfuerzo tiene un costo <span class="math inline">\(c(a)\)</span>, creciente con el nivel de esfuerzo:</p>
+<p><span class="math display">\[
+U_A(a)=W-c(a),
+\qquad c'(a)&gt;0,\quad c(0)=0.
+\]</span></p>
+<p>El agente recibe el beneficio de ocupar el cargo, pero debe sacrificar tiempo, energía u otros recursos para realizar sus actividades. Supondremos inicialmente que la compensación <span class="math inline">\(W\)</span> es fija y que no depende de los resultados obtenidos.</p>
+<p>¿Qué decisión tomará el agente?</p>
+<p>Dado que desea maximizar su utilidad, resolverá:</p>
+<p><span class="math display">\[
+\max_{a\geq 0}\;W-c(a).
+\]</span></p>
+<p>Como <span class="math inline">\(W\)</span> no cambia con el esfuerzo y <span class="math inline">\(c(a)\)</span> aumenta cuando éste crece, cualquier esfuerzo positivo reduce la utilidad del agente respecto de la alternativa de no esforzarse. Por lo tanto, su decisión óptima será:</p>
+<p><span class="math display">\[
+\boxed{a_A^*=0.}
+\]</span></p>
+<p>En ese caso, el agente recibe <span class="math inline">\(W\)</span> sin realizar esfuerzo alguno.</p>
+<p>El resultado puede ser insatisfactorio para el principal, que habría preferido un esfuerzo positivo para obtener un mayor bienestar. La divergencia surge porque el agente acarrea el costo de esforzarse, mientras que los beneficios adicionales de ese esfuerzo recaen sobre el principal.</p>
+<p>Naturalmente, esto no implica que todos los agentes carezcan de motivaciones para trabajar. Podrían valorar el cumplimiento de sus responsabilidades, compartir los objetivos del principal o recibir beneficios personales por un trabajo bien realizado. Hemos omitido esas posibilidades deliberadamente para identificar el problema de incentivos en su forma más sencilla.</p>
+<p><strong>La conclusión es que, mientras la compensación del agente sea independiente de su conducta, el principal no dispone de un mecanismo que haga conveniente realizar el esfuerzo que desea.</strong></p>
+</section>
+<section id="diseñar-incentivos-participación-y-compatibilidad" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="diseñar-incentivos-participación-y-compatibilidad"><span class="header-section-number">4.2.3</span> Diseñar incentivos: participación y compatibilidad</h3>
+<p>¿Qué puede hacer el principal para modificar esta situación?</p>
+<p>Una posibilidad es establecer una relación entre la conducta del agente y los beneficios que éste obtiene. Aquí la idea es que realizar la acción deseada debe producir una utilidad al menos tan alta como la que el agente recibiría escogiendo otra acción.</p>
+<p>Sin embargo, al diseñar ese mecanismo, el principal enfrenta dos problemas sucesivos.</p>
+<p>El primero consiste en conseguir que el agente acepte desempeñar la función. Cualquier persona dispone de alternativas al acuerdo propuesto y sólo estará dispuesta a participar si la utilidad que espera recibir alcanza, como mínimo, la que obtendría fuera de esa relación.</p>
+<p>Esta es la <strong>restricción de participación</strong>, también denominada restricción de racionalidad individual (<em>individual rationality</em>, IR):</p>
+<p><span class="math display">\[
+\boxed{\mathbb{E}[U_A]\geq\overline U_A,}
+\]</span></p>
+<p>donde <span class="math inline">\(\overline U_A\)</span> representa la utilidad que el agente puede obtener en su mejor alternativa externa (o costo de oportunidad) .</p>
+<p>El segundo problema aparece una vez que el agente acepta participar. El principal necesita que, entre las acciones disponibles, elija aquella que el principal desea inducir. Esa acción debe resultar óptima para el propio agente, dados los beneficios y costos que enfrenta.</p>
+<p>Ésta es la <strong>restricción de compatibilidad de incentivos</strong> (<em>incentive compatibility</em>, IC):</p>
+<p><span class="math display">\[
+\boxed{
+a^*\in\arg\max_{a}\;\mathbb{E}[U_A(a)].
+}
+\]</span></p>
+<p>Entonces, la primera restricción exige que al agente le convenga incorporarse a la relación; la segunda, que una vez incorporado le convenga comportarse de la manera esperada.</p>
+<p>Retomemos nuestro modelo. Supongamos que el principal desea inducir un esfuerzo alto <span class="math inline">\(H\)</span>, mientras que el agente puede optar por un esfuerzo alto <span class="math inline">\(H\)</span> u otro bajo <span class="math inline">\(L\)</span>, donde:</p>
+<p><span class="math display">\[
+H&gt;L,\qquad c(H)&gt;c(L).
+\]</span></p>
+<p>Con una compensación fija <span class="math inline">\(W\)</span>, el agente compara:</p>
+<p><span class="math display">\[
+U_A(H)=W-c(H)
+\]</span></p>
+<p>con</p>
+<p><span class="math display">\[
+U_A(L)=W-c(L).
+\]</span></p>
+<p>Puesto que <span class="math inline">\(c(H)&gt;c(L)\)</span>, necesariamente se cumple:</p>
+<p><span class="math display">\[
+U_A(H)&lt;U_A(L).
+\]</span></p>
+<p>Por tanto, el agente escogerá el esfuerzo bajo. Aumentar <span class="math inline">\(W\)</span> en una cantidad fija podría ayudar a satisfacer la restricción de participación, pero no modificaría esta comparación: ambas alternativas recibirían exactamente el mismo aumento de compensación.</p>
+<p>Para inducir el esfuerzo alto necesitamos introducir alguna consecuencia que dependa de la conducta del agente. Idealmente, su compensación debería aumentar cuando escoge <span class="math inline">\(H\)</span>. Pero aquí reaparece el problema de información: <strong>el principal no puede observar directamente qué esfuerzo realizó</strong>.</p>
+<p>La solución consiste en vincular los beneficios del agente con algún resultado observable que proporcione información sobre su comportamiento. Aunque el resultado no dependa exclusivamente del esfuerzo, puede ser más probable obtener un buen desempeño cuando el agente se esfuerza que cuando no lo hace.</p>
+<p>Así, el principal puede diseñar una regla que premie los buenos resultados o sancione los malos. Al hacerlo, modifica los beneficios esperados de las distintas acciones y, con ello, la decisión que el agente encuentra conveniente tomar.</p>
+</section>
+<section id="la-reelección-como-mecanismo-de-incentivos" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="la-reelección-como-mecanismo-de-incentivos"><span class="header-section-number">4.2.4</span> La reelección como mecanismo de incentivos</h3>
+<p>En una democracia representativa, los ciudadanos no pueden modificar directamente la remuneración de sus gobernantes cada vez que toman una decisión. Sin embargo, las elecciones permiten establecer incentivos mediante la posibilidad que el representante pueda conservar el cargo o perderlo.</p>
+<p>Supongamos que los ciudadanos adoptan una regla de evaluación según la cual un buen desempeño aumenta las posibilidades de reelección. Como el resultado observado depende parcialmente del esfuerzo, la probabilidad de conservar el cargo también puede depender de él.</p>
+<p>Llamemos <span class="math inline">\(p(a)\)</span> a esa probabilidad. Para simplificar, supondremos que:</p>
+<p><span class="math display">\[
+p(H)&gt;p(L).
+\]</span></p>
+<p>Es decir, realizar un esfuerzo alto aumenta las probabilidades de reelección respecto de realizar un esfuerzo bajo, por ejemplo, porque con esfuerzo alto el agente deja más evidencias concretas de beneficios para el principal (e.g.&nbsp;se terminó de construir el hospital, hay más plazas, las calles están más limpias, etc…)</p>
+<p>Esto puede funcionar para motivar al agente a esforzarse porque valora las consecuencias futuras para él que tendrá la elección. Denotemos por <span class="math inline">\(V^I\)</span> el valor esperado de continuar en el cargo y por <span class="math inline">\(V^O\)</span> el valor esperado de quedar fuera. Supongamos que:</p>
+<p><span class="math display">\[
+V^I&gt;V^O.
+\]</span></p>
+<p>Finalmente, introducimos un factor de descuento <span class="math inline">\(\delta\in(0,1)\)</span>, que representa cuánto valora el agente los beneficios futuros en comparación con los presentes.</p>
+<p>Ahora podemos reformular su utilidad. Si realiza un esfuerzo <span class="math inline">\(a\)</span>, recibirá la compensación actual <span class="math inline">\(W\)</span>, asumirá el costo <span class="math inline">\(c(a)\)</span> y obtendrá un beneficio futuro esperado que depende de sus posibilidades de reelección:</p>
+<p><span class="math display">\[
+U_A(a)=W-c(a)+
+\delta\left[p(a)V^I+(1-p(a))V^O\right].
+\]</span></p>
+<p>El agente compara nuevamente las alternativas <span class="math inline">\(H\)</span> y <span class="math inline">\(L\)</span>. Escogerá el esfuerzo alto cuando la utilidad asociada a esa decisión sea al menos igual a la que obtendría realizando un esfuerzo bajo:</p>
+<p><span class="math display">\[
+\begin{aligned}
+W-c(H)+\delta[p(H)V^I+(1-p(H))V^O]\\
+\geq W-c(L)+\delta[p(L)V^I+(1-p(L))V^O].
+\end{aligned}
+\]</span></p>
+<p>Podemos simplificar esta expresión. Primero eliminamos <span class="math inline">\(W\)</span>, que aparece en ambos lados de la desigualdad. Luego agrupamos los costos del esfuerzo y las diferencias entre los beneficios futuros esperados. Obtenemos:</p>
+<p><span class="math display">\[
+\boxed{
+c(H)-c(L)\leq
+\delta\,[p(H)-p(L)]\,[V^I-V^O].
+}
+\]</span></p>
+<p>Esta es la restricción de compatibilidad de incentivos que buscábamos.</p>
+<p>El lado izquierdo representa el <strong>costo adicional de realizar el esfuerzo alto</strong>. El lado derecho representa el <strong>beneficio futuro adicional que ese esfuerzo genera al aumentar la probabilidad de conservar el cargo</strong>.</p>
+<p>La interpretación es bastante intuitiva: el agente estará dispuesto a realizar el esfuerzo extra que desea el principal cuando el beneficio adicional esperado de hacerlo sea, como mínimo, igual al costo adicional que deberá asumir. O dicho técnicamente, cuando el beneficio marginal de esforzar esa magnitud extra sea igual o superior al costo marginal de dicho esfuerzo.</p>
+<p>La expresión también permite identificar las condiciones bajo las cuales la reelección puede disciplinar al gobernante. La recompensa futura debe ser suficientemente valiosa, el agente debe atribuir importancia a su futuro y, especialmente, su esfuerzo debe afectar de manera significativa la probabilidad de conservar el cargo.</p>
+<p>Si el representante ya no puede ser reelegido, esa vía de recompensa desaparece. Del mismo modo, si el desempeño observado proporciona muy poca información sobre sus acciones, el esfuerzo puede tener un efecto demasiado pequeño sobre las probabilidades electorales. En ambas situaciones, el mecanismo pierde capacidad para inducir la conducta deseada.</p>
+<p>Hemos llegado así a una solución posible del problema principal-agente. Aunque el principal no observe directamente las acciones del representante, puede utilizar resultados observables para establecer consecuencias que alteren los beneficios esperados de sus decisiones.</p>
+<p>Esta formulación es una simplificación didáctica. En el modelo de Ferejohn (1986), que estudiaremos a continuación, el gobernante observa las condiciones externas antes de escoger su esfuerzo y los ciudadanos establecen una regla retrospectiva basada en un umbral de desempeño. Su contribución consiste en analizar cómo debe construirse esa regla y bajo qué condiciones produce un equilibrio en el que al gobernante le conviene responder a los intereses de los electores.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Para reflexión personal">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Para reflexión personal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consideremos nuevamente las decisiones del principal. ¿Le convendría aumentar el valor de ocupar el cargo? ¿Qué sucede si los resultados observados dependen principalmente de factores que el gobernante no controla? ¿Y si perder una elección no reduce demasiado sus oportunidades políticas futuras?</p>
+<p>En cada caso, identifique qué término de la restricción de incentivos cambia y qué consecuencias debería tener para la conducta del agente.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="ferejohn-1986-la-reelección-como-mecanismo-de-control" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="ferejohn-1986-la-reelección-como-mecanismo-de-control"><span class="header-section-number">4.3</span> Ferejohn (1986): la reelección como mecanismo de control</h2>
+<section id="por-qué-abandonar-las-promesas-de-campaña" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="por-qué-abandonar-las-promesas-de-campaña"><span class="header-section-number">4.3.1</span> Por qué abandonar las promesas de campaña</h3>
+<p>Ferejohn comienza identificando una dificultad en los modelos de competencia electoral que existían a la fecha. En ellos se planteaba que los ciudadanos comparan plataformas políticas y terminaban optando por la que más se acerca a sus preferencias. El problema que ve Ferejohn es que el candidato, una vez elegido, puede tener incentivos para apartarse de lo que prometió (i.e.&nbsp;de la plataforma política declarada). Y si es así, ¿era racional para el ciudadano votar sólo en base a lo que declaraban los candidatos? La intención de Ferejohn es, entonces, construir una teoría en la cual los votantes anticipan esa posibilidad de ser engañados por un agente y mostrar cómo cierta disciplina sí es posible de conseguir en el comportamiento del gobernante. Para ello desarrolla una aproximación de principal-agente.</p>
+<p>Por eso el artículo reemplaza la comparación de promesas por una <strong>regla de voto retrospectivo</strong> en la que ciudadanos e incumbentes se ven involucrados en una interacción estratégica. Los ciudadanos evalúan el resultado de la administración y establecen un estándar que determina la continuidad del incumbente. Nótese que esta decisión metodológica analiza un proceso electoral como una relación entre el incumbente y los ciudadanos… ¿y qué pasa con los otros candidatos? No es que se ignoren, sino que por simplificación y para poder detectar el problema específico de interés, los candidatos desafiantes son parametrizados. Ellos no se incorporan en el análisis como actores estratégicos (por ejemplo, ofreciendo programas/promesas, etc.); ellos quedan incluidos tácitamente como la alternativa que vuelve operativa la amenaza de reemplazo.</p>
+<p>También importa el horizonte. Frente al problema de que una última elección elimina incentivos futuros, Ferejohn trabaja con un horizonte infinito. No afirma que cada persona ocupe indefinidamente el cargo. Su horizonte representa una competencia política continuada que permite analizar incentivos dinámicos sin que el juego se deshaga por el último período.</p>
+</section>
+<section id="jugadores-información-y-secuencia" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="jugadores-información-y-secuencia"><span class="header-section-number">4.3.2</span> Jugadores, información y secuencia</h3>
+<p>El caso básico considera un electorado homogéneo y un gobernante. En cada período:</p>
+<ol type="1">
+<li>Los votantes aplican una regla retrospectiva de reelección con un umbral <span class="math inline">\(K_t\)</span>.</li>
+<li>El gobernante observa un estado externo <span class="math inline">\(\varepsilon_t\)</span>.</li>
+<li>El gobernante elige esfuerzo <span class="math inline">\(a_t\)</span>, que los votantes no observan directamente.</li>
+<li>El desempeño observado es <span class="math inline">\(y_t=a_t\varepsilon_t\)</span>.</li>
+<li>El incumbente conserva el cargo si <span class="math inline">\(y_t\geq K_t\)</span>; en caso contrario es reemplazado.</li>
+</ol>
+<p>El supuesto central es <strong>la diferencia entre acción y desempeño</strong>. El gobernante sabe algo que el electorado ignora: las condiciones externas antes de actuar. El ciudadano observa únicamente el producto del esfuerzo y esas condiciones. Un buen resultado puede reflejar esfuerzo, circunstancias favorables o ambos. El desempeño funciona como una señal imperfecta de la conducta.</p>
+<div id="fig-ferejohn-voto-retrospectivo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Árbol de decisiones: la naturaleza determina las condiciones externas, el gobernante escoge el esfuerzo y el votante decide la reelección observando solo el desempeño. Las líneas discontinuas unen historias que el votante no puede distinguir.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ferejohn-voto-retrospectivo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../figs/ferejohn1986-voto-retrospectivo.png" class="img-fluid figure-img" style="width:100.0%" alt="Árbol de decisiones: la naturaleza determina las condiciones externas, el gobernante escoge el esfuerzo y el votante decide la reelección observando solo el desempeño. Las líneas discontinuas unen historias que el votante no puede distinguir.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ferejohn-voto-retrospectivo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.1: Ferejohn (1986): árbol ilustrativo del voto retrospectivo.
+</figcaption>
+</figure>
+</div>
+<p>Las preferencias de un período son</p>
+<p><span class="math display">\[
+u_A(a_t,\varepsilon_t)=W-\phi(a_t),
+\qquad u_P(a_t,\varepsilon_t)=a_t\varepsilon_t,
+\]</span></p>
+<p>con <span class="math inline">\(\phi(0)=0\)</span> y <span class="math inline">\(\phi\)</span> creciente y convexa. <span class="math inline">\(W\)</span> incorpora compensaciones y rentas asociadas al cargo. La convexidad de <span class="math inline">\(\phi\)</span> expresa que elevar el esfuerzo se vuelve progresivamente más costoso. Para simplificar, los actores son neutrales al riesgo y el estado externo se modela mediante una distribución conocida <span class="math inline">\(F\)</span>.</p>
+<p>¿Por qué escoger <span class="math inline">\(a\varepsilon\)</span> en vez de una función más compleja? Porque permite expresar inmediatamente cuánto esfuerzo se necesita para satisfacer el estándar de los electores. Si <span class="math inline">\(\varepsilon\)</span> es favorable, conseguir <span class="math inline">\(K\)</span> requiere menos esfuerzo; si es desfavorable, requiere más. Esta elección funcional hace visible el efecto disciplinario de la información imperfecta.</p>
+</section>
+<section id="la-mejor-respuesta-del-gobernante" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="la-mejor-respuesta-del-gobernante"><span class="header-section-number">4.3.3</span> La mejor respuesta del gobernante</h3>
+<p>Supongamos una regla estacionaria <span class="math inline">\(K\)</span>. Para un estado <span class="math inline">\(\varepsilon&gt;0\)</span>, el esfuerzo mínimo que permite ser reelegido es</p>
+<p><span class="math display">\[
+a_K(\varepsilon)=\frac K\varepsilon.
+\]</span></p>
+<p>Un gobernante interesado en conservar el cargo jamás escogerá esfuerzo superior a ese nivel si hacerlo aumenta el costo sin cambiar el resultado electoral. La decisión relevante es entre realizar el esfuerzo mínimo exigido y aceptar la derrota sin realizar esfuerzo.</p>
+<p>Sea <span class="math inline">\(V^I\)</span> el valor futuro de continuar en el cargo y <span class="math inline">\(V^O\)</span> el valor futuro de quedar fuera. El gobernante se esfuerza para cumplir la regla cuando</p>
+<p><span class="math display">\[
+W-\phi(K/\varepsilon)+\delta V^I
+\geq W+\delta V^O.
+\]</span></p>
+<p>Los beneficios corrientes <span class="math inline">\(W\)</span> aparecen a ambos lados y se cancelan. Obtenemos la condición:</p>
+<p><span class="math display">\[
+\boxed{\phi(K/\varepsilon)\leq\delta(V^I-V^O).}
+\]</span></p>
+<p>Definamos <span class="math inline">\(M\equiv\delta(V^I-V^O)\)</span>, el valor descontado de evitar la pérdida del cargo. El político cumple el estándar cuando el costo de lograrlo no excede <span class="math inline">\(M\)</span>. Para estados suficientemente desfavorables renuncia a la reelección; para estados favorables realiza exactamente el esfuerzo que exige <span class="math inline">\(K\)</span>. Esta es la intuición de la <strong>Proposición 1</strong> (pp.&nbsp;14-15 del artículo).</p>
+<p>El resultado muestra por qué el valor de permanecer en el cargo importa, pero también por qué ese valor debe distinguirse de <span class="math inline">\(W\)</span> recibido en el período actual. Lo disciplinario es la diferencia entre las oportunidades futuras dentro y fuera del gobierno.</p>
+</section>
+<section id="los-votantes-también-optimizan" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="los-votantes-también-optimizan"><span class="header-section-number">4.3.4</span> Los votantes también optimizan</h3>
+<p>Una regla más exigente puede elevar el desempeño del gobernante cuando este decide cumplirla. Pero también puede aumentar la proporción de circunstancias en que considera demasiado costoso intentarlo. Por lo tanto, escoger <span class="math inline">\(K\)</span> es un problema estratégico del principal.</p>
+<p>Sea <span class="math inline">\(\varepsilon^*(K)\)</span> el menor estado en que el incumbente intenta satisfacer el estándar. Puesto que obtiene <span class="math inline">\(K\)</span> cuando el político cumple, el rendimiento esperado de un período para el elector, en la formulación sencilla del artículo, es</p>
+<p><span class="math display">\[
+g(K)=K[1-F(\varepsilon^*(K))].
+\]</span></p>
+<p>Si los períodos son idénticos y se emplea una regla estacionaria, la suma descontada es <span class="math inline">\(g(K)/(1-\delta)\)</span>. La elección óptima de <span class="math inline">\(K\)</span> considera la <strong>respuesta endógena del agente</strong>, y no simplemente el desempeño que al principal le gustaría exigir.</p>
+<section id="un-caso-ilustrativo" class="level4" data-number="4.3.4.1">
+<h4 data-number="4.3.4.1" class="anchored" data-anchor-id="un-caso-ilustrativo"><span class="header-section-number">4.3.4.1</span> Un caso ilustrativo</h4>
+<p>Ferejohn estudia un caso particularmente transparente. Supongamos:</p>
+<p><span class="math display">\[
+\varepsilon\sim U[0,1],\qquad \phi(a)=a,\qquad 0\leq a\leq1.
+\]</span></p>
+<p>El gobernante se esfuerza cuando puede satisfacer el estándar (<span class="math inline">\(\varepsilon\geq K\)</span>) y cuando hacerlo no cuesta más que <span class="math inline">\(M\)</span> (<span class="math inline">\(\varepsilon\geq K/M\)</span>). Por tanto:</p>
+<p><span class="math display">\[
+\varepsilon^*(K)=\max\{K,K/M\}.
+\]</span></p>
+<p>Para <span class="math inline">\(M\leq1\)</span>, se cumple <span class="math inline">\(\varepsilon^*(K)=K/M\)</span> en el rango relevante. Entonces el principal maximiza:</p>
+<p><span class="math display">\[
+g(K)=K\left(1-\frac K M\right).
+\]</span></p>
+<p>La condición de primer orden es</p>
+<p><span class="math display">\[
+\frac{dg}{dK}=1-\frac{2K}{M}=0
+\quad\Rightarrow\quad K^*=\frac M2.
+\]</span></p>
+<p>Para <span class="math inline">\(M\geq1\)</span>, la restricción operativa es <span class="math inline">\(\varepsilon^*(K)=K\)</span> y se maximiza <span class="math inline">\(K(1-K)\)</span>, de donde <span class="math inline">\(K^*=1/2\)</span>. Reuniendo ambos casos:</p>
+<p><span class="math display">\[
+\boxed{K^*=\min\left\{\frac12,\frac{\delta(V^I-V^O)}2\right\}.}
+\]</span></p>
+<p>En ambos regímenes <span class="math inline">\(\varepsilon^*=1/2\)</span>. Bajo estos supuestos específicos, el estándar óptimo aumenta con el valor de permanecer en el cargo hasta alcanzar un límite. La derivación resume el corolario de la Proposición 2 (p.&nbsp;16) y la discusión de los resultados de la p.&nbsp;17. No debe trasladarse a otras distribuciones o costos sin revisar las condiciones del modelo.</p>
+</section>
+</section>
+<section id="por-qué-el-equilibrio-debe-ser-dinámicamente-creíble" class="level3" data-number="4.3.5">
+<h3 data-number="4.3.5" class="anchored" data-anchor-id="por-qué-el-equilibrio-debe-ser-dinámicamente-creíble"><span class="header-section-number">4.3.5</span> Por qué el equilibrio debe ser dinámicamente creíble</h3>
+<p>Para hablar de disciplina electoral, la amenaza de castigo debe ser creíble cuando llega la elección. Ferejohn exige que la conducta prescrita en cada continuación del juego sea óptima, no simplemente que se anuncie al comienzo. El principio es el de <strong>perfección en subjuegos</strong>. Como los contendientes son equivalentes en el modelo, los votantes pueden sostener una regla de castigo retrospectivo sin aceptar una alternativa intrínsecamente peor.</p>
+<p>El modelo no requiere que el gobernante sea altruista. Precisamente porque quiere conservar los beneficios futuros del cargo, puede elegir políticas favorables al electorado. El control electoral es una propiedad del equilibrio resultante de preferencias, información y reglas.</p>
+</section>
+<section id="qué-ocurre-si-la-derrota-no-resulta-definitiva" class="level3" data-number="4.3.6">
+<h3 data-number="4.3.6" class="anchored" data-anchor-id="qué-ocurre-si-la-derrota-no-resulta-definitiva"><span class="header-section-number">4.3.6</span> ¿Qué ocurre si la derrota no resulta definitiva?</h3>
+<p>Ferejohn introduce una probabilidad <span class="math inline">\(x\)</span> de recuperar el cargo después de quedar fuera, asociada a diferentes interpretaciones de la competencia entre candidatos y partidos. Cuanto más fácil es regresar, menor resulta <span class="math inline">\(V^I-V^O\)</span>. Perder la elección cuesta menos y el incentivo a esforzarse se debilita. Su <strong>Proposición 4</strong> establece que, dentro del modelo, un aumento de <span class="math inline">\(x\)</span> reduce el bienestar del votante.</p>
+<p>Este resultado no demuestra que un sistema de partidos particular sea siempre superior. Descansa en supuestos específicos: candidatos equivalentes, ausencia de reputaciones partidarias diferenciadas y un modo simplificado de representar el retorno al gobierno. Interesa porque identifica un mecanismo verificable: la sanción sólo disciplina en la medida en que el agente pierde algo valioso.</p>
+</section>
+<section id="el-paso-hacia-las-preferencias-heterogéneas" class="level3" data-number="4.3.7">
+<h3 data-number="4.3.7" class="anchored" data-anchor-id="el-paso-hacia-las-preferencias-heterogéneas"><span class="header-section-number">4.3.7</span> El paso hacia las preferencias heterogéneas</h3>
+<p>Hasta aquí los ciudadanos evalúan un resultado común. Pero en una sociedad real, distintos grupos prefieren políticas y asignaciones distintas. Para analizarlo, Ferejohn permite que un gobernante distribuya el producto total entre <span class="math inline">\(N\)</span> votantes. Cada elector evalúa la porción que recibe y el incumbente necesita satisfacer únicamente una mayoría.</p>
+<p>La <strong>Proposición 6</strong> muestra que, bajo las condiciones del modelo distributivo, el incumbente puede enfrentar a los grupos entre sí y debilitar completamente el control. Si los electores establecen demandas particulares, el político puede formar una mayoría mínima con las demandas más baratas. Un grupo que queda fuera tiene incentivos para ofrecer un estándar todavía menor con el fin de entrar en la coalición ganadora. La competencia entre electores termina erosionando las exigencias colectivas.</p>
+<p>La <strong>Proposición 7</strong> indica que una regla de evaluación del resultado agregado, aplicada de manera coordinada, permite recuperar el nivel de control del caso homogéneo. Ferejohn denomina <em>sociotrópicas</em> a estas reglas: los votantes evalúan un desempeño común en lugar de limitarse a su beneficio individual.</p>
+<p>La conclusión para nuestra sesión es doble. Los problemas de información importan porque los votantes no observan las acciones; las diferencias de preferencias importan porque dificultan acordar qué desempeño debe premiarse. El segundo problema prepara una extensión hacia la representación ideológica, aunque esa extensión requerirá supuestos y herramientas diferentes de los utilizados por Ferejohn.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="En suma">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>En suma
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ferejohn construye una explicación de cuándo la perspectiva de perder el cargo induce esfuerzo. Sus resultados dependen del valor relativo de continuar en el gobierno, de la calidad del desempeño como señal, de la credibilidad del castigo y de la coordinación de los votantes. El modelo explica incentivos; no estima todavía su magnitud en una democracia concreta.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="ferraz-y-finan-2011-de-los-incentivos-a-la-corrupción-municipal" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="ferraz-y-finan-2011-de-los-incentivos-a-la-corrupción-municipal"><span class="header-section-number">4.4</span> Ferraz y Finan (2011): de los incentivos a la corrupción municipal</h2>
+<section id="una-predicción-y-un-diseño-de-investigación" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="una-predicción-y-un-diseño-de-investigación"><span class="header-section-number">4.4.1</span> Una predicción y un diseño de investigación</h3>
+<p>Ferejohn explica por qué un político puede realizar esfuerzo en beneficio de los ciudadanos para evitar una derrota electoral. Pero es un modelo continuo. Una implicancia importante es que la probabilidad de volver a tener los beneficios de estar en el cargo se mantienen incluso con derrotas de por medio. Pero qué pasa si el incumbente sabe que ya no puede seguir en él. Eso cambia los incentivos. Ferraz y Finan lo analizan buscando trazas en un punto específico: apropiación o no de recursos públicos (corrupción). La investigación se sitúa en municipios brasileños, donde una reforma constitucional introdujo la posibilidad de un segundo mandato consecutivo para alcaldes y, al mismo tiempo, impuso un límite de dos mandatos seguidos. El programa federal de auditorías de la Controladoria-Geral da União (CGU), iniciado en 2003, proporcionó información detallada sobre irregularidades de gestión.</p>
+<p>La comparación básica parece directa: los alcaldes de primer mandato tienen una reelección inmediata por la cual competir; los de segundo mandato no. Pero el contraste enfrenta un problema de identificación: los alcaldes que llegaron a un segundo mandato ya superaron una elección anterior y tienen una experiencia distinta. Un buen diseño debe explicar por qué esas diferencias no son suficientes para producir los resultados observados.</p>
+<p>El artículo, por lo tanto, sirve para estudiar una secuencia metodológica completa: formular el mecanismo, derivar una hipótesis, construir variables, identificar fuentes de sesgo y utilizar predicciones adicionales para investigar si el mecanismo explica los datos.</p>
+</section>
+<section id="por-qué-ferraz-y-finan-construyen-otro-modelo" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="por-qué-ferraz-y-finan-construyen-otro-modelo"><span class="header-section-number">4.4.2</span> ¿Por qué Ferraz y Finan construyen otro modelo?</h3>
+<p>El modelo simplificado de la sección 2 de Ferraz y Finan sigue a Besley (2006). A diferencia de Ferejohn, considera <strong>dos períodos</strong> y <strong>dos tipos de políticos</strong>: no corruptos (<span class="math inline">\(nc\)</span>) y corruptos (<span class="math inline">\(c\)</span>). Sea <span class="math inline">\(\pi\)</span> la proporción de no corruptos en el conjunto de candidatos.</p>
+<p>Cada período tiene un estado <span class="math inline">\(s_t\in\{0,1\}\)</span>, observado por el político. El gobernante escoge una política <span class="math inline">\(e_t\)</span>. Los votantes obtienen <span class="math inline">\(V&gt;0\)</span> si <span class="math inline">\(e_t=s_t\)</span>, y cero en caso contrario. Un político no corrupto escoge la política congruente con el estado. Un corrupto puede escoger <span class="math inline">\(e_t\neq s_t\)</span> y recibir un beneficio privado <span class="math inline">\(r_t\)</span>, extraído de una distribución <span class="math inline">\(G\)</span> con media <span class="math inline">\(\mu\)</span>.</p>
+<p>La modelación introduce deliberadamente <strong>selección adversa</strong>: los ciudadanos no conocen el tipo del político. También hay <strong>riesgo moral</strong>: las acciones y el estado no son directamente observables. Después de la política, los votantes conocen el resultado que obtuvieron y deciden si reeligen al incumbente.</p>
+<p>¿Por qué usar dos períodos? Porque el límite de mandatos ofrece una comparación clara entre una etapa en que la continuidad está en juego y otra en que desaparece esa posibilidad inmediata. El horizonte finito produce un efecto de último período que en Ferejohn había sido excluido mediante el horizonte infinito. Ambas opciones son coherentes con sus respectivas preguntas de investigación.</p>
+</section>
+<section id="la-decisión-del-político-corrupto" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="la-decisión-del-político-corrupto"><span class="header-section-number">4.4.3</span> La decisión del político corrupto</h3>
+<p>En el segundo período ya no existe la recompensa de una nueva reelección. Un político no corrupto implementa la política favorable al elector; un político corrupto obtiene el beneficio privado disponible.</p>
+<p>En el primer período el corrupto enfrenta dos alternativas. Si se apropia de <span class="math inline">\(r_1\)</span>, obtiene el beneficio privado ahora pero renuncia a la reelección. Si actúa como un político no corrupto, sacrifica esa renta inmediata y conserva la posibilidad de recibir los beneficios privados futuros, además de la utilidad <span class="math inline">\(E\)</span> de ejercer el cargo. La condición para moderar su conducta es</p>
+<p><span class="math display">\[
+\boxed{r_1\leq\delta(\mu+E).}
+\]</span></p>
+<p>Esta desigualdad reproduce la comparación central del modelo: renta inmediata frente al valor descontado del segundo mandato. El político corrupto puede comportarse bien por razones estratégicas. De hecho, ese comportamiento puede hacer difícil distinguirlo de un político no corrupto a partir de la observación de un resultado favorable.</p>
+<p>La probabilidad de que un político corrupto se discipline es</p>
+<p><span class="math display">\[
+\boxed{\lambda=G\left(\delta(\mu+E)\right).}
+\]</span></p>
+<p>En particular, esa probabilidad aumenta si el futuro importa más o si los beneficios esperados del cargo son mayores, manteniendo lo demás constante.</p>
+</section>
+<section id="cómo-intervienen-las-creencias-de-los-votantes" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="cómo-intervienen-las-creencias-de-los-votantes"><span class="header-section-number">4.4.4</span> Cómo intervienen las creencias de los votantes</h3>
+<p>Si el resultado favorable es <span class="math inline">\(V\)</span>, todos los políticos no corruptos pueden producirlo, mientras que entre los corruptos sólo lo hacen los que renuncian a su oportunidad privada del primer período. Por Bayes, el votante actualiza su creencia:</p>
+<p><span class="math display">\[
+\Pr(nc\mid V)=
+\frac{\pi}{\pi+(1-\pi)\lambda}.
+\]</span></p>
+<p>El resultado favorable aumenta o, en el límite, mantiene la probabilidad atribuida a un político no corrupto. Así, los votantes encuentran racional premiar resultados favorables y los políticos corruptos pueden tratar de parecerse a los no corruptos.</p>
+<p>Como los políticos corruptos que se moderan en el primer período pueden sobrevivir al segundo, y los que se comportan mal pueden ser reemplazados, el resultado agregado depende tanto de la disciplina como de la selección. Los autores presentan una condición suficiente, expresada en términos de <span class="math inline">\(\lambda\)</span> y <span class="math inline">\(\pi\)</span>, para obtener mayor extracción de rentas en el segundo período.</p>
+</section>
+<section id="la-hipótesis-que-va-a-los-datos" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="la-hipótesis-que-va-a-los-datos"><span class="header-section-number">4.4.5</span> La hipótesis que va a los datos</h3>
+<p>Bajo las condiciones estudiadas, la predicción principal es</p>
+<p><span class="math display">\[
+\mathbb{E}[C_i\mid\text{primer mandato}]
+&lt;
+\mathbb{E}[C_i\mid\text{segundo mandato}],
+\]</span></p>
+<p>con <span class="math inline">\(C_i\)</span> como corrupción municipal. La comparación es atractiva porque introduce variación en el incentivo electoral, pero medir esa variación no constituye por sí mismo identificación causal. Debemos mirar cómo se mide <span class="math inline">\(C_i\)</span> y cómo se asignan los alcaldes a cada condición.</p>
+</section>
+</section>
+<section id="del-concepto-de-corrupción-a-una-variable-medible" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="del-concepto-de-corrupción-a-una-variable-medible"><span class="header-section-number">4.5</span> Del concepto de corrupción a una variable medible</h2>
+<section id="la-elección-de-una-fuente-de-información" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="la-elección-de-una-fuente-de-información"><span class="header-section-number">4.5.1</span> La elección de una fuente de información</h3>
+<p>La corrupción es difícil de medir porque los responsables tienen incentivos para ocultarla. Una medida de percepción puede incorporar reputaciones, cobertura periodística y sesgos de información. Los autores aprovechan una alternativa: reportes de auditorías federales sobre el uso de recursos transferidos a municipios.</p>
+<p>Los auditores inspeccionan documentos, contratos y obras; además obtienen información en terreno. Los investigadores clasifican las irregularidades identificadas. Las categorías de corrupción comprenden <strong>fraude en la contratación pública</strong>, <strong>desvío de recursos</strong> y <strong>sobreprecios</strong>. Esta operacionalización privilegia prácticas verificables que involucren apropiación privada o contratación fraudulenta, evitando equiparar automáticamente toda infracción administrativa con corrupción.</p>
+<p>La medida principal es</p>
+<p><span class="math display">\[
+C_i=\frac{\text{monto asociado con actos de corrupción}_i}
+{\text{monto total de recursos auditados}_i}.
+\]</span></p>
+<p>La ventaja es que <span class="math inline">\(C_i\)</span> expresa una proporción comparable entre municipios de distinto tamaño. La limitación es que corresponde a corrupción <strong>detectada y codificada</strong>, no a un censo perfecto de todas las prácticas corruptas. Por eso los autores construyen también el número de irregularidades y la proporción de ítems auditados con corrupción; son pruebas de sensibilidad frente a distintas formas de medir el fenómeno.</p>
+<p>La selección aleatoria de municipios para auditoría mejora la observación de corrupción en la muestra, pero no asigna aleatoriamente el número de mandato de los alcaldes. Este punto es esencial para separar calidad de medición de identificación causal.</p>
+</section>
+<section id="cuál-es-la-variable-explicativa" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="cuál-es-la-variable-explicativa"><span class="header-section-number">4.5.2</span> ¿Cuál es la variable explicativa?</h3>
+<p>Sea</p>
+<p><span class="math display">\[
+I_i=\begin{cases}
+1 &amp; \text{si el alcalde cursa su primer mandato},\\
+0 &amp; \text{si cursa su segundo mandato consecutivo}.
+\end{cases}
+\]</span></p>
+<p>El indicador aproxima la posibilidad de competir inmediatamente por la reelección. Es una variable institucionalmente interpretable, pero imperfecta: los alcaldes de segundo mandato pueden mantener incentivos por carreras políticas posteriores o por la posibilidad de retornar después de una pausa. Los autores aportan evidencia de que tales trayectorias eran relativamente poco frecuentes en su contexto.</p>
+<p>La regresión inicial es</p>
+<p><span class="math display">\[
+\boxed{C_i=\beta I_i+X_i'\varphi+Z_i'\gamma+\varepsilon_i,}
+\]</span></p>
+<p>con controles municipales <span class="math inline">\(X_i\)</span> y del alcalde <span class="math inline">\(Z_i\)</span>. Si los incentivos disciplinan, esperamos <span class="math inline">\(\beta&lt;0\)</span>.</p>
+</section>
+<section id="primera-lectura-de-los-resultados-tabla-4" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="primera-lectura-de-los-resultados-tabla-4"><span class="header-section-number">4.5.3</span> Primera lectura de los resultados: Tabla 4</h3>
+<p>La Tabla 4 del borrador de febrero de 2010 muestra (luego fue publicado en <span class="math inline">\(AER\)</span> el 2011), para 476 municipios, la evolución de la estimación al incorporar controles:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Especificación</th>
+<th style="text-align: right;">Coeficiente de primer mandato</th>
+<th style="text-align: right;">Error estándar robusto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sin controles, columna 1</td>
+<td style="text-align: right;"><span class="math inline">\(-0.019\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0.009\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Controles municipales y personales, más instituciones, efectos de lotería y estado, columna 6</td>
+<td style="text-align: right;"><span class="math inline">\(-0.027\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(0.011\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>La primera estimación representa <strong>1,9 puntos porcentuales menos</strong> de recursos auditados involucrados en corrupción para alcaldes de primer mandato. Frente al promedio de <span class="math inline">\(0.074\)</span> entre alcaldes de segundo mandato, equivale a una diferencia relativa cercana al <strong>27%</strong>. Conviene evitar un error habitual: <strong><span class="math inline">\(-0.019\)</span> es una diferencia en puntos porcentuales sobre una proporción; 27% es la comparación relativa con la media de referencia</strong>. El coeficiente ajustado de <span class="math inline">\(-0.027\)</span> corresponde a otra especificación y no debe confundirse con la cifra de 27% del resumen.</p>
+<p>El efecto estimado persiste al introducir características observadas, lo que reduce algunas explicaciones alternativas. Pero el control estadístico no asegura que las diferencias no observadas entre alcaldes hayan desaparecido.</p>
+</section>
+<section id="qué-sesgos-amenazan-la-interpretación" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="qué-sesgos-amenazan-la-interpretación"><span class="header-section-number">4.5.4</span> ¿Qué sesgos amenazan la interpretación?</h3>
+<p>La diferencia observada entre mandatos puede mezclar al menos tres procesos. Primero, la <strong>disciplina</strong>: los alcaldes en primer mandato sacrifican rentas para aumentar sus posibilidades de continuidad. Segundo, la <strong>selección</strong>: los reelegidos que llegan al segundo mandato pueden ser sistemáticamente distintos de los reemplazados. Tercero, el <strong>aprendizaje</strong>: mayor permanencia puede generar conocimiento, relaciones con proveedores o capacidad para ocultar irregularidades.</p>
+<p>Estos mecanismos pueden producir patrones observacionales parecidos. Por eso la sección de estrategia empírica emplea explícitamente un lenguaje de resultados potenciales para descomponer la comparación simple en el efecto buscado y términos vinculados a experiencia y diferencias no observadas.</p>
+</section>
+<section id="elecciones-estrechas-y-discontinuidad" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="elecciones-estrechas-y-discontinuidad"><span class="header-section-number">4.5.5</span> Elecciones estrechas y discontinuidad</h3>
+<p>Para reducir diferencias municipales no observadas, los autores comparan lugares donde el alcalde que buscaba reelegirse en 2000 ganó por muy poco con lugares donde perdió por muy poco. En el período 2001-2004 los primeros quedan con un alcalde reelegido, en segundo mandato, y los segundos con un nuevo alcalde, en primero.</p>
+<p>Definamos <span class="math inline">\(W_i\)</span> como votos del incumbente menos votos del competidor más cercano. Cerca de <span class="math inline">\(W_i=0\)</span>, resultados electorales con diferencias pequeñas pueden producir una discontinuidad en el tipo de mandato del alcalde que gobierna después. Con una variable <span class="math inline">\(T_i\)</span> que vale uno para un alcalde de segundo mandato, una formulación consistente es</p>
+<p><span class="math display">\[
+T_i=\mathbb{1}[W_i\geq0],
+\qquad
+C_i=\alpha+\tau T_i+f(W_i)+X_i'\gamma+u_i.
+\]</span></p>
+<p>La hipótesis de mayor corrupción en segundos mandatos implica <span class="math inline">\(\tau&gt;0\)</span>. Para interpretar causalmente el salto es necesario asumir continuidad de los resultados potenciales en torno al umbral y examinar si existen manipulaciones o discontinuidades relevantes en otras características.</p>
+<p>En la Tabla 6 los coeficientes del indicador de primer mandato permanecen negativos bajo especificaciones alternativas, aunque varían en magnitud y precisión. El diseño de discontinuidad mejora la comparabilidad de los municipios próximos al umbral, pero la victoria estrecha también determina <strong>qué persona</strong> gobierna. Por ello no elimina sin más las diferencias de capacidad y experiencia entre políticos.</p>
+</section>
+<section id="descartar-explicaciones-alternativas-con-otras-predicciones" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="descartar-explicaciones-alternativas-con-otras-predicciones"><span class="header-section-number">4.5.6</span> Descartar explicaciones alternativas con otras predicciones</h3>
+<p>La mejor parte metodológica del artículo aparece cuando los autores van más allá de una diferencia promedio. Si la disciplina electoral es el mecanismo, deberían observarse otros patrones.</p>
+<p><strong>Experiencia.</strong> La comparación incorpora trayectorias previas como alcaldes o legisladores locales. Si el resultado dependiera exclusivamente de aprendizaje, deberían existir diferencias semejantes entre políticos de experiencia semejante. Los coeficientes siguen siendo negativos en las comparaciones estudiadas (Tabla 7), aunque toda aproximación a experiencia o habilidad es imperfecta.</p>
+<p><strong>Visibilidad de las irregularidades.</strong> La reelección debería disciplinar especialmente conductas que afectan resultados reconocibles para los votantes. Los investigadores elaboran un indicador de irregularidades administrativas menos visibles y no encuentran una diferencia estadísticamente clara entre mandatos en ese indicador (Tabla 8). En el borrador, la estimación principal para mala gestión es <span class="math inline">\(0.054\)</span> con error estándar <span class="math inline">\(0.102\)</span>, mientras la estimación de corrupción para esa submuestra sigue siendo negativa. La comparación ayuda a evaluar el mecanismo de información, aunque las categorías de medición no son completamente equivalentes.</p>
+<p><strong>Competencia y condiciones institucionales.</strong> El diferencial de corrupción es mayor en ciertos municipios con escaso acceso a medios y menor vigilancia judicial, y disminuye donde los alcaldes tienen posiciones electorales muy seguras (Tabla 10). Hay una sutileza teórica: más información puede hacer más fácil identificar el <em>tipo</em> del político y mejorar la selección de quienes sobreviven al segundo mandato, reduciendo la diferencia observada entre mandatos. Si la información revela <em>acciones</em>, en cambio, puede aumentar directamente el incentivo a moderarse. Los autores distinguen ambas posibilidades en su discusión del modelo ampliado.</p>
+<p><strong>Actividad proactiva del gobernante.</strong> La Tabla 9 estudia transferencias obtenidas mediante convenios o aportes complementarios (<em>matching grants</em>), un resultado más visible y dependiente del esfuerzo de gestión. Los alcaldes de primer mandato aparecen relativamente más activos conforme se aproxima la elección. Este resultado es coherente con un incentivo para producir resultados electoralmente reconocibles, y difícil de reducir a una explicación uniforme de aprendizaje.</p>
+<p>Estas pruebas añaden contenido teórico: cada una pregunta qué más debería observarse si el mecanismo que afirmamos haber identificado fuera verdadero.</p>
+</section>
+<section id="qué-concluimos-y-qué-no" class="level3" data-number="4.5.7">
+<h3 data-number="4.5.7" class="anchored" data-anchor-id="qué-concluimos-y-qué-no"><span class="header-section-number">4.5.7</span> Qué concluimos, y qué no</h3>
+<p>La evidencia aporta apoyo a la predicción de que la posibilidad de reelección limita la apropiación de recursos en los municipios y el período estudiados. No permite concluir, por sí sola, que todas las democracias deban suprimir los límites de mandatos. Tampoco identifica cómo se comportaría un alcalde ante la opción de un tercero o cuarto mandato consecutivo. Podrían aparecer costos distintos, como posiciones de poder persistentes, menores oportunidades de renovación o políticas concebidas para obtener aprobación inmediata.</p>
+<p>El aporte metodológico del artículo es mostrar cómo una teoría de incentivos genera una comparación concreta y cómo la investigación intenta distinguir ese efecto de la selección, la experiencia y los problemas de medición.</p>
+</section>
+</section>
+<section id="preferencias-políticas-de-controlar-al-representante-a-comprender-sus-decisiones" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="preferencias-políticas-de-controlar-al-representante-a-comprender-sus-decisiones"><span class="header-section-number">4.6</span> Preferencias políticas: de controlar al representante a comprender sus decisiones</h2>
+<p>Ferejohn comienza suponiendo que todos los electores evalúan el desempeño del gobernante con un mismo criterio. Bajo ese supuesto, pueden exigir un nivel mínimo de resultados y utilizar la amenaza de no reelegirlo para incentivar su esfuerzo. Pero ¿qué sucede cuando los ciudadanos tienen intereses diferentes y cada uno evalúa al gobernante según los beneficios particulares que recibe? En ese caso, el gobernante puede concentrar los recursos en un grupo suficiente para asegurar su reelección, dejando fuera al resto. Además, como los ciudadanos compiten por obtener esos beneficios, cada uno tiene incentivos para aceptar menos con tal de formar parte de la mayoría favorecida. Esta competencia debilita progresivamente las exigencias al gobernante y, en el equilibrio del modelo, puede eliminar por completo su esfuerzo. Así, <strong>la diversidad de intereses distributivos dificulta que los ciudadanos ejerzan colectivamente el control electoral</strong>.</p>
+<p>El análisis de Ferejohn deja abierta una cuestión que hasta ahora hemos mantenido en segundo plano. Para estudiar cómo las diferencias de intereses afectan el comportamiento político, hemos incorporado las preferencias de los actores como supuestos del modelo. En la práctica, sin embargo, esas preferencias no son directamente observables. Conocemos las decisiones que toman los representantes, pero ¿podemos utilizar esas decisiones para inferir qué políticas prefieren?</p>
+<p>Para explorar esta posibilidad, pasaremos del gobernante individual a un cuerpo colegiado. Un parlamento ofrece una ventaja particular: numerosos diputados deben pronunciarse sobre las mismas propuestas. Al observar sus votaciones, podemos identificar patrones de coincidencia y desacuerdo que, bajo determinados supuestos, permiten estimar sus posiciones en un espacio político. Esta es la lógica de los modelos espaciales de votación y de los métodos de estimación de posiciones ideales que estudiaremos en la segunda parte de la sesión. Se trata de herramientas complementarias al análisis de Ferejohn, que no forman parte de su modelo original.</p>
+<p>Estas estimaciones nos permitirán comparar las posiciones de los diputados, identificar diferencias entre partidos y examinar cuánto se aparta cada legislador de las posiciones predominantes en su bancada. Sin embargo, debemos distinguir las preferencias de los partidos de las de los ciudadanos. Que un diputado vote de manera diferente a su bancada no significa necesariamente que esté actuando contra los intereses de sus electores. Para evaluar esa relación necesitaríamos, además, información independiente sobre las preferencias del electorado. Por ahora, nuestro objetivo será aprender <strong>cómo inferir posiciones políticas a partir de decisiones legislativas observadas</strong> y reconocer los supuestos necesarios para interpretar esas estimaciones.</p>
+<section id="un-modelo-espacial-de-votación" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="un-modelo-espacial-de-votación"><span class="header-section-number">4.6.1</span> Un modelo espacial de votación</h3>
+<p>Supongamos que las alternativas pueden representarse en una dimensión política continua. El diputado <span class="math inline">\(i\)</span> tiene un punto ideal <span class="math inline">\(\theta_i\)</span> y evalúa una alternativa <span class="math inline">\(x\)</span> según</p>
+<p><span class="math display">\[
+u_i(x)=-(x-\theta_i)^2.
+\]</span></p>
+<p>Cuanto menor sea la distancia entre la política y el punto ideal, mayor será la utilidad. En la votación <span class="math inline">\(j\)</span>, el diputado elige entre aprobar una propuesta <span class="math inline">\(z_j\)</span> y mantener un statu quo <span class="math inline">\(q_j\)</span>. Bajo votación sincera, apoya la propuesta si</p>
+<p><span class="math display">\[
+-(z_j-\theta_i)^2&gt;-(q_j-\theta_i)^2.
+\]</span></p>
+<p>Equivalentemente, la diferencia de utilidad es</p>
+<p><span class="math display">\[
+\Delta u^{\mathrm{pol}}_{ij}=
+(q_j-\theta_i)^2-(z_j-\theta_i)^2.
+\]</span></p>
+<p>El modelo muestra que, conocidas las alternativas, una votación informa acerca de la posición ideal de quien decide. Si <span class="math inline">\(z_j&gt;q_j\)</span>, por ejemplo, un legislador situado a la derecha del punto medio <span class="math inline">\((z_j+q_j)/2\)</span> prefiere la propuesta. Esa implicación se invierte cuando la propuesta se ubica a la izquierda del statu quo.</p>
+<p>Con muchas votaciones, los patrones de decisiones permiten localizar a diputados y alternativas en un espacio común. Esta es la intuición de la tradición de modelos espaciales de votación nominal de Poole y Rosenthal (1985).</p>
+</section>
+<section id="incorporar-incentivos-de-representación" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="incorporar-incentivos-de-representación"><span class="header-section-number">4.6.2</span> Incorporar incentivos de representación</h3>
+<p>Si el legislador está preocupado por conservar el cargo, la decisión de voto puede depender también de su efecto sobre la continuidad electoral. Para ilustrarlo, incluyamos la diferencia de probabilidad de reelección entre votar favorablemente y votar en contra, <span class="math inline">\(\Delta p_{ij}\)</span>, y un costo o beneficio asociado a la coordinación partidaria, <span class="math inline">\(s_{ij}\)</span>. Una comparación conceptual sería:</p>
+<p><span class="math display">\[
+\boxed{
+\Delta U_{ij}=
+\underbrace{(q_j-\theta_i)^2-(z_j-\theta_i)^2}_{\text{preferencia por la política}}
++
+\underbrace{\delta R_i\Delta p_{ij}}_{\text{incentivo electoral}}
++
+\underbrace{s_{ij}}_{\text{incentivo partidario}}
+.}
+\]</span></p>
+<p>El diputado vota favorablemente si <span class="math inline">\(\Delta U_{ij}\geq0\)</span>. Esta ecuación no pertenece a Ferejohn, Ferraz y Finan ni a una estimación NOMINATE (<strong>Nomina</strong>l <em>T</em>hree-Step <em>E</em>stimation).</p>
+<p>La formulación anterior nos permite reconocer tres factores que pueden influir en una votación legislativa. Primero, <strong>las preferencias del diputado</strong>, que lo llevan a favorecer las alternativas políticas más cercanas a su posición ideal. Segundo, <strong>los incentivos electorales</strong>, que pueden hacerlo apoyar una alternativa distinta si considera que esa decisión mejora sus posibilidades de reelección. Tercero, <strong>la coordinación partidaria</strong>, que puede inducirlo a votar conforme a los acuerdos de su bancada, incluso cuando personalmente preferiría otra opción. Nuestra ecuación incorpora los dos primeros factores; representar formalmente el tercero requeriría introducir los incentivos o restricciones asociados a la pertenencia partidaria.</p>
+<p>Esta distinción es importante para comprender qué estamos estimando cuando utilizamos métodos como NOMINATE. A partir de las votaciones observadas podemos identificar patrones de coincidencia y desacuerdo entre diputados y estimar sus posiciones en un espacio político. Sin embargo, como esas decisiones pueden responder tanto a preferencias individuales como a incentivos electorales o partidarios, <strong>las posiciones estimadas no necesariamente representan las preferencias que tendría cada diputado en ausencia de esas presiones</strong>. Su interpretación depende de los supuestos que adoptemos sobre cómo se generan los votos.</p>
+<p>Esto también tiene consecuencias para la investigación empírica. Si queremos explicar la disciplina partidaria utilizando posiciones ideológicas estimadas a partir de las mismas votaciones que empleamos para medir esa disciplina, podemos introducir una relación circular entre lo que intentamos explicar y aquello con lo que pretendemos explicarlo. Clinton, Jackman y Rivers (2004) advierten sobre la importancia de los supuestos de comportamiento que sostienen los modelos de posiciones ideales. Por ello, una alternativa metodológica consiste en estimar las posiciones utilizando un conjunto de votaciones y evaluar posteriormente el comportamiento partidario con otro. Esta separación reduce la circularidad de la medición, aunque por sí sola no permite distinguir causalmente las preferencias individuales de los incentivos estratégicos.</p>
+</section>
+<section id="cómo-estimar-una-posición-que-no-observamos" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="cómo-estimar-una-posición-que-no-observamos"><span class="header-section-number">4.6.3</span> Cómo estimar una posición que no observamos</h3>
+<p>Para fines pedagógicos, introduzcamos un modelo de respuesta a ítems (<em>item response model</em>) en una dimensión:</p>
+<p><span class="math display">\[
+\Pr(Y_{ij}=1\mid\theta_i,\alpha_j,\beta_j)=
+\operatorname{logit}^{-1}(\alpha_j+\beta_j\theta_i),
+\]</span></p>
+<p>con <span class="math inline">\(Y_{ij}=1\)</span> cuando el diputado <span class="math inline">\(i\)</span> vota a favor del ítem <span class="math inline">\(j\)</span>. La posición <span class="math inline">\(\theta_i\)</span> no se observa directamente; se infiere a partir de todas las votaciones. <span class="math inline">\(\alpha_j\)</span> recoge una característica del ítem que afecta la probabilidad de voto favorable y <span class="math inline">\(\beta_j\)</span> identifica cuánto distingue la votación entre posiciones de la dimensión latente. En este modelo, algunos ítems discriminan en un sentido y otros en el opuesto.</p>
+<p>La especificación logística representa una formulación IRT ilustrativa. W-NOMINATE utiliza una función probabilística espacial específica y sus estimaciones <strong>no son numéricamente idénticas</strong> a las de cualquier IRT logístico sencillo. Ambas familias comparten, sin embargo, la idea de reconstruir posiciones latentes a partir de elecciones repetidas.</p>
+<p>Los puntos ideales requieren restricciones de identificación. Invertir simultáneamente el sentido de la escala y las discriminaciones puede dejar sin alterar las probabilidades previstas. La localización y la escala también deben fijarse mediante una normalización. Por eso los paquetes de estimación utilizan convenciones y, en W-NOMINATE, una referencia de polaridad. El extremo positivo solo puede interpretarse mediante esa convención y una validación substantiva del patrón de votación.</p>
+<p>También debemos examinar si una sola dimensión representa adecuadamente las decisiones. Un espacio de dos dimensiones puede capturar conflictos no alineados con el eje dominante. Elegir una dimensión ayuda a enseñar el mecanismo, pero es un supuesto empírico que debemos justificar, no una propiedad garantizada de todas las legislaturas.</p>
+</section>
+<section id="qué-podremos-afirmar-sobre-representación" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="qué-podremos-afirmar-sobre-representación"><span class="header-section-number">4.6.4</span> Qué podremos afirmar sobre representación</h3>
+<p>Podemos distinguir tres conceptos distintos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Concepto</th>
+<th style="text-align: left;">Información mínima</th>
+<th style="text-align: left;">Interpretación legítima</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Posición legislativa estimada</td>
+<td style="text-align: left;">Votos nominales</td>
+<td style="text-align: left;">Ubicación latente que resume el patrón de decisiones, bajo el modelo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Discrepancia respecto de la bancada</td>
+<td style="text-align: left;">Votos individuales y de otros miembros del partido</td>
+<td style="text-align: left;">Frecuencia de desacuerdo con un referente partidario</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Distancia entre elector y representante</td>
+<td style="text-align: left;">Medida <strong>independiente</strong> de preferencias ciudadanas y de representantes</td>
+<td style="text-align: left;">Posible discrepancia de representación, condicionada a comparabilidad de escalas</td>
+</tr>
+</tbody>
+</table>
+<p>En esta sesión nos enfocamos en las dos primeras. La tercera requiere incorporar mediciones externas de opinión ciudadana, posiciones programáticas o instrumentos de preferencias previamente validados.</p>
+<p>La utilidad de este puente es abrir nuevas preguntas: ¿quién vota más consistentemente con su partido?, ¿cómo varía la dispersión interna de las bancadas?, ¿en qué materias las posiciones estimadas explican mejor las decisiones?, ¿qué evidencia adicional necesitaríamos para estimar responsabilidad frente a los electores?</p>
+</section>
+</section>
+<section id="laboratorio-en-r.-posiciones-ideológicas-y-decisiones-legislativas-en-chile" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="laboratorio-en-r.-posiciones-ideológicas-y-decisiones-legislativas-en-chile"><span class="header-section-number">4.7</span> Laboratorio en R. Posiciones ideológicas y decisiones legislativas en Chile</h2>
+<section id="los-datos" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="los-datos"><span class="header-section-number">4.7.1</span> Los datos</h3>
+<p>El laboratorio utiliza el conjunto de datos de <strong>Fábrega (2025), <em>Ideological positions in the Chilean Chamber of Deputies (2002–2026): A legislative roll-call dataset</em></strong>, y sus archivos de replicación. Contiene votaciones nominales sobre proyectos de ley y estimaciones de posiciones mediante tres procedimientos, entre ellos W-NOMINATE y un modelo bayesiano; el enfoque dinámico busca conectar posiciones entre períodos.</p>
+<p>Los materiales están disponibles en <a href="https://doi.org/10.7910/DVN/FOXOIT">Harvard Dataverse</a> y en el <a href="https://github.com/jfabregalacoa/monitor_congreso">repositorio de GitHub</a>. Utilizaremos el sexto período, correspondiente a 2022-2026, para no mezclar estimaciones de legislaturas distintas durante el ejercicio introductorio.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Archivos del laboratorio">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Archivos del laboratorio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El material de la sesión incluye el <a href="../scripts/ECONPOL_Sesion_4_Laboratorio_R.R" download="ECONPOL_Sesion_4_Laboratorio_R.R">script completo del laboratorio en R</a>. Este archivo organiza la actividad en tres partes: analizar estimaciones publicadas, reconstruir puntos ideales a partir de votos y estudiar discrepancias partidarias utilizando votaciones reservadas. Para ejecutarlo se requieren R, conexión a internet y los paquetes <code>data.table</code>, <code>ggplot2</code>, <code>pscl</code> y <code>wnominate</code>; la primera línea comentada del script permite instalarlos. Los bloques siguientes se ejecutan al renderizar el capítulo y muestran sus resultados en el HTML. La generación requiere descargar los datos y estimar los modelos; el script permite realizar también el laboratorio de forma independiente.</p>
+</div>
+</div>
+</section>
+<section id="primera-actividad-describir-posiciones-ya-estimadas" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="primera-actividad-describir-posiciones-ya-estimadas"><span class="header-section-number">4.7.2</span> Primera actividad: describir posiciones ya estimadas</h3>
+<p>Comenzamos sin estimar ningún modelo. Recuperamos las posiciones publicadas y examinamos su distribución, lo que permite concentrarse en su interpretación antes de estudiar el algoritmo.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="fu">paste0</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/jfabregalacoa/"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"monitor_congreso/master/Harvard%20Dataverse/"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base, <span class="st">"Ideology%20estimates/"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              <span class="st">"ideologia_congreso_chile_2002_2026_long_format.csv"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>pos <span class="ot">&lt;-</span> <span class="fu">fread</span>(url, <span class="at">na.strings =</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>p6 <span class="ot">&lt;-</span> pos[Period <span class="sc">==</span> <span class="st">"Periodo_6"</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(wnom_ideology)]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Distribución de las posiciones W-NOMINATE</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(p6<span class="sc">$</span>wnom_ideology,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Posición estimada"</span>, <span class="at">main =</span> <span class="st">"Diputados, 2022-2026"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="04-principal-agente-elecciones-corrupcion_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>El paso siguiente es estudiar las posiciones por partido. Esta comparación requiere comprobar la variable de afiliación y recordar que los cambios de partido dentro de un período pueden complicar su interpretación.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p6[, .(<span class="at">n =</span> .N,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mediana =</span> <span class="fu">median</span>(wnom_ideology),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">dispersion =</span> <span class="fu">IQR</span>(wnom_ideology)),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   by <span class="ot">=</span> party_1][<span class="fu">order</span>(<span class="sc">-</span>n)]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>    party_1     n    mediana dispersion
+     &lt;char&gt; &lt;int&gt;      &lt;num&gt;      &lt;num&gt;
+ 1:     IND    37 -0.5640355 0.69050102
+ 2:      RN    25  0.4532190 0.09971553
+ 3:     UDI    21  0.5528443 0.06010222
+ 4:      PS    14 -0.6864733 0.04253764
+ 5:      PC    11 -0.9583957 0.01348972
+ 6:    PREP    10  0.9629152 0.02593322
+ 7:      DC     8 -0.4447767 0.16762852
+ 8:      RD     6 -0.8792984 0.07082416
+ 9:     PDG     5  0.2875658 0.30943453
+10: LIBERAL     2 -0.5835671 0.05084059
+11:     PEV     2 -0.7306878 0.01030073
+12:      PH     2 -0.7002178 0.26247215
+13:     PPD     2 -0.6496345 0.03148130
+14:      PR     2 -0.5610284 0.04804495
+15:    EVOP     2  0.3675397 0.00526613
+16:     PCS     2 -0.9114221 0.01446924
+17:      PL     1 -0.6570042 0.00000000
+18: COMUNES     1 -0.9266631 0.00000000
+19:   IGUAL     1 -0.9061691 0.00000000
+20:    FRVS     1 -0.7897286 0.00000000
+21:     PSC     1  0.4940753 0.00000000
+22:     PRI     1  0.3812948 0.00000000
+    party_1     n    mediana dispersion
+     &lt;char&gt; &lt;int&gt;      &lt;num&gt;      &lt;num&gt;</code></pre>
+</div>
+</div>
+<p>La <strong>dispersión intrapartidaria</strong> es un resultado sustantivo: partidos con una mediana semejante pueden tener distribuciones internas diferentes. No constituye por sí misma una medición de disciplina, pues un diputado puede tener una posición distinta de su bancada y, aun así, seguir consistentemente sus acuerdos de voto.</p>
+</section>
+<section id="segunda-actividad-recuperar-posiciones-de-una-matriz-de-votos" class="level3" data-number="4.7.3">
+<h3 data-number="4.7.3" class="anchored" data-anchor-id="segunda-actividad-recuperar-posiciones-de-una-matriz-de-votos"><span class="header-section-number">4.7.3</span> Segunda actividad: recuperar posiciones de una matriz de votos</h3>
+<p>Ahora empezamos desde las decisiones nominales. El archivo de votaciones contiene identificadores de diputados en las primeras columnas y, desde la sexta, una columna por votación. Recodificamos <code>Afirmativo</code> como 1 y <code>En Contra</code> como 0. Abstenciones, ausencias u otros registros no equivalen a votos negativos y se mantienen como ausentes para esta especificación.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pscl)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wnominate)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>url_votos <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base, <span class="st">"Roll%20calls/"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"matriz__periodo_2022_26.csv"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">fread</span>(url_votos)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>recodificar <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">trimws</span>(<span class="fu">as.character</span>(x))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(x <span class="sc">==</span> <span class="st">"Afirmativo"</span>, <span class="dv">1</span>L,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ifelse</span>(x <span class="sc">==</span> <span class="st">"En Contra"</span>, <span class="dv">0</span>L, <span class="cn">NA_integer_</span>))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(d[, <span class="dv">6</span><span class="sc">:</span><span class="fu">ncol</span>(d), <span class="at">with =</span> <span class="cn">FALSE</span>][, <span class="fu">lapply</span>(.SD, recodificar)])</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">storage.mode</span>(m) <span class="ot">&lt;-</span> <span class="st">"numeric"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(m) <span class="ot">&lt;-</span> <span class="fu">as.character</span>(d<span class="sc">$</span>DiputadoId)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>rc <span class="ot">&lt;-</span> pscl<span class="sc">::</span><span class="fu">rollcall</span>(m, <span class="at">yea =</span> <span class="dv">1</span>, <span class="at">nay =</span> <span class="dv">0</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                     <span class="at">legis.names =</span> <span class="fu">rownames</span>(m),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                     <span class="at">vote.names =</span> <span class="fu">colnames</span>(m))</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>ancla <span class="ot">&lt;-</span> <span class="fu">intersect</span>(<span class="fu">c</span>(<span class="st">"908"</span>, <span class="st">"865"</span>, <span class="st">"857"</span>, <span class="st">"942"</span>, <span class="st">"917"</span>, <span class="st">"1135"</span>),</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">rownames</span>(m))[<span class="dv">1</span>]</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="sc">!</span><span class="fu">is.na</span>(ancla))</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> wnominate<span class="sc">::</span><span class="fu">wnominate</span>(<span class="at">rcObject =</span> rc, <span class="at">dims =</span> <span class="dv">1</span>,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">polarity =</span> ancla)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Preparing to run W-NOMINATE...
+
+    Checking data...
+
+        All members meet minimum vote requirements.
+
+        Votes dropped:
+        ... 860 of 3393 total votes dropped.
+
+    Running W-NOMINATE...
+
+        Getting bill parameters...
+        Getting legislator coordinates...
+        Starting estimation of Beta...
+        Getting bill parameters...
+        Getting legislator coordinates...
+        Starting estimation of Beta...
+        Getting bill parameters...
+        Getting legislator coordinates...
+
+
+W-NOMINATE estimation completed successfully.
+W-NOMINATE took 117.31 seconds to execute.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(resultado<span class="sc">$</span>legislators[, <span class="st">"coord1D"</span>, <span class="at">drop =</span> <span class="cn">FALSE</span>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        coord1D
+1096 -0.9597597
+1097 -0.3686578
+1098  0.2878215
+1009  0.5815469
+803  -0.6051407
+1099 -0.5043162</code></pre>
+</div>
+</div>
+<p>Este código sigue la estructura general del script de replicación del conjunto de datos. Para una actividad más rápida o más exigente, podemos filtrar votaciones casi unánimes y diputados con poca participación. Es importante notar que tales exclusiones también son decisiones metodológicas que pueden cambiar qué división política conseguimos identificar.</p>
+<p><strong>Nota para que le den una vuelta después</strong>: El término <code>polarity</code> ¿qué significa? Miren la dimensión elegida ¿qué está midiendo? Exploren la proporción de votos ausentes y los indicadores de ajuste del modelo. También recomiendo que contrasten las coordenadas con las estimaciones publicadas para ver consistencia o no y discutir las diferencias debidas a filtros, anclas y procedimientos.</p>
+</section>
+<section id="tercera-actividad-se-apartan-de-sus-bancadas-los-diputados-ideológicamente-distantes" class="level3" data-number="4.7.4">
+<h3 data-number="4.7.4" class="anchored" data-anchor-id="tercera-actividad-se-apartan-de-sus-bancadas-los-diputados-ideológicamente-distantes"><span class="header-section-number">4.7.4</span> Tercera actividad: ¿se apartan de sus bancadas los diputados ideológicamente distantes?</h3>
+<p>Para volver al problema de los incentivos proponemos una pregunta exploratoria: <strong>¿la distancia de un diputado al centro de su bancada está asociada con una mayor frecuencia de votos discrepantes?</strong></p>
+<p>Definamos <span class="math inline">\(\widehat\theta_i\)</span> como posición estimada del diputado y <span class="math inline">\(\widetilde\theta_{p(i)}\)</span> como mediana del partido. Una distancia sencilla es</p>
+<p><span class="math display">\[
+d_i=|\widehat\theta_i-\widetilde\theta_{p(i)}|.
+\]</span></p>
+<p>Para la votación <span class="math inline">\(j\)</span>, definimos <span class="math inline">\(D_{ij}=1\)</span> si el diputado vota de manera distinta de la mayoría de <strong>los otros miembros</strong> de su partido presentes en esa votación. Excluir su propio voto al calcular la mayoría evita que su decisión contribuya mecánicamente al referente con el que será comparado. Las observaciones sin una mayoría clara o con muy pocos integrantes del partido se excluyen según una regla explícita.</p>
+<p>Hay un problema adicional: si estimamos <span class="math inline">\(\widehat\theta_i\)</span> con las mismas votaciones utilizadas para construir <span class="math inline">\(D_{ij}\)</span>, los resultados pueden tener circularidad. Para reducirla, separaremos aleatoriamente las votaciones en dos grupos: uno de <strong>estimación</strong> (70%) y otro de <strong>evaluación</strong> (30%). Recuperamos las posiciones con el primer conjunto y analizamos las discrepancias exclusivamente en el segundo. Este procedimiento no resuelve todos los problemas de endogeneidad, pero evita una superposición mecánica particularmente evidente.</p>
+<p><strong>Estimar con una muestra y evaluar con otra.</strong> Retomamos la matriz de votos <code>m</code> de la segunda actividad. Conservamos votaciones con al menos 30 votos válidos, cinco a favor y cinco en contra. La semilla fija permite reproducir la división 70/30. Volvemos a estimar las posiciones usando únicamente los votos de entrenamiento; las coordenadas de la segunda actividad no se utilizan para explicar las discrepancias.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>votos_01 <span class="ot">&lt;-</span> m</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>no_faltantes <span class="ot">&lt;-</span> <span class="fu">colSums</span>(<span class="sc">!</span><span class="fu">is.na</span>(votos_01))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>a_favor <span class="ot">&lt;-</span> <span class="fu">colSums</span>(votos_01 <span class="sc">==</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>en_contra <span class="ot">&lt;-</span> <span class="fu">colSums</span>(votos_01 <span class="sc">==</span> <span class="dv">0</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>conservar <span class="ot">&lt;-</span> no_faltantes <span class="sc">&gt;=</span> <span class="dv">30</span> <span class="sc">&amp;</span> a_favor <span class="sc">&gt;=</span> <span class="dv">5</span> <span class="sc">&amp;</span> en_contra <span class="sc">&gt;=</span> <span class="dv">5</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>votos_01 <span class="ot">&lt;-</span> votos_01[, conservar, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Dimensiones de la matriz para estimacion:</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Dimensiones de la matriz para estimacion:</code></pre>
+</div>
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">dim</span>(votos_01))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  157 2478</code></pre>
+</div>
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">ncol</span>(votos_01) <span class="sc">&gt;=</span> <span class="dv">20</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Separar votaciones para ESTIMACION y EVALUACION.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Evita estimar ideologia con exactamente las decisiones que queremos explicar.</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1042026</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>indices_train <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="fu">ncol</span>(votos_01),</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>                             <span class="at">size =</span> <span class="fu">floor</span>(<span class="fl">0.70</span> <span class="sc">*</span> <span class="fu">ncol</span>(votos_01)))</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> votos_01[, indices_train, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> votos_01[, <span class="sc">-</span>indices_train, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>roll <span class="ot">&lt;-</span> pscl<span class="sc">::</span><span class="fu">rollcall</span>(</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> train,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">yea =</span> <span class="dv">1</span>,</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">nay =</span> <span class="dv">0</span>,</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">missing =</span> <span class="cn">NA</span>,</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">legis.names =</span> <span class="fu">rownames</span>(train),</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">vote.names =</span> <span class="fu">colnames</span>(train),</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">desc =</span> <span class="st">"Chile 2022-2026: votaciones de entrenamiento"</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co"># El ancla fija el sentido de la coordenada; no implica aprobacion politica.</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista de identificadores que utiliza el script original del repositorio.</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>anclas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"908"</span>, <span class="st">"865"</span>, <span class="st">"857"</span>, <span class="st">"942"</span>, <span class="st">"917"</span>, <span class="st">"1135"</span>)</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>ancla <span class="ot">&lt;-</span> <span class="fu">intersect</span>(anclas, <span class="fu">rownames</span>(train))[<span class="dv">1</span>]</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">length</span>(ancla) <span class="sc">==</span> <span class="dv">1</span>, <span class="sc">!</span><span class="fu">is.na</span>(ancla))</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>modelo <span class="ot">&lt;-</span> wnominate<span class="sc">::</span><span class="fu">wnominate</span>(</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">rcObject =</span> roll,</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">dims =</span> <span class="dv">1</span>,</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">polarity =</span> ancla,</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">minvotes =</span> <span class="dv">20</span>,</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">lop =</span> <span class="fl">0.025</span>,</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">trials =</span> <span class="dv">3</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Preparing to run W-NOMINATE...
+
+    Checking data...
+
+        All members meet minimum vote requirements.
+
+        All votes meet minimum lopsidedness requirement.
+
+    Running W-NOMINATE...
+
+        Getting bill parameters...
+        Getting legislator coordinates...
+        Starting estimation of Beta...
+        Getting bill parameters...
+        Getting legislator coordinates...
+        Starting estimation of Beta...
+        Getting bill parameters...
+        Getting legislator coordinates...
+
+
+W-NOMINATE estimation completed successfully.
+W-NOMINATE took 84.21 seconds to execute.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ideales_entrenamiento <span class="ot">&lt;-</span> <span class="fu">data.table</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">DiputadoId =</span> <span class="fu">as.character</span>(<span class="fu">rownames</span>(modelo<span class="sc">$</span>legislators)),</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">theta_train =</span> <span class="fu">as.numeric</span>(modelo<span class="sc">$</span>legislators<span class="sc">$</span>coord1D)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>ideales_entrenamiento <span class="ot">&lt;-</span> ideales_entrenamiento[<span class="sc">!</span><span class="fu">is.na</span>(theta_train)]</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(ideales_entrenamiento<span class="sc">$</span>theta_train))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-1.0000 -0.6951 -0.2281 -0.1064  0.5011  1.0000 </code></pre>
+</div>
+</div>
+<p><strong>Medir la distancia al partido.</strong> Vinculamos los identificadores de las estimaciones con la afiliación consignada en la primera actividad y calculamos la distancia a la mediana partidaria.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>info_partido <span class="ot">&lt;-</span> <span class="fu">unique</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  p6[, .(<span class="at">DiputadoId =</span> <span class="fu">as.character</span>(Id), <span class="at">partido =</span> <span class="fu">as.character</span>(party_1))],</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">"DiputadoId"</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>info_partido <span class="ot">&lt;-</span> info_partido[<span class="sc">!</span><span class="fu">is.na</span>(partido) <span class="sc">&amp;</span> <span class="fu">nzchar</span>(<span class="fu">trimws</span>(partido))]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ideales_partido <span class="ot">&lt;-</span> <span class="fu">merge</span>(ideales_entrenamiento, info_partido,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">by =</span> <span class="st">"DiputadoId"</span>, <span class="at">all =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>ideales_partido[, mediana_partido <span class="sc">:</span><span class="er">=</span> <span class="fu">median</span>(theta_train, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>                by <span class="ot">=</span> partido]</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>ideales_partido[, distancia_partido <span class="sc">:</span><span class="er">=</span> <span class="fu">abs</span>(theta_train <span class="sc">-</span> mediana_partido)]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>Construir las discrepancias con los votos reservados.</strong> Para cada votación exigimos al menos tres compañeros de partido con voto válido y excluimos empates. Calculamos una tasa por diputado y conservamos a quienes tienen al menos diez votaciones evaluadas.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir solo la submuestra de </span><span class="al">TEST</span><span class="co"> a formato largo.</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>test_dt <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(test)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>test_dt[, DiputadoId <span class="sc">:</span><span class="er">=</span> <span class="fu">as.character</span>(<span class="fu">rownames</span>(test))]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">melt</span>(test_dt,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">id.vars =</span> <span class="st">"DiputadoId"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">variable.name =</span> <span class="st">"votacion"</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">value.name =</span> <span class="st">"voto"</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">variable.factor =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">merge</span>(long, info_partido, <span class="at">by =</span> <span class="st">"DiputadoId"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> long[<span class="sc">!</span><span class="fu">is.na</span>(voto)]</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Mayoría del partido excluyendo el propio voto (leave-one-out).</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Evita que la decision del diputado determine mecanicamente el referente.</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>long[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">votos_favor =</span> <span class="fu">sum</span>(voto <span class="sc">==</span> <span class="dv">1</span>),</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">votos_validos =</span> .N), by <span class="ot">=</span> .(votacion, partido)]</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>long[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">otros_favor =</span> votos_favor <span class="sc">-</span> voto,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>            <span class="at">otros_validos =</span> votos_validos <span class="sc">-</span> <span class="dv">1</span>)]</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Exigir al menos otros tres parlamentarios del mismo partido,</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="co"># y excluir empates en el resto de la bancada.</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> long[</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  otros_validos <span class="sc">&gt;=</span> <span class="dv">3</span> <span class="sc">&amp;</span> (<span class="dv">2</span> <span class="sc">*</span> otros_favor <span class="sc">!=</span> otros_validos)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>long[, mayoria_otros <span class="sc">:</span><span class="er">=</span> <span class="fu">as.integer</span>(<span class="dv">2</span> <span class="sc">*</span> otros_favor <span class="sc">&gt;</span> otros_validos)]</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>long[, discrepancia <span class="sc">:</span><span class="er">=</span> <span class="fu">as.integer</span>(voto <span class="sc">!=</span> mayoria_otros)]</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Una tasa por diputado evita presentar los votos como observaciones independientes.</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>resumen_diputados <span class="ot">&lt;-</span> long[</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>  , .(<span class="at">tasa_discrepancia =</span> <span class="fu">mean</span>(discrepancia),</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">n_votos_evaluados =</span> .N),</span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>  by <span class="ot">=</span> .(DiputadoId, partido)</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>resumen_diputados <span class="ot">&lt;-</span> <span class="fu">merge</span>(</span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>  resumen_diputados,</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>  ideales_partido[, .(DiputadoId, theta_train, distancia_partido)],</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">by =</span> <span class="st">"DiputadoId"</span></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>resumen_diputados <span class="ot">&lt;-</span> resumen_diputados[n_votos_evaluados <span class="sc">&gt;=</span> <span class="dv">10</span>]</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(resumen_diputados<span class="sc">$</span>tasa_discrepancia))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+0.00142 0.02832 0.05455 0.10995 0.12300 0.78221 </code></pre>
+</div>
+</div>
+<p>El modelo descriptivo a nivel de diputados puede ser</p>
+<p><span class="math display">\[
+\overline D_i=\alpha+\beta d_i+u_i,
+\]</span></p>
+<p>con <span class="math inline">\(\overline D_i\)</span> como tasa de discrepancias en las votaciones reservadas. Un coeficiente positivo mostraría una asociación entre distancia al partido y discrepancia observada. La estimación <strong>no identificaría</strong> un efecto causal de las preferencias ideológicas ni una diferencia de rendición de cuentas ante los ciudadanos. Las votaciones, los partidos y los diputados comparten dependencias que exigen otro diseño para inferencia causal.</p>
+<p><strong>Visualizar y estimar la asociación.</strong> El tamaño de los puntos indica cuántas votaciones sustentan cada tasa. Tanto la recta del gráfico como la regresión ponderan por ese número de votos. La banda de confianza y los errores estándar corresponden a este ajuste descriptivo; no corrigen las dependencias entre diputados y votaciones.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>g3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(resumen_diputados,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>(<span class="at">x =</span> distancia_partido, <span class="at">y =</span> tasa_discrepancia)) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> n_votos_evaluados), <span class="at">alpha =</span> <span class="fl">0.65</span>) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">weight =</span> n_votos_evaluados), <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"grey30"</span>) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Distancia al centro estimado del partido (TRAIN)"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Proporcion de discrepancias en votos reservados (TEST)"</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Posiciones y votaciones: asociacion descriptiva"</span>) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(g3)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-actividad3-distancia-discrepancia" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-actividad3-distancia-discrepancia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="04-principal-agente-elecciones-corrupcion_files/figure-html/fig-actividad3-distancia-discrepancia-1.png" id="fig-actividad3-distancia-discrepancia" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-actividad3-distancia-discrepancia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La salida siguiente muestra el coeficiente de la distancia, su error estándar y los indicadores de ajuste. Su interpretación debe mantener las limitaciones señaladas arriba.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ajuste_descriptivo <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  tasa_discrepancia <span class="sc">~</span> distancia_partido,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">weights =</span> n_votos_evaluados,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> resumen_diputados</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">summary</span>(ajuste_descriptivo))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = tasa_discrepancia ~ distancia_partido, data = resumen_diputados, 
+    weights = n_votos_evaluados)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.2690 -0.4840  0.0027  0.5165  2.4558 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        0.02429    0.00446   5.447 2.37e-07 ***
+distancia_partido  0.50759    0.01425  35.625  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.064 on 134 degrees of freedom
+Multiple R-squared:  0.9045,    Adjusted R-squared:  0.9038 
+F-statistic:  1269 on 1 and 134 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>El código integrado y el script descargable implementan esta versión con estimación W-NOMINATE en el conjunto de entrenamiento, mayoría partidaria <em>leave-one-out</em>, y una regresión descriptiva sobre tasas individuales. No calcula una variable de competencia electoral porque la fuente de votaciones no contiene, por sí sola, una medida apropiada de esa presión. Agregarla requeriría datos electorales independientes y una hipótesis previamente definida.</p>
+</section>
+</section>
+<section id="integración-lo-que-aprendemos-al-pasar-de-un-modelo-a-los-datos" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="integración-lo-que-aprendemos-al-pasar-de-un-modelo-a-los-datos"><span class="header-section-number">4.8</span> Integración: lo que aprendemos al pasar de un modelo a los datos</h2>
+</section>
+<section id="cierre.-incentivos-y-preferencias-en-la-representación-política" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="cierre.-incentivos-y-preferencias-en-la-representación-política"><span class="header-section-number">4.9</span> 4.7. Cierre. Incentivos y preferencias en la representación política</h2>
+<p>Volvamos al alcalde de la introducción. Su decisión de esforzarse por mejorar los servicios públicos o aprovechar el cargo para obtener beneficios privados depende de sus preferencias, pero también de las consecuencias que anticipa. Si conservar el cargo tiene valor, la posibilidad de reelección puede inducirlo a actuar en beneficio de los ciudadanos, incluso cuando sus intereses sean diferentes. El problema del principal consiste en diseñar reglas que produzcan esos incentivos, reconociendo que no puede observar directamente todas las acciones del gobernante.</p>
+<p>Ferejohn (1986) nos permitió formalizar este problema y comprender por qué la capacidad de control electoral depende del valor de permanecer en el cargo, de la información disponible y de las reglas de evaluación que utilizan los votantes. También mostró que la diversidad de intereses entre ciudadanos puede debilitar ese control cuando el gobernante tiene oportunidades para favorecer selectivamente a distintos grupos. Ferraz y Finan (2011), por su parte, nos permitieron examinar empíricamente uno de estos mecanismos: cómo cambia la corrupción cuando los gobernantes enfrentan o dejan de enfrentar incentivos de reelección. Su investigación mostró además por qué observar una diferencia de comportamiento no basta para identificar su causa. Es necesario evaluar otras explicaciones, como la experiencia acumulada o la selección de quienes consiguen mantenerse en el cargo.</p>
+<p>La segunda parte del capítulo abordó una pregunta diferente. Hasta ese momento habíamos supuesto que los agentes podían tener preferencias distintas de las del principal, pero ¿cómo conocer esas preferencias? Para responder, nos trasladamos desde el gobierno de un alcalde hacia las decisiones de un cuerpo colegiado. Las votaciones parlamentarias ofrecen una oportunidad particular: muchos representantes deben pronunciarse sobre las mismas alternativas, y sus patrones de coincidencia y desacuerdo permiten inferir posiciones políticas que no observamos directamente. Los modelos espaciales proporcionan las herramientas formales para realizar esa estimación.</p>
+<p>Sin embargo, las posiciones estimadas requieren una interpretación cuidadosa. Un diputado puede votar de acuerdo con sus preferencias individuales, responder a incentivos electorales o seguir los acuerdos de su partido. Las tres motivaciones pueden producir decisiones semejantes. Por eso, reconstruir posiciones ideológicas a partir de votaciones nominales exige explicitar los supuestos sobre cómo se generan esos votos. También debemos distinguir las preferencias de los diputados, las posiciones de sus partidos y las preferencias de los ciudadanos que representan.</p>
+<p>Las dos partes del capítulo nos dejan, así, dos problemas fundamentales para la investigación en economía política. <strong>El primero es explicar cómo los incentivos modifican las decisiones de actores con intereses potencialmente divergentes. El segundo es inferir las preferencias de esos actores a partir de su comportamiento observable.</strong> Para abordar cualquiera de ellos necesitamos identificar quién decide, qué información posee, qué alternativas enfrenta y qué consecuencias anticipa. Después debemos establecer qué datos permiten estudiar el mecanismo propuesto y qué otras explicaciones podrían producir los mismos resultados.</p>
+<p>En definitiva, las instituciones importan porque modifican los incentivos bajo los cuales se toman decisiones políticas. Pero para comprender esas decisiones también necesitamos conocer las preferencias de quienes las toman. Los modelos formales nos ayudan a establecer cómo podrían operar ambos elementos; las herramientas de estimación y el diseño empírico nos permiten investigar hasta dónde podemos reconocerlos en el comportamiento observado.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Preguntas de cierre">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Preguntas de cierre
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>¿Por qué la posibilidad de perder el cargo importa más que el valor absoluto de un salario ya recibido?</li>
+<li>¿Cómo cambia el incentivo electoral cuando los votantes observan resultados, acciones o tipos del político?</li>
+<li>¿Por qué una diferencia entre primeros y segundos mandatos no prueba por sí sola un efecto de reelección?</li>
+<li>¿Qué mide una posición ideal estimada con votos legislativos y qué necesitaríamos para compararla con las preferencias de los ciudadanos?</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="referencias" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="referencias"><span class="header-section-number">4.10</span> Referencias</h2>
+<p>Aghion, Philippe, y Jean Tirole. 1997. “Formal and Real Authority in Organizations”. <em>Journal of Political Economy</em> 105 (1): 1-29. https://doi.org/10.1086/262063.</p>
+<p>Clinton, Joshua, Simon Jackman, y Douglas Rivers. 2004. “The Statistical Analysis of Roll Call Data”. <em>American Political Science Review</em> 98 (2): 355-370. https://doi.org/10.1017/S0003055404001194.</p>
+<p>Fábrega, Jorge. 2025. “Ideological Positions in the Chilean Chamber of Deputies (2002-2026): A Legislative Roll-Call Dataset”. <em>Data in Brief</em> 63: 112163. https://doi.org/10.1016/j.dib.2025.112163. Datos: https://doi.org/10.7910/DVN/FOXOIT.</p>
+<p>Ferejohn, John. 1986. “Incumbent Performance and Electoral Control”. <em>Public Choice</em> 50: 5-25. https://doi.org/10.1007/BF00124924.</p>
+<p>Ferraz, Claudio, y Frederico Finan. 2011. “Electoral Accountability and Corruption: Evidence from the Audits of Local Governments”. <em>American Economic Review</em> 101 (4): 1274-1311. https://doi.org/10.1257/aer.101.4.1274. <strong>Nota sobre la fuente:</strong> la fuente descrita en el material base corresponde al borrador de febrero de 2010; las referencias a ecuaciones y tablas detalladas siguen esa versión.</p>
+<p>Poole, Keith T., y Howard Rosenthal. 1985. “A Spatial Model for Legislative Roll Call Analysis”. <em>American Journal of Political Science</em> 29 (2): 357-384. https://doi.org/10.2307/2111172.</p>
+<p>Poole, Keith T., Jeffrey B. Lewis, James Lo, y Royce Carroll. 2011. “Scaling Roll Call Votes with wnominate in R”. <em>Journal of Statistical Software</em> 42 (14): 1-21. https://doi.org/10.18637/jss.v042.i14.</p>
+</section>
+<section id="guía-de-recorrido-para-una-sesión-de-120-minutos" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="guía-de-recorrido-para-una-sesión-de-120-minutos"><span class="header-section-number">4.11</span> Guía de recorrido para una sesión de 120 minutos</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Etapa</th>
+<th style="text-align: right;">Tiempo sugerido</th>
+<th style="text-align: left;">Trabajo principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Apertura y principal-agente</td>
+<td style="text-align: right;">15 min</td>
+<td style="text-align: left;">Incentivos, información y restricciones IC/IR</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ferejohn</td>
+<td style="text-align: right;">30 min</td>
+<td style="text-align: left;">Mejor respuesta, umbral óptimo, valor de continuar en el cargo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ferraz y Finan</td>
+<td style="text-align: right;">25 min</td>
+<td style="text-align: left;">Modelo de dos períodos, operacionalización, sesgos e identificación</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Puente espacial</td>
+<td style="text-align: right;">15 min</td>
+<td style="text-align: left;">Preferencias heterogéneas y estimación de puntos ideales</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">R: laboratorio guiado</td>
+<td style="text-align: right;">35 min</td>
+<td style="text-align: left;">Exploración publicada y primera estimación; extensión autónoma de discrepancias</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>120 min</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>En una sesión de dos horas, conviene dedicar la actividad de aula a explorar las posiciones publicadas y a reconstruir al menos una estimación. El análisis con división entrenamiento/evaluación y discrepancias partidarias puede completarse individualmente con el script entregado.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/03-compromiso-repeticion-clientelismo.html" class="pagination-link" aria-label="Compromiso, repetición y clientelismo">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Compromiso, repetición y clientelismo</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

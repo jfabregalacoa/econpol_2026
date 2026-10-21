@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - scripts/ECONPOL_Sesion_4_Laboratorio_R.R
 
 book:
   title: "Economía Política Formal - 2026"
@@ -9,6 +11,7 @@ book:
     - chapters/01-interaccion-instituciones-agenda.qmd
     - chapters/02-horizontes-incentivos-diseno-institucional.qmd
     - chapters/03-compromiso-repeticion-clientelismo.qmd
+    - chapters/04-principal-agente-elecciones-corrupcion.qmd
 
 lang: es
 bibliography: references.bib
