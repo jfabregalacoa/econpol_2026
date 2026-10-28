@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Selección política: incentivos, rentas y calidad de los candidatos – Economía Política Formal - 2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/04-principal-agente-elecciones-corrupcion.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c574c73dd0d0ff61020859ffc61752ee.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/05-seleccion-politica.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Selección política: incentivos, rentas y calidad de los candidatos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Economía Política Formal - 2026</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-interaccion-instituciones-agenda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Interacción estratégica, instituciones y poder de agenda</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-horizontes-incentivos-diseno-institucional.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Horizontes temporales, incentivos y diseño institucional</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-compromiso-repeticion-clientelismo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Compromiso, repetición y clientelismo</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-principal-agente-elecciones-corrupcion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principal-agente: incentivos y preferencias de los representantes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-seleccion-politica.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Selección política: incentivos, rentas y calidad de los candidatos</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#el-problema-por-qué-mayores-recursos-pueden-deteriorar-la-calidad-del-gobierno" id="toc-el-problema-por-qué-mayores-recursos-pueden-deteriorar-la-calidad-del-gobierno" class="nav-link active" data-scroll-target="#el-problema-por-qué-mayores-recursos-pueden-deteriorar-la-calidad-del-gobierno"><span class="header-section-number">5.1</span> El problema: ¿por qué mayores recursos pueden deteriorar la calidad del gobierno?</a></li>
+  <li><a href="#recursos-delegados-provisión-pública-y-rentas-políticas" id="toc-recursos-delegados-provisión-pública-y-rentas-políticas" class="nav-link" data-scroll-target="#recursos-delegados-provisión-pública-y-rentas-políticas"><span class="header-section-number">5.2</span> Recursos delegados, provisión pública y rentas políticas</a>
+  <ul class="collapse">
+  <li><a href="#una-restricción-presupuestaria-con-usos-alternativos" id="toc-una-restricción-presupuestaria-con-usos-alternativos" class="nav-link" data-scroll-target="#una-restricción-presupuestaria-con-usos-alternativos"><span class="header-section-number">5.2.1</span> Una restricción presupuestaria con usos alternativos</a></li>
+  <li><a href="#el-juego-político-jugadores-decisiones-y-secuencia-de-acontecimientos" id="toc-el-juego-político-jugadores-decisiones-y-secuencia-de-acontecimientos" class="nav-link" data-scroll-target="#el-juego-político-jugadores-decisiones-y-secuencia-de-acontecimientos"><span class="header-section-number">5.2.2</span> El juego político: jugadores, decisiones y secuencia de acontecimientos</a></li>
+  <li><a href="#la-inferencia-electoral-a-partir-de-los-resultados-observados" id="toc-la-inferencia-electoral-a-partir-de-los-resultados-observados" class="nav-link" data-scroll-target="#la-inferencia-electoral-a-partir-de-los-resultados-observados"><span class="header-section-number">5.2.3</span> La inferencia electoral a partir de los resultados observados</a></li>
+  <li><a href="#la-decisión-óptima-del-alcalde-inducción-hacia-atrás" id="toc-la-decisión-óptima-del-alcalde-inducción-hacia-atrás" class="nav-link" data-scroll-target="#la-decisión-óptima-del-alcalde-inducción-hacia-atrás"><span class="header-section-number">5.2.4</span> La decisión óptima del alcalde: inducción hacia atrás</a></li>
+  </ul></li>
+  <li><a href="#qué-ocurre-cuando-aumenta-el-presupuesto" id="toc-qué-ocurre-cuando-aumenta-el-presupuesto" class="nav-link" data-scroll-target="#qué-ocurre-cuando-aumenta-el-presupuesto"><span class="header-section-number">5.3</span> ¿Qué ocurre cuando aumenta el presupuesto?</a></li>
+  <li><a href="#la-entrada-en-política-como-decisión-económica" id="toc-la-entrada-en-política-como-decisión-económica" class="nav-link" data-scroll-target="#la-entrada-en-política-como-decisión-económica"><span class="header-section-number">5.4</span> La entrada en política como decisión económica</a>
+  <ul class="collapse">
+  <li><a href="#individuos-heterogéneos-y-oportunidades-exteriores" id="toc-individuos-heterogéneos-y-oportunidades-exteriores" class="nav-link" data-scroll-target="#individuos-heterogéneos-y-oportunidades-exteriores"><span class="header-section-number">5.4.1</span> Individuos heterogéneos y oportunidades exteriores</a></li>
+  <li><a href="#el-valor-esperado-de-convertirse-en-candidato" id="toc-el-valor-esperado-de-convertirse-en-candidato" class="nav-link" data-scroll-target="#el-valor-esperado-de-convertirse-en-candidato"><span class="header-section-number">5.4.2</span> El valor esperado de convertirse en candidato</a></li>
+  <li><a href="#del-incentivo-individual-a-la-composición-del-conjunto" id="toc-del-incentivo-individual-a-la-composición-del-conjunto" class="nav-link" data-scroll-target="#del-incentivo-individual-a-la-composición-del-conjunto"><span class="header-section-number">5.4.3</span> Del incentivo individual a la composición del conjunto</a></li>
+  </ul></li>
+  <li><a href="#equilibrio-con-entrada-endógena" id="toc-equilibrio-con-entrada-endógena" class="nav-link" data-scroll-target="#equilibrio-con-entrada-endógena"><span class="header-section-number">5.5</span> Equilibrio con entrada endógena</a></li>
+  <li><a href="#de-las-predicciones-del-modelo-a-variables-observables" id="toc-de-las-predicciones-del-modelo-a-variables-observables" class="nav-link" data-scroll-target="#de-las-predicciones-del-modelo-a-variables-observables"><span class="header-section-number">5.6</span> De las predicciones del modelo a variables observables</a></li>
+  <li><a href="#cómo-identificar-el-efecto-causal-de-los-recursos" id="toc-cómo-identificar-el-efecto-causal-de-los-recursos" class="nav-link" data-scroll-target="#cómo-identificar-el-efecto-causal-de-los-recursos"><span class="header-section-number">5.7</span> Cómo identificar el efecto causal de los recursos</a>
+  <ul class="collapse">
+  <li><a href="#la-dificultad-de-comparar-municipios-ricos-y-pobres" id="toc-la-dificultad-de-comparar-municipios-ricos-y-pobres" class="nav-link" data-scroll-target="#la-dificultad-de-comparar-municipios-ricos-y-pobres"><span class="header-section-number">5.7.1</span> La dificultad de comparar municipios ricos y pobres</a></li>
+  <li><a href="#por-qué-la-discontinuidad-es-fuzzy" id="toc-por-qué-la-discontinuidad-es-fuzzy" class="nav-link" data-scroll-target="#por-qué-la-discontinuidad-es-fuzzy"><span class="header-section-number">5.7.2</span> Por qué la discontinuidad es <em>fuzzy</em></a></li>
+  <li><a href="#las-ecuaciones-que-estiman-los-autores" id="toc-las-ecuaciones-que-estiman-los-autores" class="nav-link" data-scroll-target="#las-ecuaciones-que-estiman-los-autores"><span class="header-section-number">5.7.3</span> Las ecuaciones que estiman los autores</a></li>
+  <li><a href="#las-muestras-usadas-para-la-estimación" id="toc-las-muestras-usadas-para-la-estimación" class="nav-link" data-scroll-target="#las-muestras-usadas-para-la-estimación"><span class="header-section-number">5.7.4</span> Las muestras usadas para la estimación</a></li>
+  </ul></li>
+  <li><a href="#estimaciones-qué-evidencia-corresponde-a-cada-mecanismo" id="toc-estimaciones-qué-evidencia-corresponde-a-cada-mecanismo" class="nav-link" data-scroll-target="#estimaciones-qué-evidencia-corresponde-a-cada-mecanismo"><span class="header-section-number">5.8</span> Estimaciones: qué evidencia corresponde a cada mecanismo</a>
+  <ul class="collapse">
+  <li><a href="#recursos-e-irregularidades-administrativas" id="toc-recursos-e-irregularidades-administrativas" class="nav-link" data-scroll-target="#recursos-e-irregularidades-administrativas"><span class="header-section-number">5.8.1</span> Recursos e irregularidades administrativas</a></li>
+  <li><a href="#recursos-y-selección-política" id="toc-recursos-y-selección-política" class="nav-link" data-scroll-target="#recursos-y-selección-política"><span class="header-section-number">5.8.2</span> Recursos y selección política</a></li>
+  </ul></li>
+  <li><a href="#discusión-de-los-supuestos-y-sus-implicaciones" id="toc-discusión-de-los-supuestos-y-sus-implicaciones" class="nav-link" data-scroll-target="#discusión-de-los-supuestos-y-sus-implicaciones"><span class="header-section-number">5.9</span> Discusión de los supuestos y sus implicaciones</a>
+  <ul class="collapse">
+  <li><a href="#preguntas-para-que-le-den-una-vuelta" id="toc-preguntas-para-que-le-den-una-vuelta" class="nav-link" data-scroll-target="#preguntas-para-que-le-den-una-vuelta"><span class="header-section-number">5.9.1</span> Preguntas para que le den una vuelta…</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">5.10</span> Referencias</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Selección política: incentivos, rentas y calidad de los candidatos</span></h1>
+<p class="subtitle lead">De la agencia electoral a la entrada endógena</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="el-problema-por-qué-mayores-recursos-pueden-deteriorar-la-calidad-del-gobierno" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="el-problema-por-qué-mayores-recursos-pueden-deteriorar-la-calidad-del-gobierno"><span class="header-section-number">5.1</span> El problema: ¿por qué mayores recursos pueden deteriorar la calidad del gobierno?</h2>
+<p>En el <a href="../chapters/04-principal-agente-elecciones-corrupcion.html">capítulo anterior</a> analizamos la relación entre ciudadanos y gobernantes como un problema de agencia. Los ciudadanos delegan decisiones en un representante cuyos intereses pueden diferir de los suyos. El representante obtiene beneficios de ocupar el cargo, pero depende de la decisión de los electores para continuar en él. Esa posibilidad de continuidad vincula su comportamiento presente con sus ingresos y beneficios futuros.</p>
+<p>En el modelo de rendición de cuentas electoral estudiado a partir de Ferejohn (1986), el gobernante enfrenta una decisión intertemporal. Puede obtener mayores beneficios privados durante el período actual o contener esa apropiación para preservar su posición electoral. Ferraz y Finan (2011) examinan empíricamente una implicación de esta lógica: cuando los alcaldes brasileños tienen la posibilidad de ser reelegidos, sus incentivos para evitar la corrupción son mayores.</p>
+<p>Una forma de expresar el problema de decisión que venimos estudiando es:</p>
+<p><span class="math display">\[
+V_1(a)=b(a)+\delta p(a)V_2.
+\]</span></p>
+<p>La variable <span class="math inline">\(a\)</span> representa la decisión del agente, <span class="math inline">\(b(a)\)</span> el beneficio privado presente, <span class="math inline">\(p(a)\)</span> la probabilidad de continuar en el cargo y <span class="math inline">\(V_2\)</span> el valor de ocuparlo en el futuro. El factor <span class="math inline">\(\delta\)</span> recoge cuánto valora los beneficios futuros frente a los presentes. Si obtener un beneficio privado adicional hoy reduce <span class="math inline">\(p(a)\)</span>, aparece un costo intertemporal de la apropiación.</p>
+<p>La condición marginal correspondiente, cuando existe una solución interior, es:</p>
+<p><span class="math display">\[
+b'(a)+\delta p'(a)V_2=0.
+\]</span></p>
+<p>El primer término mide la ganancia privada inmediata. El segundo mide la variación del valor esperado del futuro político. El equilibrio depende de la magnitud relativa de ambas fuerzas, incluida la capacidad de los ciudadanos para detectar y sancionar comportamientos oportunistas.</p>
+<p><strong>Ejemplo.</strong> Un alcalde puede desviar recursos y obtener una ganancia privada inmediata. Si el desvío reduce sus posibilidades de ganar una segunda elección, también pone en riesgo los beneficios de ejercer el cargo durante cuatro años adicionales. Cuando su mandato no admite reelección, desaparece ese incentivo electoral específico, aunque pueden permanecer sanciones legales, reputacionales y partidarias. El contraste permite explicar por qué las reglas de reelección pueden afectar la conducta del gobernante.</p>
+<p>Consideremos ahora qué sucede si el municipio comienza a recibir mayores recursos. En principio, un presupuesto más elevado debería permitir financiar mejores servicios públicos, ampliar la infraestructura municipal o atender necesidades que antes no podían satisfacerse. Sin embargo, también aumenta la cantidad de recursos que el gobernante administra y, potencialmente, las oportunidades de apropiación privada. <strong>¿Podría un aumento de los recursos públicos terminar incrementando la corrupción y deteriorando la calidad del gobierno?</strong></p>
+<p>Para responder, extendamos el problema de agencia anterior incorporando explícitamente el presupuesto que el principal entrega al gobernante. Una parte de esos recursos puede destinarse a la provisión de bienes públicos y otra puede ser apropiada por el agente. La decisión del gobernante consiste en determinar cuánto destinar a cada uso, considerando que la apropiación genera beneficios privados inmediatos y puede afectar sus posibilidades de reelección.</p>
+<p><strong>Ejemplo.</strong> Supongamos que un municipio administra 100 unidades presupuestarias y que su alcalde destina 90 a servicios públicos y se apropia de 10. Si el presupuesto aumenta a 130, podría destinar 100 a servicios públicos y apropiarse de 30. Los ciudadanos observarían una mejora en la provisión de servicios, mientras que el monto apropiado se habría triplicado. El ejemplo muestra cómo un aumento del presupuesto puede modificar la relación entre los resultados que observan los ciudadanos y la conducta del gobernante.</p>
+<p>Esta posibilidad amplía el problema de riesgo moral (<em>moral hazard</em>) que estudiamos anteriormente. Ahora podemos analizar cómo el tamaño del presupuesto afecta el beneficio de apropiarse de recursos y la intensidad de los incentivos electorales que disciplinan al gobernante.</p>
+<p>Pero el incremento de los recursos también puede tener consecuencias anteriores a la elección. Si administrar un municipio permite obtener mayores rentas, el cargo se vuelve más atractivo para potenciales candidatos. Ese atractivo puede variar entre individuos según sus capacidades, oportunidades laborales fuera de la política y costos de apropiarse indebidamente de recursos. En consecuencia, un aumento del presupuesto puede modificar quiénes consideran conveniente ingresar a la competencia electoral.</p>
+<p>Brollo et al.&nbsp;(2013) integran estos dos mecanismos en un modelo de agencia política con entrada endógena de candidatos. Primero, estudian cómo un aumento de los recursos disponibles afecta la apropiación de rentas por parte del gobernante. Luego incorporan individuos heterogéneos que deciden si entrar en política, permitiendo que la composición del conjunto de candidatos se determine dentro del propio modelo.</p>
+<p>La relación entre ambos mecanismos tiene una consecuencia adicional. Si el aumento de las rentas atrae relativamente más a candidatos de menor competencia, el gobernante que busca reelegirse enfrentará adversarios de menor calidad esperada. Esto puede debilitar la amenaza electoral y aumentar todavía más sus incentivos para apropiarse de recursos.</p>
+<p>El análisis de esta sesión se organiza, por tanto, alrededor de dos preguntas relacionadas:</p>
+<ol type="1">
+<li><strong>Riesgo moral:</strong> ¿por qué un aumento del presupuesto puede incrementar la apropiación de recursos por parte del gobernante, aun cuando existen mecanismos de rendición de cuentas electoral?</li>
+<li><strong>Selección política:</strong> ¿cómo modifica ese aumento de recursos la composición del conjunto de candidatos y qué consecuencias tiene para los incentivos del gobernante?</li>
+</ol>
+<p>La primera pregunta extiende el modelo de agencia que ya conocemos. La segunda incorpora una decisión adicional: la entrada de individuos heterogéneos a la competencia política. Al resolver ambas conjuntamente, podremos analizar cómo un cambio en los recursos disponibles afecta tanto la conducta de quienes gobiernan como la calidad de quienes aspiran a reemplazarlos. El abstract de Brollo, Nannicini, Perotti y Tabellini (2013) es el siguiente:</p>
+<p><img src="../figs/brollo2013-abstract.png" class="img-fluid" alt="Título, autores y abstract de The Political Resource Curse, de Brollo, Nannicini, Perotti y Tabellini (2013)." width="703"></p>
+</section>
+<section id="recursos-delegados-provisión-pública-y-rentas-políticas" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="recursos-delegados-provisión-pública-y-rentas-políticas"><span class="header-section-number">5.2</span> Recursos delegados, provisión pública y rentas políticas</h2>
+<section id="una-restricción-presupuestaria-con-usos-alternativos" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="una-restricción-presupuestaria-con-usos-alternativos"><span class="header-section-number">5.2.1</span> Una restricción presupuestaria con usos alternativos</h3>
+<p>Brollo, Nannicini, Perotti y Tabellini (2013) estudian un gobierno municipal que dispone, en cada período, de un presupuesto <span class="math inline">\(\tau\)</span>. El alcalde puede asignar una parte a rentas que lo benefician privadamente, <span class="math inline">\(r_t\)</span>, y el resto a bienes públicos. La capacidad de transformar los recursos restantes en servicios depende de su competencia administrativa, <span class="math inline">\(\theta\)</span>:</p>
+<p><span class="math display">\[
+g_t=\theta(\tau-r_t).
+\]</span></p>
+<p>La apropiación está sujeta a un límite:</p>
+<p><span class="math display">\[
+0\leq r_t\leq\psi\tau,\qquad 0&lt;\psi&lt;1.
+\]</span></p>
+<p>Esta restricción formaliza que sólo una fracción del presupuesto puede destinarse a rentas privadas. Los electores valoran la provisión <span class="math inline">\(g_t\)</span>, mientras que el gobernante valora las rentas y los beneficios de ejercer el cargo. En consecuencia, la misma unidad de recursos tiene usos que benefician a actores distintos.</p>
+<p><strong>Ejemplo.</strong> Consideremos un municipio con un presupuesto de 100 unidades y un límite de apropiación del 20%. Si el alcalde se apropia de 10 unidades, quedan 90 para financiar servicios. Con competencia <span class="math inline">\(\theta=1{,}2\)</span>, la provisión obtenida es <span class="math inline">\(g=108\)</span>. Otro alcalde con <span class="math inline">\(\theta=1\)</span> y la misma apropiación produce <span class="math inline">\(g=90\)</span>. Un observador que sólo conoce la provisión final enfrenta un problema: un resultado bajo puede reflejar más apropiación, menor competencia o ambas.</p>
+<p>Las decisiones sobre <span class="math inline">\(\tau\)</span>, <span class="math inline">\(r_t\)</span> y <span class="math inline">\(\theta\)</span> desempeñan funciones analíticas diferentes. El presupuesto representa los recursos disponibles; <span class="math inline">\(r_t\)</span> es una decisión del gobernante; <span class="math inline">\(\theta\)</span> es una característica del individuo que afecta su capacidad de producir resultados. Separar estos componentes permite estudiar tanto los incentivos como la heterogeneidad entre políticos (Brollo et al., 2013, sección I.A, pp.&nbsp;1762-1764).</p>
+</section>
+<section id="el-juego-político-jugadores-decisiones-y-secuencia-de-acontecimientos" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="el-juego-político-jugadores-decisiones-y-secuencia-de-acontecimientos"><span class="header-section-number">5.2.2</span> El juego político: jugadores, decisiones y secuencia de acontecimientos</h3>
+<p>Para estudiar cómo el tamaño del presupuesto afecta la conducta del gobernante, Brollo et al.&nbsp;(2013) construyen un juego de dos períodos. Durante el primero, un alcalde administra los recursos municipales y posteriormente enfrenta una elección. El ganador gobierna durante el segundo período, al término del cual finaliza el juego.</p>
+<section id="los-jugadores-y-sus-características" class="level4" data-number="5.2.2.1">
+<h4 data-number="5.2.2.1" class="anchored" data-anchor-id="los-jugadores-y-sus-características"><span class="header-section-number">5.2.2.1</span> Los jugadores y sus características</h4>
+<p>El modelo considera tres actores políticos:</p>
+<ol type="1">
+<li><p><strong>El alcalde en ejercicio (<em>incumbent</em>).</strong> Administra el presupuesto municipal y decide cuánto destinar a rentas privadas. Busca maximizar los beneficios presentes y futuros de ocupar el cargo, considerando que sus decisiones afectan la probabilidad de reelección.</p></li>
+<li><p><strong>El candidato desafiante (<em>challenger</em>).</strong> Compite contra el alcalde en la elección que separa ambos períodos. Su competencia administrativa esperada influye en la decisión de los electores. Inicialmente, el modelo considera que la identidad y el tipo del desafiante son determinados exógenamente. Más adelante se incorporará la decisión de entrar en política.</p></li>
+<li><p><strong>Los electores.</strong> Constituyen el principal en la relación de agencia. Valoran la provisión de bienes públicos y deciden si reeligen al alcalde o entregan el cargo al desafiante. Como no observan directamente la apropiación de recursos, deben evaluar al gobernante a partir de los resultados de su administración y de la información disponible sobre ambos candidatos.</p></li>
+</ol>
+<p>Los políticos pueden pertenecer a dos tipos, <span class="math inline">\(J\in\{H,L\}\)</span>, que representan distintos niveles de competencia administrativa esperada. Para cada individuo, la competencia efectiva <span class="math inline">\(\theta\)</span> se obtiene de una distribución uniforme cuya media depende de su tipo:</p>
+<p><span class="math display">\[
+E(\theta\mid J)=1+\sigma_J,
+\]</span></p>
+<p>donde <span class="math inline">\(\sigma_H=\sigma\)</span> y <span class="math inline">\(\sigma_L=-\sigma\)</span>, con <span class="math inline">\(0&lt;\sigma&lt;1\)</span>.</p>
+<p>Por construcción, los políticos de tipo <span class="math inline">\(H\)</span> son más competentes en promedio. Sin embargo, las distribuciones pueden superponerse: un individuo de tipo <span class="math inline">\(L\)</span> puede resultar más competente que uno de tipo <span class="math inline">\(H\)</span>.</p>
+<p>El tipo de un candidato es observable, mientras que su competencia efectiva <span class="math inline">\(\theta\)</span> es inicialmente desconocida. Esta diferencia permite que los electores utilicen tanto las características conocidas de los candidatos como los resultados de gobierno para formar expectativas sobre su desempeño futuro.</p>
+</section>
+<section id="las-preferencias-y-funciones-de-utilidad" class="level4" data-number="5.2.2.2">
+<h4 data-number="5.2.2.2" class="anchored" data-anchor-id="las-preferencias-y-funciones-de-utilidad"><span class="header-section-number">5.2.2.2</span> Las preferencias y funciones de utilidad</h4>
+<p>Los electores valoran exclusivamente los bienes públicos que reciben. Su utilidad durante cada período es:</p>
+<p><span class="math display">\[
+W_t=g_t.
+\]</span></p>
+<p>Por su parte, los alcaldes obtienen beneficios de las rentas apropiadas, aunque enfrentan el riesgo de ser descubiertos y sancionados.</p>
+<p>La probabilidad de detectar apropiación indebida de recursos es:</p>
+<p><span class="math display">\[
+d(r_t)=qr_t,
+\]</span></p>
+<p>donde <span class="math inline">\(q&gt;0\)</span> representa un parámetro de la tecnología de fiscalización. Cuando el alcalde es descubierto, enfrenta una pérdida de utilidad <span class="math inline">\(\lambda_J\)</span>, que depende de su tipo.</p>
+<p>Los autores suponen que <span class="math inline">\(\lambda_H&gt;\lambda_L\)</span>: los políticos de mayor calidad enfrentan mayores costos reputacionales por ser descubiertos. Por tanto, el valor esperado de cada unidad apropiada es:</p>
+<p><span class="math display">\[
+\alpha_J=1-\lambda_Jq.
+\]</span></p>
+<p>Además, los políticos reciben beneficios asociados al ejercicio del cargo, representados por <span class="math inline">\(R\)</span>.</p>
+<p>La utilidad esperada de un alcalde de tipo <span class="math inline">\(J\)</span> en el segundo período es:</p>
+<p><span class="math display">\[
+V_2^J=\alpha_Jr_2+R.
+\]</span></p>
+<p>En el primer período, la posibilidad de reelección agrega un beneficio futuro:</p>
+<p><span class="math display">\[
+V_1^J=\alpha_Jr_1+R+p_JV_2^J,
+\]</span></p>
+<p>donde <span class="math inline">\(p_J\)</span> es la probabilidad de reelección que el alcalde anticipa cuando decide cuánto apropiarse.</p>
+<p>Estas funciones mantienen la estructura intertemporal del problema de agencia estudiado anteriormente. La apropiación proporciona beneficios presentes, pero puede reducir la probabilidad de acceder a los beneficios futuros de ocupar el cargo.</p>
+</section>
+<section id="las-reglas-y-la-secuencia-del-juego" class="level4" data-number="5.2.2.3">
+<h4 data-number="5.2.2.3" class="anchored" data-anchor-id="las-reglas-y-la-secuencia-del-juego"><span class="header-section-number">5.2.2.3</span> Las reglas y la secuencia del juego</h4>
+<p>El orden de los acontecimientos determina qué información tiene cada jugador cuando toma sus decisiones.</p>
+<p><strong>Etapa 1. Decisión del alcalde.</strong></p>
+<p>Al comenzar el primer período, el alcalde conoce su propio tipo <span class="math inline">\(J\)</span>, pero desconoce la realización exacta de su competencia <span class="math inline">\(\theta\)</span>. Tampoco conoce todavía la identidad de su futuro competidor.</p>
+<p>Sabe que el desafiante será de tipo <span class="math inline">\(L\)</span> con probabilidad <span class="math inline">\(\pi\)</span> y de tipo <span class="math inline">\(H\)</span> con probabilidad <span class="math inline">\(1-\pi\)</span>.</p>
+<p>Con esa información, decide cuántos recursos apropiarse:</p>
+<p><span class="math display">\[
+r_1\in[0,\psi\tau].
+\]</span></p>
+<p>Su decisión determina, junto con su competencia administrativa, los bienes públicos producidos:</p>
+<p><span class="math display">\[
+g_1=\theta(\tau-r_1).
+\]</span></p>
+<p><strong>Etapa 2. Identificación del desafiante.</strong></p>
+<p>Se determina quién competirá contra el alcalde. Su tipo, <span class="math inline">\(H\)</span> o <span class="math inline">\(L\)</span>, se hace público, aunque su competencia efectiva <span class="math inline">\(\theta\)</span> permanece desconocida.</p>
+<p>Los electores conocen entonces el tipo de ambos candidatos.</p>
+<p><strong>Etapa 3. Elección.</strong></p>
+<p>Los ciudadanos observan la provisión de bienes públicos <span class="math inline">\(g_1\)</span>, pero no observan directamente las rentas apropiadas <span class="math inline">\(r_1\)</span>.</p>
+<p>Al evaluar al alcalde, deben considerar que el resultado observado depende de dos factores: la cantidad de recursos destinados a bienes públicos y la competencia administrativa de quien los utiliza.</p>
+<p>Los electores comparan las expectativas de desempeño futuro de los candidatos y deciden si reeligen al incumbente o eligen al desafiante.</p>
+<p><strong>Etapa 4. Fiscalización y sanción.</strong></p>
+<p>Después de la elección se realiza la auditoría del primer período. Si se descubre apropiación indebida de recursos, el alcalde recibe la sanción correspondiente.</p>
+<p>El orden es importante: como la fiscalización ocurre después de la elección, los electores no conocen su resultado cuando votan. Su decisión electoral depende de lo que pueden inferir a partir de los bienes públicos observados y las características conocidas de los candidatos.</p>
+<p><strong>Etapa 5. Segundo período.</strong></p>
+<p>El candidato que ganó la elección administra el presupuesto del segundo período y decide cuánto apropiarse, <span class="math inline">\(r_2\)</span>.</p>
+<p>Al finalizar se realiza una nueva auditoría y se aplican las sanciones correspondientes. Como el juego termina después de este período, el gobernante ya no enfrenta un incentivo de reelección dentro del modelo.</p>
+<p>Una versión simplificada del juego es la que se presenta a continuación.</p>
+<p><img src="../figs/brollo2013-juego-seleccion-apropiacion-voto.png" class="img-fluid" style="width:100.0%" alt="Árbol del juego simplificado de selección, apropiación y voto: entrada del candidato H, decisiones de rentas del incumbente, provisión de bienes públicos y elección de los votantes, con sus conjuntos de información."></p>
+</section>
+<section id="qué-resultados-determina-el-juego" class="level4" data-number="5.2.2.4">
+<h4 data-number="5.2.2.4" class="anchored" data-anchor-id="qué-resultados-determina-el-juego"><span class="header-section-number">5.2.2.4</span> ¿Qué resultados determina el juego?</h4>
+<p>Dadas las características de los candidatos, el tamaño del presupuesto y las reglas de fiscalización, el modelo permite determinar conjuntamente varios resultados:</p>
+<ul>
+<li><strong>La apropiación de rentas:</strong> cuánto decide apropiarse el alcalde, <span class="math inline">\(r_1\)</span> y <span class="math inline">\(r_2\)</span>.</li>
+<li><strong>La provisión de bienes públicos:</strong> cuánto reciben los electores como resultado de las decisiones presupuestarias y la competencia del gobernante, <span class="math inline">\(g_1\)</span> y <span class="math inline">\(g_2\)</span>.</li>
+<li><strong>La probabilidad de reelección:</strong> cómo el desempeño observado y las características de los candidatos afectan <span class="math inline">\(p_J\)</span>.</li>
+<li><strong>Las sanciones esperadas:</strong> cómo la probabilidad de detectar irregularidades y sus consecuencias afectan el valor de apropiarse de recursos.</li>
+</ul>
+<p><strong>Ejemplo.</strong> Supongamos que dos alcaldes disponen del mismo presupuesto y producen idéntica cantidad de bienes públicos. Uno es considerado de alta competencia administrativa y el otro de baja competencia. Aunque los ciudadanos observan el mismo resultado, pueden hacer inferencias diferentes: un alcalde del que se esperaba una elevada capacidad de gestión podría haber destinado más recursos a fines privados, mientras que el otro podría haber producido el mismo resultado con menor apropiación y menor competencia efectiva.</p>
+<p>De este modo, la información sobre el tipo del político influye en la interpretación de su desempeño y en sus posibilidades de reelección.</p>
+<p>En esta primera formulación, la probabilidad <span class="math inline">\(\pi\)</span> de enfrentar a un desafiante de baja calidad se considera dada. Esto permite resolver el problema de apropiación de rentas manteniendo constante la composición esperada de los competidores.</p>
+<p>Posteriormente, el modelo incorporará una decisión adicional: los individuos deberán decidir si ingresar a la competencia política. La composición de los candidatos, y por tanto <span class="math inline">\(\pi\)</span>, pasará a determinarse endógenamente. Así podremos estudiar cómo un aumento del presupuesto afecta primero los incentivos del gobernante y luego, a través de la selección de candidatos, las condiciones de competencia electoral que enfrenta.</p>
+</section>
+</section>
+<section id="la-inferencia-electoral-a-partir-de-los-resultados-observados" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="la-inferencia-electoral-a-partir-de-los-resultados-observados"><span class="header-section-number">5.2.3</span> La inferencia electoral a partir de los resultados observados</h3>
+<p>La secuencia del juego deja a los electores con un problema de inferencia. Cuando votan, conocen el presupuesto y el tipo del incumbente, y observan <span class="math inline">\(g_1\)</span>. Como desconocen <span class="math inline">\(r_1\)</span>, deben interpretar ese resultado a partir de lo que esperan que haga un político de ese tipo. Si en equilibrio anticipan que un alcalde de tipo <span class="math inline">\(J\)</span> elige <span class="math inline">\(r_1^{J*}\)</span>, la restricción presupuestaria permite recuperar la competencia que atribuyen al incumbente:</p>
+<p><span class="math display">\[
+\widehat\theta(g_1,J)=\frac{g_1}{\tau-r_1^{J*}}.
+\]</span></p>
+<p>La expresión muestra cómo se conectan las decisiones no observadas con los resultados electorales. Una mayor apropiación efectiva, manteniendo constante la competencia del alcalde, reduce <span class="math inline">\(g_1\)</span>. Los electores, que utilizan la apropiación esperada <span class="math inline">\(r_1^{J*}\)</span> para interpretar el resultado, atribuyen esa menor provisión a una competencia más baja. Por esta vía, la apropiación presente puede perjudicar la reelección aun cuando los votantes no observen directamente los recursos desviados.</p>
+<p><strong>Ejemplo.</strong> Supongamos que el presupuesto es de 100 unidades y los electores esperan que un alcalde de cierto tipo se apropie de 10. Si observan una provisión <span class="math inline">\(g_1=99\)</span>, infieren <span class="math inline">\(\widehat\theta=99/90=1{,}1\)</span>. Si el resultado fuese <span class="math inline">\(g_1=81\)</span>, la competencia inferida sería <span class="math inline">\(\widehat\theta=81/90=0{,}9\)</span>. Una caída de la provisión modifica, por tanto, la evaluación electoral del alcalde. El cálculo utiliza las rentas que los votantes esperan en equilibrio, no una observación directa de las rentas efectivamente apropiadas.</p>
+<p>La exigencia electoral también depende del desafiante. Si los votantes esperan que un candidato de tipo <span class="math inline">\(H\)</span> administre mejor que uno de tipo <span class="math inline">\(L\)</span>, un mismo desempeño del incumbente puede ser suficiente para derrotar al segundo y resultar insuficiente frente al primero. Por ejemplo, con <span class="math inline">\(\sigma=0{,}2\)</span>, un incumbente cuya competencia inferida es <span class="math inline">\(1{,}1\)</span> supera la media de un desafiante de tipo <span class="math inline">\(L\)</span> (<span class="math inline">\(0{,}8\)</span>), pero no la de uno de tipo <span class="math inline">\(H\)</span> (<span class="math inline">\(1{,}2\)</span>). La comparación supone iguales recursos y reglas de apropiación para cualquiera que gobierne en el período final.</p>
+<p>Como el incumbente decide <span class="math inline">\(r_1\)</span> antes de conocer el tipo de su oponente, anticipa ambos escenarios. Su probabilidad de reelección <span class="math inline">\(p_J(r_1;\tau,\pi)\)</span> reúne la respuesta de los votantes ante la provisión observada y las probabilidades de enfrentar a cada tipo de desafiante. La composición esperada de los competidores, resumida inicialmente por <span class="math inline">\(\pi\)</span>, influye así en el costo electoral de apropiarse de recursos.</p>
+</section>
+<section id="la-decisión-óptima-del-alcalde-inducción-hacia-atrás" class="level3" data-number="5.2.4">
+<h3 data-number="5.2.4" class="anchored" data-anchor-id="la-decisión-óptima-del-alcalde-inducción-hacia-atrás"><span class="header-section-number">5.2.4</span> La decisión óptima del alcalde: inducción hacia atrás</h3>
+<p>El juego se resuelve comenzando por el segundo período. Quien ocupa el cargo en esa etapa ya no enfrenta otra elección. Como <span class="math inline">\(\alpha_J&gt;0\)</span>, cada unidad adicional apropiada aumenta su utilidad esperada. En consecuencia, el alcalde elige el máximo permitido por la restricción presupuestaria:</p>
+<p><span class="math display">\[
+r_2^{J*}=\psi\tau.
+\]</span></p>
+<p>Al sustituir esta decisión en el valor del segundo período, obtenemos:</p>
+<p><span class="math display">\[
+V_2^{J*}(\tau)=\alpha_J\psi\tau+R.
+\]</span></p>
+<p>Este resultado permite determinar cuánto vale conservar el cargo antes de decidir la apropiación del primer período. El incumbente resuelve:</p>
+<p><span class="math display">\[
+\max_{0\leq r_1\leq\psi\tau}
+\left\{\alpha_Jr_1+R+p_J(r_1;\tau,\pi)\bigl(\alpha_J\psi\tau+R\bigr)\right\}.
+\]</span></p>
+<p>La elección de <span class="math inline">\(r_1\)</span> enfrenta el beneficio marginal de apropiarse de recursos con la pérdida del valor esperado de la reelección. Si la solución es interior, la condición de primer orden es:</p>
+<p><span class="math display">\[
+\alpha_J+
+\frac{\partial p_J(r_1;\tau,\pi)}{\partial r_1}
+\bigl(\alpha_J\psi\tau+R\bigr)=0.
+\]</span></p>
+<p>Como <span class="math inline">\(\partial p_J/\partial r_1&lt;0\)</span>, el segundo término representa el costo electoral esperado de apropiarse de una unidad adicional. La condición muestra cómo un aumento de las rentas debe compensarse con la pérdida marginal de oportunidades futuras.</p>
+<p><strong>Ejemplo.</strong> Sea <span class="math inline">\(\alpha_J=0{,}8\)</span>, <span class="math inline">\(\psi=0{,}2\)</span> y <span class="math inline">\(R=8\)</span>. Si el presupuesto es de 100 unidades, el valor de ocupar el cargo en el segundo período es <span class="math inline">\(V_2^{J*}=0{,}8(20)+8=24\)</span>. Si el presupuesto aumenta a 200, ese valor llega a <span class="math inline">\(0{,}8(40)+8=40\)</span>. Así, un presupuesto mayor también aumenta lo que el alcalde arriesga al perder la elección. Para determinar cuánto decidirá apropiarse en cada caso, debemos conocer además cómo varía la probabilidad de reelección con <span class="math inline">\(r_1\)</span>.</p>
+<p>El presupuesto actúa por dos vías que ahora pueden analizarse conjuntamente. Al aumentar <span class="math inline">\(\tau\)</span>, crece el valor futuro de ocupar el cargo, lo que refuerza el incentivo a conservarlo. También cambia la sensibilidad de la evaluación electoral ante cada unidad apropiada, pues los votantes infieren la competencia a partir de resultados producidos con un presupuesto distinto. La siguiente sección estudia el efecto de ambas fuerzas sobre las rentas de equilibrio (Brollo et al., 2013, sección I.A-B, pp.&nbsp;1763-1765).</p>
+</section>
+</section>
+<section id="qué-ocurre-cuando-aumenta-el-presupuesto" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="qué-ocurre-cuando-aumenta-el-presupuesto"><span class="header-section-number">5.3</span> ¿Qué ocurre cuando aumenta el presupuesto?</h2>
+<p>Mantengamos inicialmente constante el conjunto de posibles competidores. Un aumento de <span class="math inline">\(\tau\)</span> entrega al alcalde más recursos administrables. Al mismo tiempo, altera la capacidad de los electores para inferir apropiación a partir de los bienes públicos producidos.</p>
+<p><strong>Ejemplo.</strong> Dos municipios tienen alcaldes de competencia similar. En uno, el presupuesto es 100 y se desvían 5 unidades; en el otro, el presupuesto es 200 y se desvían 5 unidades. La reducción absoluta de recursos disponibles es igual, pero representa una proporción mucho menor del presupuesto del segundo municipio. En el modelo, ese contraste afecta la sensibilidad de la probabilidad de reelección ante variaciones en las rentas, dada la estructura de información sobre la competencia del gobernante.</p>
+<p>Brollo et al.&nbsp;derivan que, al aumentar el presupuesto, la sanción electoral marginal asociada a apropiarse de rentas disminuye en valor absoluto. Por ello, las rentas de equilibrio aumentan:</p>
+<p><span class="math display">\[
+\frac{\partial r_1^{J*}}{\partial\tau}&gt;0.
+\]</span></p>
+<p>También importa quién gobierna. Los autores suponen <span class="math inline">\(\lambda_H&gt;\lambda_L\)</span>, por lo que descubrir apropiación genera un costo reputacional mayor para un político de tipo <span class="math inline">\(H\)</span>. De ello se deriva que, manteniendo lo demás constante, los incumbentes de tipo <span class="math inline">\(H\)</span> se apropian de menos rentas que los de tipo <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[
+r_1^{H*}&lt;r_1^{L*}.
+\]</span></p>
+<p>La calidad esperada de los competidores constituye otro límite a la apropiación. Un incumbente que anticipa enfrentar un oponente más competente tiene mayores incentivos para preservar su desempeño electoral. El modelo predice asimismo que la influencia del presupuesto sobre las rentas es menor cuando la competencia esperada del oponente es mayor (Brollo et al., 2013, sección I.B, predicciones 1-3).</p>
+<p>Hasta aquí hemos permitido que el presupuesto modifique las decisiones del gobernante. El siguiente paso consiste en examinar cómo el presupuesto afecta las decisiones de personas que todavía no ocupan el cargo.</p>
+</section>
+<section id="la-entrada-en-política-como-decisión-económica" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="la-entrada-en-política-como-decisión-económica"><span class="header-section-number">5.4</span> La entrada en política como decisión económica</h2>
+<section id="individuos-heterogéneos-y-oportunidades-exteriores" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="individuos-heterogéneos-y-oportunidades-exteriores"><span class="header-section-number">5.4.1</span> Individuos heterogéneos y oportunidades exteriores</h3>
+<p>Consideremos dos personas con capacidad de administrar un municipio. Una cuenta con oportunidades laborales atractivas fuera de la política; la otra dispone de alternativas menos remuneradas. Ambas pueden valorar el ejercicio de un cargo público, pero renunciar a sus actividades actuales tiene costos distintos. Además, pueden diferir en el costo reputacional de ser descubiertas apropiándose de rentas.</p>
+<p>Brollo et al.&nbsp;consideran una población con dos grupos de individuos, <span class="math inline">\(H\)</span> y <span class="math inline">\(L\)</span>, que difieren en competencia esperada y costo de oportunidad. Dentro de cada grupo hay personas con costos de oportunidad distintos. Para la persona <span class="math inline">\(i\)</span> del grupo <span class="math inline">\(J\)</span>, el costo de entrar a la actividad política se expresa como:</p>
+<p><span class="math display">\[
+c_{iJ}=iy_J,\qquad y_H&gt;y_L&gt;0.
+\]</span></p>
+<p>La correlación positiva entre competencia política esperada y oportunidades exteriores permite estudiar selección: participar resulta relativamente más costoso para algunas personas que, en promedio, también serían administradores más competentes. La relación no es perfecta porque el factor <span class="math inline">\(i\)</span> introduce heterogeneidad adicional dentro de cada tipo.</p>
+</section>
+<section id="el-valor-esperado-de-convertirse-en-candidato" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="el-valor-esperado-de-convertirse-en-candidato"><span class="header-section-number">5.4.2</span> El valor esperado de convertirse en candidato</h3>
+<p>Ingresar a la política significa entrar en un conjunto de <span class="math inline">\(n=n_H+n_L\)</span> aspirantes. De él se selecciona un solo oponente para enfrentar al incumbente. Todos los aspirantes tienen, por supuesto, la misma probabilidad <span class="math inline">\(1/n\)</span> de ser seleccionados en el modelo; esta simplificación deja fuera los mecanismos de nominación de partidos.</p>
+<p>Si un individuo de tipo <span class="math inline">\(J\)</span> es seleccionado, gana con probabilidad <span class="math inline">\(p_J^*\)</span> y obtiene <span class="math inline">\(V_2^J\)</span>. La condición para entrar es:</p>
+<p><span class="math display">\[
+\boxed{iy_J\leq \frac{p_J^*}{n}V_2^J.}
+\]</span></p>
+<p>En el lado izquierdo está el costo de oportunidad. En el derecho, el valor esperado de entrar. Quien pierde o no es seleccionado recibe cero dentro de esta representación. El tamaño del conjunto <span class="math inline">\(n\)</span> también importa: si entran más aspirantes, cada uno tiene una probabilidad menor de llegar a competir contra el alcalde.</p>
+<p><strong>Ejemplo.</strong> Si una persona tiene una probabilidad de 1 en 10 de convertirse en candidata, una probabilidad de 1 en 2 de ganar y un beneficio de 200 unidades al ejercer el cargo, el valor esperado de entrar es 10. A quien le cuesta 6 unidades renunciar a sus alternativas le conviene ingresar; a quien le cuesta 15, no. Si se duplicara el beneficio del cargo, el valor esperado de entrada aumentaría a 20 para ambas personas. La respuesta de cada una dependería de su costo de oportunidad. Los números ilustran la condición de entrada y no corresponden a estimaciones del estudio.</p>
+</section>
+<section id="del-incentivo-individual-a-la-composición-del-conjunto" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="del-incentivo-individual-a-la-composición-del-conjunto"><span class="header-section-number">5.4.3</span> Del incentivo individual a la composición del conjunto</h3>
+<p>La utilidad de ejercer el cargo depende de los recursos apropiables y del costo esperado de la apropiación. Como los autores suponen <span class="math inline">\(\lambda_H&gt;\lambda_L\)</span>, el valor neto de las rentas es mayor para los individuos de tipo <span class="math inline">\(L\)</span>:</p>
+<p><span class="math display">\[
+\alpha_L&gt;\alpha_H.
+\]</span></p>
+<p>Cuando el presupuesto aumenta, el valor esperado del cargo crece relativamente más para ese grupo. En equilibrio, una mayor fracción de aspirantes pertenece al tipo <span class="math inline">\(L\)</span>. Si definimos:</p>
+<p><span class="math display">\[
+\pi=\frac{n_L}{n_H+n_L},
+\]</span></p>
+<p>la predicción de selección es:</p>
+<p><span class="math display">\[
+\frac{d\pi}{d\tau}&gt;0.
+\]</span></p>
+<p>El resultado depende de la mayor valoración relativa de las rentas por parte de los individuos de tipo <span class="math inline">\(L\)</span>. Si los costos reputacionales relativos fueran diferentes, cambiaría la predicción. También depende de simplificar la selección partidaria mediante la probabilidad común de nominación <span class="math inline">\(1/n\)</span> (Brollo et al., 2013, sección I.C, ecuación 4 y predicción 4).</p>
+<p><strong>Ejemplo.</strong> Imaginemos una alcaldía cuyo presupuesto crece sin que aumenten en la misma proporción los mecanismos de supervisión. La ampliación hace el puesto atractivo para profesionales interesados en administrar más proyectos, pero también aumenta el valor de los recursos de los que podría apropiarse un gobernante. Si esa última ventaja pesa relativamente más entre personas con menores costos reputacionales, la composición de aspirantes se desplaza hacia ese grupo. La magnitud y aun la dirección del efecto dependen de los supuestos sobre quiénes valoran más cada beneficio y cuánto cuesta ingresar a la política.</p>
+</section>
+</section>
+<section id="equilibrio-con-entrada-endógena" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="equilibrio-con-entrada-endógena"><span class="header-section-number">5.5</span> Equilibrio con entrada endógena</h2>
+<p>La entrada cambia la competencia que enfrenta el incumbente. Los votantes comparan la continuidad del alcalde con la calidad esperada del desafiante. Si el conjunto de aspirantes contiene una proporción mayor de individuos de tipo <span class="math inline">\(L\)</span>, la alternativa electoral se vuelve menos exigente en términos de competencia esperada.</p>
+<p>El modelo predice que, incluso apropiándose de más recursos, el incumbente puede aumentar su probabilidad de reelección. Los votantes comparan alternativas disponibles y la composición de esas alternativas cambia con el presupuesto (Brollo et al., 2013, sección I.C, predicción 5).</p>
+<p>Podemos expresar la lógica del efecto total de un cambio presupuestario sobre las rentas mediante la regla de la cadena. Sea <span class="math inline">\(\bar\theta_o\)</span> la competencia esperada del conjunto de posibles competidores:</p>
+<p><span class="math display">\[
+\frac{dr_1^{J*}}{d\tau}
+=
+\underbrace{\frac{\partial r_1^{J*}}{\partial\tau}}_{\text{Efecto directo}}
++
+\underbrace{
+\frac{\partial r_1^{J*}}{\partial\bar\theta_o}
+\frac{d\bar\theta_o}{d\tau}
+}_{\text{Efecto vía selección}}.
+\]</span></p>
+<p>El primer componente corresponde a la respuesta del incumbente cuando cambia el presupuesto y se mantiene constante la composición esperada de sus oponentes. El segundo incorpora la variación de esa composición. En el equilibrio descrito por los autores, ambos componentes aumentan las rentas de apropiación (Brollo et al., 2013, sección I.C, predicción 6).</p>
+<p>Esta descomposición permite distinguir dos efectos institucionales. Uno opera sobre las decisiones de actores que ya ocupan sus posiciones. El otro opera sobre las características de quienes consideran ingresar en ellas. Una misma variación presupuestaria activa ambos mecanismos y produce un efecto total que depende de su interacción.</p>
+</section>
+<section id="de-las-predicciones-del-modelo-a-variables-observables" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="de-las-predicciones-del-modelo-a-variables-observables"><span class="header-section-number">5.6</span> De las predicciones del modelo a variables observables</h2>
+<p>El modelo ofrece seis predicciones interrelacionadas. Su contraste requiere traducir conceptos teóricos a indicadores, identificar cambios presupuestarios que no respondan a las características de los municipios y distinguir, cuando sea posible, los mecanismos que producen cada resultado.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto o predicción</th>
+<th>Magnitud observada en los datos</th>
+<th>Decisión de medición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Presupuesto municipal <span class="math inline">\(\tau\)</span></td>
+<td>Transferencias del Fondo de Participación de los Municipios (FPM)</td>
+<td>Utilizar transferencias efectivas; construir además transferencias teóricas a partir de la regla legal</td>
+</tr>
+<tr class="even">
+<td>Apropiación de rentas <span class="math inline">\(r_t\)</span></td>
+<td>Irregularidades detectadas en auditorías federales</td>
+<td>Definir medidas amplias y restringidas de corrupción</td>
+</tr>
+<tr class="odd">
+<td>Tipo del político <span class="math inline">\(J\)</span></td>
+<td>Educación de los candidatos opositores</td>
+<td>Usar proporción con educación superior y años promedio de escolaridad</td>
+</tr>
+<tr class="even">
+<td>Composición del conjunto de competidores <span class="math inline">\(\pi\)</span></td>
+<td>Educación de los oponentes del incumbente</td>
+<td>Restringir la muestra de selección a elecciones donde el alcalde busca reelegirse</td>
+</tr>
+<tr class="odd">
+<td>Valor de continuidad <span class="math inline">\(p_J\)</span></td>
+<td>Reelección del incumbente</td>
+<td>Indicador binario de victoria electoral</td>
+</tr>
+<tr class="even">
+<td>Castigo por apropiación</td>
+<td>Efecto electoral de divulgar irregularidades antes de la elección</td>
+<td>Combinar el momento de divulgación con las discontinuidades de transferencias</td>
+</tr>
+</tbody>
+</table>
+<p>Las auditorías registran irregularidades administrativas y posibles actos de corrupción, mientras que el modelo describe una apropiación privada de rentas. Por esa razón, los autores construyen una medida amplia de irregularidades y otra restringida a episodios graves. La medida empírica se aproxima al mecanismo teórico, pero no observa directamente cada unidad de <span class="math inline">\(r_t\)</span>.</p>
+<p>La educación cumple una función distinta. En el modelo, la competencia administrativa efectiva es <span class="math inline">\(\theta\)</span> y el tipo observable <span class="math inline">\(J\)</span> permite anticipar su distribución. En los datos, el nivel educacional aproxima el tipo, sin medir directamente la capacidad de gestión ni los costos reputacionales. El ejercicio empírico contrasta cambios en la composición educacional de candidatos, un resultado observable vinculado al mecanismo de selección propuesto (Brollo et al., 2013, sección II, pp.&nbsp;1769-1777).</p>
+</section>
+<section id="cómo-identificar-el-efecto-causal-de-los-recursos" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="cómo-identificar-el-efecto-causal-de-los-recursos"><span class="header-section-number">5.7</span> Cómo identificar el efecto causal de los recursos</h2>
+<section id="la-dificultad-de-comparar-municipios-ricos-y-pobres" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="la-dificultad-de-comparar-municipios-ricos-y-pobres"><span class="header-section-number">5.7.1</span> La dificultad de comparar municipios ricos y pobres</h3>
+<p>Una regresión de corrupción sobre transferencias podría reflejar diferencias que preceden a los recursos fiscales. Municipios con mayores necesidades pueden recibir transferencias más grandes y, simultáneamente, enfrentar dificultades administrativas. Las autoridades también podrían influir sobre las transferencias que reciben. En ambos casos, la asociación entre presupuesto y corrupción mezcla el efecto de los recursos con características previas.</p>
+<p>Los autores aprovechan una regla brasileña de distribución del FPM: el coeficiente que determina una parte de las transferencias federales aumenta por tramos cuando la población estimada por el Instituto Brasileño de Geografía y Estadística supera umbrales preestablecidos.</p>
+<p>Por ejemplo, el coeficiente FPM es 0,8 para municipios de 10.189 a 13.584 habitantes y 1,0 para municipios de 13.585 a 16.980 habitantes. A cada lado del umbral de 13.585 habitantes, poblaciones casi iguales pueden implicar transferencias teóricas diferentes. Las primeras siete discontinuidades permiten analizar municipios de menos de 50.940 habitantes (Brollo et al., 2013, tabla 1, p.&nbsp;1770):</p>
+<p><img src="../figs/brollo2013-coeficientes-fpm.png" class="img-fluid" alt="Tabla 1 de Brollo et al. (2013): intervalos de población y coeficientes del Fondo de Participación de los Municipios (FPM)." width="514"></p>
+<p><strong>Ejemplo.</strong> Supongamos dos municipios similares con 13.584 y 13.585 habitantes, respectivamente. Su población difiere en una persona, pero la regla asigna distintos coeficientes de transferencia. Si sus otras características cambian continuamente alrededor del umbral, la diferencia de transferencias ofrece una fuente de variación útil para estudiar qué sucede con las decisiones de los gobernantes y la composición de candidatos.</p>
+</section>
+<section id="por-qué-la-discontinuidad-es-fuzzy" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="por-qué-la-discontinuidad-es-fuzzy"><span class="header-section-number">5.7.2</span> Por qué la discontinuidad es <em>fuzzy</em></h3>
+<p>La transferencia efectivamente recibida no coincide siempre con la cantidad que corresponde a la regla. Hubo asignaciones administrativas inconsistentes con las estimaciones de población y disposiciones transitorias que afectaron algunos municipios. Por ello, cruzar el umbral modifica de manera discontinua las transferencias <strong>esperadas</strong>, pero el tratamiento efectivo no se ajusta mecánicamente a la regla.</p>
+<p>Denotemos por <span class="math inline">\(\widehat\tau_i\)</span> las transferencias teóricas y por <span class="math inline">\(\tau_i\)</span> las transferencias efectivas. Los autores usan <span class="math inline">\(\widehat\tau_i\)</span> como instrumento de <span class="math inline">\(\tau_i\)</span>. Esta estrategia corresponde a una regresión discontinua <em>fuzzy</em>: la regla cambia la intensidad de exposición a los recursos, aunque exista cumplimiento imperfecto (Brollo et al., 2013, sección III.A).</p>
+<p>Para un único umbral <span class="math inline">\(c\)</span>, definimos la distancia <span class="math inline">\(x_i=P_i-c\)</span>, donde <span class="math inline">\(P_i\)</span> es la población del municipio. El estimando local puede expresarse como:</p>
+<p><span class="math display">\[
+\beta_{\mathrm{FRD}}
+=
+\frac{
+\lim_{x\downarrow 0}E[Y_i\mid x_i=x]
+-
+\lim_{x\uparrow 0}E[Y_i\mid x_i=x]
+}{
+\lim_{x\downarrow 0}E[\tau_i\mid x_i=x]
+-
+\lim_{x\uparrow 0}E[\tau_i\mid x_i=x]
+}.
+\]</span></p>
+<p>El numerador es el salto del resultado en el umbral. El denominador es el salto de las transferencias efectivas. Su cociente expresa el cambio en el resultado por unidad adicional de transferencias inducida por la regla, bajo los supuestos de identificación.</p>
+</section>
+<section id="las-ecuaciones-que-estiman-los-autores" class="level3" data-number="5.7.3">
+<h3 data-number="5.7.3" class="anchored" data-anchor-id="las-ecuaciones-que-estiman-los-autores"><span class="header-section-number">5.7.3</span> Las ecuaciones que estiman los autores</h3>
+<p>El estudio utiliza los siete umbrales y estima una relación entre transferencias efectivas y teóricas (primera etapa):</p>
+<p><span class="math display">\[
+\tau_i=g(P_i)+\alpha_{\tau}\widehat\tau_i+\delta_t+\gamma_s+u_i.
+\]</span></p>
+<p>Después estima la forma reducida para un resultado <span class="math inline">\(Y_i\)</span>, que puede ser corrupción, educación de los oponentes o reelección:</p>
+<p><span class="math display">\[
+Y_i=g(P_i)+\alpha_Y\widehat\tau_i+\delta_t+\gamma_s+\eta_i.
+\]</span></p>
+<p>Finalmente, utiliza las transferencias teóricas como instrumento de las efectivas:</p>
+<p><span class="math display">\[
+Y_i=g(P_i)+\beta_Y\tau_i+\delta_t+\gamma_s+\varepsilon_i,
+\qquad \tau_i\text{ instrumentada por }\widehat\tau_i.
+\]</span></p>
+<p>Aquí <span class="math inline">\(g(P_i)\)</span> controla de manera flexible la relación entre población y resultado; <span class="math inline">\(\delta_t\)</span> controla diferencias entre períodos de gobierno; <span class="math inline">\(\gamma_s\)</span> representa los controles geográficos incluidos en la especificación. Los autores emplean un polinomio cúbico de población normalizada y errores estándar agrupados por municipio. Las ecuaciones 5–7 describen efectos de estado, mientras que las notas de las tablas 4, 5, 8 y 9 indican controles de macroregión. Esta diferencia entre la exposición general y las notas de las tablas exige verificar cada script original antes de ejecutar la reproducción (Brollo et al., 2013, ecuaciones 5-7 y tablas 4-9).</p>
+<p>Para interpretar causalmente estas estimaciones se requiere continuidad de los resultados potenciales en torno a los umbrales, ausencia de otras políticas relevantes que cambien exactamente allí y ausencia de manipulación precisa de las cifras de población utilizadas para construir el instrumento. La interpretación instrumental añade los supuestos de exclusión y monotonicidad. Los autores evalúan discontinuidades en la densidad poblacional, balance de covariables predeterminadas y especificaciones alternativas. El resultado identifica efectos locales alrededor de los umbrales para municipios cuyas transferencias responden a la regla.</p>
+</section>
+<section id="las-muestras-usadas-para-la-estimación" class="level3" data-number="5.7.4">
+<h3 data-number="5.7.4" class="anchored" data-anchor-id="las-muestras-usadas-para-la-estimación"><span class="header-section-number">5.7.4</span> Las muestras usadas para la estimación</h3>
+<p>Los resultados de corrupción provienen de 1.202 observaciones municipio-período con auditorías aleatorias. Para observar la composición de los competidores, los autores utilizan una muestra mayor, de 2.877 observaciones en elecciones en las que el incumbente se presenta a la reelección. Esta última restricción sigue el modelo, porque identifica un grupo de oponentes frente a un gobernante que busca continuar.</p>
+<p>La selección de municipios según la decisión del incumbente de competir puede tener consecuencias para la interpretación. Los autores examinan también especificaciones con un conjunto más amplio de elecciones. Es necesario distinguir el efecto causal de las transferencias dentro de la muestra analizada de la posibilidad de extrapolar ese efecto a todas las elecciones municipales.</p>
+</section>
+</section>
+<section id="estimaciones-qué-evidencia-corresponde-a-cada-mecanismo" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="estimaciones-qué-evidencia-corresponde-a-cada-mecanismo"><span class="header-section-number">5.8</span> Estimaciones: qué evidencia corresponde a cada mecanismo</h2>
+<section id="recursos-e-irregularidades-administrativas" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="recursos-e-irregularidades-administrativas"><span class="header-section-number">5.8.1</span> Recursos e irregularidades administrativas</h3>
+<p>Las tablas 4 y 5 estudian la corrupción. En la tabla 4, la primera etapa de la muestra auditada estima <span class="math inline">\(\widehat\alpha_{\tau}=0{,}629\)</span>, mientras que la forma reducida estima coeficientes de 0,009 para corrupción amplia y 0,014 para corrupción grave. En la tabla 5, los coeficientes instrumentales respectivos son 0,014 y 0,022, con errores estándar agrupados de 0,007 y 0,008. Las transferencias están expresadas en unidades de 100.000 reales a precios del año 2000.</p>
+<p><img src="../figs/brollo2013-tabla4-corrupcion.png" class="img-fluid" alt="Tabla 4 de Brollo et al. (2013): efectos de forma reducida de las transferencias FPM sobre las medidas de corrupción, para el conjunto de umbrales y por umbral." width="674"></p>
+<p><img src="../figs/brollo2013-figura2-discontinuidades-corrupcion.png" class="img-fluid" alt="Figura 2 de Brollo et al. (2013): discontinuidades en cuatro medidas de corrupción alrededor de los umbrales de población del FPM." width="851"></p>
+<p>Los resultados son consistentes con la predicción de que mayores recursos fiscales incrementan la apropiación de rentas, aunque la medición observada corresponde a la presencia de irregularidades detectadas. El análisis de mecanismos examina, además, si el castigo electoral por corrupción disminuye en municipios con más transferencias (tabla 6) y si el efecto de las transferencias sobre la corrupción es menor cuando los oponentes tienen más educación (tabla 7).</p>
+</section>
+<section id="recursos-y-selección-política" class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="recursos-y-selección-política"><span class="header-section-number">5.8.2</span> Recursos y selección política</h3>
+<p>Las tablas 8 y 9 se concentran en la composición de los candidatos y la reelección del incumbente. Para la muestra completa de selección, la tabla 8 informa una primera etapa de 0,732. Las formas reducidas son -0,006 para la proporción de oponentes con educación superior, -0,056 para sus años promedio de escolaridad y 0,009 para la reelección del alcalde.</p>
+<p>La tabla 9 presenta los efectos estimados mediante variables instrumentales:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resultado</th>
+<th style="text-align: right;">Coeficiente IV</th>
+<th style="text-align: right;">Error estándar</th>
+<th style="text-align: right;">Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fracción de oponentes con educación superior</td>
+<td style="text-align: right;">-0,008</td>
+<td style="text-align: right;">0,004</td>
+<td style="text-align: right;">2.877</td>
+</tr>
+<tr class="even">
+<td>Años promedio de escolaridad de oponentes</td>
+<td style="text-align: right;">-0,077</td>
+<td style="text-align: right;">0,026</td>
+<td style="text-align: right;">2.877</td>
+</tr>
+<tr class="odd">
+<td>Reelección del incumbente</td>
+<td style="text-align: right;">0,012</td>
+<td style="text-align: right;">0,005</td>
+<td style="text-align: right;">2.877</td>
+</tr>
+</tbody>
+</table>
+<p><em>Fuente:</em> Brollo et al.&nbsp;(2013), tablas 8 y 9, pp.&nbsp;1791-1792. Cada coeficiente IV corresponde a un incremento de 100.000 reales en transferencias efectivas, medidos a precios de 2000. Las variables de educación se refieren a los oponentes en elecciones donde el incumbente compite por reelegirse.</p>
+<p>Un incremento de 100.000 reales en transferencias efectivas reduce la proporción de oponentes con estudios superiores en aproximadamente 0,8 puntos porcentuales e incrementa la probabilidad de reelección del incumbente en aproximadamente 1,2 puntos porcentuales, según las estimaciones instrumentales. Estos coeficientes describen efectos marginales del modelo estimado; para interpretar cambios porcentuales se debe considerar el nivel inicial de transferencias y la media de cada resultado.</p>
+<p>Los autores también documentan que el aumento de corrupción es mayor cuando los oponentes tienen menor educación. La evidencia vincula el incentivo presupuestario con un cambio de composición electoral y con la conducta del incumbente, aunque no permite observar directamente las decisiones de entrada de todas las personas que consideraron postular.</p>
+</section>
+</section>
+<section id="discusión-de-los-supuestos-y-sus-implicaciones" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="discusión-de-los-supuestos-y-sus-implicaciones"><span class="header-section-number">5.9</span> Discusión de los supuestos y sus implicaciones</h2>
+<p>La teoría combina información imperfecta, heterogeneidad individual y entrada endógena. Cada componente habilita una predicción distinta:</p>
+<ol type="1">
+<li>Si los votantes observan la provisión pública y desconocen las rentas, deben inferir la competencia del alcalde. El aumento presupuestario modifica esa inferencia y los incentivos de apropiación.</li>
+<li>Si algunos individuos tienen mayores oportunidades fuera de la política, la decisión de competir varía entre tipos y dentro de cada tipo.</li>
+<li>Si las rentas apropiadas generan costos reputacionales diferentes, un aumento del presupuesto modifica de manera desigual el atractivo del cargo.</li>
+<li>Si el incumbente compite contra candidatos cuya composición ha cambiado, su propia decisión óptima también se modifica.</li>
+</ol>
+<p>La estrategia empírica combina una regla administrativa de asignación de transferencias, datos de auditoría y registros de candidatos. Su fuerza principal radica en la discontinuidad de recursos fiscales, que permite evaluar efectos causales locales. El vínculo entre la educación observada, la competencia administrativa y la entrada individual exige supuestos adicionales. Asimismo, las estimaciones de corrupción combinan la reacción conductual directa y los posibles efectos de la composición de candidatos; separar cuantitativamente ambos componentes es más difícil.</p>
+<p>El modelo también permite precisar su alcance. La variación estudiada corresponde a presupuestos administrados por autoridades; el salario legal de los políticos constituye una fuente de ingresos distinta de las rentas apropiables. Por ello, la dirección de la selección prevista en el artículo depende del valor que las rentas apropiables tengan para los distintos tipos y de los mecanismos institucionales de sanción y nominación.</p>
+<p>Las elecciones generan incentivos para que los gobernantes consideren los efectos futuros de sus decisiones presentes. Cuando introducimos un presupuesto administrable, esos incentivos también dependen del volumen de recursos y de la información disponible para los electores. A su vez, el valor de controlar recursos modifica las decisiones de entrada de personas heterogéneas.</p>
+<p>La decisión del gobernante y la decisión del potencial candidato quedan así vinculadas. El alcalde elige cuánto apropiarse según la amenaza electoral que enfrenta. La amenaza electoral depende de las características de los competidores. Esas características dependen, en parte, de las rentas que ofrece el cargo. El equilibrio integra, por tanto, comportamiento y selección.</p>
+<p>La misma lógica puede extenderse a otras instituciones. En una legislatura, las facultades de ciertas comisiones o cargos directivos pueden influir en quiénes buscan ocuparlos. En la competencia redistributiva, la capacidad de distribuir beneficios modifica tanto los incentivos de los partidos como el valor político de controlar los recursos (Dixit y Londregan, 1996; Krehbiel, 2004). El análisis institucional debe examinar las decisiones de quienes participan actualmente y las decisiones de quienes podrían ingresar.</p>
+<section id="preguntas-para-que-le-den-una-vuelta" class="level3" data-number="5.9.1">
+<h3 data-number="5.9.1" class="anchored" data-anchor-id="preguntas-para-que-le-den-una-vuelta"><span class="header-section-number">5.9.1</span> Preguntas para que le den una vuelta…</h3>
+<ol type="1">
+<li>¿Qué supuesto específico permite que un aumento del presupuesto reduzca el castigo electoral marginal de la apropiación? ¿Qué ocurriría si los ciudadanos observaran directamente <span class="math inline">\(r_t\)</span>?</li>
+<li>¿Cómo cambiaría la selección de candidatos si los políticos más competentes también obtuvieran un beneficio mayor de administrar proyectos públicos, con independencia de las rentas apropiables?</li>
+<li>¿Qué implica sustituir la probabilidad común de nominación <span class="math inline">\(1/n\)</span> por una regla en la que los partidos eligen candidatos según competencia y posibilidad de ganar?</li>
+<li>¿Qué resultado de la tabla 9 puede interpretarse directamente como evidencia de un cambio observable en la composición de la competencia? ¿Qué información adicional se necesitaría para observar la entrada individual?</li>
+<li>¿Por qué el coeficiente IV se interpreta localmente alrededor de los umbrales? ¿Qué evidencia podría cuestionar esa interpretación?</li>
+</ol>
+</section>
+</section>
+<section id="referencias" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="referencias"><span class="header-section-number">5.10</span> Referencias</h2>
+<p>Brollo, F., Nannicini, T., Perotti, R., &amp; Tabellini, G. (2013). The Political Resource Curse. <em>American Economic Review, 103</em>(5), 1759-1796. https://doi.org/10.1257/aer.103.5.1759</p>
+<p>Brollo, F., Nannicini, T., Perotti, R., &amp; Tabellini, G. (2019). <em>Replication data for: The Political Resource Curse</em> (versión V1) [Datos y código]. openICPSR. https://doi.org/10.3886/E112657V1</p>
+<p>Dixit, A., &amp; Londregan, J. (1996). The Determinants of Success of Special Interests in Redistributive Politics. <em>The Journal of Politics, 58</em>(4), 1132-1155. https://www.jstor.org/stable/2960152</p>
+<p>Ferejohn, J. A. (1986). Incumbent Performance and Electoral Control. <em>Public Choice, 50</em>(1-3), 5-25.</p>
+<p>Ferraz, C., &amp; Finan, F. (2011). Electoral Accountability and Corruption: Evidence from the Audits of Local Governments. <em>American Economic Review, 101</em>(4), 1274-1311. https://doi.org/10.1257/aer.101.4.1274</p>
+<p>Krehbiel, K. (2004). Legislative Organization. <em>Journal of Economic Perspectives, 18</em>(1), 113-128. https://doi.org/10.1257/089533004773563467</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/04-principal-agente-elecciones-corrupcion.html" class="pagination-link" aria-label="Principal-agente: incentivos y preferencias de los representantes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principal-agente: incentivos y preferencias de los representantes</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

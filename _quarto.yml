@@ -3,6 +3,8 @@ project:
   output-dir: _book
   resources:
     - scripts/ECONPOL_Sesion_4_Laboratorio_R.R
+    - scripts/ECONPOL_Sesion_5_Importacion_R.R
+    - data/README.md
 
 book:
   title: "Economía Política Formal - 2026"
@@ -12,6 +14,7 @@ book:
     - chapters/02-horizontes-incentivos-diseno-institucional.qmd
     - chapters/03-compromiso-repeticion-clientelismo.qmd
     - chapters/04-principal-agente-elecciones-corrupcion.qmd
+    - chapters/05-seleccion-politica.qmd
 
 lang: es
 bibliography: references.bib
