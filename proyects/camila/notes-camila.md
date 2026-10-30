@@ -86,7 +86,7 @@ Usaremos el modelo de **Stokes (2005)**, que vimos en el capítulo 3, con compra
 - Un alcalde $I$ que va a la reelección.
 - Sus simpatizantes $i$. Cada uno obtiene un beneficio $\beta_i$ por votar y paga un costo $c_i$ por ir a votar.
 
-**La brecha.** Sea $X_i = c_i - \beta_i$. Si $X_i > 0$, el simpatizante no va a votar por su cuenta.
+**La brecha.** Sea $X_i = c_i - \beta_i$. Si $X_i > 0$, el simpatizante no va a votar por su cuenta. Escribimos $X_i^+ = \max\{X_i, 0\}$ para la parte positiva de la brecha: lo que le falta al simpatizante para ir a votar, que es cero si ya iría por su cuenta. $F$ es la distribución de las brechas entre los simpatizantes del alcalde.
 
 **Voto voluntario.** Para que vaya, el alcalde tiene que hacerle llegar $X_i$, por ejemplo a través de una organización. El gasto en movilización es
 
@@ -100,13 +100,7 @@ $$
 S_O = \int (X - f)^+ \, dF .
 $$
 
-**El ahorro.** Como $x^+ - (x - f)^+ = \min\{x^+, f\}$,
-
-$$
-S_V - S_O = \int \min\{X^+, f\} \, dF \; \ge \; 0 ,
-$$
-
-es decir, la multa le ahorra al alcalde exactamente la parte de la brecha que ella cubre.
+La idea es calcular el ahorro $S_V - S_O$. Preguntas: ¿Puede ser negativo? ¿En qué comunas debería ser más grande?
 
 ## 6. Qué debería predecir el modelo
 
