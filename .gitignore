@@ -17,3 +17,6 @@ references.bib
 # Datos oficiales y derivados locales de la sesión 5
 /data/originales/
 /data/derivados/
+
+# Material de trabajo del ayudante (no se publica)
+/playground/
