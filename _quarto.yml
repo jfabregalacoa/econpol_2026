@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  post-render:
+    - quarto run scripts/referencias-sesion-06.js
   resources:
     - scripts/ECONPOL_Sesion_4_Laboratorio_R.R
     - scripts/ECONPOL_Sesion_5_Importacion_R.R
@@ -15,9 +17,12 @@ book:
     - chapters/03-compromiso-repeticion-clientelismo.qmd
     - chapters/04-principal-agente-elecciones-corrupcion.qmd
     - chapters/05-seleccion-politica.qmd
+    - chapters/sesion_06_burocracia_capacidad_estatal.qmd
 
 lang: es
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - chapters/referencias_sesion_06.bib
 number-sections: true
 
 format:

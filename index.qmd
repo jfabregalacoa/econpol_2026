@@ -11,3 +11,5 @@ El [Capítulo 3](chapters/03-compromiso-repeticion-clientelismo.qmd) estudia có
 El [Capítulo 4](chapters/04-principal-agente-elecciones-corrupcion.qmd) estudia la delegación y el control electoral a través del problema principal-agente. Desarrolla el modelo de Ferejohn, examina la evidencia de Ferraz y Finan sobre reelección y corrupción municipal y conecta las preferencias políticas con un laboratorio en R sobre posiciones ideológicas y votaciones legislativas en Chile.
 
 El [Capítulo 5](chapters/05-seleccion-politica.qmd) estudia cómo los recursos fiscales afectan la conducta de los gobernantes y la composición de sus competidores. Desarrolla el modelo de selección política de Brollo y coautores y examina su diseño de discontinuidad.
+
+El [Capítulo 6](chapters/sesion_06_burocracia_capacidad_estatal.qmd) estudia la selección de funcionarios, los incentivos monetarios y la capacidad estatal, y conecta los modelos políticos con su estimación empírica.

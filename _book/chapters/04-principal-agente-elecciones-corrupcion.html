@@ -213,6 +213,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Selección política: incentivos, rentas y calidad de los candidatos</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/sesion_06_burocracia_capacidad_estatal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Burocracia, capacidad estatal y estimación de modelos políticos</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -970,7 +976,7 @@ Preparing to run W-NOMINATE...
 
 
 W-NOMINATE estimation completed successfully.
-W-NOMINATE took 117.31 seconds to execute.</code></pre>
+W-NOMINATE took 164.48 seconds to execute.</code></pre>
 </div>
 <details class="code-fold">
 <summary>Mostrar código</summary>
@@ -1082,7 +1088,7 @@ Preparing to run W-NOMINATE...
 
 
 W-NOMINATE estimation completed successfully.
-W-NOMINATE took 84.21 seconds to execute.</code></pre>
+W-NOMINATE took 108.81 seconds to execute.</code></pre>
 </div>
 <details class="code-fold">
 <summary>Mostrar código</summary>
@@ -1231,7 +1237,8 @@ Multiple R-squared:  0.9045,    Adjusted R-squared:  0.9038
 F-statistic:  1269 on 1 and 134 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>El código integrado y el script descargable implementan esta versión con estimación W-NOMINATE en el conjunto de entrenamiento, mayoría partidaria <em>leave-one-out</em>, y una regresión descriptiva sobre tasas individuales. No calcula una variable de competencia electoral porque la fuente de votaciones no contiene, por sí sola, una medida apropiada de esa presión. Agregarla requeriría datos electorales independientes y una hipótesis previamente definida.</p>
+<p><strong>Interpretación de los resultados.</strong> La regresión muestra una asociación positiva y estadísticamente significativa entre la distancia ideológica de un diputado respecto de su partido y su tasa de discrepancia con la bancada. El coeficiente estimado (0,508) indica que un aumento de 0,1 unidades en la distancia partidaria se asocia con un incremento de aproximadamente <strong>5,1 puntos porcentuales en la tasa de discrepancia</strong>. El modelo presenta un poder explicativo muy alto (<span class="math inline">\(R^2=0,905\)</span>): la distancia partidaria da cuenta de alrededor del 90,5 % de la variación ponderada en las tasas de discrepancia observadas. La estimación pondera a cada diputado según el número de votaciones evaluadas, dando mayor peso a quienes cuentan con más observaciones.</p>
+<p><strong>Precaución metodológica.</strong> Esta relación no demuestra que la distancia ideológica cause la indisciplina partidaria. Si las posiciones ideológicas se estimaron utilizando las mismas votaciones empleadas para calcular la discrepancia, ambas variables comparten información de origen. Esto puede explicar parte de la elevada asociación encontrada. Para evaluar la capacidad predictiva de las posiciones ideológicas, sería conveniente estimarlas con un conjunto de votaciones y medir la discrepancia partidaria utilizando otro conjunto independiente.</p>
 </section>
 </section>
 <section id="integración-lo-que-aprendemos-al-pasar-de-un-modelo-a-los-datos" class="level2" data-number="4.8">

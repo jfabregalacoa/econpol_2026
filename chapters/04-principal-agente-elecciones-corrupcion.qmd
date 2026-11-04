@@ -790,7 +790,7 @@ print(summary(ideales_entrenamiento$theta_train))
 
 ```{r}
 #| label: actividad3-distancias
-#| eval: false
+#| eval: true
 
 info_partido <- unique(
   p6[, .(DiputadoId = as.character(Id), partido = as.character(party_1))],
@@ -809,7 +809,7 @@ ideales_partido[, distancia_partido := abs(theta_train - mediana_partido)]
 
 ```{r}
 #| label: actividad3-discrepancias
-#| eval: false
+#| eval: true
 
 # Convertir solo la submuestra de TEST a formato largo.
 test_dt <- as.data.table(test)
