@@ -22,6 +22,8 @@
 #      - bip_ep_obras.csv.gz: una fila por obra (código BIP).
 #      - bip_ep_panel_comuna_anio.csv: comuna x año de primera postulación x tipo, con ceros.
 #      - bip_ep_muestra_revision.csv: 200 obras al azar para revisar a mano la clasificación.
+#      - bip_todas_panel_comuna_anio.csv: lo mismo que el panel anterior, pero con todas las obras municipales
+#        (no solo espacio público), para pruebas de robustez.
 
 suppressMessages({library(dplyr); library(readr); library(stringi); library(tidyr)})
 
@@ -124,8 +126,26 @@ muestra <- obras %>%
   select(codigo_bip, anio_primera, responsable, nombre, tipo) %>%
   mutate(tipo_revisado = "", es_espacio_publico = "", comentario = "")
 
+# 7. Todas las obras municipales (robustez) ------------------------------------------------------------
+# Mismo conteo por primera aparición y tipo, sin filtrar por espacio público: sedes, luminarias, calles,
+# escuelas, etc. Da mucha más muestra para comparar obra nueva con mejoramiento.
+todas <- d %>%
+  filter(!is.na(cut)) %>%
+  arrange(EBI_CODIGO, anio) %>%
+  group_by(EBI_CODIGO) %>%
+  summarise(anio = first(anio), cut = first(cut), tipo = first(tipo), .groups = "drop")
+panel_todas <- todas %>%
+  count(cut, anio, tipo) %>%
+  pivot_wider(names_from = tipo, values_from = n, names_prefix = "n_", values_fill = 0) %>%
+  right_join(expand_grid(cut = cuts$cut, anio = anios), by = c("cut", "anio")) %>%
+  mutate(across(starts_with("n_"), ~ coalesce(.x, 0L))) %>%
+  select(cut, anio, any_of(c("n_nueva", "n_mejoramiento", "n_conservacion", "n_otro"))) %>%
+  arrange(cut, anio)
+cat("\nTodas las obras municipales:", nrow(todas), "\n"); print(table(todas$tipo))
+
 write_csv(obras, file.path(salida, "bip_ep_obras.csv.gz"))
 write_csv(panel, file.path(salida, "bip_ep_panel_comuna_anio.csv"))
 write_csv(muestra, file.path(salida, "bip_ep_muestra_revision.csv"))
+write_csv(panel_todas, file.path(salida, "bip_todas_panel_comuna_anio.csv"))
 cat("\nEscrito en", salida, ": bip_ep_obras.csv.gz, bip_ep_panel_comuna_anio.csv (", nrow(panel),
-    "filas), bip_ep_muestra_revision.csv\n")
+    "filas), bip_ep_muestra_revision.csv, bip_todas_panel_comuna_anio.csv\n")
