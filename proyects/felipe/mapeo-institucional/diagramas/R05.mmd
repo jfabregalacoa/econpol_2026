@@ -1,0 +1,17 @@
+flowchart TD
+    a["SUBDERE → gobernador / CORE — Distribuir recursos regionales y comunales"]
+    b["Municipio / SECPLA — Ingresar proyecto en SUBDERE en Línea"]
+    c["Unidad Regional SUBDERE — Revisar expediente"]
+    d["Gobernador regional — Visar mediante oficio a SUBDERE"]
+    e["SUBDERE central — Evaluación técnica y elegibilidad"]
+    f{"¿Asignación de recursos?"}
+    g["Municipio — Mantener cartera vigente o reformular"]
+    h["Municipio — Ejecutar, rendir y mantener"]
+    a --> b
+    b --> c
+    c -->|"observaciones"| b
+    c -->|"conforme"| d
+    d -->|"oficio incorporado"| e
+    e --> f
+    f -->|"pendiente / no"| g
+    f -->|"resolución"| h

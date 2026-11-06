@@ -1,0 +1,24 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Unidad técnica + autoridad</B><BR/>Habilitar contratación<BR/>Bases, permisos y recursos>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+b [label=<<B>Comisión / autoridad<BR/>competente</B><BR/>Licitar, evaluar<BR/>y adjudicar>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+c [label=<<B>¿Oferta admisible<BR/>y financiable?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+d [label=<<B>Mandante / financiador</B><BR/>Revisar bases o recursos<BR/>y volver a tramitar>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+e [label=<<B>Contratista + ITO / FTO /<BR/>inspector fiscal</B><BR/>Ejecutar y controlar<BR/>Certificar estados de pago>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+f [label=<<B>Unidad técnica / comisión</B><BR/>Recepción contractual<BR/>y correcciones>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+g [label=<<B>DOM / órganos competentes</B><BR/>Recepciones y certificados<BR/>si son exigibles>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+h [label=<<B>Ejecutor ↔ operador</B><BR/>Entrega, inventario<BR/>y obligaciones de cuidado>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+i [label=<<B>Operador / municipio</B><BR/>Mantener y atender fallas<BR/>Garantías según contrato>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label=""];
+b -> c [label=""];
+c -> d [label="no"];
+d -> a [label="",constraint=false,style=dashed];
+c -> e [label="sí: contrato"];
+e -> f [label="solicitud de\nrecepción"];
+f -> e [label="",constraint=false,style=dashed];
+f -> g [label="obra conforme"];
+g -> h [label=""];
+h -> i [label=""];
+}

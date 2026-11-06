@@ -1,0 +1,20 @@
+flowchart TD
+    a["Áreas verdes + finanzas — Inventario, niveles de servicio y presupuesto aprobado"]
+    b["Unidad de compras / SECPLA — Bases y licitación según régimen aplicable"]
+    c["Comisión → alcalde / concejo — Evaluación y adjudicación Acuerdos si corresponden"]
+    d["Municipio ↔ empresa — Contrato e inicio Inspector designado"]
+    e["Empresa + supervisor — Ejecutar servicios según programación"]
+    f["Inspector municipal — Comprobar prestaciones"]
+    g{"¿Servicio conforme?"}
+    h["Empresa / municipio — Corregir y tramitar medidas contractuales"]
+    i["Finanzas municipales — Pagar prestación certificada y continuar ciclo"]
+    a --> b
+    b -->|"ofertas"| c
+    c -->|"decreto / contrato"| d
+    d --> e
+    e -->|"informe de servicio"| f
+    f --> g
+    g -->|"no"| h
+    h -->|"subsanación"| f
+    g -->|"sí"| i
+    i -->|"siguiente período"| e

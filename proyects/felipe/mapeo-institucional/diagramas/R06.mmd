@@ -1,0 +1,16 @@
+flowchart TD
+    a["Alcalde + SECPLA — Postular proyecto y justificar línea PMU"]
+    b["Unidad Regional SUBDERE — Revisión técnica y administrativa"]
+    c{"¿Qué línea?"}
+    d["Emergencia / Cuenca — Pase directo a evaluación central"]
+    e["Prevención del Delito — Revisión y visación SPD"]
+    f["SUBDERE central — Evaluar elegibilidad y asignar si hay recursos"]
+    g["Municipio — Obra, rendición y mantención"]
+    a -->|"plataforma"| b
+    b -->|"observaciones"| a
+    b -->|"conforme"| c
+    c -->|"Emergencia / Cuenca"| d
+    c -->|"PMU-SPD"| e
+    d --> f
+    e --> f
+    f -->|"resolución y transferencia"| g

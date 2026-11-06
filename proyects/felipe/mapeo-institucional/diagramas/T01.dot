@@ -1,0 +1,24 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Formulador + institución<BR/>financiera</B><BR/>Preparar diseño, costos,<BR/>terreno y sostenibilidad>,shape=box,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+b [label=<<B>¿Qué régimen<BR/>corresponde?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+c [label=<<B>Régimen de exención</B><BR/>Acreditar requisitos<BR/>y registrar según instrucción>,shape=box,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+d [label=<<B>MDSF / SEREMI</B><BR/>Analizar inversión<BR/>y emitir resultado>,shape=box,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+e [label=<<B>Formulador</B><BR/>Responder observaciones>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+f [label=<<B>Financiador competente</B><BR/>Priorizar cartera<BR/>y asignar presupuesto>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+g [label=<<B>¿Recursos asignados?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+h [label=<<B>Cartera de proyectos</B><BR/>Esperar / actualizar<BR/>o reformular prioridad>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+i [label=<<B>Unidad ejecutora</B><BR/>Pasar a contratación · T02>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+a -> b [label=""];
+b -> c [label="exento y cumple"];
+b -> d [label="evaluación\nrequerida"];
+d -> e [label="observado"];
+e -> d [label="",constraint=false,style=dashed];
+c -> f [label=""];
+d -> f [label="favorable"];
+f -> g [label=""];
+g -> h [label="no"];
+g -> i [label="sí"];
+}

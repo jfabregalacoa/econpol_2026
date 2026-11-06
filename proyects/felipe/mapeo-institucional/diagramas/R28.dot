@@ -1,0 +1,22 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Municipio / asociación /<BR/>GORE</B><BR/>Postular parque a SEREMI<BR/>Aportes y autorización>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+b [label=<<B>Comisión regional MINVU</B><BR/>Evaluar y priorizar>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+c [label=<<B>MINVU central</B><BR/>Seleccionar según<BR/>criterios y recursos>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+d [label=<<B>SERVIU ↔ aportantes /<BR/>propietario</B><BR/>Formalizar convenios<BR/>y autorización de conservación>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+e [label=<<B>SERVIU</B><BR/>Licitar y contratar<BR/>servicios de conservación>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+f [label=<<B>Empresa contratada</B><BR/>Labores rutinarias,<BR/>estacionales y especiales>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+g [label=<<B>SERVIU / inspección</B><BR/>Controlar cumplimiento<BR/>y pagos contractuales>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+h [label=<<B>Instituciones del convenio</B><BR/>Evaluar continuidad<BR/>y renovar compromisos>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+a -> b [label="expediente"];
+b -> a [label="",constraint=false,style=dashed];
+b -> c [label="lista priorizada"];
+c -> d [label="selección"];
+d -> e [label="convenio tramitado"];
+e -> f [label=""];
+f -> g [label=""];
+g -> f [label="",constraint=false,style=dashed];
+g -> h [label="término /\nrenovación"];
+}

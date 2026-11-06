@@ -1,0 +1,17 @@
+flowchart TD
+    a["SPD ↔ municipalidad — Asignación y convenio según programa"]
+    b["Seguridad municipal + SECPLA — Diagnóstico de seguridad y diseño participativo"]
+    c["Municipio → SPD — Ingresar proyecto REP en SIEVAP"]
+    d["Equipo evaluador SPD — Revisar coherencia y viabilidad técnica"]
+    e{"¿Proyecto aprobado y recursos habilitados?"}
+    f["Equipo municipal — Subsanar o reformular"]
+    g["Municipalidad — Contratar, ejecutar e informar / rendir"]
+    h["Municipio + comunidad — Operación y gestión social Mantención comprometida"]
+    a --> b
+    b -->|"expediente"| c
+    c --> d
+    d --> e
+    e -->|"no"| f
+    f --> c
+    e -->|"sí"| g
+    g --> h

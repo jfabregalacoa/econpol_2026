@@ -1,0 +1,17 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>FOSIS regional + ejecutor</B><BR/>Definir intervención<BR/>territorial del programa>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+b [label=<<B>Grupo motor + comunidad</B><BR/>Diagnóstico y Plan<BR/>de Desarrollo Local>,shape=box,fillcolor="#FBE9E0",color="#AA6243",fontcolor="#172E47"];
+c [label=<<B>Ejecutor + municipio</B><BR/>Verificar pequeña obra<BR/>Suelo, permisos y costos>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+d [label=<<B>FOSIS / programa</B><BR/>Aprobar inversión elegible<BR/>según bases y convenio>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+e [label=<<B>Ejecutor + comunidad</B><BR/>Materializar intervención<BR/>y rendir recursos>,shape=box,fillcolor="#FBE9E0",color="#AA6243",fontcolor="#172E47"];
+f [label=<<B>Comunidad + administrador</B><BR/>Acuerdos de cuidado<BR/>y mantención>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label=""];
+b -> c [label="prioridad del plan"];
+c -> b [label="",constraint=false,style=dashed];
+c -> d [label="propuesta"];
+d -> e [label=""];
+e -> f [label=""];
+}

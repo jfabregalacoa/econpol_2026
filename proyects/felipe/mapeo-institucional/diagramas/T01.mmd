@@ -1,0 +1,20 @@
+flowchart TD
+    a["Formulador + institución financiera — Preparar diseño, costos, terreno y sostenibilidad"]
+    b{"¿Qué régimen corresponde?"}
+    c["Régimen de exención — Acreditar requisitos y registrar según instrucción"]
+    d["MDSF / SEREMI — Analizar inversión y emitir resultado"]
+    e["Formulador — Responder observaciones"]
+    f["Financiador competente — Priorizar cartera y asignar presupuesto"]
+    g{"¿Recursos asignados?"}
+    h["Cartera de proyectos — Esperar / actualizar o reformular prioridad"]
+    i["Unidad ejecutora — Pasar a contratación · T02"]
+    a --> b
+    b -->|"exento y cumple"| c
+    b -->|"evaluación requerida"| d
+    d -->|"observado"| e
+    e -->|"oficio y antecedentes"| d
+    c --> f
+    d -->|"favorable"| f
+    f --> g
+    g -->|"no"| h
+    g -->|"sí"| i

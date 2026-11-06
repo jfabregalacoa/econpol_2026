@@ -1,0 +1,19 @@
+flowchart TD
+    a["MINVU / SEREMI + municipio — Seleccionar barrio según proceso vigente"]
+    b["Equipo barrial + vecinos — Diagnóstico y priorización Constituir CVD"]
+    c["CVD + alcalde + SEREMI — Firmar Contrato de Barrio PGO y PGS"]
+    d["Equipo técnico / SERVIU — Diseñar y habilitar proyecto de plaza"]
+    e["SEREMI ↔ ejecutor — Convenio de ejecución"]
+    f{"¿Entidad ejecutora?"}
+    g["SERVIU — Contratar e inspeccionar"]
+    h["Municipalidad — Contratar e inspeccionar"]
+    i["Ejecutor + municipio + CVD — Recepción, cierre y mantención"]
+    a --> b
+    b -->|"acuerdos participativos"| c
+    c -->|"cartera de obras"| d
+    d -->|"aprobaciones"| e
+    e --> f
+    f -->|"SERVIU"| g
+    f -->|"municipio"| h
+    g --> i
+    h --> i

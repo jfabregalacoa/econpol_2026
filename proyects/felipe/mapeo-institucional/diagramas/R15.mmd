@@ -1,0 +1,16 @@
+flowchart TD
+    a["Alcalde + SECPLA — Justificar recuperación y formular proyecto"]
+    b["URS / SUBDERE + municipio — Revisar antecedentes y preparar inversión"]
+    c["MDSF — Recomendación favorable exigida por glosa"]
+    d{"¿Hay cofinanciamiento regional?"}
+    e["Gobernador + CORE — Aprobar aporte GORE según competencias"]
+    f["SUBDERE ↔ municipio — Asignación y convenio"]
+    g["Municipalidad — Obra, rendición y mantención"]
+    a --> b
+    b -->|"expediente SNI"| c
+    c -->|"observaciones"| b
+    c -->|"favorable"| d
+    d -->|"sí: mínimo 40% GORE"| e
+    d -->|"no"| f
+    e -->|"convenio de aportes"| f
+    f --> g

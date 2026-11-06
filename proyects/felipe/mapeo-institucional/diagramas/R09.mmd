@@ -1,0 +1,17 @@
+flowchart TD
+    a["Organización + Entidad Patrocinante — Diagnosticar y formular proyecto y aportes"]
+    b["Municipalidad — Informe de pertinencia y coordinación territorial"]
+    c["Entidad Patrocinante → SERVIU — Presentar expediente y antecedentes de terreno"]
+    d["SERVIU — Habilitar y calificar"]
+    e{"¿Cumple condiciones y resulta seleccionado?"}
+    f["Organización + EP — Corregir / volver a postular"]
+    g["MINVU / SERVIU + ejecutor — Subsidio, contrato y obra Fiscalización técnica"]
+    h["Responsable del espacio — Recepción y mantención municipal si corresponde"]
+    a --> b
+    b -->|"informe"| c
+    c --> d
+    d -->|"calificación / selección MINVU"| e
+    e -->|"no"| f
+    f -->|"subsanación procedente"| c
+    e -->|"sí"| g
+    g --> h

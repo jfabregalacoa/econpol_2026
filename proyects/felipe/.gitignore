@@ -1,0 +1,7 @@
+cache/
+
+# Archivos originales del Servel (140 MB). Se descargan desde servel.cl; ver plan-base-datos.md.
+fuentes/servel/
+
+# Archivos temporales de Office
+~$*

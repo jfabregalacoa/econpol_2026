@@ -1,0 +1,13 @@
+flowchart TD
+    a["FOSIS regional + ejecutor — Definir intervención territorial del programa"]
+    b["Grupo motor + comunidad — Diagnóstico y Plan de Desarrollo Local"]
+    c["Ejecutor + municipio — Verificar pequeña obra Suelo, permisos y costos"]
+    d["FOSIS / programa — Aprobar inversión elegible según bases y convenio"]
+    e["Ejecutor + comunidad — Materializar intervención y rendir recursos"]
+    f["Comunidad + administrador — Acuerdos de cuidado y mantención"]
+    a --> b
+    b -->|"prioridad del plan"| c
+    c -->|"ajustes de viabilidad"| b
+    c -->|"propuesta"| d
+    d --> e
+    e --> f

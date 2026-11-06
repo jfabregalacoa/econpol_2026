@@ -1,0 +1,15 @@
+flowchart TD
+    a["Vecinos / alcalde / unidades — Necesidad y propuesta"]
+    b["SECPLA y equipo técnico — Terreno, diseño y costos Incluye costo de operación"]
+    c["Alcalde → concejo — Propuesta y aprobación presupuestaria"]
+    d{"¿Recursos y condiciones habilitantes?"}
+    e["SECPLA / alcalde — Reformular o reprogramar"]
+    f["Municipalidad — Contratar y ejecutar Ver proceso T02"]
+    g["Unidad de áreas verdes — Recibir activo y mantener R24 o R25"]
+    a -->|"solicitud / diagnóstico"| b
+    b -->|"cartera y presupuesto"| c
+    c --> d
+    d -->|"no"| e
+    e -->|"ajuste"| b
+    d -->|"sí"| f
+    f -->|"acta y plan de mantención"| g

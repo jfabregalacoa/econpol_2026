@@ -1,0 +1,16 @@
+flowchart TD
+    a["Recepción de obra / vecinos / inspectores — Inventario y detección de necesidades"]
+    b["Jefatura de áreas verdes — Programar tareas, frecuencias y recursos"]
+    c["Alcalde + concejo — Presupuesto operativo y dotación autorizada"]
+    d["Supervisor + cuadrillas — Riego, aseo, jardinería y reparaciones menores"]
+    e["Inspector / jefatura — Verificar estado y cumplimiento"]
+    f{"¿Basta la mantención habitual?"}
+    g["SECPLA / unidad de proyectos — Formular conservación o inversión mayor"]
+    a --> b
+    b -->|"necesidades presupuestarias"| c
+    c -->|"recursos e instrucciones"| d
+    d -->|"registro de trabajos"| e
+    e --> f
+    f -->|"sí: nuevo ciclo"| b
+    f -->|"no"| g
+    g -->|"activo recuperado"| a

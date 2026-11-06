@@ -1,0 +1,15 @@
+flowchart TD
+    a["SEREMI + municipio / comunidad — Identificar déficit y plan urbano"]
+    b["SERVIU + proyectistas — Formular componente plaza Suelo, diseño y costos"]
+    c["MINVU / institución financiera — Postular inversión a evaluación · T01"]
+    d["MDSF o régimen de exención — Habilitar técnicamente"]
+    e["MINVU — Priorizar y programar recursos sectoriales"]
+    f["SERVIU — Contratar e inspeccionar obra · T02"]
+    g["SERVIU ↔ operador — Entregar activo y activar mantención"]
+    a --> b
+    b -->|"proyecto / BIP"| c
+    c --> d
+    d -->|"observaciones"| b
+    d -->|"habilitado"| e
+    e -->|"presupuesto"| f
+    f -->|"acta / convenio"| g

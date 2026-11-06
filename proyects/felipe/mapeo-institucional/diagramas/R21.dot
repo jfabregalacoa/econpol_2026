@@ -1,0 +1,22 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Titular + proyectista</B><BR/>Proponer plaza como aporte<BR/>y presupuesto detallado>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+b [label=<<B>Municipalidad</B><BR/>Revisar coherencia<BR/>y consultar competencias>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+c [label=<<B>¿Requiere acuerdos<BR/>o informes adicionales?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+d [label=<<B>Alcalde / concejo; SEREMI</B><BR/>Acuerdo por obra fuera de plan<BR/>Informe intercomunal si aplica>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+e [label=<<B>Municipalidad</B><BR/>Aprobar propuesta<BR/>y presupuesto>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+f [label=<<B>Titular + constructor</B><BR/>Obtener permisos<BR/>y ejecutar obra>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+g [label=<<B>DOM / órganos competentes</B><BR/>Recepción y acreditación<BR/>del aporte cumplido>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+h [label=<<B>Administrador del espacio</B><BR/>Operar y mantener>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label="solicitud por\nsistema"];
+b -> a [label="",constraint=false,style=dashed];
+b -> c [label=""];
+c -> d [label="sí"];
+c -> e [label="no"];
+d -> e [label=""];
+e -> f [label=""];
+f -> g [label="antes de recepción\nprincipal"];
+g -> h [label=""];
+}

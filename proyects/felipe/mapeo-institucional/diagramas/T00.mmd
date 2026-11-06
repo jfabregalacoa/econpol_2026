@@ -1,0 +1,14 @@
+flowchart TD
+    a["Necesidad territorial — Crear, recuperar o cuidar una plaza"]
+    b{"¿Qué intervención se requiere?"}
+    c["Nueva / transformación — Formular inversión R01-R22 según elegibilidad"]
+    d["Conservación del activo — Regional/mixta R26 Sectorial R27"]
+    e["Cuidado recurrente — Directo R24 / contratado R25 Parques elegibles R28"]
+    f["Administrador + financiador — Acordar suelo, competencias y costo de ciclo de vida"]
+    a --> b
+    b -->|"nueva / recuperación"| c
+    b -->|"conservación"| d
+    b -->|"mantención"| e
+    c --> f
+    d --> f
+    e --> f

@@ -1,0 +1,291 @@
+﻿ruta,origen_nodo,actor_origen,destino_nodo,actor_destino,acto_o_transicion,fuentes_del_recorrido
+T00,a,Necesidad territorial,b,"¿Qué intervención
+se requiere?",,S01; S03; S07; S34
+T00,b,"¿Qué intervención
+se requiere?",c,Nueva / transformación,nueva / recuperación,S01; S03; S07; S34
+T00,b,"¿Qué intervención
+se requiere?",d,Conservación del activo,conservación,S01; S03; S07; S34
+T00,b,"¿Qué intervención
+se requiere?",e,Cuidado recurrente,mantención,S01; S03; S07; S34
+T00,c,Nueva / transformación,f,Administrador + financiador,,S01; S03; S07; S34
+T00,d,Conservación del activo,f,Administrador + financiador,,S01; S03; S07; S34
+T00,e,Cuidado recurrente,f,Administrador + financiador,,S01; S03; S07; S34
+T01,a,Formulador + institución financiera,b,"¿Qué régimen
+corresponde?",,S05; S06; S07; S08; S34
+T01,b,"¿Qué régimen
+corresponde?",c,Régimen de exención,exento y cumple,S05; S06; S07; S08; S34
+T01,b,"¿Qué régimen
+corresponde?",d,MDSF / SEREMI,evaluación requerida,S05; S06; S07; S08; S34
+T01,d,MDSF / SEREMI,e,Formulador,observado,S05; S06; S07; S08; S34
+T01,e,Formulador,d,MDSF / SEREMI,oficio y antecedentes,S05; S06; S07; S08; S34
+T01,c,Régimen de exención,f,Financiador competente,,S05; S06; S07; S08; S34
+T01,d,MDSF / SEREMI,f,Financiador competente,favorable,S05; S06; S07; S08; S34
+T01,f,Financiador competente,g,¿Recursos asignados?,,S05; S06; S07; S08; S34
+T01,g,¿Recursos asignados?,h,Cartera de proyectos,no,S05; S06; S07; S08; S34
+T01,g,¿Recursos asignados?,i,Unidad ejecutora,sí,S05; S06; S07; S08; S34
+T02,a,Unidad técnica + autoridad,b,Comisión / autoridad competente,,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,b,Comisión / autoridad competente,c,"¿Oferta admisible
+y financiable?",,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,c,"¿Oferta admisible
+y financiable?",d,Mandante / financiador,no,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,d,Mandante / financiador,a,Unidad técnica + autoridad,reprogramación,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,c,"¿Oferta admisible
+y financiable?",e,Contratista + ITO / FTO / inspector fiscal,sí: contrato,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,e,Contratista + ITO / FTO / inspector fiscal,f,Unidad técnica / comisión,solicitud de recepción,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,f,Unidad técnica / comisión,e,Contratista + ITO / FTO / inspector fiscal,observaciones,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,f,Unidad técnica / comisión,g,DOM / órganos competentes,obra conforme,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,g,DOM / órganos competentes,h,Ejecutor ↔ operador,,S01; S03; S04; S18; S31; S37; S38; S41; S42
+T02,h,Ejecutor ↔ operador,i,Operador / municipio,,S01; S03; S04; S18; S31; S37; S38; S41; S42
+R01,a,Vecinos / alcalde / unidades,b,SECPLA y equipo técnico,solicitud / diagnóstico,S01; S03; S05; S31
+R01,b,SECPLA y equipo técnico,c,Alcalde → concejo,cartera y presupuesto,S01; S03; S05; S31
+R01,c,Alcalde → concejo,d,"¿Recursos y
+condiciones habilitantes?",,S01; S03; S05; S31
+R01,d,"¿Recursos y
+condiciones habilitantes?",e,SECPLA / alcalde,no,S01; S03; S05; S31
+R01,e,SECPLA / alcalde,b,SECPLA y equipo técnico,ajuste,S01; S03; S05; S31
+R01,d,"¿Recursos y
+condiciones habilitantes?",f,Municipalidad,sí,S01; S03; S05; S31
+R01,f,Municipalidad,g,Unidad de áreas verdes,acta y plan de mantención,S01; S03; S05; S31
+R02,a,Alcalde + SECPLA,b,Equipo técnico GORE,oficio y antecedentes,S01; S02; S05; S06; S07; S12
+R02,b,Equipo técnico GORE,c,Formulador + financiador,postulación BIP,S01; S02; S05; S06; S07; S12
+R02,c,Formulador + financiador,d,"¿Expediente
+habilitado?",,S01; S02; S05; S06; S07; S12
+R02,d,"¿Expediente
+habilitado?",e,SECPLA,no,S01; S02; S05; S06; S07; S12
+R02,e,SECPLA,c,Formulador + financiador,corrección,S01; S02; S05; S06; S07; S12
+R02,d,"¿Expediente
+habilitado?",f,Gobernador + CORE,sí; no garantiza recursos,S01; S02; S05; S06; S07; S12
+R02,f,Gobernador + CORE,g,GORE ↔ unidad técnica,asignación,S01; S02; S05; S06; S07; S12
+R02,g,GORE ↔ unidad técnica,h,Unidad ejecutora → operador,mandato / transferencia,S01; S02; S05; S06; S07; S12
+R03,a,Gobernador + equipos GORE,b,GORE ↔ municipio / servicio,cartera regional,S02; S05; S07; S12; S18
+R03,b,GORE ↔ municipio / servicio,c,Servicio o equipo formulador,encargo / convenio,S02; S05; S07; S12; S18
+R03,c,Servicio o equipo formulador,d,Evaluador / financiador,expediente,S02; S05; S07; S12; S18
+R03,d,Evaluador / financiador,c,Servicio o equipo formulador,observaciones,S02; S05; S07; S12; S18
+R03,d,Evaluador / financiador,e,Gobernador + CORE,habilitado,S02; S05; S07; S12; S18
+R03,e,Gobernador + CORE,f,GORE ↔ unidad técnica,resolución,S02; S05; S07; S12; S18
+R03,f,GORE ↔ unidad técnica,g,Unidad ejecutora,,S02; S05; S07; S12; S18
+R03,g,Unidad ejecutora,h,Municipio u otro operador,entrega formal,S02; S05; S07; S12; S18
+R04,a,GORE + CORE,b,"¿La plaza es elegible
+en estas bases?",bases / distribución,S02; S10; S11
+R04,b,"¿La plaza es elegible
+en estas bases?",c,Municipio,no,S02; S10; S11
+R04,b,"¿La plaza es elegible
+en estas bases?",d,Alcalde + SECPLA,sí,S02; S10; S11
+R04,d,Alcalde + SECPLA,e,Equipo técnico GORE,oficio y carpeta,S02; S10; S11
+R04,e,Equipo técnico GORE,d,Alcalde + SECPLA,correcciones,S02; S10; S11
+R04,e,Equipo técnico GORE,f,GORE ↔ municipio,aprobación y recursos,S02; S10; S11
+R04,f,GORE ↔ municipio,g,Municipio,,S02; S10; S11
+R05,a,SUBDERE → gobernador / CORE,b,Municipio / SECPLA,,S08; S09; S01
+R05,b,Municipio / SECPLA,c,Unidad Regional SUBDERE,,S08; S09; S01
+R05,c,Unidad Regional SUBDERE,b,Municipio / SECPLA,observaciones,S08; S09; S01
+R05,c,Unidad Regional SUBDERE,d,Gobernador regional,conforme,S08; S09; S01
+R05,d,Gobernador regional,e,SUBDERE central,oficio incorporado,S08; S09; S01
+R05,e,SUBDERE central,f,"¿Asignación
+de recursos?",,S08; S09; S01
+R05,f,"¿Asignación
+de recursos?",g,Municipio,pendiente / no,S08; S09; S01
+R05,f,"¿Asignación
+de recursos?",h,Municipio,resolución,S08; S09; S01
+R06,a,Alcalde + SECPLA,b,Unidad Regional SUBDERE,plataforma,S08; S09
+R06,b,Unidad Regional SUBDERE,a,Alcalde + SECPLA,observaciones,S08; S09
+R06,b,Unidad Regional SUBDERE,c,¿Qué línea?,conforme,S08; S09
+R06,c,¿Qué línea?,d,Emergencia / Cuenca,Emergencia / Cuenca,S08; S09
+R06,c,¿Qué línea?,e,Prevención del Delito,PMU-SPD,S08; S09
+R06,d,Emergencia / Cuenca,f,SUBDERE central,,S08; S09
+R06,e,Prevención del Delito,f,SUBDERE central,,S08; S09
+R06,f,SUBDERE central,g,Municipio,resolución y transferencia,S08; S09
+R07,a,Comunidad / municipio,b,Alcalde + concejo,,S13; S14; S15; S05
+R07,b,Alcalde + concejo,c,SEREMI + SERVIU,expediente a SEREMI,S13; S14; S15; S05
+R07,c,SEREMI + SERVIU,b,Alcalde + concejo,observaciones,S13; S14; S15; S05
+R07,c,SEREMI + SERVIU,d,Subsecretaría MINVU,nómina priorizada,S13; S14; S15; S05
+R07,d,Subsecretaría MINVU,e,SERVIU + proyectistas,selección comunicada,S13; S14; S15; S05
+R07,e,SERVIU + proyectistas,f,SERVIU ↔ municipio,,S13; S14; S15; S05
+R07,f,SERVIU ↔ municipio,g,SERVIU,recursos habilitados,S13; S14; S15; S05
+R07,g,SERVIU,h,Municipalidad,entrega formal,S13; S14; S15; S05
+R08,a,MINVU / SEREMI + municipio,b,Equipo barrial + vecinos,,S16; S05; S07
+R08,b,Equipo barrial + vecinos,c,CVD + alcalde + SEREMI,acuerdos participativos,S16; S05; S07
+R08,c,CVD + alcalde + SEREMI,d,Equipo técnico / SERVIU,cartera de obras,S16; S05; S07
+R08,d,Equipo técnico / SERVIU,e,SEREMI ↔ ejecutor,aprobaciones,S16; S05; S07
+R08,e,SEREMI ↔ ejecutor,f,¿Entidad ejecutora?,,S16; S05; S07
+R08,f,¿Entidad ejecutora?,g,SERVIU,SERVIU,S16; S05; S07
+R08,f,¿Entidad ejecutora?,h,Municipalidad,municipio,S16; S05; S07
+R08,g,SERVIU,i,Ejecutor + municipio + CVD,,S16; S05; S07
+R08,h,Municipalidad,i,Ejecutor + municipio + CVD,,S16; S05; S07
+R09,a,Organización + Entidad Patrocinante,b,Municipalidad,,S17; S01
+R09,b,Municipalidad,c,Entidad Patrocinante → SERVIU,informe,S17; S01
+R09,c,Entidad Patrocinante → SERVIU,d,SERVIU,,S17; S01
+R09,d,SERVIU,e,"¿Cumple condiciones
+y resulta seleccionado?",calificación / selección MINVU,S17; S01
+R09,e,"¿Cumple condiciones
+y resulta seleccionado?",f,Organización + EP,no,S17; S01
+R09,f,Organización + EP,c,Entidad Patrocinante → SERVIU,subsanación procedente,S17; S01
+R09,e,"¿Cumple condiciones
+y resulta seleccionado?",g,MINVU / SERVIU + ejecutor,sí,S17; S01
+R09,g,MINVU / SERVIU + ejecutor,h,Responsable del espacio,,S17; S01
+R10,a,SEREMI + municipio / comunidad,b,SERVIU + proyectistas,,S18; S19; S20; S05; S07
+R10,b,SERVIU + proyectistas,c,MINVU / institución financiera,proyecto / BIP,S18; S19; S20; S05; S07
+R10,c,MINVU / institución financiera,d,MDSF o régimen de exención,,S18; S19; S20; S05; S07
+R10,d,MDSF o régimen de exención,b,SERVIU + proyectistas,observaciones,S18; S19; S20; S05; S07
+R10,d,MDSF o régimen de exención,e,MINVU,habilitado,S18; S19; S20; S05; S07
+R10,e,MINVU,f,SERVIU,presupuesto,S18; S19; S20; S05; S07
+R10,f,SERVIU,g,SERVIU ↔ operador,acta / convenio,S18; S19; S20; S05; S07
+R11,a,Alcalde + equipo municipal,b,SEREMI MINVU,expediente y carta alcalde,S21; S05
+R11,b,SEREMI MINVU,c,Comisión + mesa regional,admisible,S21; S05
+R11,c,Comisión + mesa regional,d,SEREMI ↔ municipio,puntajes,S21; S05
+R11,d,SEREMI ↔ municipio,e,Equipo local + actores,,S21; S05
+R11,e,Equipo local + actores,f,MINVU / SERVIU / municipio,cartera y diseño,S21; S05
+R11,f,MINVU / SERVIU / municipio,g,SERVIU o municipio,,S21; S05
+R11,g,SERVIU o municipio,h,Operador acordado,,S21; S05
+R12,a,SPD ↔ municipalidad,b,Seguridad municipal + SECPLA,,S22; S23; S01
+R12,b,Seguridad municipal + SECPLA,c,Municipio → SPD,expediente,S22; S23; S01
+R12,c,Municipio → SPD,d,Equipo evaluador SPD,,S22; S23; S01
+R12,d,Equipo evaluador SPD,e,"¿Proyecto aprobado
+y recursos habilitados?",,S22; S23; S01
+R12,e,"¿Proyecto aprobado
+y recursos habilitados?",f,Equipo municipal,no,S22; S23; S01
+R12,f,Equipo municipal,c,Municipio → SPD,,S22; S23; S01
+R12,e,"¿Proyecto aprobado
+y recursos habilitados?",g,Municipalidad,sí,S22; S23; S01
+R12,g,Municipalidad,h,Municipio + comunidad,,S22; S23; S01
+R13,a,Equipo municipal + barrio,b,Municipio,cartera del plan,S24; S25; S05; S37
+R13,b,Municipio,c,Unidad Regional SUBDERE,plataforma / expediente,S24; S25; S05; S37
+R13,c,Unidad Regional SUBDERE,d,Unidad Ejecutora PRBIPE,,S24; S25; S05; S37
+R13,d,Unidad Ejecutora PRBIPE,b,Municipio,observaciones,S24; S25; S05; S37
+R13,d,Unidad Ejecutora PRBIPE,e,SUBDERE ↔ municipio,habilitado y priorizado,S24; S25; S05; S37
+R13,e,SUBDERE ↔ municipio,f,Municipio,,S24; S25; S05; S37
+R13,f,Municipio,g,Operador municipal,,S24; S25; S05; S37
+R14,a,SUBDERE / URS + actores territoriales,b,SUBDERE,coordinación / propuesta,S26; S08; S05
+R14,b,SUBDERE,c,Municipio + comunidad,territorio habilitado,S26; S08; S05
+R14,c,Municipio + comunidad,d,URS + programa central,expediente,S26; S08; S05
+R14,d,URS + programa central,c,Municipio + comunidad,observaciones,S26; S08; S05
+R14,d,URS + programa central,e,SUBDERE ↔ municipio,elegible y financiado,S26; S08; S05
+R14,e,SUBDERE ↔ municipio,f,Municipalidad,,S26; S08; S05
+R14,f,Municipalidad,g,Operador municipal,,S26; S08; S05
+R15,a,Alcalde + SECPLA,b,URS / SUBDERE + municipio,,S27; S08; S05; S02
+R15,b,URS / SUBDERE + municipio,c,MDSF,expediente SNI,S27; S08; S05; S02
+R15,c,MDSF,b,URS / SUBDERE + municipio,observaciones,S27; S08; S05; S02
+R15,c,MDSF,d,"¿Hay cofinanciamiento
+regional?",favorable,S27; S08; S05; S02
+R15,d,"¿Hay cofinanciamiento
+regional?",e,Gobernador + CORE,sí: mínimo 40% GORE,S27; S08; S05; S02
+R15,d,"¿Hay cofinanciamiento
+regional?",f,SUBDERE ↔ municipio,no,S27; S08; S05; S02
+R15,e,Gobernador + CORE,f,SUBDERE ↔ municipio,convenio de aportes,S27; S08; S05; S02
+R15,f,SUBDERE ↔ municipio,g,Municipalidad,,S27; S08; S05; S02
+R16,a,Alcalde + SECPLA / finanzas,b,SUBDERE,solicitud,S28; S40; S01
+R16,b,SUBDERE,a,Alcalde + SECPLA / finanzas,observaciones,S28; S40; S01
+R16,b,SUBDERE,c,DIPRES / Hacienda,,S28; S40; S01
+R16,c,DIPRES / Hacienda,d,SUBDERE,,S28; S40; S01
+R16,d,SUBDERE,e,Alcalde + concejo,,S28; S40; S01
+R16,e,Alcalde + concejo,f,Municipio ↔ Tesorería,acuerdo,S28; S40; S01
+R16,f,Municipio ↔ Tesorería,g,Municipalidad,,S28; S40; S01
+R17,a,DOP + municipio / territorio,b,DOP + proyectista,,S29; S05; S02; S42
+R17,b,DOP + proyectista,c,¿Fuente de inversión?,proyecto habilitado,S29; S05; S02; S42
+R17,c,¿Fuente de inversión?,d,MOP,sectorial,S29; S05; S02; S42
+R17,c,¿Fuente de inversión?,e,Gobernador + CORE,FNDR / convenio,S29; S05; S02; S42
+R17,d,MOP,f,DOP + inspector fiscal,,S29; S05; S02; S42
+R17,e,Gobernador + CORE,f,DOP + inspector fiscal,,S29; S05; S02; S42
+R17,f,DOP + inspector fiscal,g,DOP ↔ operador acordado,actas y convenio,S29; S05; S02; S42
+R17,g,DOP ↔ operador acordado,h,Operadores correspondientes,,S29; S05; S02; S42
+R18,a,Propietario + arquitecto / especialistas,b,DOM,expediente urbanístico,S03; S04; S01
+R18,b,DOM,c,Urbanizador + contratista,permiso / aprobaciones,S03; S04; S01
+R18,c,Urbanizador + contratista,d,DOM / organismos competentes,solicitud de recepción,S03; S04; S01
+R18,d,DOM / organismos competentes,e,¿Obras conformes?,,S03; S04; S01
+R18,e,¿Obras conformes?,f,Urbanizador,no,S03; S04; S01
+R18,f,Urbanizador,d,DOM / organismos competentes,,S03; S04; S01
+R18,e,¿Obras conformes?,g,DOM,sí,S03; S04; S01
+R18,g,DOM,h,Municipio,entrega e inventario,S03; S04; S01
+R19,a,Interesado + profesionales,b,Municipalidad,planos y memoria,S30; S04; S03; S01
+R19,b,Municipalidad,c,¿Autorizada?,,S30; S04; S03; S01
+R19,c,¿Autorizada?,d,Interesado,no,S30; S04; S03; S01
+R19,d,Interesado,a,Interesado + profesionales,nueva propuesta,S30; S04; S03; S01
+R19,c,¿Autorizada?,e,DOM,sí,S30; S04; S03; S01
+R19,e,DOM,f,Interesado / constructor,,S30; S04; S03; S01
+R19,f,Interesado / constructor,g,DOM,recepción,S30; S04; S03; S01
+R19,g,DOM,h,Municipio / administrador,,S30; S04; S03; S01
+R20,a,Titular del proyecto,b,Municipalidad,aporte previo a recepción,S03; S01; S02
+R20,b,Municipalidad,f,Municipio / ejecutor competente,disponibilidad financiera,S03; S01; S02
+R20,c,"¿Obra en plan
+comunal o intercomunal?",d,SECPLA → concejo / alcalde,comunal,S03; S01; S02
+R20,c,"¿Obra en plan
+comunal o intercomunal?",e,SEREMI MINVU + MTT → GORE,intercomunal,S03; S01; S02
+R20,d,SECPLA → concejo / alcalde,f,Municipio / ejecutor competente,cartera aprobada,S03; S01; S02
+R20,e,SEREMI MINVU + MTT → GORE,f,Municipio / ejecutor competente,cartera aprobada,S03; S01; S02
+R20,f,Municipio / ejecutor competente,g,Ejecutor → municipio,presupuesto / convenio,S03; S01; S02
+R21,a,Titular + proyectista,b,Municipalidad,solicitud por sistema,S03; S04
+R21,b,Municipalidad,a,Titular + proyectista,observaciones,S03; S04
+R21,b,Municipalidad,c,"¿Requiere acuerdos
+o informes adicionales?",,S03; S04
+R21,c,"¿Requiere acuerdos
+o informes adicionales?",d,Alcalde / concejo; SEREMI,sí,S03; S04
+R21,c,"¿Requiere acuerdos
+o informes adicionales?",e,Municipalidad,no,S03; S04
+R21,d,Alcalde / concejo; SEREMI,e,Municipalidad,,S03; S04
+R21,e,Municipalidad,f,Titular + constructor,,S03; S04
+R21,f,Titular + constructor,g,DOM / órganos competentes,antes de recepción principal,S03; S04
+R21,g,DOM / órganos competentes,h,Administrador del espacio,,S03; S04
+R22,a,GORE + ministerio + municipio,b,Gobernador → CORE,,S02; S01; S05
+R22,a,GORE + ministerio + municipio,c,Ministerio / municipio,,S02; S01; S05
+R22,b,Gobernador → CORE,d,Instituciones firmantes,acuerdo,S02; S01; S05
+R22,c,Ministerio / municipio,d,Instituciones firmantes,autorización,S02; S01; S05
+R22,d,Instituciones firmantes,e,Financiadores + formuladores,,S02; S01; S05
+R22,e,Financiadores + formuladores,f,Financiador ↔ unidad técnica,,S02; S01; S05
+R22,f,Financiador ↔ unidad técnica,g,Unidad ejecutora → operador,,S02; S01; S05
+R23,a,FOSIS regional + ejecutor,b,Grupo motor + comunidad,,S39; S01; S03
+R23,b,Grupo motor + comunidad,c,Ejecutor + municipio,prioridad del plan,S39; S01; S03
+R23,c,Ejecutor + municipio,b,Grupo motor + comunidad,ajustes de viabilidad,S39; S01; S03
+R23,c,Ejecutor + municipio,d,FOSIS / programa,propuesta,S39; S01; S03
+R23,d,FOSIS / programa,e,Ejecutor + comunidad,,S39; S01; S03
+R23,e,Ejecutor + comunidad,f,Comunidad + administrador,,S39; S01; S03
+R24,a,Recepción de obra / vecinos / inspectores,b,Jefatura de áreas verdes,,S01; S32
+R24,b,Jefatura de áreas verdes,c,Alcalde + concejo,necesidades presupuestarias,S01; S32
+R24,c,Alcalde + concejo,d,Supervisor + cuadrillas,recursos e instrucciones,S01; S32
+R24,d,Supervisor + cuadrillas,e,Inspector / jefatura,registro de trabajos,S01; S32
+R24,e,Inspector / jefatura,f,"¿Basta la mantención
+habitual?",,S01; S32
+R24,f,"¿Basta la mantención
+habitual?",b,Jefatura de áreas verdes,sí: nuevo ciclo,S01; S32
+R24,f,"¿Basta la mantención
+habitual?",g,SECPLA / unidad de proyectos,no,S01; S32
+R24,g,SECPLA / unidad de proyectos,a,Recepción de obra / vecinos / inspectores,activo recuperado,S01; S32
+R25,a,Áreas verdes + finanzas,b,Unidad de compras / SECPLA,,S01; S31; S33
+R25,b,Unidad de compras / SECPLA,c,Comisión → alcalde / concejo,ofertas,S01; S31; S33
+R25,c,Comisión → alcalde / concejo,d,Municipio ↔ empresa,decreto / contrato,S01; S31; S33
+R25,d,Municipio ↔ empresa,e,Empresa + supervisor,,S01; S31; S33
+R25,e,Empresa + supervisor,f,Inspector municipal,informe de servicio,S01; S31; S33
+R25,f,Inspector municipal,g,¿Servicio conforme?,,S01; S31; S33
+R25,g,¿Servicio conforme?,h,Empresa / municipio,no,S01; S31; S33
+R25,h,Empresa / municipio,f,Inspector municipal,subsanación,S01; S31; S33
+R25,g,¿Servicio conforme?,i,Finanzas municipales,sí,S01; S31; S33
+R25,i,Finanzas municipales,e,Empresa + supervisor,siguiente período,S01; S31; S33
+R26,a,Municipio / servicio técnico,b,GORE,carpeta técnica,S34; S02; S05
+R26,b,GORE,c,"¿Conservación
+regional o mixta admisible?",,S34; S02; S05
+R26,c,"¿Conservación
+regional o mixta admisible?",d,Formulador,no,S34; S02; S05
+R26,d,Formulador,a,Municipio / servicio técnico,si procede,S34; S02; S05
+R26,c,"¿Conservación
+regional o mixta admisible?",e,Gobernador / CORE,sí,S34; S02; S05
+R26,e,Gobernador / CORE,f,GORE ↔ ejecutor,,S34; S02; S05
+R26,f,GORE ↔ ejecutor,g,Unidad ejecutora,,S34; S02; S05
+R26,g,Unidad ejecutora,h,Operador del espacio,,S34; S02; S05
+R27,a,Servicio / profesional competente,b,Institución financiera,,S34; S05; S07
+R27,b,Institución financiera,c,MDSF / SEREMI,,S34; S05; S07
+R27,c,MDSF / SEREMI,d,"¿Clasificación y
+antecedentes conformes?",,S34; S05; S07
+R27,d,"¿Clasificación y
+antecedentes conformes?",e,Formulador,no,S34; S05; S07
+R27,e,Formulador,b,Institución financiera,correcciones,S34; S05; S07
+R27,d,"¿Clasificación y
+antecedentes conformes?",f,Financiador sectorial,sí,S34; S05; S07
+R27,f,Financiador sectorial,g,Unidad ejecutora,,S34; S05; S07
+R27,g,Unidad ejecutora,h,Operador,,S34; S05; S07
+R28,a,Municipio / asociación / GORE,b,Comisión regional MINVU,expediente,S35; S36; S31
+R28,b,Comisión regional MINVU,a,Municipio / asociación / GORE,antecedentes faltantes,S35; S36; S31
+R28,b,Comisión regional MINVU,c,MINVU central,lista priorizada,S35; S36; S31
+R28,c,MINVU central,d,SERVIU ↔ aportantes / propietario,selección,S35; S36; S31
+R28,d,SERVIU ↔ aportantes / propietario,e,SERVIU,convenio tramitado,S35; S36; S31
+R28,e,SERVIU,f,Empresa contratada,,S35; S36; S31
+R28,f,Empresa contratada,g,SERVIU / inspección,,S35; S36; S31
+R28,g,SERVIU / inspección,f,Empresa contratada,correcciones / nuevo período,S35; S36; S31
+R28,g,SERVIU / inspección,h,Instituciones del convenio,término / renovación,S35; S36; S31

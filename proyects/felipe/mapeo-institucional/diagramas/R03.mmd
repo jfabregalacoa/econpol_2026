@@ -1,0 +1,17 @@
+flowchart TD
+    a["Gobernador + equipos GORE — Identificar necesidad regional o intercomunal"]
+    b["GORE ↔ municipio / servicio — Acordar alcance, suelo y futuro operador"]
+    c["Servicio o equipo formulador — Desarrollar diseño y BIP"]
+    d["Evaluador / financiador — Habilitar inversión · T01"]
+    e["Gobernador + CORE — Priorizar y aprobar recursos según competencias"]
+    f["GORE ↔ unidad técnica — Formalizar mandato y responsabilidades"]
+    g["Unidad ejecutora — Contratar obra · T02"]
+    h["Municipio u otro operador — Recepción y mantención según convenio"]
+    a -->|"cartera regional"| b
+    b -->|"encargo / convenio"| c
+    c -->|"expediente"| d
+    d -->|"observaciones"| c
+    d -->|"habilitado"| e
+    e -->|"resolución"| f
+    f --> g
+    g -->|"entrega formal"| h

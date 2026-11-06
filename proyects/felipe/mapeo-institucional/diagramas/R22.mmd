@@ -1,0 +1,15 @@
+flowchart TD
+    a["GORE + ministerio + municipio — Acordar cartera, aportes y responsabilidades"]
+    b["Gobernador → CORE — Someter convenio a aprobación"]
+    c["Ministerio / municipio — Aprobaciones propias y acuerdos pertinentes"]
+    d["Instituciones firmantes — Formalizar convenio según modalidad legal"]
+    e["Financiadores + formuladores — Habilitar cada proyecto Evaluación y presupuesto anual"]
+    f["Financiador ↔ unidad técnica — Convenio de ejecución Mandato / transferencia"]
+    g["Unidad ejecutora → operador — Obra T02 y mantención según obligaciones pactadas"]
+    a --> b
+    a --> c
+    b -->|"acuerdo"| d
+    c -->|"autorización"| d
+    d --> e
+    e --> f
+    f --> g

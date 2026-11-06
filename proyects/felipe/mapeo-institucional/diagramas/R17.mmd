@@ -1,0 +1,17 @@
+flowchart TD
+    a["DOP + municipio / territorio — Identificar tramo y programa de borde"]
+    b["DOP + proyectista — Diseño, permisos y evaluación SNI"]
+    c{"¿Fuente de inversión?"}
+    d["MOP — Programación sectorial"]
+    e["Gobernador + CORE — Financiamiento regional"]
+    f["DOP + inspector fiscal — Contratar y supervisar obras de borde"]
+    g["DOP ↔ operador acordado — Recibir y distribuir responsabilidades"]
+    h["Operadores correspondientes — Mantener infraestructura y equipamiento"]
+    a --> b
+    b -->|"proyecto habilitado"| c
+    c -->|"sectorial"| d
+    c -->|"FNDR / convenio"| e
+    d --> f
+    e --> f
+    f -->|"actas y convenio"| g
+    g --> h

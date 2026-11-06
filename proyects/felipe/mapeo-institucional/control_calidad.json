@@ -1,0 +1,192 @@
+{
+  "pages": 43,
+  "overflows": [],
+  "font_scales": [
+    {
+      "page": 2,
+      "id": "T00",
+      "node_font": 12.56,
+      "edge_font": 10.34
+    },
+    {
+      "page": 6,
+      "id": "T01",
+      "node_font": 14.01,
+      "edge_font": 11.54
+    },
+    {
+      "page": 7,
+      "id": "T02",
+      "node_font": 11.03,
+      "edge_font": 9.08
+    },
+    {
+      "page": 9,
+      "id": "R01",
+      "node_font": 13.44,
+      "edge_font": 11.07
+    },
+    {
+      "page": 10,
+      "id": "R02",
+      "node_font": 11.64,
+      "edge_font": 9.58
+    },
+    {
+      "page": 11,
+      "id": "R03",
+      "node_font": 12.04,
+      "edge_font": 9.91
+    },
+    {
+      "page": 12,
+      "id": "R04",
+      "node_font": 14.09,
+      "edge_font": 11.61
+    },
+    {
+      "page": 13,
+      "id": "R05",
+      "node_font": 12.87,
+      "edge_font": 10.6
+    },
+    {
+      "page": 14,
+      "id": "R06",
+      "node_font": 14.18,
+      "edge_font": 11.68
+    },
+    {
+      "page": 15,
+      "id": "R07",
+      "node_font": 11.79,
+      "edge_font": 9.71
+    },
+    {
+      "page": 16,
+      "id": "R08",
+      "node_font": 12.26,
+      "edge_font": 10.1
+    },
+    {
+      "page": 17,
+      "id": "R09",
+      "node_font": 12.01,
+      "edge_font": 9.89
+    },
+    {
+      "page": 18,
+      "id": "R10",
+      "node_font": 12.52,
+      "edge_font": 10.31
+    },
+    {
+      "page": 19,
+      "id": "R11",
+      "node_font": 12.82,
+      "edge_font": 10.56
+    },
+    {
+      "page": 20,
+      "id": "R12",
+      "node_font": 12.5,
+      "edge_font": 10.3
+    },
+    {
+      "page": 21,
+      "id": "R13",
+      "node_font": 13.17,
+      "edge_font": 10.85
+    },
+    {
+      "page": 22,
+      "id": "R14",
+      "node_font": 13.11,
+      "edge_font": 10.8
+    },
+    {
+      "page": 23,
+      "id": "R15",
+      "node_font": 13.09,
+      "edge_font": 10.78
+    },
+    {
+      "page": 24,
+      "id": "R16",
+      "node_font": 13.37,
+      "edge_font": 11.01
+    },
+    {
+      "page": 25,
+      "id": "R17",
+      "node_font": 13.11,
+      "edge_font": 10.8
+    },
+    {
+      "page": 26,
+      "id": "R18",
+      "node_font": 11.11,
+      "edge_font": 9.15
+    },
+    {
+      "page": 27,
+      "id": "R19",
+      "node_font": 13.81,
+      "edge_font": 11.37
+    },
+    {
+      "page": 28,
+      "id": "R20",
+      "node_font": 11.57,
+      "edge_font": 9.53
+    },
+    {
+      "page": 29,
+      "id": "R21",
+      "node_font": 11.1,
+      "edge_font": 9.14
+    },
+    {
+      "page": 30,
+      "id": "R22",
+      "node_font": 14.29,
+      "edge_font": 11.77
+    },
+    {
+      "page": 31,
+      "id": "R23",
+      "node_font": 15.2,
+      "edge_font": 12.52
+    },
+    {
+      "page": 32,
+      "id": "R24",
+      "node_font": 11.1,
+      "edge_font": 9.14
+    },
+    {
+      "page": 33,
+      "id": "R25",
+      "node_font": 11.96,
+      "edge_font": 9.85
+    },
+    {
+      "page": 34,
+      "id": "R26",
+      "node_font": 13.3,
+      "edge_font": 10.95
+    },
+    {
+      "page": 35,
+      "id": "R27",
+      "node_font": 13.58,
+      "edge_font": 11.18
+    },
+    {
+      "page": 36,
+      "id": "R28",
+      "node_font": 10.86,
+      "edge_font": 8.94
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+flowchart TD
+    a["Alcalde + SECPLA / finanzas — Proyecto y capacidad financiera municipal"]
+    b["SUBDERE — Verificar elegibilidad y antecedentes"]
+    c["DIPRES / Hacienda — Revisar operación y autorización"]
+    d["SUBDERE — Resolución de aporte visada por DIPRES"]
+    e["Alcalde + concejo — Autorizar compromiso y convenio de reembolso"]
+    f["Municipio ↔ Tesorería — Formalizar transferencia y mecanismo de devolución"]
+    g["Municipalidad — Ejecutar obra, mantener y pagar reembolso"]
+    a -->|"solicitud"| b
+    b -->|"observaciones"| a
+    b --> c
+    c --> d
+    d --> e
+    e -->|"acuerdo"| f
+    f --> g

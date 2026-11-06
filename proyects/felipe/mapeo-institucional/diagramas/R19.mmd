@@ -1,0 +1,17 @@
+flowchart TD
+    a["Interesado + profesionales — Proponer urbanización voluntaria"]
+    b["Municipalidad — Resolver autorización previa de propuesta"]
+    c{"¿Autorizada?"}
+    d["Interesado — Ajustar o desistir"]
+    e["DOM — Permiso y condiciones Garantías si corresponden"]
+    f["Interesado / constructor — Ejecutar obras"]
+    g["DOM — Verificar y recibir"]
+    h["Municipio / administrador — Incorporar a operación y mantención"]
+    a -->|"planos y memoria"| b
+    b --> c
+    c -->|"no"| d
+    d -->|"nueva propuesta"| a
+    c -->|"sí"| e
+    e --> f
+    f -->|"recepción"| g
+    g --> h

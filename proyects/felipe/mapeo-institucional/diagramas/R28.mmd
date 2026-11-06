@@ -1,0 +1,18 @@
+flowchart TD
+    a["Municipio / asociación / GORE — Postular parque a SEREMI Aportes y autorización"]
+    b["Comisión regional MINVU — Evaluar y priorizar"]
+    c["MINVU central — Seleccionar según criterios y recursos"]
+    d["SERVIU ↔ aportantes / propietario — Formalizar convenios y autorización de conservación"]
+    e["SERVIU — Licitar y contratar servicios de conservación"]
+    f["Empresa contratada — Labores rutinarias, estacionales y especiales"]
+    g["SERVIU / inspección — Controlar cumplimiento y pagos contractuales"]
+    h["Instituciones del convenio — Evaluar continuidad y renovar compromisos"]
+    a -->|"expediente"| b
+    b -->|"antecedentes faltantes"| a
+    b -->|"lista priorizada"| c
+    c -->|"selección"| d
+    d -->|"convenio tramitado"| e
+    e --> f
+    f --> g
+    g -->|"correcciones / nuevo período"| f
+    g -->|"término / renovación"| h

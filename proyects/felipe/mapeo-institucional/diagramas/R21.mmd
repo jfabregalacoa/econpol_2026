@@ -1,0 +1,18 @@
+flowchart TD
+    a["Titular + proyectista — Proponer plaza como aporte y presupuesto detallado"]
+    b["Municipalidad — Revisar coherencia y consultar competencias"]
+    c{"¿Requiere acuerdos o informes adicionales?"}
+    d["Alcalde / concejo; SEREMI — Acuerdo por obra fuera de plan Informe intercomunal si aplica"]
+    e["Municipalidad — Aprobar propuesta y presupuesto"]
+    f["Titular + constructor — Obtener permisos y ejecutar obra"]
+    g["DOM / órganos competentes — Recepción y acreditación del aporte cumplido"]
+    h["Administrador del espacio — Operar y mantener"]
+    a -->|"solicitud por sistema"| b
+    b -->|"observaciones"| a
+    b --> c
+    c -->|"sí"| d
+    c -->|"no"| e
+    d --> e
+    e --> f
+    f -->|"antes de recepción principal"| g
+    g --> h

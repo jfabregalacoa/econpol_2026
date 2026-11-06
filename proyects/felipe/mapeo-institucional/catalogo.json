@@ -1,0 +1,3979 @@
+{
+  "fecha_corte": "2026-11-06",
+  "fuentes": [
+    {
+      "id": "S01",
+      "title": "Ley 18.695, Orgánica Constitucional de Municipalidades; texto refundido DFL 1/2006",
+      "locator": "Arts. 5 c, 8, 21, 24, 25, 63, 65 y 82. Texto consolidado consultado el 06-11-2026.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=251693"
+    },
+    {
+      "id": "S02",
+      "title": "Ley 19.175, Gobierno y Administración Regional; texto refundido DFL 1/2005",
+      "locator": "Arts. 23, 24, 36 e-f, 73, 78, 81 y 81 bis. Texto consolidado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=243771"
+    },
+    {
+      "id": "S03",
+      "title": "MINVU. Ley General de Urbanismo y Construcciones, DFL 458/1975",
+      "locator": "Arts. 70, 116, 134-135 y 175-182. Texto consolidado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=13560"
+    },
+    {
+      "id": "S04",
+      "title": "MINVU. Ordenanza General de Urbanismo y Construcciones, DS 47/1992",
+      "locator": "Arts. 2.2.4 bis, 2.2.5 y reglas de urbanización y recepción. Texto consolidado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=8201"
+    },
+    {
+      "id": "S05",
+      "title": "Hacienda y MDSF. Normas, Instrucciones y Procedimientos para el proceso de inversión pública 2026",
+      "locator": "NIP 2026; ámbito, ciclo, instituciones y análisis técnico-económico. Copia oficial GORE Santiago.",
+      "url": "https://www.gobiernosantiago.cl/wp-content/uploads/2026/04/Normas-Instrucciones-y-Procedimeintos-NIP-para-el-proceso-de-inversion-publica-2026.pdf"
+    },
+    {
+      "id": "S06",
+      "title": "MDSF. Instructivo de proporcionalidad del Sistema Nacional de Inversiones, 2025",
+      "locator": "Nivel 0 y proyectos menores a 5.000 UTM; requisitos, exclusiones y registro BIP.",
+      "url": "https://sni.gob.cl/wp-content/uploads/Instructivo_proporcionalidad_SNI_2025.pdf"
+    },
+    {
+      "id": "S07",
+      "title": "MDSF. Requisitos de Información Sectorial: proyectos de espacios públicos, 2024",
+      "locator": "Antecedentes de terreno, diseño, evaluación y operación. Documento enlazado por SNI al consultar.",
+      "url": "https://sni.gob.cl/wp-content/uploads/RIS-Proyectos_Espacios_Publicos_2024.pdf"
+    },
+    {
+      "id": "S08",
+      "title": "DIPRES. Ley de Presupuestos 2026, SUBDERE, Programas de Desarrollo Local",
+      "locator": "Partida 05, capítulo 05, programa 03; especialmente glosas 05, 07 y 10. Prevalece para condiciones presupuestarias anuales.",
+      "url": "https://www.dipres.gob.cl/597/articles-396977_doc_pdf.pdf"
+    },
+    {
+      "id": "S09",
+      "title": "SUBDERE. Guía operativa del Programa de Mejoramiento Urbano y Equipamiento Comunal",
+      "locator": "Edición publicada en 2024; líneas y apartado III: revisión técnica y administrativa. PDF escaneado, lectura asistida por OCR.",
+      "url": "https://www.subdere.gov.cl/sites/default/files/documentos/Guia%20operativa%20PMU.pdf"
+    },
+    {
+      "id": "S10",
+      "title": "SUBDERE. Guía operativa del Fondo Regional de Iniciativa Local, 2024",
+      "locator": "Marco FRIL: distribución, formulación, evaluación y ejecución. PDF escaneado, lectura asistida por OCR.",
+      "url": "https://www.subdere.gov.cl/sites/default/files/documentos/Guia%20Operativa%20FRIL%202024.pdf"
+    },
+    {
+      "id": "S11",
+      "title": "Gobierno de Santiago. Instructivo FRIL, resolución 694, 11-05-2026",
+      "locator": "Ejemplo de variación regional: llamado destinado a comunas rurales y vialidad/movilidad rural; no es una convocatoria genérica para plazas.",
+      "url": "https://www.gobiernosantiago.cl/wp-content/uploads/2026/10/154-INSTRUCTIVO_FRIL_RES_N_694_F_11_05_2026-accesible.pdf"
+    },
+    {
+      "id": "S12",
+      "title": "Gobierno de Santiago. Circular 5, Proceso de inversión 2026",
+      "locator": "Diferenciación de carteras comunales y regionales. Ejemplo regional, no instrucción nacional.",
+      "url": "https://www.gobiernosantiago.cl/wp-content/uploads/2026/10/152-Circular-5-Proceso-de-Inversion-2026-accesible.pdf"
+    },
+    {
+      "id": "S13",
+      "title": "MINVU. DS 312/2006, Programa de Espacios Públicos",
+      "locator": "Arts. 1-10; texto consolidado con modificación publicada el 08-04-2026.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=257919"
+    },
+    {
+      "id": "S14",
+      "title": "MINVU. DS 27/2025, modifica DS 312/2006; publicación 08-04-2026",
+      "locator": "Cambio de foco a recuperación de áreas centrales deterioradas y mejora de obras existentes. Diario Oficial, CVE 2792214.",
+      "url": "https://www.diariooficial.interior.gob.cl/publicaciones/2026/04/08/44419/01/2792214.pdf"
+    },
+    {
+      "id": "S15",
+      "title": "MINVU. Resolución exenta 1.596/2013, operaciones del Programa de Espacios Públicos",
+      "locator": "Texto consolidado consultado; postulación, diseño, selección, ejecución, aportes y convenio. Aplicar en concordancia con DS 312 vigente y llamado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1049524"
+    },
+    {
+      "id": "S16",
+      "title": "MINVU. DS 14/2007, Programa de Recuperación de Barrios",
+      "locator": "Arts. 2, 7 y 8: Consejo Vecinal de Desarrollo, Contrato de Barrio y entidades ejecutoras. Texto MINVU actualizado al 24-05-2017.",
+      "url": "https://www.minvu.gob.cl/wp-content/uploads/2019/05/DS_14_07_Recuperacio%CC%81n-Barrios_ACT_24-05-2017.pdf"
+    },
+    {
+      "id": "S17",
+      "title": "MINVU. Resolución exenta 1.002/2026, llamado DS 27, capítulo I",
+      "locator": "Llamado 2026: pertinencia municipal, habilitación, calificación, selección y áreas verdes de hasta 1.800 m², numeral 34.",
+      "url": "https://www.leychile.cl/navegar?idNorma=1226221"
+    },
+    {
+      "id": "S18",
+      "title": "MINVU. DS 355/1976, Reglamento orgánico de los SERVIU",
+      "locator": "Facultades de urbanización, ejecución, contratación y administración; texto consolidado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=12617"
+    },
+    {
+      "id": "S19",
+      "title": "MINVU. DS 397/1976, Reglamento orgánico de las SEREMI",
+      "locator": "Planificación, coordinación y programación regional del sector; texto consolidado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=13007"
+    },
+    {
+      "id": "S20",
+      "title": "MINVU. Obras Urbanas",
+      "locator": "Catálogo oficial de líneas de inversión urbana y programas. Página consultada en noviembre de 2026.",
+      "url": "https://www.minvu.gob.cl/sobre-minvu/obras-urbanas/"
+    },
+    {
+      "id": "S21",
+      "title": "MINVU. DS 39/2015, Programa para Pequeñas Localidades",
+      "locator": "Arts. 1-3 y 6-14: elegibilidad, selección regional, convenio, plan y ejecución municipal o SERVIU.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1088984"
+    },
+    {
+      "id": "S22",
+      "title": "SPD. Sistema Nacional de Seguridad Municipal",
+      "locator": "Asignación, convenios y presentación de proyectos municipales. Portal oficial.",
+      "url": "https://spd-seguridadmunicipal.cl/"
+    },
+    {
+      "id": "S23",
+      "title": "SPD. Orientaciones Técnicas 2026",
+      "locator": "Sección Recuperación de Espacios Públicos: diagnóstico, SIEVAP, gestión y documentos; pp. internas 3-16 y 34-36 de esa sección.",
+      "url": "https://spd-seguridadmunicipal.cl/wp-content/uploads/2026/06/Orientaciones-Tecncas-OOTT-2026.pdf"
+    },
+    {
+      "id": "S24",
+      "title": "SUBDERE. Guía operativa PRBIPE",
+      "locator": "Plan de Revitalización de Barrios, presentación municipal, URS y Unidad Ejecutora del Programa. Revisión de apartados iniciales y modificaciones, no de todos los anexos.",
+      "url": "https://www.subdere.gov.cl/sites/default/files/documentos/Guia%20Operativa%20PRBIPE.pdf"
+    },
+    {
+      "id": "S25",
+      "title": "SUBDERE. Programa de Revitalización de Barrios e Infraestructura Patrimonial Emblemática",
+      "locator": "Descripción institucional; financiamiento nacional después del término del préstamo BID en febrero de 2022.",
+      "url": "https://www.subdere.gov.cl/taxonomy/term/2387"
+    },
+    {
+      "id": "S26",
+      "title": "SUBDERE. Guía de operaciones PREAVS, resolución 6.719/2023",
+      "locator": "Polígono de intervención, coordinación territorial y postulación de iniciativas. PDF escaneado, apartados operativos leídos mediante OCR.",
+      "url": "https://www.subdere.gov.cl/sites/default/files/documentos/GUIA%20OPERACIONES%20PREAVS%2030.06.23%20RESOL%20N%C2%B06719%20(2).pdf"
+    },
+    {
+      "id": "S27",
+      "title": "SUBDERE. Guía operativa Fondo de Recuperación de Ciudades, resolución 8.988/2023",
+      "locator": "Formulación, revisión y convenios. Para cofinanciamiento se usa la glosa 07 de 2026, no una exigencia histórica invariable.",
+      "url": "https://www.subdere.gov.cl/sites/default/files/documentos/GUIA%20OPERATIVA%20FRC%20RESOL%20EX%20N%C2%B08988%20DE%2029.08.23.pdf"
+    },
+    {
+      "id": "S28",
+      "title": "Interior / SUBDERE. DS 196/2011, aportes reembolsables para iniciativas municipales de desarrollo de las ciudades",
+      "locator": "Reglamento del Programa de Inversión Desarrollo de las Ciudades, modificado por DS 1.015/2015. Arts. 1-4 y 9-15: SUBDERE, DIPRES, concejo, municipio y TGR.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1031505"
+    },
+    {
+      "id": "S29",
+      "title": "MOP, Dirección de Obras Portuarias. Infraestructura de mejoramiento del borde costero",
+      "locator": "Ámbito costero, fluvial y lacustre; financiamiento sectorial y FNDR.",
+      "url": "https://dop.mop.gob.cl/project/infraestructura-de-mejoramiento-del-borde-costero/"
+    },
+    {
+      "id": "S30",
+      "title": "MINVU. DS 5/2026; publicación 22-05-2026",
+      "locator": "Incorpora OGUC art. 2.2.4 bis: urbanización voluntaria, autorización municipal, permiso y recepción.",
+      "url": "https://www.diariooficial.interior.gob.cl/publicaciones/2026/05/22/44455/01/2812169.pdf"
+    },
+    {
+      "id": "S31",
+      "title": "Hacienda. DS 661/2024, reglamento de la Ley 19.886",
+      "locator": "Régimen vigente de compras y servicios; considerar reglas transitorias y regímenes especiales de contratos de obra pública.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1209290"
+    },
+    {
+      "id": "S32",
+      "title": "Municipalidad de Santiago. Dirección de Operaciones",
+      "locator": "Funciones locales de áreas verdes, programación, control y mantención. Ejemplo de organización municipal.",
+      "url": "https://www.munistgo.cl/direccion-de-operaciones/"
+    },
+    {
+      "id": "S33",
+      "title": "Municipalidad de Las Condes. Bases licitación 2560-19-LR24, 2024",
+      "locator": "Mantención, conservación y reposición de áreas verdes: bases administrativas y técnicas. Evidencia de una implementación, no regla nacional.",
+      "url": "https://archivos.lascondes.cl/descargas/transparencia/adquisiciones/2024/licitaciones/Bases_2560-19-LR24.pdf"
+    },
+    {
+      "id": "S34",
+      "title": "Hacienda y MDSF. Instructivo para proyectos de conservación de infraestructura pública, 2026",
+      "locator": "Secciones 1-8 y 11-12. Distingue inversión sectorial de regional/mixta; esta última remite a Circular 33/2009 o reemplazante.",
+      "url": "https://sni.gob.cl/wp-content/uploads/Instructivo-para-Proyectos-de-Conservacion-2026.pdf"
+    },
+    {
+      "id": "S35",
+      "title": "MINVU. DS 112/2014, Programa de Conservación de Parques Urbanos",
+      "locator": "Arts. 1-10: parques de más de dos hectáreas, gratuidad, aportes, selección y SERVIU.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=1073113"
+    },
+    {
+      "id": "S36",
+      "title": "MINVU. Resolución 10.278/2017, modificada por resolución 1.449/2020",
+      "locator": "Aplicación DS 112: convenios con propietarios, período de nueve años renovable y contratación de servicios.",
+      "url": "https://www.minvu.gob.cl/wp-content/uploads/2020/05/Res_10278_2017_Res_1449_2020.pdf"
+    },
+    {
+      "id": "S37",
+      "title": "Consejo de Monumentos Nacionales. Autorización de intervención en Zonas Típicas o Pintorescas",
+      "locator": "Control condicionado a protección patrimonial; no intervención obligatoria en toda plaza.",
+      "url": "https://www.monumentos.gob.cl/tramites/autorizacion-intervencion-zonas-tipicas-pintorescas"
+    },
+    {
+      "id": "S38",
+      "title": "Servicio de Evaluación Ambiental. Pertinencia de ingreso al SEIA",
+      "locator": "Consulta de pertinencia y obligación de evaluar según tipologías; no ingreso automático por tratarse de una plaza.",
+      "url": "https://www.sea.gob.cl/pertinencia-de-ingreso-al-seia"
+    },
+    {
+      "id": "S39",
+      "title": "FOSIS. Bases Acción Local, Frutillar 2023, con anexos metodológicos",
+      "locator": "Alcance acotado: antecedente metodológico regional, no procedimiento nacional 2026 acreditado. Se usa solo para delimitar una vía complementaria.",
+      "url": "https://repositorio.fosis.gob.cl/server/api/core/bitstreams/9ab6e82e-c044-4564-8a52-755511ab420a/content"
+    },
+    {
+      "id": "S40",
+      "title": "SUBDERE. Informe de glosa 13, Programa Desarrollo de las Ciudades, 2026",
+      "locator": "Página oficial de rendición presupuestaria del programa de préstamos; confirma su presencia en el presupuesto 2026.",
+      "url": "https://www.subdere.gov.cl/content/glosa-13"
+    },
+    {
+      "id": "S41",
+      "title": "MINVU. DS 236/2002, Bases generales reglamentarias de contratación de obras SERVIU",
+      "locator": "Arts. 1-2 y régimen de ejecución, fiscalización y recepción; texto con modificaciones de 2023.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=211854"
+    },
+    {
+      "id": "S42",
+      "title": "MOP. DS 75/2004, Reglamento para contratos de obras públicas",
+      "locator": "Arts. 1-2 y reglas de inspección fiscal y recepción; texto consolidado consultado.",
+      "url": "https://www.bcn.cl/leychile/navegar?idNorma=233103"
+    }
+  ],
+  "transversales": [
+    {
+      "id": "T00",
+      "title": "Elegir el tipo de intervención",
+      "kind": "Orientación inicial",
+      "scope": "Clasificar el problema antes de elegir un fondo. La expresión recuperar una plaza puede referirse a procesos presupuestarios y técnicos diferentes.",
+      "standard": "Síntesis analítica basada en competencias, SNI y programas; no sustituye el expediente de una plaza concreta.",
+      "sources": [
+        "S01",
+        "S03",
+        "S07",
+        "S34"
+      ],
+      "notes": [
+        [
+          "Nueva plaza",
+          "Crear espacio de uso público, urbanizar suelo o incorporar una nueva obra. Puede seguir inversión municipal, regional, sectorial o urbanización."
+        ],
+        [
+          "Recuperación",
+          "Mejorar, reponer o rehabilitar un espacio deteriorado. Se debe escoger la clasificación oficial adecuada según alcance, no solo el nombre de la iniciativa."
+        ],
+        [
+          "Conservación",
+          "Mantener o restituir capacidad del activo con un proyecto de inversión; tiene reglas específicas y distingue financiamiento regional de sectorial."
+        ],
+        [
+          "Mantención habitual",
+          "Servicios recurrentes: riego, limpieza y jardinería. Normalmente se organizan desde la municipalidad, con ejecución directa o contratada."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Necesidad territorial",
+          "action": "Crear, recuperar\no cuidar una plaza",
+          "group": "community"
+        },
+        {
+          "id": "b",
+          "actor": "¿Qué intervención\nse requiere?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "c",
+          "actor": "Nueva / transformación",
+          "action": "Formular inversión\nR01-R22 según elegibilidad",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "Conservación del activo",
+          "action": "Regional/mixta R26\nSectorial R27",
+          "group": "regional"
+        },
+        {
+          "id": "e",
+          "actor": "Cuidado recurrente",
+          "action": "Directo R24 / contratado R25\nParques elegibles R28",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "Administrador + financiador",
+          "action": "Acordar suelo, competencias\ny costo de ciclo de vida",
+          "group": "evaluation"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "nueva / recuperación"
+        },
+        {
+          "source": "b",
+          "target": "d",
+          "label": "conservación"
+        },
+        {
+          "source": "b",
+          "target": "e",
+          "label": "mantención"
+        },
+        {
+          "source": "c",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "title": "La habilitación técnica no asigna recursos",
+      "kind": "Evaluación de inversión",
+      "scope": "Ruta transversal para las inversiones que están dentro del ámbito del SNI. Las conservaciones R26/R27 tienen reglas específicas.",
+      "standard": "NIP 2026, proporcionalidad y requisitos sectoriales. Prevalece la norma específica del fondo y la glosa anual.",
+      "sources": [
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S34"
+      ],
+      "notes": [
+        [
+          "Actores distintos",
+          "Formulador prepara el proyecto; institución financiera lo postula; analista MDSF/SEREMI evalúa cuando corresponde. El evaluador no decide qué alcalde o barrio recibe presupuesto."
+        ],
+        [
+          "Exenciones",
+          "El régimen general contempla proyectos menores a 5.000 UTM sujetos a requisitos y exclusiones. PMU tiene en su glosa 2026 una referencia específica a menos de 2.500 UTM; FRC exige recomendación favorable. No usar una única regla para todos los fondos."
+        ],
+        [
+          "Qué no desaparece",
+          "Una exención no elimina terreno disponible, diseño, permisos, consistencia de costos, registro requerido ni prohibición de fraccionamiento. Se debe comprobar el instructivo exacto y su umbral."
+        ],
+        [
+          "Resultado",
+          "RS, elegibilidad o resultado técnico habilitante no son una promesa de financiamiento. La priorización política y asignación presupuestaria constituyen otra decisión."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Formulador + institución financiera",
+          "action": "Preparar diseño, costos,\nterreno y sostenibilidad",
+          "group": "evaluation"
+        },
+        {
+          "id": "b",
+          "actor": "¿Qué régimen\ncorresponde?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "c",
+          "actor": "Régimen de exención",
+          "action": "Acreditar requisitos\ny registrar según instrucción",
+          "group": "evaluation"
+        },
+        {
+          "id": "d",
+          "actor": "MDSF / SEREMI",
+          "action": "Analizar inversión\ny emitir resultado",
+          "group": "evaluation"
+        },
+        {
+          "id": "e",
+          "actor": "Formulador",
+          "action": "Responder observaciones",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "Financiador competente",
+          "action": "Priorizar cartera\ny asignar presupuesto",
+          "group": "regional"
+        },
+        {
+          "id": "g",
+          "actor": "¿Recursos asignados?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "h",
+          "actor": "Cartera de proyectos",
+          "action": "Esperar / actualizar\no reformular prioridad",
+          "group": "municipal"
+        },
+        {
+          "id": "i",
+          "actor": "Unidad ejecutora",
+          "action": "Pasar a contratación · T02",
+          "group": "sector"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "exento y cumple"
+        },
+        {
+          "source": "b",
+          "target": "d",
+          "label": "evaluación requerida"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "observado"
+        },
+        {
+          "source": "e",
+          "target": "d",
+          "label": "oficio y antecedentes"
+        },
+        {
+          "source": "c",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": "favorable"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "no"
+        },
+        {
+          "source": "g",
+          "target": "i",
+          "label": "sí"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "title": "De la asignación a una plaza en funcionamiento",
+      "kind": "Contratación, recepción y operación",
+      "scope": "Secuencia funcional común para obras contratadas. Se concreta con las bases, régimen de contratación y convenio de cada institución.",
+      "standard": "Síntesis de obligaciones contractuales, urbanísticas y de administración. No todos los permisos ni controles se aplican a toda plaza.",
+      "sources": [
+        "S01",
+        "S03",
+        "S04",
+        "S18",
+        "S31",
+        "S37",
+        "S38",
+        "S41",
+        "S42"
+      ],
+      "notes": [
+        [
+          "Antes de licitar",
+          "Proyecto ejecutable, recursos, terreno, permisos y operador acordado. El régimen depende del ejecutor: obras SERVIU, DS 236/2002; obras MOP, DS 75/2004; compras y servicios, Ley 19.886 y DS 661/2024, según su ámbito."
+        ],
+        [
+          "Dos recepciones distintas",
+          "La recepción del contrato de obra verifica cumplimiento contractual; la recepción DOM, cuando procede, acredita cumplimiento urbanístico. No son el mismo acto."
+        ],
+        [
+          "Problemas y retornos",
+          "Ofertas fuera de presupuesto pueden exigir revisión de recursos y bases; observaciones de obra exigen correcciones; cambios relevantes pueden requerir reevaluación. No toda licitación termina en contrato."
+        ],
+        [
+          "Controles condicionales",
+          "CMN si hay protección patrimonial; SEIA según tipologías legales; autorizaciones de servicios, suelo o borde si proceden. Contraloría no aprueba de forma previa todas las plazas; sus controles dependen del acto."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Unidad técnica + autoridad",
+          "action": "Habilitar contratación\nBases, permisos y recursos",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "Comisión / autoridad competente",
+          "action": "Licitar, evaluar\ny adjudicar",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "¿Oferta admisible\ny financiable?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "Mandante / financiador",
+          "action": "Revisar bases o recursos\ny volver a tramitar",
+          "group": "regional"
+        },
+        {
+          "id": "e",
+          "actor": "Contratista + ITO / FTO / inspector fiscal",
+          "action": "Ejecutar y controlar\nCertificar estados de pago",
+          "group": "private"
+        },
+        {
+          "id": "f",
+          "actor": "Unidad técnica / comisión",
+          "action": "Recepción contractual\ny correcciones",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "DOM / órganos competentes",
+          "action": "Recepciones y certificados\nsi son exigibles",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Ejecutor ↔ operador",
+          "action": "Entrega, inventario\ny obligaciones de cuidado",
+          "group": "municipal"
+        },
+        {
+          "id": "i",
+          "actor": "Operador / municipio",
+          "action": "Mantener y atender fallas\nGarantías según contrato",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "no"
+        },
+        {
+          "source": "d",
+          "target": "a",
+          "label": "reprogramación"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "sí: contrato"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "solicitud de recepción"
+        },
+        {
+          "source": "f",
+          "target": "e",
+          "label": "observaciones"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "obra conforme"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        },
+        {
+          "source": "h",
+          "target": "i",
+          "label": ""
+        }
+      ]
+    }
+  ],
+  "rutas": [
+    {
+      "id": "R01",
+      "title": "Inversión con presupuesto municipal",
+      "kind": "Nueva / recuperación",
+      "scope": "La municipalidad financia y ejecuta una plaza dentro de sus atribuciones y de los recursos efectivamente disponibles.",
+      "standard": "Ciclo legal municipal; la organización del equipo y el expediente se especifican localmente.",
+      "sources": [
+        "S01",
+        "S03",
+        "S05",
+        "S31"
+      ],
+      "notes": [
+        [
+          "Decisión política",
+          "El alcalde propone prioridades y presupuesto; el concejo aprueba el presupuesto y las decisiones que la ley somete a su acuerdo. No existe una votación separada obligatoria del concejo sobre cada diseño."
+        ],
+        [
+          "Documento de enlace",
+          "Perfil y diseño de SECPLA, presupuesto municipal, acuerdos del concejo cuando proceden, decreto de adjudicación y contrato."
+        ],
+        [
+          "Después de la obra",
+          "La unidad municipal de áreas verdes incorpora la plaza a su programa de mantención. El presupuesto de obra no asegura por sí solo ese gasto futuro."
+        ],
+        [
+          "Condición importante",
+          "La evaluación SNI no es universal para toda inversión financiada con fondos propios municipales. Comprobar fuente de recursos y regla aplicable: T01."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Vecinos / alcalde / unidades",
+          "action": "Necesidad y propuesta",
+          "group": "community"
+        },
+        {
+          "id": "b",
+          "actor": "SECPLA y equipo técnico",
+          "action": "Terreno, diseño y costos\nIncluye costo de operación",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Alcalde → concejo",
+          "action": "Propuesta y aprobación\npresupuestaria",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "¿Recursos y\ncondiciones habilitantes?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "e",
+          "actor": "SECPLA / alcalde",
+          "action": "Reformular o reprogramar",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "Municipalidad",
+          "action": "Contratar y ejecutar\nVer proceso T02",
+          "group": "municipal"
+        },
+        {
+          "id": "g",
+          "actor": "Unidad de áreas verdes",
+          "action": "Recibir activo y mantener\nR24 o R25",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "solicitud / diagnóstico"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "cartera y presupuesto"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "no"
+        },
+        {
+          "source": "e",
+          "target": "b",
+          "label": "ajuste"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": "sí"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "acta y plan de mantención"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "Proyecto municipal con financiamiento GORE",
+      "kind": "Nueva / recuperación",
+      "scope": "La iniciativa se formula en el municipio y solicita inversión regional, habitualmente identificada como FNDR u otra asignación regional habilitada.",
+      "standard": "Ley regional + SNI + instrucciones anuales del respectivo GORE.",
+      "sources": [
+        "S01",
+        "S02",
+        "S05",
+        "S06",
+        "S07",
+        "S12"
+      ],
+      "notes": [
+        [
+          "Decisión política",
+          "Alcalde: presenta y prioriza su cartera. Gobernador: propone distribución y asignación. CORE: aprueba marcos; además aprueba individualmente los proyectos de ejecución sobre 7.000 UTM y sus estudios o diseños."
+        ],
+        [
+          "Documento de enlace",
+          "Oficio municipal, ficha IDI/código BIP, expediente técnico, resultado de evaluación o respaldo de exención, acuerdo y resolución de financiamiento, convenio."
+        ],
+        [
+          "Unidad ejecutora",
+          "El convenio define quién licita e inspecciona. Puede ser el municipio o un servicio competente. El GORE financiador no tiene que construir directamente."
+        ],
+        [
+          "Después de la obra",
+          "Definir previamente el organismo que administrará y pagará la operación. En una plaza municipal ordinaria, se incorpora a la mantención municipal."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Alcalde + SECPLA",
+          "action": "Formular y presentar\nproyecto de plaza",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "Equipo técnico GORE",
+          "action": "Revisar pertinencia\ny admisibilidad",
+          "group": "regional"
+        },
+        {
+          "id": "c",
+          "actor": "Formulador + financiador",
+          "action": "Evaluación SNI o\nexención aplicable · T01",
+          "group": "evaluation"
+        },
+        {
+          "id": "d",
+          "actor": "¿Expediente\nhabilitado?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "e",
+          "actor": "SECPLA",
+          "action": "Subsanar observaciones",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "Gobernador + CORE",
+          "action": "Priorizar y financiar\nsegún competencias",
+          "group": "regional"
+        },
+        {
+          "id": "g",
+          "actor": "GORE ↔ unidad técnica",
+          "action": "Resolución y convenio\nMunicipio o servicio",
+          "group": "regional"
+        },
+        {
+          "id": "h",
+          "actor": "Unidad ejecutora → operador",
+          "action": "Obra T02 → mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "oficio y antecedentes"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "postulación BIP"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "no"
+        },
+        {
+          "source": "e",
+          "target": "c",
+          "label": "corrección"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": "sí; no garantiza recursos"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "asignación"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "mandato / transferencia"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "title": "Cartera originada en el Gobierno Regional",
+      "kind": "Nueva / recuperación",
+      "scope": "El problema se incorpora a una cartera regional o intercomunal; el GORE coordina formulación y ejecución con municipios y servicios.",
+      "standard": "Competencias regionales y ciclo de inversión; no es un concurso nacional único para plazas.",
+      "sources": [
+        "S02",
+        "S05",
+        "S07",
+        "S12",
+        "S18"
+      ],
+      "notes": [
+        [
+          "Quién impulsa",
+          "Gobernador y equipos de planificación/inversión regional. DIPLADER y DIPIR cumplen roles distintos; la distribución concreta de funciones depende del GORE."
+        ],
+        [
+          "Comunicación formal",
+          "Acuerdos de coordinación, solicitud de formulación, ficha BIP, convenio de programación si existe y convenio con la unidad técnica ejecutora."
+        ],
+        [
+          "Condición territorial",
+          "La prioridad regional no reemplaza la disponibilidad del terreno ni las competencias municipales o sectoriales. Se debe acordar quién recibe y opera cada obra."
+        ],
+        [
+          "Decisión de financiamiento",
+          "Rigen los mismos controles presupuestarios y umbrales CORE de R02. Un proyecto regional también puede quedar sin financiamiento."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Gobernador + equipos GORE",
+          "action": "Identificar necesidad\nregional o intercomunal",
+          "group": "regional"
+        },
+        {
+          "id": "b",
+          "actor": "GORE ↔ municipio / servicio",
+          "action": "Acordar alcance, suelo\ny futuro operador",
+          "group": "regional"
+        },
+        {
+          "id": "c",
+          "actor": "Servicio o equipo formulador",
+          "action": "Desarrollar diseño y BIP",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "Evaluador / financiador",
+          "action": "Habilitar inversión · T01",
+          "group": "evaluation"
+        },
+        {
+          "id": "e",
+          "actor": "Gobernador + CORE",
+          "action": "Priorizar y aprobar recursos\nsegún competencias",
+          "group": "regional"
+        },
+        {
+          "id": "f",
+          "actor": "GORE ↔ unidad técnica",
+          "action": "Formalizar mandato\ny responsabilidades",
+          "group": "regional"
+        },
+        {
+          "id": "g",
+          "actor": "Unidad ejecutora",
+          "action": "Contratar obra · T02",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Municipio u otro operador",
+          "action": "Recepción y mantención\nsegún convenio",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "cartera regional"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "encargo / convenio"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "expediente"
+        },
+        {
+          "source": "d",
+          "target": "c",
+          "label": "observaciones"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "habilitado"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "resolución"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "entrega formal"
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "title": "Fondo Regional de Iniciativa Local · FRIL",
+      "kind": "Nueva / recuperación",
+      "scope": "Obras locales elegibles conforme a la guía nacional y, decisivamente, a las bases regionales y glosa anual aplicable.",
+      "standard": "Marco nacional con selección y condiciones regionales. No toda convocatoria FRIL admite plazas.",
+      "sources": [
+        "S02",
+        "S10",
+        "S11"
+      ],
+      "notes": [
+        [
+          "Decisión política",
+          "Gobernador propone la distribución; CORE interviene en marcos y asignaciones conforme al régimen regional. El alcalde presenta proyectos de su comuna."
+        ],
+        [
+          "Evaluación",
+          "El equipo GORE revisa admisibilidad y calidad técnica. La exención de informe MDSF para proyectos bajo el umbral vigente no elimina expediente, registro BIP ni control regional."
+        ],
+        [
+          "Después de la obra",
+          "Municipio licita, inspecciona, paga y rinde conforme al convenio; recibe e incorpora la plaza a mantención."
+        ],
+        [
+          "Variación comprobada",
+          "El instructivo FRIL de Santiago, resolución 694 de 2026, se orienta a vialidad y movilidad rural. No permite asumir que cualquier plaza urbana puede postular allí."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "GORE + CORE",
+          "action": "Definir marco y\ncondiciones regionales",
+          "group": "regional"
+        },
+        {
+          "id": "b",
+          "actor": "¿La plaza es elegible\nen estas bases?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "c",
+          "actor": "Municipio",
+          "action": "Buscar otra vía",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "Alcalde + SECPLA",
+          "action": "Presentar expediente\ncon registro BIP",
+          "group": "municipal"
+        },
+        {
+          "id": "e",
+          "actor": "Equipo técnico GORE",
+          "action": "Revisar y observar",
+          "group": "regional"
+        },
+        {
+          "id": "f",
+          "actor": "GORE ↔ municipio",
+          "action": "Asignación y convenio\nde transferencia",
+          "group": "regional"
+        },
+        {
+          "id": "g",
+          "actor": "Municipio",
+          "action": "Obra T02, rendición\ny mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "bases / distribución"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "no"
+        },
+        {
+          "source": "b",
+          "target": "d",
+          "label": "sí"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "oficio y carpeta"
+        },
+        {
+          "source": "e",
+          "target": "d",
+          "label": "correcciones"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "aprobación y recursos"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "title": "SUBDERE · PMU Tradicional",
+      "kind": "Nueva / recuperación",
+      "scope": "Programa de Mejoramiento Urbano y Equipamiento Comunal, línea Tradicional, antes IRAL; puede financiar obras de espacio público elegibles.",
+      "standard": "Guía PMU y presupuesto anual; tiene una intervención específica del gobernador.",
+      "sources": [
+        "S08",
+        "S09",
+        "S01"
+      ],
+      "notes": [
+        [
+          "Distribución",
+          "SUBDERE informa recursos regionales; gobernador propone distribución comunal y CORE resuelve según la glosa aplicable. Luego se tramitan los proyectos."
+        ],
+        [
+          "Enlace distintivo",
+          "Tras revisar la URS, el gobernador visa el proyecto mediante oficio a SUBDERE. Esa etapa no debe copiarse automáticamente a las otras líneas PMU."
+        ],
+        [
+          "Control técnico",
+          "SUBDERE central declara elegible; elegibilidad no asegura financiamiento. La glosa PMU 2026 contempla exención MDSF para costos inferiores a 2.500 UTM: no usar un umbral genérico sin revisar la línea."
+        ],
+        [
+          "Ejecución y continuidad",
+          "Resolución de recursos y modalidad autorizada; municipio ejecuta y rinde. Debe prever mantención posterior con recursos propios u otra vía habilitada."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "SUBDERE → gobernador / CORE",
+          "action": "Distribuir recursos\nregionales y comunales",
+          "group": "regional"
+        },
+        {
+          "id": "b",
+          "actor": "Municipio / SECPLA",
+          "action": "Ingresar proyecto en\nSUBDERE en Línea",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Unidad Regional SUBDERE",
+          "action": "Revisar expediente",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "Gobernador regional",
+          "action": "Visar mediante oficio\na SUBDERE",
+          "group": "regional"
+        },
+        {
+          "id": "e",
+          "actor": "SUBDERE central",
+          "action": "Evaluación técnica\ny elegibilidad",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "¿Asignación\nde recursos?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "g",
+          "actor": "Municipio",
+          "action": "Mantener cartera vigente\no reformular",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Municipio",
+          "action": "Ejecutar, rendir y mantener",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "b",
+          "label": "observaciones"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "conforme"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "oficio incorporado"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "pendiente / no"
+        },
+        {
+          "source": "f",
+          "target": "h",
+          "label": "resolución"
+        }
+      ]
+    },
+    {
+      "id": "R06",
+      "title": "SUBDERE · otras líneas PMU",
+      "kind": "Nueva / recuperación condicionada",
+      "scope": "Variantes de la guía PMU: Emergencia, Cuenca del Carbón y línea vinculada a Prevención del Delito, cuando exista disponibilidad y elegibilidad.",
+      "standard": "La guía distingue circuitos de revisión; no constituyen una convocatoria siempre abierta.",
+      "sources": [
+        "S08",
+        "S09"
+      ],
+      "notes": [
+        [
+          "Diferencia institucional",
+          "Emergencia y Cuenca pasan de URS a evaluación central. La línea SPD incorpora revisión de la Subsecretaría de Prevención del Delito."
+        ],
+        [
+          "No confundir",
+          "PMU-SPD sigue siendo un circuito de financiamiento PMU. El Sistema Nacional de Seguridad Municipal tiene su propio circuito: R12."
+        ],
+        [
+          "Documento decisivo",
+          "Oficio alcaldicio y expediente ingresado a SUBDERE en Línea; visación adicional SPD cuando corresponde; resolución de asignación."
+        ],
+        [
+          "Límite",
+          "Que una plaza esté deteriorada no basta para invocar cualquier línea de emergencia. Debe satisfacer su objeto y las condiciones presupuestarias vigentes."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Alcalde + SECPLA",
+          "action": "Postular proyecto y\njustificar línea PMU",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "Unidad Regional SUBDERE",
+          "action": "Revisión técnica\ny administrativa",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "¿Qué línea?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "Emergencia / Cuenca",
+          "action": "Pase directo a\nevaluación central",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "Prevención del Delito",
+          "action": "Revisión y visación SPD",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "SUBDERE central",
+          "action": "Evaluar elegibilidad\ny asignar si hay recursos",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "Municipio",
+          "action": "Obra, rendición\ny mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "plataforma"
+        },
+        {
+          "source": "b",
+          "target": "a",
+          "label": "observaciones"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "conforme"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "Emergencia / Cuenca"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "PMU-SPD"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "resolución y transferencia"
+        }
+      ]
+    },
+    {
+      "id": "R07",
+      "title": "MINVU · Programa de Espacios Públicos",
+      "kind": "Recuperación",
+      "scope": "DS 312/2006 vigente: recuperación de espacios públicos en áreas centrales deterioradas; mejora de obras existentes.",
+      "standard": "Reglamento nacional, resolución operativa y llamado regional. Cambio de objeto publicado el 08-04-2026.",
+      "sources": [
+        "S13",
+        "S14",
+        "S15",
+        "S05"
+      ],
+      "notes": [
+        [
+          "Iniciativa y postulación",
+          "Puede originarse en la municipalidad o comunidad organizada. La municipalidad postula a SEREMI y compromete el aporte aprobado por el concejo."
+        ],
+        [
+          "Selección",
+          "SEREMI y SERVIU informan técnicamente; comisión regional prioriza; Subsecretaría MINVU determina selección y distribución de recursos. SEREMI comunica el resultado."
+        ],
+        [
+          "Diseño y ejecución",
+          "El circuito regular contempla diseño gestionado por SERVIU y posterior habilitación de ejecución. Un llamado puede admitir proyectos con diseño aprobado; verificar sus condiciones."
+        ],
+        [
+          "Mantención",
+          "El DS 312 excluye la mantención del costo de obras. El convenio y compromiso municipal deben resolver la continuidad; no presentar este programa como un fondo permanente de aseo y riego."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Comunidad / municipio",
+          "action": "Proponer recuperación",
+          "group": "community"
+        },
+        {
+          "id": "b",
+          "actor": "Alcalde + concejo",
+          "action": "Respaldar y comprometer\naporte municipal",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "SEREMI + SERVIU",
+          "action": "Revisión técnica\ny comisión regional",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "Subsecretaría MINVU",
+          "action": "Seleccionar y distribuir\nrecursos disponibles",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "SERVIU + proyectistas",
+          "action": "Diseño aprobado\ny habilitación SNI",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "SERVIU ↔ municipio",
+          "action": "Convenio: aportes\ny mantención",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "SERVIU",
+          "action": "Licitación e inspección\nde obra · T02",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Municipalidad",
+          "action": "Recibir y mantener",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "expediente a SEREMI"
+        },
+        {
+          "source": "c",
+          "target": "b",
+          "label": "observaciones"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "nómina priorizada"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "selección comunicada"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "recursos habilitados"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "entrega formal"
+        }
+      ]
+    },
+    {
+      "id": "R08",
+      "title": "MINVU · Quiero Mi Barrio",
+      "kind": "Nueva / recuperación dentro del barrio",
+      "scope": "Una plaza se incorpora al Plan de Gestión de Obras de un barrio seleccionado en el Programa de Recuperación de Barrios.",
+      "standard": "DS 14/2007 y reglas del proceso de selección y ejecución correspondiente.",
+      "sources": [
+        "S16",
+        "S05",
+        "S07"
+      ],
+      "notes": [
+        [
+          "Actor vecinal formal",
+          "El Consejo Vecinal de Desarrollo representa a la comunidad en el Contrato de Barrio; este contrato también lo suscriben alcalde y SEREMI."
+        ],
+        [
+          "Acuerdo central",
+          "El Contrato de Barrio reúne obras y gestión social. La plaza no se tramita como una solicitud aislada y automática de cualquier junta de vecinos."
+        ],
+        [
+          "Quién construye",
+          "La entidad ejecutora puede ser SERVIU o municipio, según convenio y normativa. El equipo barrial facilita diagnóstico y participación; no reemplaza al ejecutor técnico."
+        ],
+        [
+          "Continuidad",
+          "Cierre del programa y agenda futura deben enlazarse con el responsable efectivo de operación. La participación vecinal no sustituye el presupuesto de mantención."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "MINVU / SEREMI + municipio",
+          "action": "Seleccionar barrio\nsegún proceso vigente",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "Equipo barrial + vecinos",
+          "action": "Diagnóstico y priorización\nConstituir CVD",
+          "group": "community"
+        },
+        {
+          "id": "c",
+          "actor": "CVD + alcalde + SEREMI",
+          "action": "Firmar Contrato de Barrio\nPGO y PGS",
+          "group": "community"
+        },
+        {
+          "id": "d",
+          "actor": "Equipo técnico / SERVIU",
+          "action": "Diseñar y habilitar\nproyecto de plaza",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "SEREMI ↔ ejecutor",
+          "action": "Convenio de ejecución",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "¿Entidad ejecutora?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "g",
+          "actor": "SERVIU",
+          "action": "Contratar e inspeccionar",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Municipalidad",
+          "action": "Contratar e inspeccionar",
+          "group": "municipal"
+        },
+        {
+          "id": "i",
+          "actor": "Ejecutor + municipio + CVD",
+          "action": "Recepción, cierre\ny mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "acuerdos participativos"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "cartera de obras"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "aprobaciones"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "SERVIU"
+        },
+        {
+          "source": "f",
+          "target": "h",
+          "label": "municipio"
+        },
+        {
+          "source": "g",
+          "target": "i",
+          "label": ""
+        },
+        {
+          "source": "h",
+          "target": "i",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R09",
+      "title": "MINVU · DS 27, capítulo I",
+      "kind": "Nueva / mejoramiento de pequeña escala",
+      "scope": "Equipamiento comunitario y espacios públicos mediante organizaciones y Entidad Patrocinante; aquí se consideran solo proyectos que dan lugar a espacios de uso público.",
+      "standard": "Procedimiento del llamado 2026, resolución 1.002; condiciones no extrapolables a otros años.",
+      "sources": [
+        "S17",
+        "S01"
+      ],
+      "notes": [
+        [
+          "Escala y acceso",
+          "El llamado 2026 admite áreas verdes de hasta 1.800 m² en las condiciones del numeral 34. No todo equipamiento comunitario financiado es una plaza pública."
+        ],
+        [
+          "Actores individuales",
+          "Directiva de la organización; profesional de la Entidad Patrocinante; funcionario municipal competente para informar pertinencia; evaluador SERVIU y fiscalizador técnico de obras."
+        ],
+        [
+          "Decisiones",
+          "Municipio informa pertinencia y no duplicación; SERVIU habilita y califica; MINVU selecciona según recursos y reglas. La selección no la decide por sí sola la organización."
+        ],
+        [
+          "Operación",
+          "Acreditar terreno, acceso público y responsable de mantención. El subsidio y los aportes cubren el proyecto aprobado; no equivalen a financiamiento indefinido de mantenimiento."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Organización + Entidad Patrocinante",
+          "action": "Diagnosticar y formular\nproyecto y aportes",
+          "group": "community"
+        },
+        {
+          "id": "b",
+          "actor": "Municipalidad",
+          "action": "Informe de pertinencia\ny coordinación territorial",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Entidad Patrocinante → SERVIU",
+          "action": "Presentar expediente\ny antecedentes de terreno",
+          "group": "private"
+        },
+        {
+          "id": "d",
+          "actor": "SERVIU",
+          "action": "Habilitar y calificar",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "¿Cumple condiciones\ny resulta seleccionado?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "f",
+          "actor": "Organización + EP",
+          "action": "Corregir / volver a postular",
+          "group": "community"
+        },
+        {
+          "id": "g",
+          "actor": "MINVU / SERVIU + ejecutor",
+          "action": "Subsidio, contrato y obra\nFiscalización técnica",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Responsable del espacio",
+          "action": "Recepción y mantención\nmunicipal si corresponde",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "informe"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "calificación / selección MINVU"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "no"
+        },
+        {
+          "source": "f",
+          "target": "c",
+          "label": "subsanación procedente"
+        },
+        {
+          "source": "e",
+          "target": "g",
+          "label": "sí"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "MINVU · inversión urbana programada",
+      "kind": "Nueva / recuperación",
+      "scope": "Plazas como parte de planes y proyectos urbanos: regeneración, planes maestros, proyectos urbanos integrales u otras líneas sectoriales habilitadas.",
+      "standard": "Síntesis del ciclo de inversión sectorial; no existe un concurso único que reúna todas estas líneas.",
+      "sources": [
+        "S18",
+        "S19",
+        "S20",
+        "S05",
+        "S07"
+      ],
+      "notes": [
+        [
+          "Origen sectorial",
+          "SEREMI coordina planificación y programación regional del sector; SERVIU desarrolla o contrata proyectos y ejecuta. Municipio y comunidad pueden participar en la definición territorial."
+        ],
+        [
+          "Decisión presupuestaria",
+          "MINVU incorpora inversiones a su programación y presupuesto; SNI resuelve la habilitación técnico-económica que corresponda. Un plan urbano no garantiza por sí solo el gasto."
+        ],
+        [
+          "Variantes",
+          "Puede haber aportes GORE o municipales y un convenio de programación. Eso agrega R22 sin eliminar las responsabilidades sectoriales."
+        ],
+        [
+          "Después de la obra",
+          "El convenio de entrega debe precisar quién administra suelo y equipamiento. No presumir que SERVIU mantendrá indefinidamente toda plaza que construye."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "SEREMI + municipio / comunidad",
+          "action": "Identificar déficit\ny plan urbano",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "SERVIU + proyectistas",
+          "action": "Formular componente plaza\nSuelo, diseño y costos",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "MINVU / institución financiera",
+          "action": "Postular inversión\na evaluación · T01",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "MDSF o régimen de exención",
+          "action": "Habilitar técnicamente",
+          "group": "evaluation"
+        },
+        {
+          "id": "e",
+          "actor": "MINVU",
+          "action": "Priorizar y programar\nrecursos sectoriales",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "SERVIU",
+          "action": "Contratar e inspeccionar\nobra · T02",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "SERVIU ↔ operador",
+          "action": "Entregar activo\ny activar mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "proyecto / BIP"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "b",
+          "label": "observaciones"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "habilitado"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "presupuesto"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "acta / convenio"
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "title": "MINVU · Pequeñas Localidades",
+      "kind": "Nueva / recuperación",
+      "scope": "Plaza incorporada al componente urbano de un Plan de Desarrollo de la Localidad; también comprende pequeñas ciudades elegibles.",
+      "standard": "DS 39/2015; elegibilidad y detalles se completan con el llamado aplicable.",
+      "sources": [
+        "S21",
+        "S05"
+      ],
+      "notes": [
+        [
+          "Escala territorial",
+          "Localidad o sistema de localidades de hasta 20.000 habitantes y demás condiciones del reglamento/listado y convocatoria. No es un fondo disponible para todas las ciudades."
+        ],
+        [
+          "Selección",
+          "SEREMI revisa admisibilidad; comisión evaluadora y mesa regional califican; SEREMI sanciona la selección y firma convenio con el municipio."
+        ],
+        [
+          "Precisión institucional",
+          "El texto base conserva una referencia a Intendente en la mesa regional. No se reemplaza aquí automáticamente por gobernador: se debe verificar la integración efectiva en el llamado y actos vigentes."
+        ],
+        [
+          "Operación",
+          "SERVIU o municipio puede ser entidad ejecutora de obras. El plan y convenio deben identificar al operador; otras instituciones pueden aportar al componente multisectorial."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Alcalde + equipo municipal",
+          "action": "Presentar propuesta de\nPlan de Desarrollo Local",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "SEREMI MINVU",
+          "action": "Admisibilidad",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "Comisión + mesa regional",
+          "action": "Evaluación y priorización\nsegún convocatoria",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "SEREMI ↔ municipio",
+          "action": "Selección y convenio",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "Equipo local + actores",
+          "action": "Desarrollar plan y\nproyecto de plaza",
+          "group": "community"
+        },
+        {
+          "id": "f",
+          "actor": "MINVU / SERVIU / municipio",
+          "action": "Habilitar proyecto\ny financiar componente",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "SERVIU o municipio",
+          "action": "Ejecutar obra · T02",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Operador acordado",
+          "action": "Recibir y mantener",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "expediente y carta alcalde"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "admisible"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "puntajes"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "cartera y diseño"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "title": "Seguridad Pública · recuperación de espacios",
+      "kind": "Recuperación / habilitación",
+      "scope": "Proyecto de prevención situacional de la SPD, por ejemplo bajo el Sistema Nacional de Seguridad Municipal; la plaza responde a problemas de seguridad diagnosticados.",
+      "standard": "Asignación y convenio del programa + Orientaciones Técnicas 2026, tipología REP.",
+      "sources": [
+        "S22",
+        "S23",
+        "S01"
+      ],
+      "notes": [
+        [
+          "Ministerio competente",
+          "SPD pertenece al Ministerio de Seguridad Pública. El equipo municipal de seguridad trabaja con SECPLA y el equipo territorial."
+        ],
+        [
+          "Entrada al circuito",
+          "En SNSM se asignan recursos según el sistema correspondiente y se conviene con la municipalidad. No representarlo como un concurso libre universal de plazas."
+        ],
+        [
+          "Comunicación",
+          "Proyecto en SIEVAP: diagnóstico, focalización, diseño, presupuesto y sustentabilidad; SPD evalúa coherencia y viabilidad. Acta de validación comunitaria recomendada en REP 2026."
+        ],
+        [
+          "Mantención",
+          "La documentación REP exige compromiso alcaldicio o acuerdo del concejo cuando las obras requieren mantención y gastos operacionales. Esta obligación debe presupuestarse."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "SPD ↔ municipalidad",
+          "action": "Asignación y convenio\nsegún programa",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "Seguridad municipal + SECPLA",
+          "action": "Diagnóstico de seguridad\ny diseño participativo",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Municipio → SPD",
+          "action": "Ingresar proyecto REP\nen SIEVAP",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "Equipo evaluador SPD",
+          "action": "Revisar coherencia\ny viabilidad técnica",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "¿Proyecto aprobado\ny recursos habilitados?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "f",
+          "actor": "Equipo municipal",
+          "action": "Subsanar o reformular",
+          "group": "municipal"
+        },
+        {
+          "id": "g",
+          "actor": "Municipalidad",
+          "action": "Contratar, ejecutar\ne informar / rendir",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Municipio + comunidad",
+          "action": "Operación y gestión social\nMantención comprometida",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "expediente"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "no"
+        },
+        {
+          "source": "f",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "g",
+          "label": "sí"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R13",
+      "title": "SUBDERE · PRBIPE",
+      "kind": "Recuperación patrimonial / barrial",
+      "scope": "Plaza incorporada en el Plan de Revitalización de un barrio atendido por el Programa de Revitalización de Barrios e Infraestructura Patrimonial Emblemática.",
+      "standard": "Guía operativa; cobertura focalizada, no una ventanilla genérica para cualquier plaza.",
+      "sources": [
+        "S24",
+        "S25",
+        "S05",
+        "S37"
+      ],
+      "notes": [
+        [
+          "Origen",
+          "Equipo municipal y actores del barrio elaboran el plan; una plaza debe ser una iniciativa elegible de esa cartera."
+        ],
+        [
+          "Revisión",
+          "Municipio presenta; URS revisa y coordina; Unidad Ejecutora del Programa en SUBDERE evalúa. Se agregan evaluación SNI y autorización patrimonial cuando corresponde."
+        ],
+        [
+          "Financiamiento",
+          "La documentación histórica incluye BID. La descripción oficial informa que desde el término del préstamo en febrero de 2022 continúa con financiamiento nacional; no atribuir al BID toda obra actual."
+        ],
+        [
+          "Continuidad",
+          "La municipalidad contrata y gestiona la ejecución conforme a convenios; operación y mantención deben quedar asignadas al responsable del espacio."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Equipo municipal + barrio",
+          "action": "Plan de Revitalización\nPriorizar plaza",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "Municipio",
+          "action": "Preparar proyecto, suelo\ny autorizaciones",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Unidad Regional SUBDERE",
+          "action": "Revisar presentación",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "Unidad Ejecutora PRBIPE",
+          "action": "Evaluar elegibilidad\ny condiciones de inversión",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "SUBDERE ↔ municipio",
+          "action": "Asignar recursos\ny formalizar convenio",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "Municipio",
+          "action": "Obra, supervisión\ny rendición",
+          "group": "municipal"
+        },
+        {
+          "id": "g",
+          "actor": "Operador municipal",
+          "action": "Recepción y mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "cartera del plan"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "plataforma / expediente"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "b",
+          "label": "observaciones"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "habilitado y priorizado"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R14",
+      "title": "SUBDERE · PREAVS",
+      "kind": "Recuperación en territorios focalizados",
+      "scope": "Programa de Recuperación de Espacios de Alto Valor Social: plaza dentro de un polígono e intervención habilitados por el programa.",
+      "standard": "Guía 2023 y glosa 10 de 2026; depende de focalización territorial y recursos.",
+      "sources": [
+        "S26",
+        "S08",
+        "S05"
+      ],
+      "notes": [
+        [
+          "Focalización",
+          "Coordinación de SUBDERE/URS con delegación presidencial, municipio y actores territoriales; la delimitación se formaliza por SUBDERE."
+        ],
+        [
+          "Vía de entrada",
+          "Primero se habilita el territorio y la intervención. Luego el municipio formula proyectos; no basta una solicitud aislada de recuperar una plaza."
+        ],
+        [
+          "Control",
+          "Revisión URS y programa, evaluación SNI cuando procede, resolución y convenio de transferencia. Mantener separados elegibilidad y financiamiento."
+        ],
+        [
+          "Después de la obra",
+          "Municipio ejecuta, supervisa y rinde. El plan de recuperación debe enlazar las obras con su operación y mantención posterior."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "SUBDERE / URS + actores territoriales",
+          "action": "Proponer intervención\ny polígono",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "SUBDERE",
+          "action": "Formalizar focalización",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "Municipio + comunidad",
+          "action": "Formular recuperación\nde plaza elegible",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "URS + programa central",
+          "action": "Revisar proyecto\ny habilitación de inversión",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "SUBDERE ↔ municipio",
+          "action": "Resolución y convenio\nde recursos",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "Municipalidad",
+          "action": "Ejecutar y rendir",
+          "group": "municipal"
+        },
+        {
+          "id": "g",
+          "actor": "Operador municipal",
+          "action": "Recibir y mantener",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "coordinación / propuesta"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "territorio habilitado"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "expediente"
+        },
+        {
+          "source": "d",
+          "target": "c",
+          "label": "observaciones"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "elegible y financiado"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R15",
+      "title": "SUBDERE · Fondo de Recuperación de Ciudades",
+      "kind": "Recuperación / reposición",
+      "scope": "Intervenciones por emergencia o catástrofe, o por obsolescencia y deterioro funcional que impiden el uso adecuado del espacio.",
+      "standard": "Guía FRC + glosa 07 del presupuesto 2026.",
+      "sources": [
+        "S27",
+        "S08",
+        "S05",
+        "S02"
+      ],
+      "notes": [
+        [
+          "Requisito técnico",
+          "La glosa 2026 exige recomendación favorable del MDSF para los proyectos postulados por municipios o asociaciones. No suprimir esa puerta usando una exención genérica."
+        ],
+        [
+          "Cambio anual relevante",
+          "En 2026 los nuevos proyectos pueden cofinanciarse con el GORE; si se usa esa opción, su aporte debe ser de al menos 40%. No presentar el cofinanciamiento regional como obligatorio en todos los casos."
+        ],
+        [
+          "Actos formales",
+          "Oficio municipal, expediente y recomendación favorable; acuerdos regionales si hay aporte GORE; resolución SUBDERE y convenio de transferencia."
+        ],
+        [
+          "Operación",
+          "El financiamiento recupera el activo. Su recepción debe vincularse a un presupuesto y responsable de mantención."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Alcalde + SECPLA",
+          "action": "Justificar recuperación\ny formular proyecto",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "URS / SUBDERE + municipio",
+          "action": "Revisar antecedentes\ny preparar inversión",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "MDSF",
+          "action": "Recomendación favorable\nexigida por glosa",
+          "group": "evaluation"
+        },
+        {
+          "id": "d",
+          "actor": "¿Hay cofinanciamiento\nregional?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "e",
+          "actor": "Gobernador + CORE",
+          "action": "Aprobar aporte GORE\nsegún competencias",
+          "group": "regional"
+        },
+        {
+          "id": "f",
+          "actor": "SUBDERE ↔ municipio",
+          "action": "Asignación y convenio",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "Municipalidad",
+          "action": "Obra, rendición\ny mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "expediente SNI"
+        },
+        {
+          "source": "c",
+          "target": "b",
+          "label": "observaciones"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "favorable"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "sí: mínimo 40% GORE"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": "no"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "convenio de aportes"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R16",
+      "title": "SUBDERE · infraestructura con aporte reembolsable",
+      "kind": "Nueva / recuperación",
+      "scope": "Financiamiento reembolsable del programa conocido como Ciudades, para municipios y proyectos que cumplen los requisitos del DS 196 modificado.",
+      "standard": "Procedimiento financiero específico; no es una subvención disponible para cualquier comuna.",
+      "sources": [
+        "S28",
+        "S40",
+        "S01"
+      ],
+      "notes": [
+        [
+          "Naturaleza del recurso",
+          "El municipio recibe un aporte y lo devuelve mediante el mecanismo convenido con Tesorería. Debe considerar capacidad de pago y costos futuros de operar la plaza."
+        ],
+        [
+          "Actores decisores",
+          "SUBDERE revisa; DIPRES interviene en elegibilidad/autorización presupuestaria; alcalde requiere acuerdo de dos tercios del concejo para el convenio con TGR. El reembolso se descuenta del impuesto territorial de beneficio propio."
+        ],
+        [
+          "Documento clave",
+          "Expediente técnico-financiero, resolución de aporte visada por DIPRES, acuerdo del concejo y convenio con Tesorería."
+        ],
+        [
+          "No confundir",
+          "Este programa no es el aporte urbanístico reembolsable de la LGUC ni el Fondo de Recuperación de Ciudades de R15."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Alcalde + SECPLA / finanzas",
+          "action": "Proyecto y capacidad\nfinanciera municipal",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "SUBDERE",
+          "action": "Verificar elegibilidad\ny antecedentes",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "DIPRES / Hacienda",
+          "action": "Revisar operación\ny autorización",
+          "group": "evaluation"
+        },
+        {
+          "id": "d",
+          "actor": "SUBDERE",
+          "action": "Resolución de aporte\nvisada por DIPRES",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "Alcalde + concejo",
+          "action": "Autorizar compromiso\ny convenio de reembolso",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "Municipio ↔ Tesorería",
+          "action": "Formalizar transferencia\ny mecanismo de devolución",
+          "group": "evaluation"
+        },
+        {
+          "id": "g",
+          "actor": "Municipalidad",
+          "action": "Ejecutar obra, mantener\ny pagar reembolso",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "solicitud"
+        },
+        {
+          "source": "b",
+          "target": "a",
+          "label": "observaciones"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "acuerdo"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R17",
+      "title": "MOP · espacio público en borde costero",
+      "kind": "Nueva / recuperación de componente",
+      "scope": "Plaza, paseo o área de encuentro integrada a una intervención de mejoramiento del borde costero, fluvial o lacustre de la Dirección de Obras Portuarias.",
+      "standard": "Competencia sectorial DOP y ciclo de inversión pública; no es un programa MOP genérico para plazas interiores.",
+      "sources": [
+        "S29",
+        "S05",
+        "S02",
+        "S42"
+      ],
+      "notes": [
+        [
+          "Origen y coordinación",
+          "DOP puede levantar una cartera con municipios, comunidad y región. El expediente debe resolver administración del suelo y autorizaciones del borde, según localización."
+        ],
+        [
+          "Financiamiento",
+          "Puede ser sectorial MOP o regional/FNDR; la segunda opción agrega las decisiones GORE y CORE. La fuente no cambia automáticamente la unidad técnica."
+        ],
+        [
+          "Ejecución",
+          "DOP contrata y un inspector fiscal controla la obra. Otros servicios MOP pueden actuar como mandatarios cuando tienen competencia; no suponer que todos financian plazas."
+        ],
+        [
+          "Mantención",
+          "El convenio debe repartir obligaciones: infraestructura costera y equipamiento urbano pueden tener operadores diferentes. No atribuir todo al municipio sin revisar la entrega."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "DOP + municipio / territorio",
+          "action": "Identificar tramo y\nprograma de borde",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "DOP + proyectista",
+          "action": "Diseño, permisos\ny evaluación SNI",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "¿Fuente de inversión?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "MOP",
+          "action": "Programación sectorial",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "Gobernador + CORE",
+          "action": "Financiamiento regional",
+          "group": "regional"
+        },
+        {
+          "id": "f",
+          "actor": "DOP + inspector fiscal",
+          "action": "Contratar y supervisar\nobras de borde",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "DOP ↔ operador acordado",
+          "action": "Recibir y distribuir\nresponsabilidades",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Operadores correspondientes",
+          "action": "Mantener infraestructura\ny equipamiento",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "proyecto habilitado"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "sectorial"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "FNDR / convenio"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "actas y convenio"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R18",
+      "title": "Plaza por obligación de urbanizar y ceder",
+      "kind": "Nueva",
+      "scope": "Una urbanización genera áreas verdes de uso público, financiadas y ejecutadas por el urbanizador; puede tratarse de una iniciativa privada o pública.",
+      "standard": "LGUC y OGUC: cesiones, obras de urbanización y recepción.",
+      "sources": [
+        "S03",
+        "S04",
+        "S01"
+      ],
+      "notes": [
+        [
+          "Quién inicia",
+          "Propietario o urbanizador y sus profesionales. El director de Obras Municipales revisa y recibe conforme a reglas urbanísticas; el alcalde no sustituye esa decisión técnica."
+        ],
+        [
+          "Qué se entrega",
+          "La aprobación debe especificar cesiones y urbanización, incluidas las obras de ornato y áreas verdes que correspondan. Una reserva de área verde en el plan regulador no equivale a una plaza construida."
+        ],
+        [
+          "Momento jurídico",
+          "La recepción de urbanización produce los efectos de incorporación de espacios públicos que establece el art. 135 LGUC. Diferenciar entrega material de titularidad y administración."
+        ],
+        [
+          "Mantención",
+          "Una vez recibida y bajo administración municipal, debe incorporarse al inventario y servicio de áreas verdes. Un jardín interior de condominio no se vuelve plaza pública por su aspecto."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Propietario + arquitecto / especialistas",
+          "action": "Proyectar urbanización\ny cesiones exigidas",
+          "group": "private"
+        },
+        {
+          "id": "b",
+          "actor": "DOM",
+          "action": "Revisar proyecto\ny autorizar urbanización",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Urbanizador + contratista",
+          "action": "Financiar y ejecutar\náreas verdes y obras",
+          "group": "private"
+        },
+        {
+          "id": "d",
+          "actor": "DOM / organismos competentes",
+          "action": "Inspeccionar antecedentes\ny obras para recepción",
+          "group": "municipal"
+        },
+        {
+          "id": "e",
+          "actor": "¿Obras conformes?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "f",
+          "actor": "Urbanizador",
+          "action": "Corregir observaciones",
+          "group": "private"
+        },
+        {
+          "id": "g",
+          "actor": "DOM",
+          "action": "Recepción definitiva\nEfectos del art. 135",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Municipio",
+          "action": "Administrar espacio público\ny mantenerlo",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "expediente urbanístico"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "permiso / aprobaciones"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "solicitud de recepción"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "no"
+        },
+        {
+          "source": "f",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "g",
+          "label": "sí"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "entrega e inventario"
+        }
+      ]
+    },
+    {
+      "id": "R19",
+      "title": "Urbanización voluntaria",
+      "kind": "Nueva / intervención en espacio existente",
+      "scope": "Una persona o entidad propone ejecutar obras voluntarias de urbanización en las condiciones de la OGUC, incluida una posible área verde pública.",
+      "standard": "OGUC art. 2.2.4 bis, incorporado por DS 5 publicado el 22-05-2026.",
+      "sources": [
+        "S30",
+        "S04",
+        "S03",
+        "S01"
+      ],
+      "notes": [
+        [
+          "Paso previo",
+          "Se requiere autorización previa municipal para la propuesta. Luego se tramitan permiso y condiciones técnicas; el financista privado no decide unilateralmente sobre un bien público."
+        ],
+        [
+          "Expediente",
+          "Planos y memoria de la propuesta; autorización; permiso de urbanización y garantías cuando proceden; ejecución completa y recepción."
+        ],
+        [
+          "Efectos diferenciados",
+          "Si se urbaniza suelo del interesado con cesiones, se producen los efectos legales pertinentes al recibir. Si se interviene un BNUP existente, no hay que inventar una nueva cesión del mismo suelo."
+        ],
+        [
+          "Alcance",
+          "Aportes de una fundación o empresa deben encauzarse en un instrumento jurídico y permisos concretos. No se asume un procedimiento nacional autónomo llamado adopta una plaza."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Interesado + profesionales",
+          "action": "Proponer urbanización\nvoluntaria",
+          "group": "private"
+        },
+        {
+          "id": "b",
+          "actor": "Municipalidad",
+          "action": "Resolver autorización\nprevia de propuesta",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "¿Autorizada?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "Interesado",
+          "action": "Ajustar o desistir",
+          "group": "private"
+        },
+        {
+          "id": "e",
+          "actor": "DOM",
+          "action": "Permiso y condiciones\nGarantías si corresponden",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "Interesado / constructor",
+          "action": "Ejecutar obras",
+          "group": "private"
+        },
+        {
+          "id": "g",
+          "actor": "DOM",
+          "action": "Verificar y recibir",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Municipio / administrador",
+          "action": "Incorporar a operación\ny mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "planos y memoria"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "no"
+        },
+        {
+          "source": "d",
+          "target": "a",
+          "label": "nueva propuesta"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "sí"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "recepción"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R20",
+      "title": "Aportes al espacio público en dinero",
+      "kind": "Nueva / recuperación elegible en plan",
+      "scope": "Recursos derivados de proyectos que generan aportes al espacio público se destinan a obras de los planes de inversiones comunales o intercomunales.",
+      "standard": "LGUC arts. 175-180; planificación y cuenta separada, no financiamiento libre para cualquier gasto.",
+      "sources": [
+        "S03",
+        "S01",
+        "S02"
+      ],
+      "notes": [
+        [
+          "Origen del dinero",
+          "El titular paga el aporte antes de la recepción del proyecto o acto equivalente que fija la ley. El municipio recauda en cuenta especial y separada. Planificación y recaudación pueden avanzar en paralelo."
+        ],
+        [
+          "Quién elabora el plan",
+          "Plan comunal: municipio/asesor urbanista de SECPLA, con asistencia MINVU, MTT, SECTRA y SPD; concejo aprueba y alcalde promulga. Plan intercomunal: SEREMI MINVU y MTT, consulta municipal, conformidad de mayoría de alcaldes, CORE y gobernador."
+        ],
+        [
+          "Restricción decisiva",
+          "Al menos 70% del aporte neto de administración se invierte en movilidad. Si hay plan intercomunal, opera además su regla de 40%, modificable en los términos legales. No se puede destinar todo indiscriminadamente a plazas."
+        ],
+        [
+          "Mantención",
+          "El aporte financia destinos de inversión legalmente habilitados. La operación rutinaria de la plaza debe resolverse por su vía presupuestaria propia."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Titular del proyecto",
+          "action": "Pagar aporte urbanístico",
+          "group": "private"
+        },
+        {
+          "id": "b",
+          "actor": "Municipalidad",
+          "action": "Cuenta especial de aportes",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "¿Obra en plan\ncomunal o intercomunal?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "SECPLA → concejo / alcalde",
+          "action": "PIIMEP comunal\nAprobación y promulgación",
+          "group": "municipal"
+        },
+        {
+          "id": "e",
+          "actor": "SEREMI MINVU + MTT → GORE",
+          "action": "Plan intercomunal\nAlcaldes, CORE y gobernador",
+          "group": "regional"
+        },
+        {
+          "id": "f",
+          "actor": "Municipio / ejecutor competente",
+          "action": "Priorizar plaza y recursos\nRespetar destinos legales",
+          "group": "municipal"
+        },
+        {
+          "id": "g",
+          "actor": "Ejecutor → municipio",
+          "action": "Obra T02 y entrega\nMantención posterior",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "aporte previo a recepción"
+        },
+        {
+          "source": "b",
+          "target": "f",
+          "label": "disponibilidad financiera"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "comunal"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "intercomunal"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": "cartera aprobada"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "cartera aprobada"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "presupuesto / convenio"
+        }
+      ]
+    },
+    {
+      "id": "R21",
+      "title": "Aportes materializados como obras",
+      "kind": "Nueva / recuperación elegible",
+      "scope": "El titular propone ejecutar una obra de espacio público en cumplimiento de su aporte, por ejemplo una plaza coherente con el plan de inversiones.",
+      "standard": "LGUC art. 179; alternativa al pago en dinero, con presupuesto y aprobación previa.",
+      "sources": [
+        "S03",
+        "S04"
+      ],
+      "notes": [
+        [
+          "Aprobación municipal",
+          "La municipalidad aprueba, rechaza u observa, previa consulta a órganos competentes. Si la propuesta no está en el plan, pero es coherente con él, el alcalde la somete al concejo."
+        ],
+        [
+          "Nivel intercomunal",
+          "Requiere informe favorable de las SEREMI MINVU y MTT en los supuestos intercomunales previstos en la ley."
+        ],
+        [
+          "Momento de ejecución",
+          "La obra debe ejecutarse antes de la recepción del proyecto que origina el aporte. El presupuesto aprobado fija el valor reconocido conforme al régimen legal."
+        ],
+        [
+          "Distinción necesaria",
+          "No mezclar este aporte con las mitigaciones directas obligatorias del proyecto ni con la urbanización y cesión ordinaria de R18."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Titular + proyectista",
+          "action": "Proponer plaza como aporte\ny presupuesto detallado",
+          "group": "private"
+        },
+        {
+          "id": "b",
+          "actor": "Municipalidad",
+          "action": "Revisar coherencia\ny consultar competencias",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "¿Requiere acuerdos\no informes adicionales?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "Alcalde / concejo; SEREMI",
+          "action": "Acuerdo por obra fuera de plan\nInforme intercomunal si aplica",
+          "group": "regional"
+        },
+        {
+          "id": "e",
+          "actor": "Municipalidad",
+          "action": "Aprobar propuesta\ny presupuesto",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "Titular + constructor",
+          "action": "Obtener permisos\ny ejecutar obra",
+          "group": "private"
+        },
+        {
+          "id": "g",
+          "actor": "DOM / órganos competentes",
+          "action": "Recepción y acreditación\ndel aporte cumplido",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Administrador del espacio",
+          "action": "Operar y mantener",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "solicitud por sistema"
+        },
+        {
+          "source": "b",
+          "target": "a",
+          "label": "observaciones"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "sí"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "no"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "antes de recepción principal"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R22",
+      "title": "Cofinanciamiento y convenios de programación",
+      "kind": "Modalidad transversal",
+      "scope": "Una cartera o plaza combina recursos y compromisos de GORE, ministerios y eventualmente municipios; complementa otras rutas del catálogo.",
+      "standard": "Ley 19.175 arts. 81 y 81 bis; ley municipal arts. 8 bis, 8 ter y 65.",
+      "sources": [
+        "S02",
+        "S01",
+        "S05"
+      ],
+      "notes": [
+        [
+          "No es otro fondo",
+          "Un convenio de programación organiza compromisos y calendario. Cada proyecto conserva su fuente, evaluación, habilitación presupuestaria y ejecutor."
+        ],
+        [
+          "Actores políticos",
+          "Gobernador propone; CORE aprueba el convenio regional. Ministros y alcaldes concurren en sus competencias, con los acuerdos municipales pertinentes."
+        ],
+        [
+          "Actos y documentos",
+          "Cartera, montos, metas, plazos, evaluación y formalización del convenio. El convenio de programación del art. 81 se sanciona por decreto supremo; otras modalidades tienen reglas propias."
+        ],
+        [
+          "Riesgo institucional real",
+          "Un acuerdo plurianual debe materializarse en asignaciones presupuestarias y convenios de ejecución. El anuncio o la firma política no equivalen a una licitación financiada."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "GORE + ministerio + municipio",
+          "action": "Acordar cartera, aportes\ny responsabilidades",
+          "group": "regional"
+        },
+        {
+          "id": "b",
+          "actor": "Gobernador → CORE",
+          "action": "Someter convenio\na aprobación",
+          "group": "regional"
+        },
+        {
+          "id": "c",
+          "actor": "Ministerio / municipio",
+          "action": "Aprobaciones propias\ny acuerdos pertinentes",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "Instituciones firmantes",
+          "action": "Formalizar convenio\nsegún modalidad legal",
+          "group": "regional"
+        },
+        {
+          "id": "e",
+          "actor": "Financiadores + formuladores",
+          "action": "Habilitar cada proyecto\nEvaluación y presupuesto anual",
+          "group": "evaluation"
+        },
+        {
+          "id": "f",
+          "actor": "Financiador ↔ unidad técnica",
+          "action": "Convenio de ejecución\nMandato / transferencia",
+          "group": "regional"
+        },
+        {
+          "id": "g",
+          "actor": "Unidad ejecutora → operador",
+          "action": "Obra T02 y mantención\nsegún obligaciones pactadas",
+          "group": "sector"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "a",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "d",
+          "label": "acuerdo"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "autorización"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R23",
+      "title": "Acción Local · intervenciones comunitarias menores",
+      "kind": "Complementaria; alcance documental limitado",
+      "scope": "FOSIS puede apoyar recuperación o equipamiento comunitario de pequeña escala dentro de un plan local; no se acredita aquí una convocatoria nacional 2026 específica de plazas.",
+      "standard": "Secuencia documentada en bases regionales Acción Local 2023 y anexos metodológicos. No extrapolar plazos ni montos al presente.",
+      "sources": [
+        "S39",
+        "S01",
+        "S03"
+      ],
+      "notes": [
+        [
+          "Uso de esta ficha",
+          "Se incluye para no omitir la intervención de Desarrollo Social/FOSIS, pero fuera del núcleo de procedimientos nacionales vigentes acreditados. Se requiere verificar bases y convenio del territorio concreto."
+        ],
+        [
+          "Actor comunitario",
+          "Grupo motor y comunidad diagnostican y priorizan. Un ejecutor del programa apoya formulación y ejecución; FOSIS supervisa el instrumento."
+        ],
+        [
+          "Límite jurídico",
+          "La priorización vecinal no autoriza por sí sola obras en un BNUP. Hay que coordinar propietario/administrador y permisos municipales."
+        ],
+        [
+          "Continuidad",
+          "Un compromiso comunitario de cuidado no sustituye la competencia municipal de administrar áreas verdes públicas. Deben quedar claras las tareas y recursos de cada parte."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "FOSIS regional + ejecutor",
+          "action": "Definir intervención\nterritorial del programa",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "Grupo motor + comunidad",
+          "action": "Diagnóstico y Plan\nde Desarrollo Local",
+          "group": "community"
+        },
+        {
+          "id": "c",
+          "actor": "Ejecutor + municipio",
+          "action": "Verificar pequeña obra\nSuelo, permisos y costos",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "FOSIS / programa",
+          "action": "Aprobar inversión elegible\nsegún bases y convenio",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "Ejecutor + comunidad",
+          "action": "Materializar intervención\ny rendir recursos",
+          "group": "community"
+        },
+        {
+          "id": "f",
+          "actor": "Comunidad + administrador",
+          "action": "Acuerdos de cuidado\ny mantención",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "prioridad del plan"
+        },
+        {
+          "source": "c",
+          "target": "b",
+          "label": "ajustes de viabilidad"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "propuesta"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R24",
+      "title": "Mantención municipal con ejecución directa",
+      "kind": "Mantención habitual",
+      "scope": "Riego, limpieza, jardinería, podas y reparaciones menores se programan y ejecutan con personal e insumos municipales, dentro de sus competencias y recursos.",
+      "standard": "Competencia nacional: ley municipal art. 25. Organización operativa y registros: reglamentos y prácticas locales.",
+      "sources": [
+        "S01",
+        "S32"
+      ],
+      "notes": [
+        [
+          "Actor responsable",
+          "Director o jefatura de Aseo y Ornato/Medio Ambiente/Áreas Verdes, según estructura local; supervisores y cuadrillas. SECPLA no dirige necesariamente el riego y la limpieza cotidiana."
+        ],
+        [
+          "Decisión política",
+          "Alcalde propone presupuesto; concejo aprueba. La incorporación de nuevas plazas aumenta necesidades de personal, agua, energía, equipos e insumos."
+        ],
+        [
+          "Bucle de trabajo",
+          "Inventario e inspección → programación → tareas → control → reprogramación. Es una reconstrucción funcional, no un formulario nacional obligatorio."
+        ],
+        [
+          "Escalar el problema",
+          "Si el deterioro exige reposición o mejoramiento integral, se formula inversión por R01-R22; si cumple el proceso de conservación, R26/R27. No denominar toda remodelación mantención menor."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Recepción de obra / vecinos / inspectores",
+          "action": "Inventario y detección\nde necesidades",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "Jefatura de áreas verdes",
+          "action": "Programar tareas, frecuencias\ny recursos",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Alcalde + concejo",
+          "action": "Presupuesto operativo\ny dotación autorizada",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "Supervisor + cuadrillas",
+          "action": "Riego, aseo, jardinería\ny reparaciones menores",
+          "group": "municipal"
+        },
+        {
+          "id": "e",
+          "actor": "Inspector / jefatura",
+          "action": "Verificar estado\ny cumplimiento",
+          "group": "municipal"
+        },
+        {
+          "id": "f",
+          "actor": "¿Basta la mantención\nhabitual?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "g",
+          "actor": "SECPLA / unidad de proyectos",
+          "action": "Formular conservación\no inversión mayor",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "necesidades presupuestarias"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "recursos e instrucciones"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "registro de trabajos"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "b",
+          "label": "sí: nuevo ciclo"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": "no"
+        },
+        {
+          "source": "g",
+          "target": "a",
+          "label": "activo recuperado"
+        }
+      ]
+    },
+    {
+      "id": "R25",
+      "title": "Mantención municipal contratada",
+      "kind": "Mantención habitual / prestaciones del contrato",
+      "scope": "Una empresa presta servicios de áreas verdes bajo contrato o, si se adopta esa figura, concesión municipal con sus requisitos específicos.",
+      "standard": "Ley municipal + régimen vigente de contratación; bases locales definen exigencias e inspección.",
+      "sources": [
+        "S01",
+        "S31",
+        "S33"
+      ],
+      "notes": [
+        [
+          "Quién define y contrata",
+          "Unidad de áreas verdes fija inventario y estándares; abastecimiento/SECPLA y asesoría jurídica tramitan bases. Comisión evalúa ofertas; alcalde dicta adjudicación."
+        ],
+        [
+          "Concejo",
+          "Interviene en presupuesto, contratos/convenios de 500 UTM o más, compromisos que exceden período alcaldicio y concesiones en los términos del art. 65. No todo servicio externalizado es jurídicamente una concesión."
+        ],
+        [
+          "Quién controla",
+          "Administrador e inspector del contrato comprueban prestación. La empresa ejecuta; la municipalidad conserva responsabilidad de administración y control."
+        ],
+        [
+          "Pago y correcciones",
+          "Certificación de cumplimiento habilita pago; observaciones, descuentos o multas se tramitan según bases y procedimiento. El ejemplo Las Condes 2024 ilustra la operación, no fija un modelo obligatorio nacional."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Áreas verdes + finanzas",
+          "action": "Inventario, niveles de servicio\ny presupuesto aprobado",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "Unidad de compras / SECPLA",
+          "action": "Bases y licitación\nsegún régimen aplicable",
+          "group": "municipal"
+        },
+        {
+          "id": "c",
+          "actor": "Comisión → alcalde / concejo",
+          "action": "Evaluación y adjudicación\nAcuerdos si corresponden",
+          "group": "municipal"
+        },
+        {
+          "id": "d",
+          "actor": "Municipio ↔ empresa",
+          "action": "Contrato e inicio\nInspector designado",
+          "group": "private"
+        },
+        {
+          "id": "e",
+          "actor": "Empresa + supervisor",
+          "action": "Ejecutar servicios\nsegún programación",
+          "group": "private"
+        },
+        {
+          "id": "f",
+          "actor": "Inspector municipal",
+          "action": "Comprobar prestaciones",
+          "group": "municipal"
+        },
+        {
+          "id": "g",
+          "actor": "¿Servicio conforme?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "h",
+          "actor": "Empresa / municipio",
+          "action": "Corregir y tramitar\nmedidas contractuales",
+          "group": "private"
+        },
+        {
+          "id": "i",
+          "actor": "Finanzas municipales",
+          "action": "Pagar prestación certificada\ny continuar ciclo",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "ofertas"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "decreto / contrato"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": ""
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": "informe de servicio"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "no"
+        },
+        {
+          "source": "h",
+          "target": "f",
+          "label": "subsanación"
+        },
+        {
+          "source": "g",
+          "target": "i",
+          "label": "sí"
+        },
+        {
+          "source": "i",
+          "target": "e",
+          "label": "siguiente período"
+        }
+      ]
+    },
+    {
+      "id": "R26",
+      "title": "Conservación con financiamiento regional o mixto",
+      "kind": "Conservación como inversión",
+      "scope": "Intervenciones para mantener o restituir capacidad de un activo existente con financiamiento GORE o mixto regional-sectorial.",
+      "standard": "Instructivo SNI 2026, sección 1, remite expresamente a Circular 33/2009 de Hacienda o su reemplazante para estos casos.",
+      "sources": [
+        "S34",
+        "S02",
+        "S05"
+      ],
+      "notes": [
+        [
+          "Diferencia decisiva",
+          "En este circuito el GORE analiza e identifica directamente las conservaciones regionales y mixtas, cualquiera sea el porcentaje regional. No insertar por rutina una obtención de RS sectorial ante MDSF."
+        ],
+        [
+          "Clasificación",
+          "Diagnosticar deterioro y justificar que se trata de conservación. Si aumenta capacidad o se busca principalmente elevar el estándar, corresponde revisar la clasificación como mejoramiento u otro proceso."
+        ],
+        [
+          "Documento de enlace",
+          "Memoria, presupuesto, antecedentes técnicos y respaldo de clasificación; pronunciamiento regional, asignación e identificación, convenio con ejecutor. Aplicar instrucciones regionales vigentes."
+        ],
+        [
+          "Después de ejecutar",
+          "La obra repone condiciones de funcionamiento; el operador debe seguir financiando riego, aseo y demás mantención. El gasto de conservación no reemplaza ese ciclo."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Municipio / servicio técnico",
+          "action": "Diagnóstico y expediente\nde conservación",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "GORE",
+          "action": "Analizar clasificación\ny requisitos aplicables",
+          "group": "regional"
+        },
+        {
+          "id": "c",
+          "actor": "¿Conservación\nregional o mixta admisible?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "d",
+          "actor": "Formulador",
+          "action": "Corregir o tramitar como\notra inversión · T01",
+          "group": "municipal"
+        },
+        {
+          "id": "e",
+          "actor": "Gobernador / CORE",
+          "action": "Asignar recursos\nsegún competencias",
+          "group": "regional"
+        },
+        {
+          "id": "f",
+          "actor": "GORE ↔ ejecutor",
+          "action": "Identificación presupuestaria\ny convenio",
+          "group": "regional"
+        },
+        {
+          "id": "g",
+          "actor": "Unidad ejecutora",
+          "action": "Contratar y conservar\nRecepción y rendición",
+          "group": "municipal"
+        },
+        {
+          "id": "h",
+          "actor": "Operador del espacio",
+          "action": "Retomar mantención habitual",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "carpeta técnica"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "no"
+        },
+        {
+          "source": "d",
+          "target": "a",
+          "label": "si procede"
+        },
+        {
+          "source": "c",
+          "target": "e",
+          "label": "sí"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R27",
+      "title": "Conservación con financiamiento sectorial",
+      "kind": "Conservación como inversión",
+      "scope": "Proyecto de infraestructura pública existente que solicita financiamiento sectorial y se tramita bajo el instructivo de conservación SNI 2026.",
+      "standard": "Procedimiento nacional 2026 para inversión sectorial y empresas públicas; no trasladar automáticamente a GORE.",
+      "sources": [
+        "S34",
+        "S05",
+        "S07"
+      ],
+      "notes": [
+        [
+          "Criterio de entrada",
+          "Mantener o restituir capacidad sin aumentarla ni modificar magnitud o programa. El instructivo exige, como regla, conservación ≥80% del costo y costo total ≤30% de reposición del activo; revisar excepciones aplicables."
+        ],
+        [
+          "Plaza como activo",
+          "En espacios abiertos se define el polígono funcionalmente indivisible y autosuficiente. No fragmentar artificialmente el activo para encajar en límites."
+        ],
+        [
+          "Control MDSF",
+          "Institución financiera presenta oficio y BIP, certificado, memoria, presupuesto, planos y especificaciones. MDSF verifica clasificación y coherencia y emite el resultado; no exige indicadores de rentabilidad social propios de una obra nueva."
+        ],
+        [
+          "Salida del proceso",
+          "Si la finalidad es elevar el estándar, ampliar o transformar integralmente, tramitar la inversión como mejoramiento, ampliación u otro proceso correspondiente. Luego de conservar, mantener."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Servicio / profesional competente",
+          "action": "Diagnosticar daño\ny valorar activo",
+          "group": "sector"
+        },
+        {
+          "id": "b",
+          "actor": "Institución financiera",
+          "action": "Oficio, BIP y certificado\nMemoria y expediente",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "MDSF / SEREMI",
+          "action": "Admisibilidad y análisis\nde conservación",
+          "group": "evaluation"
+        },
+        {
+          "id": "d",
+          "actor": "¿Clasificación y\nantecedentes conformes?",
+          "action": "",
+          "group": "decision"
+        },
+        {
+          "id": "e",
+          "actor": "Formulador",
+          "action": "Subsanar o reclasificar",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "Financiador sectorial",
+          "action": "Resultado habilitante\ny asignación presupuestaria",
+          "group": "sector"
+        },
+        {
+          "id": "g",
+          "actor": "Unidad ejecutora",
+          "action": "Contratar conservación\ny recibir trabajos",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Operador",
+          "action": "Mantención habitual",
+          "group": "municipal"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": ""
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": ""
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": ""
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "no"
+        },
+        {
+          "source": "e",
+          "target": "b",
+          "label": "correcciones"
+        },
+        {
+          "source": "d",
+          "target": "f",
+          "label": "sí"
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "id": "R28",
+      "title": "MINVU · conservación de parques urbanos",
+      "kind": "Mantención de parques elegibles",
+      "scope": "Programa DS 112 para parques existentes de más de dos hectáreas, gratuitos y elegibles; límite relevante frente al universo ordinario de plazas.",
+      "standard": "DS 112/2014 y resolución operativa 10.278/2017 modificada en 2020.",
+      "sources": [
+        "S35",
+        "S36",
+        "S31"
+      ],
+      "notes": [
+        [
+          "Quién postula",
+          "Municipio, agrupación de municipios o GORE presenta a SEREMI, con aporte aprobado por concejo/CORE y autorización del propietario según corresponda."
+        ],
+        [
+          "Selección y ejecución",
+          "Comisión regional prioriza; nivel central determina selección conforme al reglamento. SERVIU materializa el programa y contrata las tareas de conservación."
+        ],
+        [
+          "Convenio de largo plazo",
+          "Se formalizan aportes y autorización del propietario; la resolución contempla período de nueve años renovable. No supone traspaso automático de dominio."
+        ],
+        [
+          "Límite del mapa",
+          "No aplica a toda plaza pequeña. La administración directa de parques de Parquemet tiene un régimen institucional diferente; no debe confundirse con mantención municipal general."
+        ]
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "actor": "Municipio / asociación / GORE",
+          "action": "Postular parque a SEREMI\nAportes y autorización",
+          "group": "municipal"
+        },
+        {
+          "id": "b",
+          "actor": "Comisión regional MINVU",
+          "action": "Evaluar y priorizar",
+          "group": "sector"
+        },
+        {
+          "id": "c",
+          "actor": "MINVU central",
+          "action": "Seleccionar según\ncriterios y recursos",
+          "group": "sector"
+        },
+        {
+          "id": "d",
+          "actor": "SERVIU ↔ aportantes / propietario",
+          "action": "Formalizar convenios\ny autorización de conservación",
+          "group": "sector"
+        },
+        {
+          "id": "e",
+          "actor": "SERVIU",
+          "action": "Licitar y contratar\nservicios de conservación",
+          "group": "sector"
+        },
+        {
+          "id": "f",
+          "actor": "Empresa contratada",
+          "action": "Labores rutinarias,\nestacionales y especiales",
+          "group": "private"
+        },
+        {
+          "id": "g",
+          "actor": "SERVIU / inspección",
+          "action": "Controlar cumplimiento\ny pagos contractuales",
+          "group": "sector"
+        },
+        {
+          "id": "h",
+          "actor": "Instituciones del convenio",
+          "action": "Evaluar continuidad\ny renovar compromisos",
+          "group": "regional"
+        }
+      ],
+      "edges": [
+        {
+          "source": "a",
+          "target": "b",
+          "label": "expediente"
+        },
+        {
+          "source": "b",
+          "target": "a",
+          "label": "antecedentes faltantes"
+        },
+        {
+          "source": "b",
+          "target": "c",
+          "label": "lista priorizada"
+        },
+        {
+          "source": "c",
+          "target": "d",
+          "label": "selección"
+        },
+        {
+          "source": "d",
+          "target": "e",
+          "label": "convenio tramitado"
+        },
+        {
+          "source": "e",
+          "target": "f",
+          "label": ""
+        },
+        {
+          "source": "f",
+          "target": "g",
+          "label": ""
+        },
+        {
+          "source": "g",
+          "target": "f",
+          "label": "correcciones / nuevo período"
+        },
+        {
+          "source": "g",
+          "target": "h",
+          "label": "término / renovación"
+        }
+      ]
+    }
+  ]
+}

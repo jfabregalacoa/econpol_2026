@@ -1,0 +1,23 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>MINVU / SEREMI + municipio</B><BR/>Seleccionar barrio<BR/>según proceso vigente>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+b [label=<<B>Equipo barrial + vecinos</B><BR/>Diagnóstico y priorización<BR/>Constituir CVD>,shape=box,fillcolor="#FBE9E0",color="#AA6243",fontcolor="#172E47"];
+c [label=<<B>CVD + alcalde + SEREMI</B><BR/>Firmar Contrato de Barrio<BR/>PGO y PGS>,shape=box,fillcolor="#FBE9E0",color="#AA6243",fontcolor="#172E47"];
+d [label=<<B>Equipo técnico / SERVIU</B><BR/>Diseñar y habilitar<BR/>proyecto de plaza>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+e [label=<<B>SEREMI ↔ ejecutor</B><BR/>Convenio de ejecución>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+f [label=<<B>¿Entidad ejecutora?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+g [label=<<B>SERVIU</B><BR/>Contratar e inspeccionar>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+h [label=<<B>Municipalidad</B><BR/>Contratar e inspeccionar>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+i [label=<<B>Ejecutor + municipio + CVD</B><BR/>Recepción, cierre<BR/>y mantención>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label=""];
+b -> c [label="acuerdos\nparticipativos"];
+c -> d [label="cartera de obras"];
+d -> e [label="aprobaciones"];
+e -> f [label=""];
+f -> g [label="SERVIU"];
+f -> h [label="municipio"];
+g -> i [label=""];
+h -> i [label=""];
+}

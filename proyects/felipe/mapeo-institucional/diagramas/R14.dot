@@ -1,0 +1,19 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>SUBDERE / URS + actores<BR/>territoriales</B><BR/>Proponer intervención<BR/>y polígono>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+b [label=<<B>SUBDERE</B><BR/>Formalizar focalización>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+c [label=<<B>Municipio + comunidad</B><BR/>Formular recuperación<BR/>de plaza elegible>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+d [label=<<B>URS + programa central</B><BR/>Revisar proyecto<BR/>y habilitación de inversión>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+e [label=<<B>SUBDERE ↔ municipio</B><BR/>Resolución y convenio<BR/>de recursos>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+f [label=<<B>Municipalidad</B><BR/>Ejecutar y rendir>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+g [label=<<B>Operador municipal</B><BR/>Recibir y mantener>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label="coordinación /\npropuesta"];
+b -> c [label="territorio\nhabilitado"];
+c -> d [label="expediente"];
+d -> c [label="",constraint=false,style=dashed];
+d -> e [label="elegible y\nfinanciado"];
+e -> f [label=""];
+f -> g [label=""];
+}

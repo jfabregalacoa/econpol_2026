@@ -1,0 +1,20 @@
+flowchart TD
+    a["Unidad técnica + autoridad — Habilitar contratación Bases, permisos y recursos"]
+    b["Comisión / autoridad competente — Licitar, evaluar y adjudicar"]
+    c{"¿Oferta admisible y financiable?"}
+    d["Mandante / financiador — Revisar bases o recursos y volver a tramitar"]
+    e["Contratista + ITO / FTO / inspector fiscal — Ejecutar y controlar Certificar estados de pago"]
+    f["Unidad técnica / comisión — Recepción contractual y correcciones"]
+    g["DOM / órganos competentes — Recepciones y certificados si son exigibles"]
+    h["Ejecutor ↔ operador — Entrega, inventario y obligaciones de cuidado"]
+    i["Operador / municipio — Mantener y atender fallas Garantías según contrato"]
+    a --> b
+    b --> c
+    c -->|"no"| d
+    d -->|"reprogramación"| a
+    c -->|"sí: contrato"| e
+    e -->|"solicitud de recepción"| f
+    f -->|"observaciones"| e
+    f -->|"obra conforme"| g
+    g --> h
+    h --> i

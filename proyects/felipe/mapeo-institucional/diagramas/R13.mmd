@@ -1,0 +1,15 @@
+flowchart TD
+    a["Equipo municipal + barrio — Plan de Revitalización Priorizar plaza"]
+    b["Municipio — Preparar proyecto, suelo y autorizaciones"]
+    c["Unidad Regional SUBDERE — Revisar presentación"]
+    d["Unidad Ejecutora PRBIPE — Evaluar elegibilidad y condiciones de inversión"]
+    e["SUBDERE ↔ municipio — Asignar recursos y formalizar convenio"]
+    f["Municipio — Obra, supervisión y rendición"]
+    g["Operador municipal — Recepción y mantención"]
+    a -->|"cartera del plan"| b
+    b -->|"plataforma / expediente"| c
+    c --> d
+    d -->|"observaciones"| b
+    d -->|"habilitado y priorizado"| e
+    e --> f
+    f --> g

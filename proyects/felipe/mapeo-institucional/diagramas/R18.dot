@@ -1,0 +1,21 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Propietario + arquitecto /<BR/>especialistas</B><BR/>Proyectar urbanización<BR/>y cesiones exigidas>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+b [label=<<B>DOM</B><BR/>Revisar proyecto<BR/>y autorizar urbanización>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+c [label=<<B>Urbanizador + contratista</B><BR/>Financiar y ejecutar<BR/>áreas verdes y obras>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+d [label=<<B>DOM / organismos<BR/>competentes</B><BR/>Inspeccionar antecedentes<BR/>y obras para recepción>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+e [label=<<B>¿Obras conformes?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+f [label=<<B>Urbanizador</B><BR/>Corregir observaciones>,shape=box,fillcolor="#EEF0F3",color="#687888",fontcolor="#172E47"];
+g [label=<<B>DOM</B><BR/>Recepción definitiva<BR/>Efectos del art. 135>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+h [label=<<B>Municipio</B><BR/>Administrar espacio público<BR/>y mantenerlo>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label="expediente\nurbanístico"];
+b -> c [label="permiso /\naprobaciones"];
+c -> d [label="solicitud de\nrecepción"];
+d -> e [label=""];
+e -> f [label="no"];
+f -> d [label="",constraint=false,style=dashed];
+e -> g [label="sí"];
+g -> h [label="entrega e\ninventario"];
+}

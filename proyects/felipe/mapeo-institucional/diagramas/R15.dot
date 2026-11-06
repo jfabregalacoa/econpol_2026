@@ -1,0 +1,20 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Alcalde + SECPLA</B><BR/>Justificar recuperación<BR/>y formular proyecto>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+b [label=<<B>URS / SUBDERE + municipio</B><BR/>Revisar antecedentes<BR/>y preparar inversión>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+c [label=<<B>MDSF</B><BR/>Recomendación favorable<BR/>exigida por glosa>,shape=box,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+d [label=<<B>¿Hay cofinanciamiento<BR/>regional?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+e [label=<<B>Gobernador + CORE</B><BR/>Aprobar aporte GORE<BR/>según competencias>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+f [label=<<B>SUBDERE ↔ municipio</B><BR/>Asignación y convenio>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+g [label=<<B>Municipalidad</B><BR/>Obra, rendición<BR/>y mantención>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label=""];
+b -> c [label="expediente SNI"];
+c -> b [label="",constraint=false,style=dashed];
+c -> d [label="favorable"];
+d -> e [label="sí: mínimo 40% GORE"];
+d -> f [label="no"];
+e -> f [label="convenio de aportes"];
+f -> g [label=""];
+}

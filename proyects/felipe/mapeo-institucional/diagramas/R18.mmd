@@ -1,0 +1,17 @@
+flowchart TD
+    a["Propietario + arquitecto / especialistas — Proyectar urbanización y cesiones exigidas"]
+    b["DOM — Revisar proyecto y autorizar urbanización"]
+    c["Urbanizador + contratista — Financiar y ejecutar áreas verdes y obras"]
+    d["DOM / organismos competentes — Inspeccionar antecedentes y obras para recepción"]
+    e{"¿Obras conformes?"}
+    f["Urbanizador — Corregir observaciones"]
+    g["DOM — Recepción definitiva Efectos del art. 135"]
+    h["Municipio — Administrar espacio público y mantenerlo"]
+    a -->|"expediente urbanístico"| b
+    b -->|"permiso / aprobaciones"| c
+    c -->|"solicitud de recepción"| d
+    d --> e
+    e -->|"no"| f
+    f --> d
+    e -->|"sí"| g
+    g -->|"entrega e inventario"| h

@@ -1,0 +1,17 @@
+flowchart TD
+    a["Servicio / profesional competente — Diagnosticar daño y valorar activo"]
+    b["Institución financiera — Oficio, BIP y certificado Memoria y expediente"]
+    c["MDSF / SEREMI — Admisibilidad y análisis de conservación"]
+    d{"¿Clasificación y antecedentes conformes?"}
+    e["Formulador — Subsanar o reclasificar"]
+    f["Financiador sectorial — Resultado habilitante y asignación presupuestaria"]
+    g["Unidad ejecutora — Contratar conservación y recibir trabajos"]
+    h["Operador — Mantención habitual"]
+    a --> b
+    b --> c
+    c --> d
+    d -->|"no"| e
+    e -->|"correcciones"| b
+    d -->|"sí"| f
+    f --> g
+    g --> h

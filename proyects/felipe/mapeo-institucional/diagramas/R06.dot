@@ -1,0 +1,20 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Alcalde + SECPLA</B><BR/>Postular proyecto y<BR/>justificar línea PMU>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+b [label=<<B>Unidad Regional SUBDERE</B><BR/>Revisión técnica<BR/>y administrativa>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+c [label=<<B>¿Qué línea?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+d [label=<<B>Emergencia / Cuenca</B><BR/>Pase directo a<BR/>evaluación central>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+e [label=<<B>Prevención del Delito</B><BR/>Revisión y visación SPD>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+f [label=<<B>SUBDERE central</B><BR/>Evaluar elegibilidad<BR/>y asignar si hay recursos>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+g [label=<<B>Municipio</B><BR/>Obra, rendición<BR/>y mantención>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label="plataforma"];
+b -> a [label="",constraint=false,style=dashed];
+b -> c [label="conforme"];
+c -> d [label="Emergencia / Cuenca"];
+c -> e [label="PMU-SPD"];
+d -> f [label=""];
+e -> f [label=""];
+f -> g [label="resolución y\ntransferencia"];
+}

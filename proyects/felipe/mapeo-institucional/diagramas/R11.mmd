@@ -1,0 +1,16 @@
+flowchart TD
+    a["Alcalde + equipo municipal — Presentar propuesta de Plan de Desarrollo Local"]
+    b["SEREMI MINVU — Admisibilidad"]
+    c["Comisión + mesa regional — Evaluación y priorización según convocatoria"]
+    d["SEREMI ↔ municipio — Selección y convenio"]
+    e["Equipo local + actores — Desarrollar plan y proyecto de plaza"]
+    f["MINVU / SERVIU / municipio — Habilitar proyecto y financiar componente"]
+    g["SERVIU o municipio — Ejecutar obra · T02"]
+    h["Operador acordado — Recibir y mantener"]
+    a -->|"expediente y carta alcalde"| b
+    b -->|"admisible"| c
+    c -->|"puntajes"| d
+    d --> e
+    e -->|"cartera y diseño"| f
+    f --> g
+    g --> h

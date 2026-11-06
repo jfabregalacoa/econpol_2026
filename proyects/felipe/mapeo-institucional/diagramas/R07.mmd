@@ -1,0 +1,17 @@
+flowchart TD
+    a["Comunidad / municipio — Proponer recuperación"]
+    b["Alcalde + concejo — Respaldar y comprometer aporte municipal"]
+    c["SEREMI + SERVIU — Revisión técnica y comisión regional"]
+    d["Subsecretaría MINVU — Seleccionar y distribuir recursos disponibles"]
+    e["SERVIU + proyectistas — Diseño aprobado y habilitación SNI"]
+    f["SERVIU ↔ municipio — Convenio: aportes y mantención"]
+    g["SERVIU — Licitación e inspección de obra · T02"]
+    h["Municipalidad — Recibir y mantener"]
+    a --> b
+    b -->|"expediente a SEREMI"| c
+    c -->|"observaciones"| b
+    c -->|"nómina priorizada"| d
+    d -->|"selección comunicada"| e
+    e --> f
+    f -->|"recursos habilitados"| g
+    g -->|"entrega formal"| h

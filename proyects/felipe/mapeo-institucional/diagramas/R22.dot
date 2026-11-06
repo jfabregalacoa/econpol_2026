@@ -1,0 +1,19 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>GORE + ministerio +<BR/>municipio</B><BR/>Acordar cartera, aportes<BR/>y responsabilidades>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+b [label=<<B>Gobernador → CORE</B><BR/>Someter convenio<BR/>a aprobación>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+c [label=<<B>Ministerio / municipio</B><BR/>Aprobaciones propias<BR/>y acuerdos pertinentes>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+d [label=<<B>Instituciones firmantes</B><BR/>Formalizar convenio<BR/>según modalidad legal>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+e [label=<<B>Financiadores +<BR/>formuladores</B><BR/>Habilitar cada proyecto<BR/>Evaluación y presupuesto anual>,shape=box,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+f [label=<<B>Financiador ↔ unidad<BR/>técnica</B><BR/>Convenio de ejecución<BR/>Mandato / transferencia>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+g [label=<<B>Unidad ejecutora → operador</B><BR/>Obra T02 y mantención<BR/>según obligaciones pactadas>,shape=box,fillcolor="#E0F2EF",color="#297D77",fontcolor="#172E47"];
+a -> b [label=""];
+a -> c [label=""];
+b -> d [label="acuerdo"];
+c -> d [label="autorización"];
+d -> e [label=""];
+e -> f [label=""];
+f -> g [label=""];
+}

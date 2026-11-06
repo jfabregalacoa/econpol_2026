@@ -1,0 +1,21 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.15", nodesep="0.32", ranksep="0.20", splines=polyline, outputorder=edgesfirst];
+node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=17, margin="0.17,0.08", penwidth=1.3];
+edge [fontname="DejaVu Sans", fontsize=14, color="#8091A4", fontcolor="#53647B", arrowsize=0.65, penwidth=1.2];
+a [label=<<B>Municipio / servicio<BR/>técnico</B><BR/>Diagnóstico y expediente<BR/>de conservación>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+b [label=<<B>GORE</B><BR/>Analizar clasificación<BR/>y requisitos aplicables>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+c [label=<<B>¿Conservación<BR/>regional o mixta admisible?</B>>,shape=diamond,fillcolor="#FFF0CE",color="#AD8425",fontcolor="#172E47"];
+d [label=<<B>Formulador</B><BR/>Corregir o tramitar como<BR/>otra inversión · T01>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+e [label=<<B>Gobernador / CORE</B><BR/>Asignar recursos<BR/>según competencias>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+f [label=<<B>GORE ↔ ejecutor</B><BR/>Identificación presupuestaria<BR/>y convenio>,shape=box,fillcolor="#EFE9FA",color="#7960A3",fontcolor="#172E47"];
+g [label=<<B>Unidad ejecutora</B><BR/>Contratar y conservar<BR/>Recepción y rendición>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+h [label=<<B>Operador del espacio</B><BR/>Retomar mantención habitual>,shape=box,fillcolor="#E8F0FC",color="#376596",fontcolor="#172E47"];
+a -> b [label="carpeta técnica"];
+b -> c [label=""];
+c -> d [label="no"];
+d -> a [label="",constraint=false,style=dashed];
+c -> e [label="sí"];
+e -> f [label=""];
+f -> g [label=""];
+g -> h [label=""];
+}

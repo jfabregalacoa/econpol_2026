@@ -1,0 +1,17 @@
+flowchart TD
+    a["Municipio / servicio técnico — Diagnóstico y expediente de conservación"]
+    b["GORE — Analizar clasificación y requisitos aplicables"]
+    c{"¿Conservación regional o mixta admisible?"}
+    d["Formulador — Corregir o tramitar como otra inversión · T01"]
+    e["Gobernador / CORE — Asignar recursos según competencias"]
+    f["GORE ↔ ejecutor — Identificación presupuestaria y convenio"]
+    g["Unidad ejecutora — Contratar y conservar Recepción y rendición"]
+    h["Operador del espacio — Retomar mantención habitual"]
+    a -->|"carpeta técnica"| b
+    b --> c
+    c -->|"no"| d
+    d -->|"si procede"| a
+    c -->|"sí"| e
+    e --> f
+    f --> g
+    g --> h

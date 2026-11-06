@@ -1,0 +1,15 @@
+flowchart TD
+    a["GORE + CORE — Definir marco y condiciones regionales"]
+    b{"¿La plaza es elegible en estas bases?"}
+    c["Municipio — Buscar otra vía"]
+    d["Alcalde + SECPLA — Presentar expediente con registro BIP"]
+    e["Equipo técnico GORE — Revisar y observar"]
+    f["GORE ↔ municipio — Asignación y convenio de transferencia"]
+    g["Municipio — Obra T02, rendición y mantención"]
+    a -->|"bases / distribución"| b
+    b -->|"no"| c
+    b -->|"sí"| d
+    d -->|"oficio y carpeta"| e
+    e -->|"correcciones"| d
+    e -->|"aprobación y recursos"| f
+    f --> g

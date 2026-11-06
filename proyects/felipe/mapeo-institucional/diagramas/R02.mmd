@@ -1,0 +1,17 @@
+flowchart TD
+    a["Alcalde + SECPLA — Formular y presentar proyecto de plaza"]
+    b["Equipo técnico GORE — Revisar pertinencia y admisibilidad"]
+    c["Formulador + financiador — Evaluación SNI o exención aplicable · T01"]
+    d{"¿Expediente habilitado?"}
+    e["SECPLA — Subsanar observaciones"]
+    f["Gobernador + CORE — Priorizar y financiar según competencias"]
+    g["GORE ↔ unidad técnica — Resolución y convenio Municipio o servicio"]
+    h["Unidad ejecutora → operador — Obra T02 → mantención"]
+    a -->|"oficio y antecedentes"| b
+    b -->|"postulación BIP"| c
+    c --> d
+    d -->|"no"| e
+    e -->|"corrección"| c
+    d -->|"sí; no garantiza recursos"| f
+    f -->|"asignación"| g
+    g -->|"mandato / transferencia"| h

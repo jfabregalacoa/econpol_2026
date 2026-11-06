@@ -1,0 +1,15 @@
+flowchart TD
+    a["Titular del proyecto — Pagar aporte urbanístico"]
+    b["Municipalidad — Cuenta especial de aportes"]
+    c{"¿Obra en plan comunal o intercomunal?"}
+    d["SECPLA → concejo / alcalde — PIIMEP comunal Aprobación y promulgación"]
+    e["SEREMI MINVU + MTT → GORE — Plan intercomunal Alcaldes, CORE y gobernador"]
+    f["Municipio / ejecutor competente — Priorizar plaza y recursos Respetar destinos legales"]
+    g["Ejecutor → municipio — Obra T02 y entrega Mantención posterior"]
+    a -->|"aporte previo a recepción"| b
+    b -->|"disponibilidad financiera"| f
+    c -->|"comunal"| d
+    c -->|"intercomunal"| e
+    d -->|"cartera aprobada"| f
+    e -->|"cartera aprobada"| f
+    f -->|"presupuesto / convenio"| g
