@@ -1,7 +1,15 @@
+# Qué NO se sube al GitHub del curso (queda solo en este computador).
+# Todo lo demás dentro de proyects/felipe/ sí se sube.
+# Este archivo aplica solo a esta carpeta; el .gitignore de la raíz es del profesor.
+
+# Carpeta personal: borradores, notas, archivos de prueba o de otros cursos.
+local/
+
+# Descargas grandes y archivos descomprimidos; los scripts los regeneran.
 cache/
 
 # Archivos originales del Servel (140 MB). Se descargan desde servel.cl; ver plan-base-datos.md.
 fuentes/servel/
 
-# Archivos temporales de Office
+# Archivos temporales de Office (se crean mientras un documento está abierto).
 ~$*
