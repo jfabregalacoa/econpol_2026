@@ -1,0 +1,25 @@
+# Proyecto Quarto propio del informe: evita que se renderice con la configuración del libro del curso.
+project:
+  type: default
+
+lang: es
+bibliography: referencias.bib
+number-sections: true
+
+format:
+  pdf:
+    documentclass: article
+    papersize: letter
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    toc: true
+    colorlinks: true
+    crossref:
+      prp-title: Proposición
+      lem-title: Lema
+      def-title: Definición
+
+execute:
+  echo: false
+  warning: false
+  message: false
