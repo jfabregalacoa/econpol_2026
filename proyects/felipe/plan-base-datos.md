@@ -1,8 +1,15 @@
 # Felipe: plan para armar la base de datos
 
-6 de noviembre de 2026. Plan, no ejecución: nada de esto está descargado todavía.
+6 de noviembre de 2026.
 
 Se apoya en `hallazgos-mapeo-institucional.md`. La idea es medir por separado lo que el alcalde **inaugura** ($k$, obra externa) y lo que **mantiene** ($m$, gasto propio), y unirlo con el **horizonte** del alcalde.
+
+## Próximas tareas
+
+1. ~~**Unir SINIM, BIP y Servel en una tabla comuna-año**~~ Hecho: `scripts/07_panel_comuna_anio.R` escribe `datos/panel_comuna_anio.csv` (345 comunas × 2008–2025, 46 columnas). Pendiente dentro de esta tarea: transferencias de SUBDERE, pactos homologados entre elecciones (H5) y afinidad con el gobernador regional.
+2. **Revisar a mano la muestra de 200 obras** del BIP (`datos/bip_ep_muestra_revision.csv`).
+3. **Instalar `fixest` y `modelsummary`** y correr las primeras estimaciones.
+4. **Actualizar la presentación** (`presentacion/`) para que refleje el estado actual del informe: los cuatro tipos de intervención, el modelo con reelección (proposiciones 1 a 4), las hipótesis H1 a H6 y la figura del BIP.
 
 ## Estado (actualizado el 6 de noviembre)
 
