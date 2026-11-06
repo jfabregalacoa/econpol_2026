@@ -11,6 +11,7 @@ Se apoya en `hallazgos-mapeo-institucional.md`. La idea es medir por separado lo
 - `EBI_FECHA_POSTULACION_SNI` viene como fecha (POSIXct): permite fechar la postulación al día.
 - `EBI_RATE` está en el 61% de las filas municipales (RS, FI, OT…).
 - Hay que revisar los cambios de cobertura: menos filas en 2005–2010 y un salto en 2011.
+- **Script listo:** `scripts/05_bip_espacio_publico.R` escribe `datos/bip_ep_obras.csv.gz` (6.655 obras municipales de espacio público, una por código BIP, en las 345 comunas), `datos/bip_ep_panel_comuna_anio.csv` (comuna × año 1997–2027, con conteos y costos de obra nueva, mejoramiento, conservación y otras por separado) y `datos/bip_ep_muestra_revision.csv` (200 obras para revisar a mano). La comuna se asigna por el nombre del municipio responsable, no por el código del BIP, porque los códigos cambiaron con las reformas territoriales.
 - Espacio público municipal, por año de primera aparición del código: entre 30 y 110 obras nuevas por año hasta 2010, y entre 65 y 250 desde 2011. La conservación sigue siendo escasa.
 
 **Bloque C, Servel: script listo.** `scripts/04_servel_alcaldes.R` escribe `datos/servel_alcaldes_candidatos.csv` y `datos/servel_alcaldes_comuna.csv` (346 comunas × 4 elecciones). Detalles:

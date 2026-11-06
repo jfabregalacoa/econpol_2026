@@ -41,7 +41,18 @@ Un mapeo de las vías institucionales para construir, recuperar o mantener plaza
 2. **El alcalde pide, otro asigna.** El alcalde y la SECPLA formulan y postulan la obra, pero la asignan el gobernador regional y el consejo regional, SUBDERE o el MINVU. Las postulaciones miden la demanda del alcalde; las asignaciones, la decisión de otro nivel de gobierno.
 3. **No toda plaza nueva es decisión municipal.** Los loteos deben ceder áreas verdes, los proyectos inmobiliarios pagan aportes al espacio público y el MINVU ejecuta programas propios. El stock de plazas mezcla todas esas vías.
 
-Hay además dos tipos de "mantener". La **mantención habitual** es gasto corriente y una decisión recurrente del alcalde. La **conservación** es una reparación mayor que se postula como inversión al BIP y, como la obra nueva, también puede inaugurarse. En este informe, *mantener* se refiere a la mantención habitual.
+## Cuatro formas de intervenir una plaza
+
+El informe distingue cuatro intervenciones, que difieren en quién decide, cómo se pagan y cuánto se ven:
+
+| Intervención | Qué es | Cómo se paga | Se inaugura | Dónde se mide |
+|-----------|--------------------|-------------|----|-----------------|
+| Obra nueva | Construir una plaza o área verde que no existía | Inversión externa (BIP) | Sí | BIP: CONSTRUCCION, INSTALACION |
+| Mejoramiento | Transformar una plaza existente y elevar su estándar | Inversión externa (BIP) | Sí | BIP: MEJORAMIENTO, REPOSICION, RECUPERACION y otros |
+| Conservación | Reparación mayor que devuelve la plaza a su estado original, sin ampliarla | Inversión externa (BIP) | A veces | BIP: CONSERVACION, REPARACION |
+| Mantención habitual | Riego, aseo, poda, jardinería y reparaciones menores | Gasto corriente municipal | No | SINIM: gasto en mantención de jardines |
+
+En este informe, *mantener* se refiere a la mantención habitual. Obra nueva y mejoramiento son las dos formas de *inaugurar* y se analizan por separado, porque difieren en un punto clave: la obra nueva agrega superficie que habrá que mantener para siempre, mientras que el mejoramiento interviene una plaza que ya se mantenía. La conservación aparece cuando una plaza se deterioró, muchas veces por falta de mantención.
 
 ## El límite a la reelección
 
@@ -135,6 +146,27 @@ Se lee el coeficiente de $\gamma$ en $\Delta_k^e(m)$. Con $e = 0$ y $\alpha = 0$
 
 Además, para el alcalde que puede repostular, construir y mantener son complementarios: $\partial^2 U^1 / \partial k\, \partial m = \delta\theta v_M H > 0$. Inaugurar aumenta la probabilidad de seguir en el cargo y, con ella, el valor de haber mantenido. Para el impedido, las dos decisiones son independientes.
 
+## Obra nueva frente a mejoramiento
+
+Supongamos ahora que el alcalde que decide inaugurar puede elegir entre una obra nueva ($j = N$) y un mejoramiento ($j = R$). Ambas se inauguran y se ven igual ($\theta$ común), pero la obra nueva deja una mantención futura mayor: $\gamma_N > \gamma_R \ge 0$. Sus beneficios sociales son $B_N$ y $B_R$. Condicional a inaugurar algo, la ventaja de elegir la obra nueva es
+$$
+D^e = v_N (B_N - B_R) + \alpha\,(B_N - B_R - \beta(\gamma_N - \gamma_R)) - e\,\delta\,(\pi + \theta)\,(\gamma_N - \gamma_R).
+$$
+
+::: {#prp-composicion}
+## Composición de lo que se inaugura
+Si la obra nueva y el mejoramiento son igual de visibles, el impedido prefiere la obra nueva en mayor medida que el alcalde que puede repostular:
+$$
+D^0 - D^1 = \delta\,(\pi + \theta)\,(\gamma_N - \gamma_R) > 0 .
+$$
+:::
+
+::: {.proof}
+Se resta $D^1$ de $D^0$; todos los términos que no dependen de $e$ se cancelan. Como $\gamma_N > \gamma_R$ y $\delta(\pi + \theta) > 0$, la diferencia es positiva.
+:::
+
+La @prp-composicion es más limpia que la @prp-construccion porque el motivo electoral, que empuja a inaugurar cualquier cosa, se cancela al comparar dos obras igual de visibles. Lo que queda es la cuenta al sucesor. Si la obra nueva fuera más visible que el mejoramiento, reaparecería una fuerza opuesta y el resultado volvería a ser empírico.
+
 ## Extensiones
 
 **Cercanía de la elección.** Si el efecto de inaugurar sobre la reelección es mayor para las obras que se inauguran cerca de la elección ($\theta$ crece al acercarse la votación), el alcalde que puede repostular concentra las inauguraciones antes de la elección. El impedido no tiene ese ciclo, porque $\theta$ no entra en su decisión.
@@ -142,6 +174,10 @@ Además, para el alcalde que puede repostular, construir y mantener son compleme
 **Continuidad de la coalición.** Si al impedido le importa que su coalición conserve la alcaldía, con peso $\lambda \in [0, 1]$ y probabilidad $\pi_c + \theta_c k$, en @eq-utilidad se reemplaza $e\,\delta(\pi + \theta k)$ por $\lambda\,\delta(\pi_c + \theta_c k)$. Las diferencias entre alcaldes que pueden y no pueden repostular se achican a medida que $\lambda$ se acerca a 1.
 
 **Financiamiento externo.** La obra se construye solo si el nivel superior aprueba la postulación, con probabilidad $q$. Esto multiplica los términos de $k$ por $q$ y no cambia el signo de las proposiciones. La afinidad política entre el alcalde y el gobernador regional puede afectar $q$ y debe controlarse.
+
+**Mantención atrasada y conservación.** Si una plaza no se mantiene ($m = 0$), se deteriora y, con alguna probabilidad, el período siguiente necesita una conservación financiada como inversión. La conservación es entonces la huella observable de la mantención que no se hizo: las comunas cuyo alcalde mantuvo poco deberían postular más conservaciones en el período siguiente.
+
+**Conservación como sustituto financiero.** Un municipio con poco presupuesto propio puede postular como conservación lo que en el fondo es mantención, para que la financie el gobierno regional. Este canal es financiero, no político: predice más conservación cuando caen los ingresos propios, sin relación con el horizonte del alcalde.
 
 ## Alcances del modelo
 
@@ -152,12 +188,13 @@ El modelo trata a los votantes como no estratégicos: $\theta$ resume cómo resp
 | | Hipótesis | Fuente en el modelo |
 |--|------------------------------------------|----------------|
 | H1 | Los alcaldes impedidos de repostular gastan menos en mantención por metro cuadrado. Entre los que pueden repostular, los más seguros electoralmente mantienen más. | @prp-mantencion |
-| H2 | La diferencia en obras inaugurables entre alcaldes que pueden y no pueden repostular tiene signo ambiguo. Los que pueden repostular concentran las postulaciones y adjudicaciones antes de la elección; los impedidos no. | @prp-construccion y cercanía de la elección |
-| H3 | Las obras iniciadas por alcaldes impedidos dejan más mantención pendiente: el gasto en mantención del período siguiente aumenta, sobre todo cuando cambia el alcalde. | @prp-sucesor |
-| H4 | Las diferencias de H1 a H3 son menores cuando la coalición del alcalde impedido tiene buenas probabilidades de conservar la alcaldía. | Continuidad de la coalición |
-| H5 | Las obras que originan el gobierno regional o el MINVU no siguen el ciclo ni la elegibilidad del alcalde. | Prueba de falsificación |
+| H2 | La diferencia en obras inaugurables (nuevas y mejoramientos) entre alcaldes que pueden y no pueden repostular tiene signo ambiguo. Los que pueden repostular concentran las postulaciones antes de la elección; los impedidos no. | @prp-construccion y cercanía de la elección |
+| H3 | Dentro de lo que se inaugura, los impedidos postulan una mayor proporción de obras nuevas frente a mejoramientos. | @prp-composicion |
+| H4 | Las obras nuevas que dejan los alcaldes impedidos aumentan la mantención del período siguiente, sobre todo cuando cambia el alcalde. Las comunas que mantuvieron poco postulan más conservaciones después. | @prp-sucesor y mantención atrasada |
+| H5 | Las diferencias de H1 a H4 son menores cuando la coalición del alcalde impedido tiene buenas probabilidades de conservar la alcaldía. | Continuidad de la coalición |
+| H6 | Las obras que originan el gobierno regional o el MINVU, y los estudios y diseños que no se inauguran, no siguen el ciclo ni la elegibilidad del alcalde. | Prueba de falsificación |
 
-La **explicación rival** es puramente financiera: si la obra la paga otro y la mantención el municipio, se construye más y se mantiene menos aunque no haya política. Esa explicación no predice diferencias por elegibilidad ni por cercanía de la elección, que es lo que contrastan H1, H2 y H5.
+La **explicación rival** es puramente financiera: si la obra la paga otro y la mantención el municipio, se construye más y se mantiene menos aunque no haya política, y la conservación sustituye a la mantención cuando faltan recursos propios. Esa explicación no predice diferencias por elegibilidad ni por cercanía de la elección, que es lo que contrastan H1 a H3 y H6.
 
 # Datos
 
@@ -166,7 +203,7 @@ La base es un panel comuna-año (345 comunas) que une cuatro fuentes por código
 | Concepto | Medida | Fuente | Cobertura |
 |---|---|---|---|
 | Mantención | Gasto en mantención de jardines de la comunidad por m² de área verde mantenida | SINIM | 2008–2025 |
-| Obras inaugurables | Postulaciones municipales de plazas, parques y áreas verdes (obra nueva y mejoramiento), por año de primera aparición | BIP histórico (MDSF) | 1997–2027 |
+| Obras | Postulaciones municipales de plazas, parques y áreas verdes por año de primera aparición, separadas en obra nueva, mejoramiento y conservación | BIP histórico (MDSF) | 1997–2027 |
 | Horizonte | Repostulación, margen, períodos seguidos, impedimento para repostular | Servel | 2012–2024 |
 | Financiamiento externo | Transferencias de capital a municipios; porcentaje de inversión con recursos externos | Ley 19.862; SINIM | 2014– |
 
@@ -187,6 +224,28 @@ servel |>
 
 En la @tbl-servel, 2012 no tiene alcalde en ejercicio identificado porque faltan los datos de 2008. La columna "Impedido en la siguiente" cuenta electos con tres períodos seguidos dentro de los datos, así que solo es completa para 2021.
 
+```{r}
+#| label: tbl-bip
+#| tbl-cap: "Obras municipales de espacio público en el BIP por período alcaldicio y tipo (año de primera postulación)."
+obras <- read_csv("../datos/bip_ep_obras.csv.gz", show_col_types = FALSE)
+obras |>
+  filter(anio_primera >= 2009, anio_primera <= 2024) |>
+  mutate(Período = cut(anio_primera, c(2008, 2012, 2016, 2021, 2024),
+                       labels = c("2009–2012", "2013–2016", "2017–2021", "2022–2024"))) |>
+  count(Período, tipo) |>
+  tidyr::pivot_wider(names_from = tipo, values_from = n) |>
+  transmute(Período, `Obra nueva` = nueva, Mejoramiento = mejoramiento,
+            Conservación = conservacion, `Otra (estudios y otros)` = otro,
+            `% nueva entre inaugurables` = round(100 * nueva / (nueva + mejoramiento))) |>
+  knitr::kable()
+```
+
+La @tbl-bip muestra que la proporción de obras nuevas entre lo que se inaugura cae de un período a otro. H3 se contrasta como diferencia respecto de esa tendencia común, comparando alcaldes que pueden y no pueden repostular dentro de un mismo período. La comuna de cada obra se asigna por el nombre del municipio que la postula, porque los códigos de comuna del BIP cambian con las reformas territoriales.
+
+![Obras municipales de espacio público en el BIP, por año presupuestario de primera postulación y tipo de obra. Las líneas discontinuas marcan las elecciones municipales. La figura describe los datos; no controla por nada.](../figs/fig2_bip_ep_tipos.png){#fig-bip width="100%"}
+
+La @fig-bip muestra la misma información año a año. Las postulaciones suben antes de algunas elecciones: obras nuevas en 2011–2012 y mejoramientos en 2022–2023. El año es el presupuestario al que se postula, y la postulación suele hacerse el año calendario anterior. Desde 2013 los mejoramientos superan a las obras nuevas, y la conservación se mantiene baja todo el período. El alza de 2026 debe revisarse contra la completitud del registro antes de interpretarla.
+
 **Advertencias.** El BIP registra lo que el alcalde postula, no lo que recibe, y no incluye todas las obras con fondos propios ni gran parte del PMU. En el BIP, la marca `NUEVO` no identifica la primera postulación, por eso se usa el año de primera aparición del código. SINIM es autoinformado y debe deflactarse. El stock de plazas de SINIM no mide la decisión del alcalde, porque incluye cesiones de loteos y obras del MINVU.
 
 # Diseño empírico
@@ -197,9 +256,15 @@ y_{ct} = \beta\, (G_c \times \text{Post}_t) + \mathbf{x}_{ct}'\boldsymbol{\phi} 
 $$
 donde $y_{ct}$ es la mantención por m², $\text{Post}_t$ indica los años 2022–2024 y $\mu_c$, $\tau_t$ son efectos fijos de comuna y año. Los mismos alcaldes estaban en 2017–2020 en un período en que podían repostular, lo que permite comparar a la misma persona con y sin horizonte electoral. Se estimará además la versión por año (estudio de eventos) para revisar tendencias previas.
 
-**Obras inaugurables (H2).** Postulaciones por comuna y año en función de los años que faltan para la elección, interactuados con $G_c$, mediante una regresión de Poisson con efectos fijos.
+**Obras inaugurables (H2).** Postulaciones por comuna y año en función de los años que faltan para la elección, interactuados con $G_c$, mediante una regresión de Poisson con efectos fijos. Se estima por separado para obra nueva, mejoramiento y conservación.
 
-**Cuenta al sucesor (H3).** Gasto en mantención del período siguiente en función de las obras iniciadas en el período anterior, interactuadas con el cambio de alcalde y con $G_c$.
+**Obra nueva frente a mejoramiento (H3).** Con una fila por comuna, año y tipo de obra inaugurable,
+$$
+n_{cjt} = \exp\big(\beta_3\, (G_c \times \text{Post}_t \times \text{Nueva}_j) + \mu_{cj} + \tau_{jt} + \dots\big)\,\eta_{cjt},
+$$
+donde $\beta_3$ mide si los impedidos desplazan su cartera hacia obras nuevas. Los efectos fijos por tipo y año absorben la tendencia común de la @tbl-bip.
+
+**Cuenta al sucesor y mantención atrasada (H4).** Gasto en mantención del período siguiente en función de las obras nuevas del período anterior, interactuadas con el cambio de alcalde y con $G_c$; y conservaciones postuladas en función de la mantención del período anterior.
 
 **Controles y errores.** Población, ruralidad, ingresos propios, Fondo Común Municipal, financiamiento externo y afinidad política con el gobernador regional. Errores estándar agrupados por comuna.
 
@@ -212,10 +277,11 @@ Pendiente: se completará con las estimaciones una vez unida la base.
 # Decisiones abiertas
 
 1. **Votantes estratégicos.** ¿Basta con $\theta$ como forma reducida, o conviene derivar la regla de voto como en el capítulo 4?
-2. **Qué cuenta como inaugurable.** Obra nueva y mejoramiento se inauguran igual; la conservación del BIP es una reparación mayor que también puede inaugurarse.
-3. **Disposición transitoria de la Ley 21.238.** Confirmar el cómputo de períodos y si hubo alcaldes impedidos en 2021.
-4. **Datos de 2008.** Solicitud por Ley de Transparencia al Servel.
-5. **Literatura chilena.** Revisar @corvalan2018 sobre ciclos políticos en el gasto municipal chileno, y la evidencia de @drazeneslava2010 y @rogoff1990 sobre gasto visible antes de las elecciones.
+2. **Visibilidad de la obra nueva y del mejoramiento.** La @prp-composicion supone que se ven igual. Si la obra nueva se ve más, hay que medirlo (por ejemplo, con cobertura de prensa de inauguraciones).
+3. **Validar la clasificación del BIP.** Revisar a mano la muestra de 200 obras (`datos/bip_ep_muestra_revision.csv`).
+4. **Disposición transitoria de la Ley 21.238.** Confirmar el cómputo de períodos y si hubo alcaldes impedidos en 2021.
+5. **Datos de 2008.** Solicitud por Ley de Transparencia al Servel.
+6. **Literatura chilena.** Revisar @corvalan2018 sobre ciclos políticos en el gasto municipal chileno, y la evidencia de @drazeneslava2010 y @rogoff1990 sobre gasto visible antes de las elecciones.
 
 # Referencias {.unnumbered}
 
