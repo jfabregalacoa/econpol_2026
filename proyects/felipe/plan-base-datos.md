@@ -11,6 +11,24 @@ Se apoya en `hallazgos-mapeo-institucional.md`. La idea es medir por separado lo
 3. **Instalar `fixest` y `modelsummary`** y correr las primeras estimaciones.
 4. **Actualizar la presentación** (`presentacion/`) para que refleje el estado actual del informe: los cuatro tipos de intervención, el modelo con reelección (proposiciones 1 a 4), las hipótesis H1 a H6 y la figura del BIP.
 
+**Pendientes que vienen de las notas de Aníbal** (revisión del 6 de noviembre):
+
+5. **Visibilidad** (su predicción 4: el sesgo es mayor donde inaugurar se ve más). No está en el modelo ni en las hipótesis. Hay que elegir una medida (densidad urbana, población, ruralidad, plazas céntricas) y agregarla como heterogeneidad de H2 y H3.
+6. **Falsificación con "alcaldes sin competencia real".** Agregar a H6: alcaldes que repostulan con margen previo muy amplio, para quienes inaugurar casi no cambia la reelección ($\theta$ bajo).
+7. **Muestra balanceada.** Él propone usar comunas con datos en todo el período; decidir y reportar ambas versiones.
+8. **Todas las obras como robustez.** Él deja abierto usar solo espacio público o todas las obras; usar todas las obras municipales del BIP como prueba de robustez (más datos, mismo diseño).
+9. **Deflactar.** Hoy los montos van en pesos corrientes y los efectos fijos de año absorben la inflación. Para tablas descriptivas falta un IPC anual 2008–2025.
+10. **Permisos de edificación del INE** como control de loteos que crean plazas sin decisión municipal.
+11. **Afinidad con el gobierno central**, además del gobernador regional: Corvalán, Cox y Osorio (2018; verificada: *Journal of Development Economics* 133, 2018) muestra que el gobierno central transfiere más a municipios en años electorales, sobre todo a alcaldes de su coalición.
+12. **Compartir los datos del Servel con Camila y Abraham** (Aníbal anota que necesitan lo mismo). Avisarles; no modificar sus carpetas.
+
+**Pendientes que salieron de la primera estimación de H1** (`scripts/08_estimar_h1.R`):
+
+13. **La mantención de SINIM es solo la contratada.** Entre 94 y 128 comunas por año reportan cero porque mantienen con personal propio. Buscar en SINIM una medida del personal o gasto de aseo y ornato para cubrir la mantención directa.
+14. **Los contratos de mantención son plurianuales.** El gasto de 2022–2024 puede venir de contratos firmados en el período anterior. Medir cuándo se renuevan y por cuánto tiempo (Mercado Público), que es donde el alcalde decide.
+
+Ya resuelto de sus notas: el conteo por código en vez de la marca `NUEVO` (que él sugería y que sobrecontaba), las 267 iniciativas sin comuna (asignadas por nombre del municipio), las mantenciones IADM93–95, qué cuenta como mantener (SINIM, con conservación aparte) y la referencia de Corvalán, Cox y Osorio.
+
 ## Estado (actualizado el 6 de noviembre)
 
 **Bloque B, BIP histórico: verificado.** La foto de octubre de 2026 (`cache/bip_historico/inversiones_202610.rdata`, 330 MB, objeto `base_bip`: 521.043 filas × 86 columnas) cubre los **años presupuestarios 1997–2027**, con entre 5.000 y 10.500 filas de responsable municipal por año. Abarca **siete elecciones municipales** (2000, 2004, 2008, 2012, 2016, 2021 y 2024), no dos. Precisiones:
