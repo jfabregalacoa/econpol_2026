@@ -13,3 +13,9 @@ fuentes/servel/
 
 # Archivos temporales de Office (se crean mientras un documento está abierto).
 ~$*
+
+# Archivos auxiliares de Quarto y LaTeX (el informe.pdf sí se sube).
+informe/.quarto/
+informe/*_files/
+informe/*.tex
+informe/*.log
