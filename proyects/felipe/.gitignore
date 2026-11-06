@@ -8,7 +8,7 @@ local/
 # Descargas grandes y archivos descomprimidos; los scripts los regeneran.
 cache/
 
-# Archivos originales del Servel (140 MB). Se descargan desde servel.cl; ver plan-base-datos.md.
+# Archivos originales del Servel (140 MB). Se descargan desde servel.cl; ver plan-trabajo.md.
 fuentes/servel/
 
 # Archivos temporales de Office (se crean mientras un documento está abierto).
