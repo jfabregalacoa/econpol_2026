@@ -240,27 +240,27 @@ Las anclas son las mismas en todos: Aróstica (derecha) y García Pino (izquierd
 | Estimación | Diagnóstico | Resultado |
 |---|---|---|
 | MCMCpack, base del paper (2 cadenas de 20.000 iteraciones) | Geweke: % de parámetros con \|z\| > 1,96 (se espera ~5 %); R-hat | Geweke 4 % y 9 %; R-hat máximo 1,03, ninguno sobre 1,1: **convergió** |
-| MCMCpack, base nueva, anclas solo con signo (2 cadenas de 15.000 iteraciones; corrida anterior a la corrección de fechas) | R-hat de Gelman-Rubin; Geweke | R-hat > 1,1 en 24 % (máximo 5,9); Geweke 32 %: **no convergió** |
+| MCMCpack, base nueva, anclas solo con signo (2 cadenas de 15.000 iteraciones) | R-hat de Gelman-Rubin; Geweke | R-hat > 1,1 en 32 % (máximo 5,5); Geweke 35 % y 29 %: **no convergió** |
 | MCMCpack, base nueva, **anclas fijas en ±1** (2 cadenas de 15.000 iteraciones, ~14 h) | R-hat; Geweke | R-hat > 1,1 en 7 % (máximo 1,42): **0 % en 2006–2014 y 2 % en 2015–2022**; Geweke 12 % y 20 %: **converge desde 2006**; antes de 2006 y desde 2023, con reservas |
 | idealstan, 5 estimaciones (2 cadenas cada una) | Divergencias; R-hat máximo (se espera < 1,1) | 0 divergencias (2 en una); R-hat máximo entre 1,02 y 1,06, salvo la base nueva con covariable (1,13, pero solo el 0,1 % de los parámetros sobre 1,1): **convergió** |
 
-**Por qué MCMCpack no convergía en la base nueva con las anclas habituales.** Martin y Quinn fija el sentido de la escala con dos anclas de signo conocido: Aróstica positivo y García Pino negativo. Eso fija el signo, pero no la distancia. Con esa versión, las dos cadenas ordenaban a los ministros casi igual y ninguna mostraba un salto de dispersión en 2005, pero **el tamaño de la escala no se estabilizaba**: García Pino, por ejemplo, quedaba en −7 en una cadena y en −5 en la otra.
+**Por qué MCMCpack no convergía en la base nueva con las anclas habituales.** Martin y Quinn fija el sentido de la escala con dos anclas de signo conocido: Aróstica positivo y García Pino negativo. Eso fija el signo, pero no la distancia. Con esa versión, las dos cadenas ordenaban a los ministros casi igual (correlación de 0,94 entre ellas), pero **el tamaño de la escala no se estabilizaba**: García Pino, por ejemplo, quedaba en −3,6 en una cadena y en −6,1 en la otra.
 
-`modelo/diagnosticar_mcmcpack.R` muestra por qué: **las cadenas seguían moviéndose al final**. En ambas, la dispersión de 2015–2022 bajaba sin parar (correlación de −0,84 y −0,78 con el número de iteración). Si todos los ministros se alejan y los fallos "discriminan" menos, los votos se explican casi igual, así que el muestreador recorre esa dirección. Con miles de fallos por año, lo hace a pasos diminutos y harían falta muchas más iteraciones. La base del paper, con muchos menos fallos, no tiene ese problema.
+`modelo/diagnosticar_mcmcpack.R` muestra por qué: **las cadenas seguían moviéndose al final**. En una cadena, la dispersión de 2015–2022 bajaba sin parar (correlación de −0,91 con el número de iteración). En la otra no tenía tendencia (0,19), pero terminó en otro nivel: 2,4, frente a 1,7 en la primera. Si todos los ministros se alejan y los fallos "discriminan" menos, los votos se explican casi igual, así que el muestreador recorre esa dirección. Con miles de fallos por año, lo hace a pasos diminutos y harían falta muchas más iteraciones. La base del paper, con muchos menos fallos, no tiene ese problema.
 
 ![Diagnóstico de MCMCpack, anclas solo con signo](figuras/diag_mcmcpack_nueva.png)
 
-**Diagnóstico de MCMCpack, base nueva, anclas solo con signo.** Cada color es una cadena. Las cadenas no se juntan y siguen con tendencia al terminar. (Corrida hecha antes de corregir las fechas de la sección 7.1; se está repitiendo con la base corregida.)
+**Diagnóstico de MCMCpack, base nueva, anclas solo con signo.** Cada color es una cadena. Las cadenas no se juntan y al menos una sigue con tendencia al terminar.
 
 **La solución: anclas fijas.** Si el problema es que la escala no tiene un tamaño fijo, hay que fijar las anclas en valores exactos: Aróstica = +1 y García Pino = −1 (`estimar_ideologia_bayes.R nueva 5000 10000 10 <cadena> fijas`). Así se fija la unidad de medida, como hace idealstan con sus anclas en ±2. Con el mismo número de iteraciones que la versión anterior:
 
 | % de parámetros con R-hat > 1,1 | 1990–2005 | 2006–2014 | 2015–2022 | 2023–2026 | R-hat máximo |
 |---|---|---|---|---|---|
-| Anclas solo con signo (antes de corregir fechas) | 24 | 29 | 24 | 14 | 5,9 (García Pino) |
+| Anclas solo con signo | 54 | 33 | 26 | 2 | 5,5 (García Pino) |
 | **Anclas fijas** | 16 | **0** | **2** | 12 | 1,42 (Silva Gallinato) |
 
 - **La escala dejó de estirarse.** La dispersión de 2015–2022 ya no tiene tendencia (correlación con la iteración de 0,04 y −0,24), y las cadenas casi no cambian entre la primera y la segunda mitad (cambio medio de 0,05 y 0,09).
-- **Lo que falta converger está en los años sin anclas.** Aróstica y García Pino votan entre 2010–2011 y 2022. Antes de 2006 y desde 2023, la escala se conecta solo a través de los ministros que cruzan de una época a otra. Antes de 2006, además, hay pocos fallos con disidencia (58). Los ministros que peor convergen son de esos años (Silva Gallinato, García Rodríguez, Aburto, Faúndez). Por eso esos períodos se leen con reservas, y por eso la base del paper sigue siendo la principal antes de 2006.
+- **Lo que falta converger está en los años sin anclas.** Aróstica y García Pino votan entre 2010–2011 y 2022. Antes de 2006 y desde 2023, la escala se conecta solo a través de los ministros que cruzan de una época a otra. Antes de 2006, además, hay pocos fallos con disidencia (58). Los ministros que peor convergen son de esos años (Silva Gallinato, García Rodríguez, Aburto, Faúndez). Por eso esos períodos se leen con reservas, y por eso la base del paper sigue siendo la principal antes de 2006. En 2023–2026, la versión con anclas solo con signo tiene menos parámetros sin converger (2 % frente a 12 %), pero no sirve de comparación, porque el tamaño de su escala no está fijo.
 
 ![Diagnóstico de MCMCpack, anclas fijas](figuras/diag_mcmcpack_nueva_fijas.png)
 
