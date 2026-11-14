@@ -19,9 +19,9 @@ Cada parte del modelo se presenta en tres pasos:
 > **Resultado principal.**
 >
 > - **La réplica funciona: no hay error en nuestros datos ni en nuestro código.** Con los datos y el método del paper (idealstan, un IRT dinámico bayesiano) se reproducen sus resultados: la validación (0,57 contra 0,56), el aumento de la dispersión después de 2005 y sus Tablas 2 y 3, con los mismos signos y la misma significancia (sección 7.4).
-> - **Un resultado del paper se sostiene con cualquier método:** los nombrados por el Ejecutivo quedan más lejos del mediano que el resto (su Tabla 3), aunque con significancia débil (p ≈ 0,08 con Martin y Quinn). Lo que el paper no prueba es que eso ocurra **solo después de la reforma**: su tabla no incluye esa interacción, y al estimarla no es significativa con ningún método.
-> - **El salto de la dispersión en 2005 depende del estimador.** Con **los mismos datos**, los dos estimadores de Martin y Quinn (emIRT y MCMCpack) no encuentran aumento: la dispersión después de 2005 es igual o menor que antes. Año por año, los tres métodos ordenan a los ministros casi igual (correlación de 0,9 a 0,99). Lo que cambia es cómo conectan la "regla" de medir entre épocas. Antes de 2006, idealstan **da vuelta** la orientación y usa una **unidad de menos de la mitad del tamaño** que después: una unidad de Martin y Quinn equivale a unas 2,5 de idealstan antes de la reforma y a unas 6 después. Ese cambio de regla, justo en 2005, basta para duplicar la dispersión.
-> - **Ninguna de las demás predicciones encuentra apoyo robusto.** La prueba de diferencias en diferencias del paper (P1) no es significativa con ningún método ni base, una vez que se considera que las posiciones están estimadas con error. El efecto de horizonte (el mecanismo reputacional) desaparece al agrupar las series repetidas. Los académicos no son más activistas, como sostienen Pardow y Verdugo.
+> - **El salto de la dispersión en 2005 depende del estimador.** Con **los mismos datos**, los dos estimadores de Martin y Quinn (emIRT y MCMCpack) no encuentran aumento en ninguna de las dos bases: la dispersión después de 2005 es igual o menor que antes. Año por año, los tres métodos ordenan a los ministros casi igual (correlación de 0,7 a 0,98). Lo que cambia es cómo conectan la "regla" de medir entre épocas. Antes de 2006, idealstan **da vuelta** la orientación y usa una **unidad de menos de la mitad del tamaño** que después: una unidad de Martin y Quinn equivale a unas 2,5 de idealstan antes de la reforma y a unas 5,5 justo después. Ese cambio de regla, justo en 2005, basta para duplicar la dispersión. Su Tabla 2 (la subida concentrada en los nombrados por políticos) sigue el mismo patrón: positiva con idealstan y negativa con Martin y Quinn, en las dos bases.
+> - **Un resultado del paper se sostiene solo en parte:** los nombrados por el Ejecutivo quedan más lejos del mediano que el resto (su Tabla 3). En la base del paper se cumple con cualquier método, con significancia débil con Martin y Quinn (p ≈ 0,08). En la base nueva el signo se repite con Martin y Quinn (p = 0,12), pero no con idealstan. Lo que el paper no prueba es que eso ocurra **solo después de la reforma**: su tabla no incluye esa interacción, y al estimarla no es significativa con ningún método ni base.
+> - **Ninguna de las demás predicciones encuentra apoyo robusto.** La prueba de diferencias en diferencias del paper (P1) no es significativa con ningún método ni base, una vez que se considera que las posiciones están estimadas con error. El efecto de horizonte (el mecanismo reputacional) no aparece con los datos actuales, se agrupen o no las series repetidas. Los académicos no son más activistas, como sostienen Pardow y Verdugo.
 > - **Antes de 2006 los datos no alcanzan para ubicar a los ministros en el eje izquierda-derecha.** Hay pocos fallos con disidencia, y en ningún método la escala de esos años se relaciona con el lado político de quien nombró al ministro. Por eso la comparación antes y después de la reforma depende tanto del método.
 
 ---
@@ -162,19 +162,20 @@ La selección se fija el día del nombramiento; la reputación cambia con el hor
 | Prueba | Pregunta | Predicción | Resultado |
 |---|---|---|---|
 | Hecho 1 | ¿La dispersión salta después de 2005? | Sí (Proposición 1) | **Depende del estimador.** Sí con idealstan (el método del paper); no con Martin y Quinn, con los mismos datos |
+| Tabla 3 del paper | ¿Los nombrados por el Presidente quedan más lejos del mediano que el resto? | Sí (Proposición 2: $\delta_{Presidente} \ge \delta_{Congreso} \ge \delta_{CS}$) | **En parte.** Signo positivo en 3 de 4 combinaciones de base y método; significativo solo en la base del paper |
 | **P1** | ¿Los nombrados por políticos quedan más lejos del mediano después de 2005? | Sí (selección) | **No significativo** con ningún método ni base; el signo cambia según el método |
 | **P2** | ¿Los nombrados por políticos disienten más después de 2005? | Sí | **Cambia de signo según la base**; no significativo |
 | **P3** | ¿Pesa más quién nombró o la carrera del ministro? | Quién nombró (paper) o la carrera (Pardow y Verdugo) | **Depende de la base.** Los académicos no son más activos, como afirman Pardow y Verdugo |
-| **P4** | ¿Los nombrados por políticos se alejan del mediano al final del mandato? | Sí (reputación) | **No**, una vez agrupadas las series, con emIRT y con MCMCpack |
+| **P4** | ¿Los nombrados por políticos se alejan del mediano al final del mandato? | Sí (reputación) | **No**, con emIRT y con MCMCpack, se agrupen o no las series |
 | — | ¿Los paquetes del Congreso producen nombrados más extremos? | Sí | No se puede probar: casi todos fueron en paquete |
 
 ---
 
 ## 7. Pruebas con datos reales
 
-Los coeficientes quedan en `modelo/resultados/` y las figuras en `modelo/figuras/`. La sección 9 lista los scripts y el orden en que se corren.
+Los coeficientes quedan en `modelo/resultados/` y las figuras en `modelo/figuras/`. La sección 10 lista los scripts y el orden en que se corren.
 
-### 7.1 Los datos: se mejoró la lectura de disidencias antiguas
+### 7.1 Los datos: disidencias antiguas y fechas imposibles
 
 El script 2 (`codigo/2_descargar_sitio_antiguo.R`) no reconocía varias fórmulas de disidencia de los PDF de 1981–2007:
 
@@ -194,6 +195,10 @@ Además exigía los dos apellidos, y en los años noventa las sentencias nombran
 
 La versión nueva también encuentra 42 disidencias que la base del paper no tiene. En una muestra revisada a mano, casi todas están efectivamente en el texto de la sentencia. Las diferencias que quedan vienen sobre todo de **disidencias parciales**, que cada base codifica distinto; se cuentan como disidencia (`DISIDENCIAS_PARCIALES <- TRUE`). El acuerdo general con la base del paper queda en 79,6 % (kappa 0,513).
 
+**Fechas imposibles.** El buscador del TC fecha mal algunos fallos. El rol se asigna al ingresar la causa y crece cada año, y un fallo no puede dictarse antes de ingresar. Sin embargo, el rol 15308 (de alrededor de 2024) aparece dictado en 2011, el 2690 (de alrededor de 2014) en 2007 y el 13081 (de alrededor de 2022) en 2018. Con esas fechas, el IRT dinámico ponía a ministros en años en que no estaban en el Tribunal: por ejemplo, ocho ministros de 2024 votando en 2011, y a las anclas (Aróstica y García Pino) votando en 2007.
+
+El script 3 descarta ahora los fallos cuyo rol supera el doble del rol alto de su año (percentil 95) más 200, y los lista en pantalla. Son esos 3 fallos y 24 votos. La base queda en 61.447 votos y 7.285 fallos, el acuerdo con la base del paper no cambia, y **todas las estimaciones de la base nueva de este documento se rehicieron con la base corregida**.
+
 ### 7.2 Las inaplicabilidades en serie se agrupan
 
 Entre 2015 y 2020 el TC falló miles de requerimientos casi idénticos: misma norma impugnada, mismo año, misma votación. Cada uno no dice nada nuevo sobre quién piensa qué, pero pesaría como un caso distinto. El paper no los agrupa, pero llega solo hasta 2016 y casi no los tiene.
@@ -202,8 +207,8 @@ Entre 2015 y 2020 el TC falló miles de requerimientos casi idénticos: misma no
 
 | Fallos con disidencia, base nueva | 1990–2005 | 2006–2014 | 2015–2022 | 2023–2026 |
 |---|---|---|---|---|
-| Sin agrupar | 58 | 322 | **4.789** | 634 |
-| Agrupados | 58 | 255 | **2.362** | 514 |
+| Sin agrupar | 58 | 320 | **4.789** | 634 |
+| Agrupados | 58 | 253 | **2.362** | 514 |
 
 La serie más grande tenía 118 fallos idénticos.
 
@@ -222,9 +227,9 @@ Es la ecuación de voto de la sección 4 (con $\beta_j\theta_i + \alpha_j$ en lu
 | Qué es | Martin y Quinn, aproximación variacional (Imai, Lo y Olmsted 2016) | Martin y Quinn por MCMC (muestreo de Gibbs) | IRT dinámico por MCMC con Stan (Kubinec); **el método del paper** |
 | Entrega | Una posición por ministro-año | Miles de posiciones posibles por ministro-año (la incertidumbre) | Igual que MCMCpack |
 | Varianza del paseo aleatorio | Fija: $\omega^2 = 0{,}1$, la de Martin y Quinn | Fija: 0,1, igual que emIRT | **Se estima libremente para cada ministro** |
-| Cómo se fija la escala | Previa de las posiciones ($N(0,1)$) y dos anclas que dan el sentido | Igual | Dos anclas **fijadas en ±2** y nada más |
+| Cómo se fija la escala | Previa de las posiciones ($N(0,1)$) y dos anclas que dan el sentido | Igual en la base del paper; en la base nueva, además, anclas **fijadas en ±1** (ver "Convergencia") | Dos anclas **fijadas en ±2** y nada más |
 | Covariable "quién lo nombró" | No permite | No permite | Permite (el paper la usa) |
-| Tiempo, base nueva | ~1 min | ~12 h por cadena | ~3,5 h |
+| Tiempo, base nueva | ~1 min | ~12 a 14 h por cadena | ~3,5 h |
 
 Las anclas son las mismas en todos: Aróstica (derecha) y García Pino (izquierda), presentes en ambas bases. Se estima por **años**: un mes tiene muy pocos fallos con disidencia.
 
@@ -235,33 +240,35 @@ Las anclas son las mismas en todos: Aróstica (derecha) y García Pino (izquierd
 | Estimación | Diagnóstico | Resultado |
 |---|---|---|
 | MCMCpack, base del paper (2 cadenas de 20.000 iteraciones) | Geweke: % de parámetros con \|z\| > 1,96 (se espera ~5 %); R-hat | Geweke 4 % y 9 %; R-hat máximo 1,03, ninguno sobre 1,1: **convergió** |
-| MCMCpack, base nueva, intento de 3.000 iteraciones | Geweke | 49 %: **no convergió**; se descartó |
-| MCMCpack, base nueva (2 cadenas, 15.000 iteraciones, ~12 h) | R-hat de Gelman-Rubin; Geweke | R-hat > 1,1 en 24 % (máximo 5,9); Geweke 32 %: **no convergió** |
-| MCMCpack, base nueva, anclas fijas (prueba: 2 cadenas de 3.000 iteraciones, ~2,5 h) | R-hat; Geweke | R-hat > 1,1 en 25 % (máximo 2,5), pero solo 10–11 % entre 2006 y 2022; Geweke 28 %: **mejora, aún no converge** |
-| idealstan, 5 estimaciones (2 cadenas cada una) | Divergencias; R-hat máximo (se espera < 1,1) | 0 divergencias (2 en una); R-hat máximo entre 1,02 y 1,06: **convergió** |
+| MCMCpack, base nueva, anclas solo con signo (2 cadenas de 15.000 iteraciones; corrida anterior a la corrección de fechas) | R-hat de Gelman-Rubin; Geweke | R-hat > 1,1 en 24 % (máximo 5,9); Geweke 32 %: **no convergió** |
+| MCMCpack, base nueva, **anclas fijas en ±1** (2 cadenas de 15.000 iteraciones, ~14 h) | R-hat; Geweke | R-hat > 1,1 en 7 % (máximo 1,42): **0 % en 2006–2014 y 2 % en 2015–2022**; Geweke 12 % y 20 %: **converge desde 2006**; antes de 2006 y desde 2023, con reservas |
+| idealstan, 5 estimaciones (2 cadenas cada una) | Divergencias; R-hat máximo (se espera < 1,1) | 0 divergencias (2 en una); R-hat máximo entre 1,02 y 1,06, salvo la base nueva con covariable (1,13, pero solo el 0,1 % de los parámetros sobre 1,1): **convergió** |
 
-**Por qué no converge MCMCpack en la base nueva.** Las dos cadenas ordenan a los ministros casi igual (correlación entre sus medias de 0,86 antes de 2006 y de 0,92 a 0,99 después) y ninguna muestra un salto de dispersión en 2005 (cadena 1: 1,03 → 1,12; cadena 2: 0,97 → 0,94). Lo que no se estabiliza es **el tamaño de la escala**: García Pino, por ejemplo, queda en −7 en una cadena y en −5 en la otra.
+**Por qué MCMCpack no convergía en la base nueva con las anclas habituales.** Martin y Quinn fija el sentido de la escala con dos anclas de signo conocido: Aróstica positivo y García Pino negativo. Eso fija el signo, pero no la distancia. Con esa versión, las dos cadenas ordenaban a los ministros casi igual y ninguna mostraba un salto de dispersión en 2005, pero **el tamaño de la escala no se estabilizaba**: García Pino, por ejemplo, quedaba en −7 en una cadena y en −5 en la otra.
 
-`modelo/diagnosticar_mcmcpack.R` muestra por qué. **Las cadenas seguían moviéndose al final:** en ambas, la dispersión de 2015–2022 bajaba sin parar (correlación de −0,84 y −0,78 con el número de iteración). Las anclas solo fijan el signo (Aróstica positivo, García Pino negativo), no la distancia. Si todos los ministros se alejan y los fallos "discriminan" menos, los votos se explican casi igual, y el muestreador recorre esa dirección a pasos muy chicos. Con miles de fallos por año, cada paso es diminuto: harían falta muchas más iteraciones.
+`modelo/diagnosticar_mcmcpack.R` muestra por qué: **las cadenas seguían moviéndose al final**. En ambas, la dispersión de 2015–2022 bajaba sin parar (correlación de −0,84 y −0,78 con el número de iteración). Si todos los ministros se alejan y los fallos "discriminan" menos, los votos se explican casi igual, así que el muestreador recorre esa dirección. Con miles de fallos por año, lo hace a pasos diminutos y harían falta muchas más iteraciones. La base del paper, con muchos menos fallos, no tiene ese problema.
 
-![Diagnóstico de MCMCpack](figuras/diag_mcmcpack_nueva.png)
+![Diagnóstico de MCMCpack, anclas solo con signo](figuras/diag_mcmcpack_nueva.png)
 
-**Diagnóstico de MCMCpack, base nueva.** Cada color es una cadena. Las cadenas no se juntan y siguen con tendencia al terminar.
+**Diagnóstico de MCMCpack, base nueva, anclas solo con signo.** Cada color es una cadena. Las cadenas no se juntan y siguen con tendencia al terminar. (Corrida hecha antes de corregir las fechas de la sección 7.1; se está repitiendo con la base corregida.)
 
-**Prueba con anclas fijas.** Si el problema es que la escala no tiene un tamaño fijo, la solución es fijar las anclas en valores exactos (Aróstica = +1, García Pino = −1): `estimar_ideologia_bayes.R nueva 1000 2000 2 <cadena> fijas`. Una prueba corta (3.000 iteraciones por cadena, cinco veces menos que la corrida anterior) confirma el diagnóstico:
+**La solución: anclas fijas.** Si el problema es que la escala no tiene un tamaño fijo, hay que fijar las anclas en valores exactos: Aróstica = +1 y García Pino = −1 (`estimar_ideologia_bayes.R nueva 5000 10000 10 <cadena> fijas`). Así se fija la unidad de medida, como hace idealstan con sus anclas en ±2. Con el mismo número de iteraciones que la versión anterior:
 
 | % de parámetros con R-hat > 1,1 | 1990–2005 | 2006–2014 | 2015–2022 | 2023–2026 | R-hat máximo |
 |---|---|---|---|---|---|
-| Anclas con signo (15.000 iteraciones) | 24 | 29 | 24 | 14 | 5,9 (García Pino) |
-| Anclas fijas (3.000 iteraciones) | 49 | **10** | **11** | 29 | 2,5 (García Rodríguez) |
+| Anclas solo con signo (antes de corregir fechas) | 24 | 29 | 24 | 14 | 5,9 (García Pino) |
+| **Anclas fijas** | 16 | **0** | **2** | 12 | 1,42 (Silva Gallinato) |
 
-- **La escala dejó de estirarse.** La dispersión de 2015–2022 queda en 0,90, con un intervalo angosto (0,84 a 0,96), y las cadenas ya casi no cambian entre la primera y la segunda mitad.
-- **Lo que falta converger está en los años sin anclas.** Aróstica y García Pino solo están en el tribunal entre 2007 y 2022. Antes de 2006 y después de 2022, la escala se conecta solo a través de los ministros que cruzan de una época a otra, y en la base nueva hay pocos fallos con disidencia antes de 2006 (58). Por eso esos años son los que menos convergen, y por eso la base del paper sigue siendo la principal antes de 2006.
-- **La conclusión sustantiva no cambia.** Con las anclas fijas tampoco hay salto en 2005: la dispersión pasa de 1,00 a 0,91 (diferencia −0,08; probabilidad de que suba, 0,30).
+- **La escala dejó de estirarse.** La dispersión de 2015–2022 ya no tiene tendencia (correlación con la iteración de 0,04 y −0,24), y las cadenas casi no cambian entre la primera y la segunda mitad (cambio medio de 0,05 y 0,09).
+- **Lo que falta converger está en los años sin anclas.** Aróstica y García Pino votan entre 2010–2011 y 2022. Antes de 2006 y desde 2023, la escala se conecta solo a través de los ministros que cruzan de una época a otra. Antes de 2006, además, hay pocos fallos con disidencia (58). Los ministros que peor convergen son de esos años (Silva Gallinato, García Rodríguez, Aburto, Faúndez). Por eso esos períodos se leen con reservas, y por eso la base del paper sigue siendo la principal antes de 2006.
 
-Mientras no esté la corrida larga con anclas fijas (15.000 iteraciones, ~12 h), los resultados de MCMCpack en la base nueva se reportan como **indicativos**.
+![Diagnóstico de MCMCpack, anclas fijas](figuras/diag_mcmcpack_nueva_fijas.png)
 
-En idealstan, el tamaño efectivo de muestra mínimo es bajo en algunos parámetros (32 a 305), suficiente para medianas y desviaciones estándar por año, pero más iteraciones darían intervalos más precisos.
+**Diagnóstico de MCMCpack, base nueva, anclas fijas.** Cada color es una cadena. Los tres primeros paneles son los parámetros que peor convergen (Silva Gallinato, 2023–2025): las cadenas se separan en un tramo, pero vuelven a juntarse. El último panel muestra que la dispersión de 2015–2022 ya no tiene tendencia.
+
+**Desde aquí, "MCMCpack en la base nueva" es la versión con anclas fijas.** En la base del paper se mantiene la versión con anclas solo con signo, que convergió.
+
+En idealstan, el tamaño efectivo de muestra mínimo es bajo en algunos parámetros (14 a 305), suficiente para medianas y desviaciones estándar por año, pero más iteraciones darían intervalos más precisos.
 
 **W-NOMINATE** (el método del laboratorio del capítulo 4) se intentó como comparación, y con estos datos da resultados internamente inconsistentes: clasifica más votos de los que cada ministro emitió. Con el ejemplo del propio paquete funciona bien. La razón probable es que W-NOMINATE supone un parlamento donde todos votan en el mismo período, y en el TC los ministros se reemplazan a lo largo de décadas. No se usa.
 
@@ -306,7 +313,7 @@ Para ver si los resultados dependen del estimador, las mismas Tablas 2 y 3 se ca
 | **Tabla 3**, M5: Ejecutivo | +0,384** | +2,16** | **+0,54*** (p = 0,07) |
 | **Tabla 3**, Legislativo | +0,048 | +0,39 | −0,01 |
 
-**Qué se sostiene con cualquier método:**
+**Qué se sostiene con cualquier método, en la base del paper:**
 
 - **Los nombrados por el Ejecutivo quedan más lejos del mediano que el resto** (Tabla 3). El signo se repite en todos los métodos. Con Martin y Quinn el tamaño es incluso parecido al del paper (0,44 contra 0,37), aunque la significancia es más débil (p ≈ 0,08).
 - **Los nombrados por el Legislativo no se distinguen** del resto, como dice el paper.
@@ -318,7 +325,29 @@ Para ver si los resultados dependen del estimador, las mismas Tablas 2 y 3 se ca
 
 **Por qué la Tabla 2 cambia de signo.** En todos los métodos, los nombrados por políticos están más dispersos que el resto, antes y después de la reforma (por eso la Tabla 3 se sostiene). Si un método agranda toda la escala después de 2005 por un factor $k > 1$, la brecha entre los grupos crece sola: la interacción de la Tabla 2 vale $(k-1)(\text{sd}_{\text{políticos}} - \text{sd}_{\text{resto}}) > 0$, aunque el tribunal no haya cambiado. idealstan agranda su escala en 2005 (×1,5 con estos datos; sección 7.6) y Martin y Quinn no. **La Tabla 2 positiva es exactamente lo que produciría un cambio de escala**, así que no permite distinguir polarización real de un efecto del estimador.
 
-#### Paso 3. Lo que el paper no prueba
+#### Paso 3. La base nueva: el patrón entre métodos se repite
+
+Las mismas Tablas 2 y 3 con la **base nueva** (fuentes oficiales; fallos con disidencia, series agrupadas, 1990–2016 como el paper). Martin y Quinn es MCMCpack con anclas fijas, que convergió desde 2006 (sección 7.3).
+
+| | Paper | idealstan, con covariable | idealstan, sin covariable | Martin y Quinn (MCMCpack) |
+|---|---|---|---|---|
+| Validación (correlación con el lado político) | 0,56 | 0,46 | 0,47 | 0,42 |
+| Dispersión, 2006–2016 menos 1990–2005 | sube | +4,6: **sube** | +4,7: **sube** | −0,12: **no sube** |
+| **Tabla 2**, Ejecutivo + Legislativo | +0,478*** | +3,19*** | +3,96*** | −0,11 (p = 0,52) |
+| **Tabla 2**, solo Ejecutivo | +0,530** | +0,47 (p = 0,71) | +1,37 (p = 0,31) | **−0,64*** ** |
+| **Tabla 3**, M1: nombrado por político | +0,308* | +1,99 (p = 0,21) | +1,79 (p = 0,27) | +0,26 (p = 0,26) |
+| **Tabla 3**, M4: Ejecutivo | +0,369** | +0,32 (p = 0,85) | −0,04 (p = 0,98) | +0,40 (p = 0,12) |
+| **Tabla 3**, M5: Ejecutivo | +0,384** | +0,59 (p = 0,74) | +0,24 (p = 0,90) | +0,45 (p = 0,12) |
+| **Tabla 3**, Legislativo | +0,048 | +2,34 (p = 0,18) | +2,43 (p = 0,17) | −0,07 (p = 0,78) |
+
+Errores estándar clásicos, como el paper. La Tabla 3 tiene 31 ministros (el paper, 36).
+
+- **La Tabla 2 se repite tal cual:** positiva y significativa con idealstan, negativa con Martin y Quinn. Es el mismo patrón de la base del paper, así que la explicación por el cambio de escala vale también aquí. Con la incertidumbre de las posiciones (Rubin), la Tabla 2 de idealstan baja a p = 0,085 con covariable y p = 0,065 sin ella.
+- **La Tabla 3 no se repite.** Con Martin y Quinn, los nombrados por el Ejecutivo vuelven a quedar más lejos del mediano, con un tamaño casi igual al de la base del paper (+0,40 contra +0,44), pero sin significancia (p = 0,12). Con idealstan el efecto del Ejecutivo desaparece (+0,32 y −0,04), y los que quedan más lejos son los nombrados por el Legislativo (+2,3; p = 0,17), lo contrario de lo que dice el paper.
+
+**Conclusión del paso 3:** lo que depende del método en la base del paper (el salto de 2005 y la Tabla 2) sigue dependiendo del método en la base nueva. Lo que parecía robusto en la base del paper (el Ejecutivo más lejos, Tabla 3) tiene el signo del paper en tres de las cuatro combinaciones de base y método, pero solo es significativo en la base del paper.
+
+#### Paso 4. Lo que el paper no prueba
 
 - **"Solo después de la reforma."** El texto del paper concluye que los nombrados por el Ejecutivo están más lejos del mediano "but only after the reform". Pero la Tabla 3 publicada **no incluye la interacción** Ejecutivo × reforma que permitiría afirmarlo: sus modelos 4 y 5 suman el efecto del Ejecutivo y el de la reforma por separado. La ecuación 4 del texto sí incluye esa interacción ($d\,R{\cdot}D$). Cuando se estima, **no es significativa con ningún método ni base** (sección 7.7; en la réplica fiel, +2,66 con p = 0,087 y, con la incertidumbre de las posiciones, p = 0,34).
 - **Errores estándar demasiado chicos en la Tabla 2.** Sus 54 observaciones son 27 años × 2 grupos, pero los mismos ministros aparecen en muchos años seguidos, así que las observaciones no son independientes. Además, las posiciones son estimaciones, no datos exactos. Al sumar esa incertidumbre (reglas de Rubin), el efecto de la Tabla 2 pasa de p < 0,001 a p = 0,04 en la réplica, y en la versión con los mismos datos que Martin y Quinn deja de ser significativo (p = 0,40).
@@ -330,13 +359,13 @@ Sí, en tres puntos concretos, y conviene decirlos:
 
 1. **Detalles que el paper no especifica.** El texto no dice qué unidad de tiempo usa (años, semestres, períodos de mandato), qué proceso sigue la ideología en el tiempo (paseo aleatorio u otro), cómo fija la escala (qué anclas o restricciones) ni cómo entra exactamente la covariable. Nuestras elecciones (años, paseo aleatorio, anclas Aróstica y García Pino) reproducen sus resultados, pero **la escala del paper es unas 5 veces más angosta que la nuestra**, señal de que su identificación fue distinta. Justamente la identificación de la escala es lo que separa a idealstan de Martin y Quinn (sección 7.6).
 2. **Martin y Quinn también supone cosas.** Su paseo aleatorio con varianza fija (0,1) podría estar suavizando un cambio real después de 2005. No hay forma de saber, con estos datos, cuál de los dos estimadores conecta mejor las épocas.
-3. **Nuestra base nueva** difiere de la del paper (kappa 0,51), pero **no explica las diferencias**: todo lo de esta sección usa la base del paper.
+3. **Nuestra base nueva** difiere de la del paper (kappa 0,51), pero **no explica las diferencias entre métodos**: los pasos 1, 2 y 4 usan la base del paper, y en el paso 3 el mismo contraste entre métodos aparece con la base nueva. Lo que sí cambia con la base es la Tabla 3.
 
 **Cómo resolverlo:** pedir a los autores el código original de la estimación con idealstan. Con él se sabría si su identificación de la escala es distinta de la nuestra y si, con ella, el salto de 2005 se mantiene con Martin y Quinn.
 
 ### 7.5 Hecho 1: ¿la dispersión salta en 2005? Tres métodos, dos bases
 
-La dispersión de un año es la desviación estándar de las posiciones (medianas posteriores) de los ministros que votaron ese año; se promedia por período. **Las unidades de cada método son distintas** (idealstan fija las anclas en ±2 y estira; Martin y Quinn usa una escala cercana a la normal estándar), así que lo comparable es **cuánto cambia** cada método de un período a otro, no el nivel.
+La dispersión de un año es la desviación estándar de las posiciones (medianas posteriores) de los ministros que votaron ese año; se promedia por período. **Las unidades de cada método son distintas** (idealstan fija las anclas en ±2; Martin y Quinn usa una escala cercana a la normal estándar, y en MCMCpack de la base nueva, anclas en ±1), así que lo comparable es **cuánto cambia** cada método de un período a otro, no el nivel.
 
 | Dispersión media (mismos datos) | 1990–2005 | 2006–2014 | 2015–2022 | 2023–2026 | Después / antes de 2005 |
 |---|---|---|---|---|---|
@@ -345,16 +374,18 @@ La dispersión de un año es la desviación estándar de las posiciones (mediana
 | MCMCpack (2 cadenas) | 1,02 | 0,88 | 1,04 (2015–16) | — | **×0,86** |
 | idealstan | 2,8 | 5,1 | 5,3 (2015–16) | — | **×1,8** |
 | **Base nueva** | | | | | |
-| emIRT | 1,05 | 0,78 | 1,15 | 1,06 | **×0,74** |
-| MCMCpack (no convergió; ver 7.3) | 1,00 | 1,03 | 2,04 | 1,73 | **×1,03** |
-| idealstan | 2,2 | 6,9 | 13,3 | 10,7 | **×3,1** |
+| emIRT | 1,06 | 0,75 | 1,10 | 1,08 | **×0,71** |
+| MCMCpack (anclas fijas, 2 cadenas) | 0,87 | 0,86 | 0,87 | 1,47 | **×0,99** |
+| idealstan | 2,3 | 6,9 | 13,3 | 10,7 | **×3,0** |
 
-En la fila de MCMCpack de la base nueva, la dispersión se calcula en cada muestra de la posterior y luego se promedia (`probar_bayes.R`), porque las dos cadenas no coinciden en los extremos y promediar primero las posiciones las achicaría artificialmente.
+Con MCMCpack se puede calcular la dispersión en cada muestra de la posterior y obtener un intervalo (`probar_bayes.R`). La diferencia 2006–2014 menos 1990–2005 es:
 
-Con MCMCpack, la diferencia 2006–2014 menos 1990–2005 es:
+- base del paper: −0,17, intervalo de 95 % [−0,57; 0,20], probabilidad de que la dispersión haya subido 0,19;
+- base nueva: −0,10, intervalo [−0,39; 0,15], probabilidad 0,23.
 
-- base del paper: −0,14, intervalo de 95 % [−0,52; 0,21], probabilidad de que la dispersión haya subido 0,24;
-- base nueva: +0,03, intervalo [−0,36; 0,43], probabilidad 0,56.
+Calculada así, la dispersión de MCMCpack en la base nueva antes de 2006 es algo mayor (1,00) que con las medias posteriores de la tabla (0,87), porque esos años tienen más incertidumbre. La conclusión no cambia.
+
+**2023–2026.** Los tres métodos muestran más dispersión en el tribunal actual que en 2006–2014: ×1,4 con emIRT, ×1,7 con MCMCpack y ×1,6 con idealstan. Son años sin anclas en el tribunal y con menos convergencia (sección 7.3), así que es un resultado para revisar, no una conclusión.
 
 ![Figura 7](figuras/fig7_dispersion_anual.png)
 
@@ -362,9 +393,9 @@ Con MCMCpack, la diferencia 2006–2014 menos 1990–2005 es:
 
 ![Figura 10](figuras/fig10_dispersion_bayes.png)
 
-**Figura 10.** Dispersión por año con MCMCpack, con su intervalo de 95 %. En la base nueva el modelo no convergió: el aumento desde 2015 viene de ministros extremos cuya posición no se estabiliza.
+**Figura 10.** Dispersión por año con MCMCpack, con su intervalo de 95 %, en la base del paper y en la base nueva (anclas fijas).
 
-**Qué significa.** Con los mismos datos, idealstan dice que la dispersión se duplicó o triplicó y Martin y Quinn dice que no cambió. La sección siguiente muestra de dónde viene la diferencia.
+**Qué significa.** Con los mismos datos, idealstan dice que la dispersión se duplicó o triplicó en 2005 y Martin y Quinn dice que no cambió, en las dos bases. La sección siguiente muestra de dónde viene la diferencia.
 
 ### 7.6 Por qué los métodos discrepan: la escala entre épocas
 
@@ -378,23 +409,27 @@ Con MCMCpack, la diferencia 2006–2014 menos 1990–2005 es:
 | **Base del paper** (contra MCMCpack) | | | | |
 | Correlación | **−0,96** | 0,95 | 0,96 (2015–16) | — |
 | Pendiente | **−2,7** | 5,5 | 4,9 | — |
-| **Base nueva** (contra MCMCpack, indicativo) | | | | |
-| Correlación | **−0,64** | 0,93 | 0,99 | 0,98 |
-| Pendiente | **−2,5** | 6,6 | 6,6 | 6,2 |
+| **Base nueva** (contra MCMCpack, anclas fijas) | | | | |
+| Correlación | **−0,80** | 0,89 | 0,86 | 0,98 |
+| Pendiente | **−2,2** | 7,0 | 13,3 | 7,2 |
 | **Base nueva** (contra emIRT) | | | | |
-| Correlación | **−0,84** | 0,78 | 0,91 | 0,87 |
-| Pendiente | **−1,9** | 7,5 | 10,7 | 9,4 |
+| Correlación | **−0,74** | 0,83 | 0,91 | 0,88 |
+| Pendiente | **−1,7** | 8,3 | 11,1 | 9,2 |
 
 ![Figura 12a](figuras/fig12_escala_metodos_paper_mcmcpack.png)
 
-![Figura 12b](figuras/fig12_escala_metodos_nueva_emirt.png)
+![Figura 12b](figuras/fig12_escala_metodos_nueva_mcmcpack_fijas.png)
 
-**Tres hallazgos:**
+![Figura 12c](figuras/fig12_escala_metodos_nueva_emirt.png)
 
-1. **Dentro de cada año los métodos coinciden.** Ordenan a los ministros casi igual (correlación de 0,8 a 0,99 en valor absoluto).
-2. **Antes de 2006, idealstan da vuelta la escala.** La correlación es negativa en todos los años hasta 2005 y pasa a positiva justo en 2006: lo que un método llama izquierda, el otro lo llama derecha. Las anclas (Aróstica y García Pino) votaron casi solo desde 2010–2011, así que el sentido de la escala antes de 2006 depende de unos pocos ministros que cruzan la reforma.
-3. **La regla de idealstan cambia de tamaño justo en 2005.** En valor absoluto, la pendiente es de unos 2,5 antes de 2006 y de unos 6 después, en las dos bases. Es decir, la misma distancia entre dos ministros (según Martin y Quinn) mide menos de la mitad en idealstan antes de la reforma que después. Ese cambio de unidad basta para que la dispersión de idealstan "se duplique" sin que el tribunal haya cambiado según Martin y Quinn.
-4. **Después de 2006 los métodos no coinciden en la base nueva, pero la comparación no es confiable.** Contra MCMCpack, la pendiente de idealstan se mantiene constante desde 2006 (6,6; 6,6; 6,2), y ambos muestran más dispersión en 2015–2022. Contra emIRT, la pendiente sube de 3,4 en 2006 a 13 en 2021. MCMCpack y emIRT estiman el mismo modelo con la misma varianza fija; que difieran en 2015–2022 se debe a que MCMCpack no convergió justamente ahí (su escala seguía encogiéndose al terminar).
+**Figura 12.** Pendiente y correlación entre idealstan y Martin y Quinn, año por año: (a) base del paper, contra MCMCpack; (b) base nueva, contra MCMCpack con anclas fijas; (c) base nueva, contra emIRT.
+
+**Cuatro hallazgos:**
+
+1. **Dentro de cada año los métodos coinciden.** Ordenan a los ministros casi igual (correlación promedio por período de 0,74 a 0,98 en valor absoluto).
+2. **Antes de 2006, idealstan da vuelta la escala.** La correlación es negativa en casi todos los años hasta 2005 y pasa a positiva justo en 2006: lo que un método llama izquierda, el otro lo llama derecha. Las anclas (Aróstica y García Pino) votan desde 2010–2011, así que el sentido de la escala antes de 2006 depende de unos pocos ministros que cruzan la reforma.
+3. **La regla de idealstan cambia de tamaño justo en 2005.** En valor absoluto, la pendiente contra MCMCpack es de unos 2,5 antes de 2006 y de unos 5,5 en 2006, en las dos bases. Es decir, la misma distancia entre dos ministros (según Martin y Quinn) mide menos de la mitad en idealstan antes de la reforma que después. Ese cambio de unidad basta para que la dispersión de idealstan "se duplique" sin que el tribunal haya cambiado según Martin y Quinn.
+4. **En la base nueva, la regla de idealstan sigue creciendo después de 2006.** Contra MCMCpack, la pendiente pasa de 5,5 en 2006 a 15,6 en 2020–2021; contra emIRT, de 3,4 a 13. Los dos estimadores de Martin y Quinn coinciden en esto. Por eso la dispersión de idealstan casi se duplica entre 2006–2014 y 2015–2022 (6,9 → 13,3), mientras que con MCMCpack no cambia (0,86 → 0,87). Una versión anterior de este documento decía lo contrario (pendiente constante contra MCMCpack), pero eso venía de que MCMCpack no había convergido justamente en esos años.
 
 **¿Cuál orientación es la correcta antes de 2006?** Se correlacionó la posición media de cada ministro en cada época con el lado político de quien lo nombró (sin contar las anclas).
 
@@ -402,14 +437,14 @@ Con MCMCpack, la diferencia 2006–2014 menos 1990–2005 es:
 |---|---|---|
 | Base del paper: MCMCpack / idealstan | +0,29 / −0,31 (N = 5) | 0,48 / 0,52 (N = 13) |
 | Base del paper: emIRT / idealstan | +0,09 / −0,31 (N = 5) | 0,61 / 0,52 (N = 13) |
-| Base nueva: MCMCpack (indicativo) / idealstan | +0,45 / −0,16 (N = 5) | 0,45 / 0,51 (N = 15) |
-| Base nueva: emIRT / idealstan | −0,08 / −0,16 (N = 5) | 0,68 / 0,51 (N = 15) |
+| Base nueva: MCMCpack / idealstan | +0,25 / −0,27 (N = 5) | 0,46 / 0,52 (N = 15) |
+| Base nueva: emIRT / idealstan | −0,08 / −0,27 (N = 5) | 0,69 / 0,52 (N = 15) |
 
-Desde 2006 todos los métodos producen una escala izquierda-derecha razonable. **Antes de 2006 ninguno lo hace de forma confiable**: con 5 ministros de lado conocido, las correlaciones van de −0,31 a +0,45 y cambian de signo según el método. Martin y Quinn tiende a dar el signo esperado (3 de 4 versiones); idealstan da siempre el contrario, pero con N = 5 eso no prueba nada. Los fallos con disidencia de esos años (58 en la base nueva, 54 en la del paper), en su mayoría de control preventivo de leyes, no ordenan a los ministros en el eje izquierda-derecha.
+Desde 2006 todos los métodos producen una escala izquierda-derecha razonable. **Antes de 2006 ninguno lo hace de forma confiable**: con 5 ministros de lado conocido, las correlaciones van de −0,31 a +0,29 y cambian de signo según el método. Martin y Quinn tiende a dar el signo esperado (3 de 4 versiones); idealstan da siempre el contrario, pero con N = 5 eso no prueba nada. Los fallos con disidencia de esos años (58 en la base nueva, 54 en la del paper), en su mayoría de control preventivo de leyes, no ordenan a los ministros en el eje izquierda-derecha.
 
 **Por qué ocurre (identificación).** Un modelo de puntos ideales solo identifica posiciones **relativas**: se puede estirar, correr o dar vuelta toda la escala y los votos se explican igual. Para comparar épocas, el modelo tiene que fijar la regla, y cada método lo hace distinto:
 
-- **Martin y Quinn** fija la escala con una previa de las posiciones parecida a una normal estándar y con un paseo aleatorio de varianza chica. Eso tiende a mantener **constante** la dispersión entre años. Si el tribunal de verdad se polarizó, este método podría estar **escondiendo** ese cambio.
+- **Martin y Quinn** fija la escala con una previa de las posiciones parecida a una normal estándar y con un paseo aleatorio de varianza chica. Eso tiende a mantener **constante** la dispersión entre años. Si el tribunal de verdad se polarizó, este método podría estar **escondiendo** ese cambio. (En la base nueva, MCMCpack fija además las anclas en ±1, como idealstan las fija en ±2, y la conclusión es la misma.)
 - **idealstan** fija solo las dos anclas en ±2 y estima libremente la varianza del paseo de cada ministro. Lejos de las anclas (antes de 2006), la regla queda poco amarrada y puede estirarse o darse vuelta. Este método podría estar **inventando** un cambio que no existe.
 
 **Los datos no permiten decidir cuál de los dos tiene razón**, porque antes de 2006 hay muy poca información para conectar las épocas. Lo que sí se puede afirmar: **el resultado principal del paper depende de una decisión de estimación**, no de un patrón que aparezca con cualquier método.
@@ -420,21 +455,21 @@ Distancia de cada ministro al mediano del año de su nombramiento. El coeficient
 
 | Método | Base del paper | Base nueva |
 |---|---|---|
-| emIRT (sin incertidumbre) | +0,44 (p = 0,47) | −0,16 (p = 0,78) |
-| MCMCpack (Rubin) | −0,12 (p = 0,86) | −0,14 (p = 0,84), indicativo |
-| idealstan, mismos datos, sin covariable (Rubin) | +0,92 (p = 0,74) | +1,08 (p = 0,74) |
-| idealstan, con covariable (Rubin) | réplica fiel: +1,95 (p = 0,34) | +0,87 (p = 0,80) |
+| emIRT (sin incertidumbre) | +0,44 (p = 0,47) | −0,15 (p = 0,80) |
+| MCMCpack (Rubin) | −0,12 (p = 0,86) | −0,11 (p = 0,85) |
+| idealstan, mismos datos, sin covariable (Rubin) | +0,92 (p = 0,74) | +1,13 (p = 0,74) |
+| idealstan, con covariable (Rubin) | réplica fiel: +1,95 (p = 0,34) | +0,87 (p = 0,79) |
 
 Detalle de emIRT por grupo (distancia media):
 
 | | Políticos antes | Políticos después | Corte Suprema antes | Corte Suprema después |
 |---|---|---|---|---|
-| Base nueva | 0,89 | 0,74 | 0,58 | 0,59 |
+| Base nueva | 0,91 | 0,74 | 0,59 | 0,57 |
 | Base del paper | 0,68 | 1,01 | 0,63 | 0,52 |
 
 ![Figura 8](figuras/fig8_reforma_grupos.png)
 
-**Qué significa.** Con idealstan el signo va en la dirección del paper en las dos bases, pero nunca es significativo. Con Martin y Quinn el signo cambia según la base. Con 4 a 19 ministros por grupo, esta prueba **no puede distinguir** si la reforma tuvo efecto.
+**Qué significa.** Con idealstan el signo va en la dirección del paper en las dos bases, pero nunca es significativo. Con Martin y Quinn el signo es negativo, salvo con emIRT en la base del paper. Con 4 a 19 ministros por grupo, esta prueba **no puede distinguir** si la reforma tuvo efecto.
 
 ### 7.8 P2. La reforma y la disidencia
 
@@ -442,7 +477,7 @@ Esta prueba no usa la ideología estimada, así que no depende del método.
 
 | Disidencia media por ministro-año | Políticos antes | Políticos después | Corte Suprema antes | Corte Suprema después | Diferencias en diferencias |
 |---|---|---|---|---|---|
-| Base nueva | 5,4 % | 20,8 % | 3,3 % | 20,8 % | −3,1 puntos (p = 0,35) |
+| Base nueva | 5,2 % | 20,8 % | 3,3 % | 20,7 % | −2,9 puntos (p = 0,39) |
 | Base del paper | 4,3 % | 10,3 % | 3,6 % | 7,3 % | +2,0 puntos (p = 0,24) |
 
 Todos disienten más después de 2005. Que los nombrados por políticos aumenten *más* depende de la base.
@@ -458,11 +493,11 @@ $$\text{resultado} = b_1\,\text{académico} + b_2\,\text{político} + \text{año
 | Resultado | Base | Académico ($b_1$) | Nombrado por políticos ($b_2$) |
 |---|---|---|---|
 | Disidencia | paper | −0,008 (p = 0,58) | **+0,023 (p = 0,02)** |
-| | nueva | **+0,046 (p = 0,04)** | −0,010 (p = 0,65) |
+| | nueva | **+0,044 (p = 0,046)** | −0,011 (p = 0,64) |
 | "Activismo" (votar por acoger más que el resto) | paper | −0,061 (p = 0,51) | **+0,181 (p = 0,03)** |
-| | nueva | **−0,187 (p = 0,03)** | +0,101 (p = 0,26) |
+| | nueva | **−0,183 (p = 0,03)** | +0,103 (p = 0,26) |
 | Distancia al mediano (emIRT) | paper | +0,14 (p = 0,78) | +0,23 (p = 0,57) |
-| | nueva | +0,42 (p = 0,32) | +0,01 (p = 0,98) |
+| | nueva | +0,42 (p = 0,34) | +0,02 (p = 0,96) |
 
 **Qué significa:**
 
@@ -477,9 +512,9 @@ Se usa la ideología **año a año**, con efectos fijos de ministro y de año. E
 
 | | Disidencia | Distancia al mediano |
 |---|---|---|
-| Base nueva, después de 2005 (emIRT) | −0,006 (p = 0,70) | −0,043 (p = 0,42) |
-| Base nueva, antes de 2005 / cambio después (emIRT) | +0,009 / −0,015 (p = 0,40) | +0,067 / −0,110 (p = 0,28) |
-| Base nueva, después de 2005 (MCMCpack, Rubin, indicativo) | — | −0,059 (p = 0,42) |
+| Base nueva, después de 2005 (emIRT) | −0,006 (p = 0,70) | −0,039 (p = 0,47) |
+| Base nueva, antes de 2005 / cambio después (emIRT) | +0,011 / −0,018 (p = 0,34) | +0,086 / −0,125 (p = 0,25) |
+| Base nueva, después de 2005 (MCMCpack, Rubin) | — | +0,014 (p = 0,76) |
 | Base del paper, después de 2005 (emIRT) | −0,008 (p = 0,48) | −0,037 (p = 0,58) |
 | Base del paper, antes / cambio después (emIRT) | +0,006 / −0,014 (p = 0,24) | −0,040 / +0,002 (p = 0,98) |
 | Base del paper, después de 2005 (MCMCpack, Rubin) | — | −0,076 (p = 0,31) |
@@ -488,31 +523,36 @@ Se usa la ideología **año a año**, con efectos fijos de ministro y de año. E
 
 | $\omega^2$ | Todo 2006+ | Sin 2015–2020 | Ponderado por votos |
 |---|---|---|---|
-| 0,05 | −0,012 (p = 0,83) | −0,068 (p = 0,45) | −0,075 (p = 0,32) |
-| 0,10 | −0,011 (p = 0,85) | −0,071 (p = 0,45) | −0,068 (p = 0,33) |
-| 0,20 | −0,009 (p = 0,86) | −0,073 (p = 0,45) | −0,060 (p = 0,35) |
+| 0,05 | −0,010 (p = 0,86) | −0,064 (p = 0,49) | −0,076 (p = 0,35) |
+| 0,10 | −0,010 (p = 0,85) | −0,069 (p = 0,47) | −0,069 (p = 0,35) |
+| 0,20 | −0,010 (p = 0,84) | −0,071 (p = 0,46) | −0,061 (p = 0,36) |
 
-**Prueba placebo.** Al asignar al azar quién es "nombrado por político", el 39 % de las veces sale un efecto igual o mayor.
+La tabla de robustez (`robustez_horizonte.R`) usa todos los ministro-año que estima el IRT; la tabla anterior, solo los que tienen al menos 10 votos ese año. Por eso su columna "Todo 2006+" no coincide exactamente con la fila de emIRT de la tabla anterior.
 
-**Qué significa.** **No hay evidencia de efecto de horizonte.** El signo es negativo, pero el efecto es chico y no significativo en ninguna versión. Sin agrupar las series, el efecto era −0,13 (p = 0,013): venía de las series repetidas, que multiplicaban unos pocos votos de los mismos ministros en los mismos años.
+**Prueba placebo.** Al asignar al azar quién es "nombrado por político", el 40 % de las veces sale un efecto igual o mayor.
+
+**Sin agrupar las series.** Con los datos actuales, el efecto tampoco aparece sin agrupar: −0,054 (p = 0,44) en la tabla principal y −0,028 (p = 0,67) en la de robustez.
+
+**Qué significa.** **No hay evidencia de efecto de horizonte.** El signo suele ser negativo (con MCMCpack en la base nueva, positivo), pero el efecto es chico y no significativo en ninguna versión. Una versión anterior de este documento sí lo encontraba (−0,13, p = 0,013), con la lectura antigua de disidencias y sin agrupar series. Era frágil: dependía de unos pocos votos.
 
 ---
 
 ## 8. Balance
 
 1. **La réplica del paper funciona, así que las diferencias no vienen de nuestros datos ni de nuestro código.** Con su base, su método (idealstan con la covariable) y sus criterios se reproducen la validación (0,57 contra 0,56), el salto de la dispersión después de 2005 y sus Tablas 2 y 3, con los mismos signos y la misma significancia.
-2. **Las diferencias vienen del estimador.** Con los mismos datos, los dos estimadores de Martin y Quinn no encuentran aumento de la dispersión en 2005, en ninguna de las dos bases, y la Tabla 2 cambia de signo. Los métodos coinciden dentro de cada año; difieren en cómo conectan las épocas. Antes de 2006 idealstan da vuelta la escala y usa una unidad de menos de la mitad del tamaño, y los datos de esos años son demasiado escasos para decidir qué conexión es la correcta.
-3. **Lo que se sostiene con cualquier método:** los nombrados por el Ejecutivo quedan más lejos del mediano que el resto (Tabla 3 del paper), con significancia débil. Los nombrados por el Legislativo no se distinguen.
-4. **Que el efecto del Ejecutivo aparezca solo después de la reforma (la interacción de la ecuación 4) no es significativo** con ningún método ni base al considerar que las posiciones son estimadas (reglas de Rubin). Con idealstan el signo coincide con el paper; con Martin y Quinn cambia según la base.
-5. **No hay apoyo para el mecanismo reputacional.** El efecto de horizonte es chico y no significativo con emIRT y con MCMCpack, una vez agrupadas las series.
+2. **Las diferencias vienen del estimador.** Con los mismos datos, los dos estimadores de Martin y Quinn no encuentran aumento de la dispersión en 2005, en ninguna de las dos bases, y la Tabla 2 cambia de signo. Los métodos coinciden dentro de cada año; difieren en cómo conectan las épocas. Antes de 2006 idealstan da vuelta la escala y usa una unidad de menos de la mitad del tamaño, y los datos de esos años son demasiado escasos para decidir qué conexión es la correcta. En la base nueva, además, la regla de idealstan sigue creciendo después de 2006, según los dos estimadores de Martin y Quinn.
+3. **Lo que se sostiene en parte:** los nombrados por el Ejecutivo quedan más lejos del mediano que el resto (Tabla 3 del paper). En la base del paper se cumple con cualquier método, con significancia débil con Martin y Quinn; en la base nueva, solo con Martin y Quinn y sin significancia (p = 0,12). Con idealstan en la base nueva, los más lejanos son los nombrados por el Legislativo, aunque tampoco es significativo.
+4. **Que la distancia de los nombrados por políticos crezca después de la reforma (la interacción de la ecuación 4) no es significativo** con ningún método ni base al considerar que las posiciones son estimadas (reglas de Rubin). Con idealstan el signo coincide con el paper; con Martin y Quinn es casi siempre negativo.
+5. **No hay apoyo para el mecanismo reputacional.** El efecto de horizonte es chico y no significativo con emIRT y con MCMCpack, se agrupen o no las series.
 6. **Pardow y Verdugo:** el enroque existe, pero los académicos no resultan más activistas.
 7. **Lo que sí se puede decir:** después de 2006 la ideología estimada es una escala izquierda-derecha razonable con cualquier método. **La comparación con el tribunal anterior a la reforma**, que es la pregunta del paper, **no tiene una respuesta que no dependa del método.**
 8. **Por qué cambió respecto de versiones anteriores de este documento:**
    - con un modelo estático, la base del paper mostraba un salto en 2005;
    - con la lectura antigua de disidencias faltaba información anterior a 2006;
-   - sin agrupar las series, aparecía un efecto de horizonte.
+   - con esa lectura antigua y sin agrupar las series, aparecía un efecto de horizonte;
+   - el buscador fechaba mal 3 fallos (sección 7.1), lo que ponía a ministros en años en que no estaban en el Tribunal.
 
-   Las tres cosas resultaron ser producto del método, no de los datos.
+   Ninguna de estas cosas era un patrón de los datos: venían del método o de errores de lectura y fecha, ya corregidos.
 
 ### Siguientes pasos posibles
 
@@ -529,7 +569,8 @@ Se usa la ideología **año a año**, con efectos fijos de ministro y de año. E
 - **Muchas pruebas:** se hicieron muchas, así que algún resultado significativo puede ser casualidad. Por eso se agregó la prueba placebo.
 - **Antes de 2005 hay pocos fallos con disidencia por año** (2 a 10), tanto en la base nueva como en la del paper. Ese problema ya lo tenía el paper, y es la razón de que los métodos discrepen.
 - **Escala entre épocas:** ningún método puede comprobar que la unidad de medida sea la misma antes y después de 2005 (sección 7.6).
-- **MCMCpack no convergió en la base nueva** (sección 7.3): sus resultados en esa base son indicativos. Más iteraciones (cada 15.000 tardan ~12 h) o anclas fijas en valores exactos (en prueba) podrían resolverlo.
+- **MCMCpack en la base nueva converge solo con las anclas fijas en ±1** (sección 7.3), y converge bien solo desde 2006. Antes de 2006 y desde 2023 la convergencia es parcial (16 % y 12 % de los parámetros con R-hat > 1,1). Fijar las anclas en ±1 en vez de solo su signo es una decisión de identificación más.
+- **Fechas del buscador del TC:** se descartan 3 fallos con fecha imposible (sección 7.1). La regla solo detecta errores grandes; un fallo fechado uno o dos años antes de lo debido no se detectaría.
 - **Disidencias parciales:** cada base las codifica distinto, y eso explica buena parte de los desacuerdos entre bases.
 - **Criterio para agrupar series:** exige una votación idéntica. Series con un ministro distinto no se agrupan.
 - **Períodos de los ministros nombrados desde 2018:** salen de Wikipedia; hay que verificarlos con el Diario Oficial.
@@ -548,14 +589,14 @@ Desde RStudio con `TC.Rproj`, después de correr `codigo/1`, `2` y `3`. Todos lo
 | 2 | `modelo/probar_predicciones.R` | Pruebas P1 a P4 y figuras 7 a 9 (emIRT) | ~10 s |
 | 3 | `modelo/robustez_horizonte.R` | Robustez y placebo de P4 | ~1,5 min |
 | 4 | `modelo/estimar_ideologia_bayes.R paper 5000 20000 10` | MCMCpack, base del paper | ~2 min |
-| 4b | `modelo/estimar_ideologia_bayes.R nueva 5000 10000 10 1` (y `... 2`) | MCMCpack, base nueva, dos cadenas en paralelo | ~12 h |
-| 4c | `modelo/estimar_ideologia_bayes.R nueva 1000 2000 2 1 fijas` (y `... 2 fijas`) | MCMCpack con anclas fijas en ±1 (prueba) | ~2,5 h |
+| 4b | `modelo/estimar_ideologia_bayes.R nueva 5000 10000 10 1 fijas` (y `... 2 fijas`) | MCMCpack, base nueva, anclas fijas en ±1 (la versión principal); dos cadenas en paralelo. Parte de las posiciones de emIRT, así que va después del paso 1 | ~12 a 14 h |
+| 4c | `modelo/estimar_ideologia_bayes.R nueva 5000 10000 10 1` (y `... 2`) | MCMCpack, base nueva, anclas solo con signo (no converge; sección 7.3) | ~12 a 14 h |
 | 5 | `modelo/probar_bayes.R` | Dispersión, P1 y P4 con MCMCpack; R-hat; figura 10 | ~5 min |
 | 5b | `modelo/diagnosticar_mcmcpack.R <nueva\|nueva_fijas>` | Dónde y por qué no converge MCMCpack | ~1 min |
 | 6 | `modelo/replicar_paper_idealstan.R mcmc` (y `mcmc 500 sin_covariable`) | Réplica fiel del paper con idealstan | 20 a 40 min |
 | 7 | `modelo/estimar_idealstan.R <paper\|nueva> [con_covariable\|sin_covariable]` | idealstan con los mismos datos que Martin y Quinn | paper ~6 min; nueva ~3,5 h |
-| 8 | `modelo/probar_idealstan.R <mcmc\|mcmc_sincov\|mcmcpack> <paper\|paperprep\|nuevaprep>` | Validación, dispersión, ecuación 4 y Tablas 2 y 3 del paper tal como se publicaron; con `mcmcpack` usa las muestras de Martin y Quinn; figura 11 | ~2 min |
-| 9 | `modelo/comparar_metodos.R <paper\|nueva> [mcmcpack\|emirt]` | Comparación año a año entre métodos; figura 12 | ~1 min |
+| 8 | `modelo/probar_idealstan.R <mcmc\|mcmc_sincov> <paper\|paperprep\|nuevaprep>` o `modelo/probar_idealstan.R mcmcpack <paper\|nueva_fijas>` | Validación, dispersión, ecuación 4 y Tablas 2 y 3 del paper tal como se publicaron; con `mcmcpack` usa las muestras de Martin y Quinn; figura 11 | ~2 min |
+| 9 | `modelo/comparar_metodos.R <paper\|nueva> [mcmcpack\|mcmcpack_fijas\|emirt]` | Comparación año a año entre métodos; figura 12 | ~1 min |
 | — | `modelo/simular_modelo.R` | Simulación del Anexo A (opcional) | ~2 min |
 
 **Paquetes:**
